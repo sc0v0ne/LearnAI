@@ -1,4 +1,4 @@
-# LearnML
+# LearnAI
 
 <!-- MarkdownTOC -->
 
@@ -7,7 +7,6 @@
     - Artificial Intelligence
     - Checklists
     - ML Guides
-    - Code Samples
     - Background
     - Machine Learning
     - Feature Engineering
@@ -18,6 +17,7 @@
     - Reinforcement Learning
     - Time Series
     - Tips
+    - Code Samples
 - References
 
 <!-- /MarkdownTOC -->
@@ -108,7 +108,7 @@ TODO: Add items
 
 [Concurrency - Mutliprocessing vs Multithreading](./ml/concurrency.md)
 
-[Diagnose Overfitting and Underfitting](https://github.com/codecypher/LearnML/blob/main/ml/diagnose_overfitting.md)
+[Diagnose Overfitting and Underfitting](./ml/diagnose_overfitting.md)
 
 [Exploratory Data Analysis (EDA)](./ml/eda.md)
 
