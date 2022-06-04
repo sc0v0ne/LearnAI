@@ -103,17 +103,41 @@ Accessibility
 - DaisyDisk
 - Downie
 - Fantastical
-- Figma
+- FlexiHub
 - ImageOptim
 - Meeter
 - Monitor Control
 - Moom
-- Numi
+- Numi 
 - Setapp
 - Spark Mail
 - Steam Gaming
-- Transmit
 - Tweetbot
+
+- Appium
+- CodeKit
+- Dash
+- Figma
+- Navicat Premium
+- Postman
+- TablePlus
+- Tower
+- Transmit
+
+
+## Swift
+
+- Alamofire
+- Rightpoint/BonMot
+- IBAnimatable
+- hackiftekhar/IQKeyboardManager
+- airbnb/lottie-ios
+- Moya for Alamofire
+- layoutBox/PinLayout
+- ReactiveX/RxSwift
+- SDWebImage/SDWebImage
+- malcommac/SwiftDate
+- SwiftyJSON
 
 
 ## iPhone Apps
@@ -143,6 +167,9 @@ Accessibility
 - [SipApp](https://sipapp.io/)
 
 
+[3 Best Websites to find Pro & Free Templates for your Portfolio](https://medium.com/geekculture/3-best-websites-to-find-pro-free-templates-for-your-portfolio-c7745792e60)
+
+
 
 ## References
 
@@ -155,4 +182,5 @@ Accessibility
 [My Favorite VS Code Extensions For Flutter and Programming](https://itnext.io/my-favorite-vs-code-extensions-for-flutter-and-programming-bc87b3284c0a)
 
 [Top 10 VS Code Extensions to Boost Productivity](https://towardsdatascience.com/top-10-vs-code-extensions-to-boost-productivity-526595b18325)
+
 
