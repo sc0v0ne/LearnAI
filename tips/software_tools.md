@@ -1,5 +1,22 @@
 # Software Development Tools
 
+<!-- MarkdownTOC -->
+
+- VS Code Extensions
+    - JavaScript
+    - Flutter
+    - Python
+- PyCharm
+- Chrome Extensions
+- Mac Apps
+- Swift
+- iPhone Apps
+- Web Design
+- References
+
+<!-- /MarkdownTOC -->
+
+
 ## VS Code Extensions
 
 - Awesome Flutter Snippets

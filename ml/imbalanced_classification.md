@@ -11,6 +11,7 @@
     - Try Different Algorithms
     - Try a Different Perspective
     - Accuracy Paradox
+    - Stratify the Dataset
 - Handle Imbalanced Classification without Rebalancing
     - Reasons not to balance your imbalanced data
     - Conclusion

@@ -19,7 +19,6 @@
 - CSS Websites for Developers
 - JetBrains Plugins
 - Linux Utilities
-- Multipass
 - References
 
 <!-- /MarkdownTOC -->
