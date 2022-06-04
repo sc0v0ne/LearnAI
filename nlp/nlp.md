@@ -38,16 +38,12 @@
 - Challenges in Natural Language Processing
 - Common Tasks
 - NLP Workflow
-- NLTK
 - NLP Pretrained Models
 - NLP Libraries
 - Tutorials
   - HuggingFace Transformers for NLP With Python
   - Sentiment Analysis using Python
   - Sentiment Analysis using AutoML
-- Applications
-- NLP Pretrained Models
-- NLTK
 - References
 
 <!-- /MarkdownTOC -->
@@ -128,7 +124,9 @@ The general idea with document clustering is to assign each document a vector re
 
 - Keyword Extraction: Named Entity Recognition (NER) using SpaCy, Rapid Automatic Keyword Extraction (RAKE) using ntlk-rake
 
-- Text Summarization: TextRank (similar to PageRank) using PyTextRank SpaCy extension and TF-IDF using GenSim
+- Text Summarization: TextRank (similar to PageRank) using PyTextRank SpaCy extension, TF-IDF using GenSim
+
+- Text Generation: SimpleNLG surface realization for children with cognitive problems.
 
 - Spell Check: PyEnchant, SymSpell Python ports
 
@@ -177,9 +175,9 @@ There are a total of five execution steps when building a Natural Language Proce
 
 1. **Lexical Analysis:** Processing of Natural Languages by the NLP algorithm starts with identifying and analyzing the input words’ structure. This part is called Lexical Analysis and Lexicon stands for an anthology of the various words and phrases used in a language. It is dividing a large chunk of words into structural paragraphs and sentences.
 
-2. **Syntactic Analysis/Parsing:** Once the sentences’ structure is formed, syntactic analysis works on checking the grammar of the formed sentences and phrases. It also forms a relationship among words and eliminates logically incorrect sentences. For instance, the English Language analyzer rejects the sentence, ‘An umbrella opens a man’.
+2. **Syntactic Analysis/Parsing:** Once the sentence structure is formed, syntactic analysis works on checking the grammar of the formed sentences and phrases. It also forms a relationship among words and eliminates logically incorrect sentences. For instance, the English Language analyzer rejects the sentence, ‘An umbrella opens a man’.
 
-3. **Semantic Analysis:** In the semantic analysis process, the input text is now checked for meaning, i.e., it draws the exact dictionary of all the words present in the sentence and subsequently checks every word and phrase for meaningfulness. This is done by understanding the task at hand and correlating it with the semantic analyzer. For example, a phrase like ‘hot ice’ is rejected.
+3. **Semantic Analysis:** In the semantic analysis process, the input text is now checked for meaning such as it draws the exact dictionary of all the words present in the sentence and subsequently checks every word and phrase for meaningfulness. This is done by understanding the task at hand and correlating it with the semantic analyzer. For example, a phrase like ‘hot ice’ is rejected.
 
 4. **Discourse Integration:** The discourse integration step forms the story of the sentence. Every sentence should have a relationship with its preceding and succeeding sentences. These relationships are checked by Discourse Integration.
 
@@ -208,7 +206,7 @@ The start and end of sentences are called **word boundaries** which are used to 
 
 - **Sent_tokenize package:** This package performs sentence tokenization and converts the input into sentences.
 
-- *Word_tokenize package:* Similar to sentence tokenization, this package divides the input text into words. 
+- **Word_tokenize package:** Similar to sentence tokenization, this package divides the input text into words. 
 
 - **WordPunctTokenizer package:** In addition to the word tokenization, this package also works on punctuation marks as a token. 
 
@@ -362,12 +360,11 @@ KE is often used as a first step to summarize the main ideas of a text and to de
 
 ## Named Entity Recognition (NER)
 
-Similar to stemming and lemmatization, named entity recognition (NER) is a technique used to extract entities from a body of a text used to identify basic concepts within the text such as names, places, dates, etc.
+Similar to stemming and lemmatization, named entity recognition (NER) is a technique used to extract entities from a body of text to identify basic concepts within the text such as names, places, dates, etc.
 
 The NER algorithm mainly has two steps. 
 
   1. It needs to detect an entity in the text. 
-  
   2. It categorizes the text into one category. 
 
 The performance of NER depends heavily on the training data used to develop the model. The more relevant the training data to the actual data, the more accurate the results will be.
@@ -551,7 +548,7 @@ Pattern recognition tends to be based on probability, so there is a chance that 
 Pattern recognition is also typically controlled by an algorithm which means that the computer will continue to make guesses until it finds a pattern that matches what we know is true or until the probability of any other pattern remaining is too small to be considered.
 
 
-<<<<<<< Updated upstream
+
 ## Challenges in Natural Language Processing
 
 - **Lexical Ambiguity:** This is the first level of ambiguity that occurs generally in words alone. For instance, when a code is given a word like ‘board’ it would not know whether to take it as a noun or a verb. This causes ambiguity in the processing of this piece of code.
@@ -623,18 +620,6 @@ In this step, you need to make use of your communication and representation skil
 
 
 ----------
-
-
-
-## NLTK
-
-[NLTK Book](https://www.nltk.org/book/)
-
-Natural language toolkit (NLTK) is by far the most popular platform for building NLP related projects.
-
-NLTK is also an open-source library and is available for almost every kind of operating system. 
-
-
 
 ## NLP Pretrained Models
 
@@ -730,47 +715,6 @@ This article [8] explores the use of a simple pre-trained HuggingFace transforme
 [How to use SHAP with PyCaret](https://astrobenhart.medium.com/how-to-use-shap-with-pycaret-dc9a31278621)
 
 [Fine-Tuning BERT for Tweets Classification with HuggingFace](https://www.kdnuggets.com/2022/01/finetuning-bert-tweets-classification-ft-hugging-face.html)
-
-
-
-<<<<<<< Updated upstream
-## Applications
-
-- Document Clustering
-
-The general idea with document clustering is to assign each document a vector representing the topics discussed. 
-
-- Sentiment Analysis: Naive Bayes, gradient boosting, and random forest
-
-- Keyword Extraction: Named Entity Recognition (NER) using SpaCy, Rapid Automatic Keyword Extraction (RAKE) using ntlk-rake
-
-- Text Summarization: TextRank (similar to PageRank) using PyTextRank SpaCy extension, TF-IDF using GenSim
-
-- Text Generation: SimpleNLG surface realization for children with cognitive problems.
-
-- Spell Check: PyEnchant, SymSpell Python ports
-
-
-----------
-
-
-## NLP Pretrained Models
-
-- Polyglot
-- SpaCy
-- GenSim
-- Pattern
-- clean-text
-
-
-## [NLTK](https://www.nltk.org)
-
-[NLTK Book](https://www.nltk.org/book/)
-
-Natural language toolkit (NLTK) is by far the most popular platform for building NLP related projects.
-
-NLTK is also an open-source library and is available for almost every kind of operating system. 
-
 
 
 
