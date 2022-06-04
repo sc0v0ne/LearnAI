@@ -6,18 +6,10 @@
 - Display multiple images in one figure
 - Plot images side by side
 - Visualize a batch of image data
-- The Decorator Pattern
-    - @staticmethod
-    - @classmethod
-    - @property
-- Decorator Code Snippets
-    - Timer
-    - Measure Function Performance
-    - Repeat
-    - Show prompt
-    - Try/Catch
 - Python one-liners
 - Utility Classes
+    - Enumeration
+    - Data Classes
 - References
 
 <!-- /MarkdownTOC -->
