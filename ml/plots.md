@@ -1047,7 +1047,7 @@ Mito allows you to edit Pandas dataframes like an Excel file and generates Pytho
 
 DSPlot is a Python package that draws and renders images of data structures.
 
-[Visualize Trees and Graphs in Seconds With DSPlot](https://betterprogramming.pub/visualize-trees-and-graphs-in-seconds-with-dsplot-9112f465da8f?source=rss----d0b105d10f0a---4)
+[Visualize Trees and Graphs in Seconds With DSPlot](https://betterprogramming.pub/visualize-trees-and-graphs-in-seconds-with-dsplot-9112f465da8f?source=rss---p-d0b105d10f0a---4)
 
 
 
