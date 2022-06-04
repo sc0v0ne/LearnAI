@@ -253,6 +253,11 @@ The _accuracy paradox_ is used to describe the situation in which your accuracy 
 The accuracy paradox is very common because classification accuracy is often the first measure we use when evaluating models on classification problems.
 
 
+### Stratify the Dataset
+
+Perhaps the best solution is to stratify the dataset to improve model performance [5]. 
+
+
 
 ## Handle Imbalanced Classification without Rebalancing
 
@@ -348,6 +353,8 @@ Naive classifier strategies can be used on predictive modeling projects via the 
 [3] [A Gentle Introduction to Threshold-Moving for Imbalanced Classification](https://machinelearningmastery.com/threshold-moving-for-imbalanced-classification/)
 
 [4] [Step-By-Step Framework for Imbalanced Classification Projects](https://machinelearningmastery.com/framework-for-imbalanced-classification-projects/)
+
+[5] [How To Stratify Data in Machine Learning Projects to Significantly Improve Model Performance](https://towardsdatascience.com/how-to-stratify-data-in-machine-learning-projects-to-significantly-improve-model-performance-4929b600340b)
 
 
 [8 Tactics to Combat Imbalanced Classes in Your Machine Learning Dataset](https://machinelearningmastery.com/tactics-to-combat-imbalanced-classes-in-your-machine-learning-dataset/)
