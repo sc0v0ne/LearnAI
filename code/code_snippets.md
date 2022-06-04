@@ -120,6 +120,7 @@
     plt.title("Fourth")
 ```
 
+
 ## Plot images side by side
 
 ```py
@@ -135,11 +136,14 @@
 
 TODO: Add code sample
 
+
 ----------
 
 
 
 ## Python one-liners
+
+Here are some helpful python one-liners that can save time [3]:
 
 ```py
     # Palindrome Python One-Liner
@@ -176,7 +180,15 @@ TODO: Add code sample
 ---------
 
 
+
 ## Utility Classes
+
+### Enumeration
+
+We can create an Enumeration class to hold related members of the same concept such as compass directions (north, south, east, and west) or seasons [3]. 
+
+In the standard library of Python, the `enum` module provides the essential functionalities for creating an enumeration class.
+
 
 ```py
     from enum import Enum
@@ -203,6 +215,9 @@ TODO: Add code sample
     [x.name for x in Season]
 ```
 
+### Data Classes
+
+We can a class to hold data using the dataclass decorator [3]. 
 
 ```py
     from dataclasses import dataclass
@@ -229,11 +244,11 @@ TODO: Add code sample
 
 ## References
 
-[4 simple tips for plotting multiple graphs in Python](https://towardsdatascience.com/4-simple-tips-for-plotting-multiple-graphs-in-python-38df2112965c)
+[1] [Binary Image Classification in PyTorch](https://towardsdatascience.com/binary-image-classification-in-pytorch-5adf64f8c781)
 
-[Learn Python By Example: 10 Python One-Liners That Will Help You Save Time](https://medium.com/@alains/learn-python-by-example-10-python-one-liners-that-will-help-you-save-time-ccc4cabb9c68)
+[2] [Learn Python By Example: 10 Python One-Liners That Will Help You Save Time](https://medium.com/@alains/learn-python-by-example-10-python-one-liners-that-will-help-you-save-time-ccc4cabb9c68)
 
-[3 Alternatives for Regular Custom Classes in Python](https://betterprogramming.pub/3-alternatives-for-regular-custom-classes-in-python-2f2bafd66338)
+[3] [3 Alternatives for Regular Custom Classes in Python]()
 
 
 [6 Must-Know Methods in Python’s Random Module](https://medium.com/geekculture/6-must-know-methods-in-pythons-random-module-338263b5f927)
