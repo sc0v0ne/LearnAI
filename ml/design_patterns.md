@@ -104,6 +104,9 @@ Data Mesh Observability Pattern: real-time understanding of the state of a Data 
 [Understand Machine Learning through More Design Patterns](https://towardsdatascience.com/understand-machine-learning-through-more-design-patterns-9c8430fd2ae8)
 
 
+[12 Front End Performance Patterns You Need to Know](https://medium.com/geekculture/12-front-end-performance-patterns-you-need-to-know-def550620464)
+
+
 [Data Mesh Observability Pattern](https://towardsdatascience.com/data-mesh-observability-pattern-467438627572)
 
 
