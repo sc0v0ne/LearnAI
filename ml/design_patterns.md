@@ -4,6 +4,7 @@
 
 - What is a Design Pattern?
 - How to Classify Design Patterns?
+- Common Design Patterrns
 - Design Pattern Cheatsheet
 - References
 
@@ -21,6 +22,7 @@ A _design pattern_ is defined by four essential elements:
 
 **Consequences:** The trade-offs we have to consider once we decide to apply a given DP.
 
+
 ## How to Classify Design Patterns?
 
 Design patterns are categorized according to the type of reuse:
@@ -31,6 +33,8 @@ Design patterns are categorized according to the type of reuse:
 
 **Creational:** Allows decoupling and optimizing the creation steps of different objects.
 
+
+## Common Design Patterrns
 
 1. Strategy
 
