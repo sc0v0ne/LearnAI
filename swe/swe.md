@@ -2,7 +2,6 @@
 
 <!-- MarkdownTOC -->
 
-- Project Quickstart
 - SOLID Design Principles
 - The Single-responsibility Principle
 - SOLID Coding in Python
@@ -12,23 +11,6 @@
 - References
 
 <!-- /MarkdownTOC -->
-
-## Project Quickstart
-
-1. Who is the user?
-
-  Once you identify the core user, you can identify their core needs.
-
-  If the software does not solve a problem, it doesn’t merit being adopted.
-
-2. How many people will use it?
-
-  Most projects must reach a critical number of users in order to be successful, pay the bills, and get off the ground.
-
-  Choosing the feature that will carry the most impact is essential to making sure the time of the entire team goes into the work with the biggest pay-off.
-
-3. Is it the easiest possible solution?
-
 
 
 ## SOLID Design Principles
@@ -41,7 +23,11 @@ The goal is to develop software with high cohesion and low coupling.
 
 High cohesion means we want functions in a class to be performing tasks that are related to each other. 
 
-Low coupling means classes should not depend too much on each other. 
+Low coupling means classes should not depend too much on each other.
+
+
+## SOLID Coding in Python
+
 
 ## The Single-responsibility Principle
 
@@ -51,7 +37,39 @@ A class should only have a single purpose.
 
 If the functionality of the class needs to be changed there should only be one reason to do so.
 
-## SOLID Coding in Python
+
+## Software Engineering Myths
+
+There is No Incremental Change in New Apps
+
+All the objections hurled at an offending pull request are usually completely absent when an app first comes online. 
+
+The seeds for failure are sown early on: poor decisions about application boundaries or data modeling can be practically impossible to fix down the line, so if you really want to play the “small incremental improvement” game, you really need to evaluate new applications very carefully before they come online. Amateur developers make things that work, senior developers make things that scale… and most management can’t tell the difference.
+
+
+Insufficient Feedback Loops
+
+Business and product folks are focused on features and finances, but your app will suffer if feedback is limited to only these talking points.
+
+Developers, better than anyone else in an organization, can identify software inefficiencies and correct them. 
+
+Efficiency Wins
+
+In a global marketplace of ideas and solutions, we would do well to remember that _efficiency wins_.
+
+The most efficient software with the fewest requirements in terms of hardware or maintainers will have a clear advantage. So listen carefully when the developers try to improve the efficiency of the code, even in cases when thousands of files get changed or when absolutely nothing changes for the customer.
+
+You Cannot Unboil a Frog
+
+This happens all the time: a company with “mostly functional” software attempts to transition from scrappy start-up to Respectable Profitability™. 
+
+Endless man-hours are spent pumping blood through the legacy code while incremental changes are introduced with surgical slowness. Because the existing implementations are so far off from where they should be, it will take years of diligent development to escape the wilderness and arrive at the promised land. 
+
+Instead of saving the project, new changes can introduce more and more debt because there is no incremental way to break out of the flawed paradigms on which it was built. Amidst this madness, the captain dictates that absolutely no man-hours are available for rewriting the system in a way that would avoid the icebergs and sinking ships altogether.
+
+In practical terms, you cannot unboil a frog: you have to make a new one.
+
+With software systems, it is less work to rebuild a new system than it is to perform CPR on the legacy system.  
 
 
 
@@ -73,24 +91,6 @@ If the functionality of the class needs to be changed there should only be one r
 
 - An Introduction to Event-Driven Architecture
 - Comparison of the Modes of Event-Driven Architecture
-
-
-
-## Changing Software Requirements
-
-When the requirments change, here are a few of the software changes required:
-
-- Code needs to be updated — potentially breaking dependant code
-- Integrations updated
-- Data updated
-- Deployment/DevOps updated
-- Data migration updated
-- Testing updated
-- Documentation updated
-- Training updated
-
-A new release through the software lifecycle
-The most significant change is extending deadlines and the plan being updated to incorporate all the work needed to make the changes above. When plans change, emotions rise and pressure increases.
 
 
 
@@ -126,9 +126,6 @@ CSS frameworks are great way to build fast and responsive websites.A framework h
 
 
 ## References
-
-[The 3 Questions You Must Ask Before Building a Product](https://medium.com/geekculture/the-3-questions-you-must-ask-before-building-a-product-b2ba104e52f9)
-
 
 [The Single Responsibility Principle Explained in Python](https://betterprogramming.pub/the-single-responsibility-principle-explained-in-python-622e2d996d86)
 
