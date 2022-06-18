@@ -3,10 +3,10 @@
 <!-- MarkdownTOC -->
 
 - SOLID Design Principles
-- The Single-responsibility Principle
 - SOLID Coding in Python
+- The Single-responsibility Principle
+- Software Engineering Myths
 - Software Engineering Principles
-- Changing Software Requirements
 - Tips to Design Responsive Website
 - References
 
