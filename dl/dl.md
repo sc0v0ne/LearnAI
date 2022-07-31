@@ -19,7 +19,6 @@
     - The Transformer Attention Mechanism
 - Transfer Learning
     - Transfer learning types
-- Examples
 - References
 
 <!-- /MarkdownTOC -->
@@ -205,28 +204,10 @@ Figure: Transfer learning quadrant
 - Quadrant 4: small data size but has a high data similarity. In this case, we can implement the fixed feature extractor method for transfer learning
 
 
-## Examples
-
-[Deep Learning with Python: Neural Networks (complete tutorial)](https://towardsdatascience.com/deep-learning-with-python-neural-networks-complete-tutorial-6b53c0b06af0)
-
-[Keras Code Examples](https://keras.io/examples/)
-
-[Training & evaluation with the built-in methods](https://keras.io/guides/training_with_built_in_methods/)
-
-[Working with preprocessing layers](https://keras.io/guides/preprocessing_layers/)
-
-[Transfer learning & fine-tuning](https://keras.io/guides/transfer_learning/)
-
-
-
 ## References
 
 H. Tatsat, S. Puri, and B. Lookabaugh, "Machine Learning and Data Science Blueprints for Finance", O’Reilly Media, ISBN: 978-1-492-07305-5, 2021. 
 
-
-[Deep Learning (Keras)](https://machinelearningmastery.com/start-here/#deeplearning)
-
-[Convolutional Layers vs Fully Connected Layers](https://towardsdatascience.com/convolutional-layers-vs-fully-connected-layers-364f05ab460b)
 
 [Better Deep Learning Performance](https://machinelearningmastery.com/start-here/#better)
 
@@ -238,6 +219,8 @@ H. Tatsat, S. Puri, and B. Lookabaugh, "Machine Learning and Data Science Bluepr
 
 [Understand the Impact of Learning Rate on Neural Network Performance](https://machinelearningmastery.com/understand-the-dynamics-of-learning-rate-on-deep-learning-neural-networks/)
 
+[Estimating required sample size for model training](https://keras.io/examples/keras_recipes/sample_size_estimate/)
+
 
 [Encoder-Decoder Models for Text Summarization in Keras](https://machinelearningmastery.com/encoder-decoder-models-text-summarization-keras/)
 
@@ -246,6 +229,4 @@ H. Tatsat, S. Puri, and B. Lookabaugh, "Machine Learning and Data Science Bluepr
 [The Transformer Attention Mechanism](https://machinelearningmastery.com/the-transformer-attention-mechanism/)
 
 [A Gentle Introduction to Transfer Learning for Deep Learning](https://machinelearningmastery.com/transfer-learning-for-deep-learning/)
-
-
 
