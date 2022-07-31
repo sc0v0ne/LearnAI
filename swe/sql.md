@@ -1,15 +1,42 @@
 # SQL
 
+
+<!-- MarkdownTOC -->
+
+- SQL Tips
+  - 1. Avoid using `select *`.
+  - 2. Replace “union" with "union all".
+  - 3. Small table drives big table.
+  - 4. Bulk operations.
+  - 5. Use limit.
+  - 6. Do not use too many values in the in keyword.
+  - 7. Incremental query.
+  - 8. Efficient paging.
+  - 9. Replacing subqueries with join queries.
+  - 10. Join tables should not be too many.
+  - 11. Inner join note.
+  - 12. Limit the number of indexes.
+  - 13. Choose the appropriate field type.
+  - 14. Improve the efficiency of group by
+  - 15. Index optimization.
+- N+1 Query Problem
+- References
+
+<!-- /MarkdownTOC -->
+
+
+## SQL Tips
+
 Here are some tips on SQL optimization[1]:
 
-1. Avoid using `select *`. 
+### 1. Avoid using `select *`.
 
 ```sql
   # correct example
   select name, age from user where id = 1;
 ```
 
-2. Replace “union" with "union all".
+### 2. Replace “union" with "union all".
 
 ```sql
 # correct example
@@ -18,7 +45,7 @@ union all
 (select * from user where id=2);
 ```
 
-3. Small table drives big table.
+### 3. Small table drives big table.
 
 If we want to check the list of orders placed by all valid users.
 
@@ -49,7 +76,7 @@ Here, the order table has 10,000 pieces of data and the user table has 100 piece
 - exists applies to the small table on the left and the large table on the right.
 
 
-4. Bulk operations.
+### 4. Bulk operations.
 
 What if you have a batch of data that needs to be inserted after business processing?
 
@@ -79,7 +106,7 @@ However, it is not recommended to operate too much data in batches at one time. 
 
 Batch operations need to grasp a degree, and it is recommended that each batch of data be controlled within 500 as much as possible. If the data is more than 500, it will be processed in multiple batches.
 
-5. Use limit.
+### 5. Use limit.
 
 Sometimes, we need to query the first item of some data: query the first order placed by a user and we want to see the time of his first order.
 
@@ -108,7 +135,7 @@ where id>=100 and id<200 limit 100;
 
 Then, even if the wrong operation (such as the id is wrong) it will not affect too much data.
 
-6. Do not use too many values in the in keyword.
+### 6. Do not use too many values in the in keyword.
 
 For the batch query interface, we usually use th in keyword to filter out data. 
 
@@ -129,7 +156,7 @@ If there are more than 500 records in ids, we can use multiple threads to query 
 However, this is only a temporary solution and is not suitable for scenes with too many ids. Because there are too many ids, even if the data can be quickly detected, if the amount of data returned is too large, the network transmission is very performance-intensive and the interface performance is not much better.
 
 
-7. Incremental query.
+### 7. Incremental query.
 
 Sometimes, we need to query data through a remote interface and synchronize it to another database.
 
@@ -149,7 +176,7 @@ After each synchronization is completed, save the largest id and time of the 100
 This incremental query method can improve the efficiency of a single query.
 
 
-8. Efficient paging.
+### 8. Efficient paging.
 
 When querying data on the list page, we generally paginate the query interface to avoid returning too much data at one time and affecting the performance of the query. 
 
@@ -180,7 +207,7 @@ from user where id between 1000000 and 1000020;
 The between should be paginated on the unique index or there will be an inconsistent size of each page.
 
 
-9. Replacing subqueries with join queries.
+### 9. Replacing subqueries with join queries.
 
 If we need to query data from more than two tables in MySQL, there are generally two implementation methods: subquery and join query.
 
@@ -203,7 +230,7 @@ inner join user u on o.user_id = u.id
 where u.status=1
 ```
 
-10. Join tables should not be too many.
+### 10. Join tables should not be too many.
 
 If there are too many join, MySQL will be very complicated when selecting indexes and it is easy to choose the wrong index.
 
@@ -223,7 +250,7 @@ If we need to query the data in other tables in the implementation of the busine
 
 However, the number of joined tables should be determined according to the actual situation of the system. It cannot be generalized. In general, the less the better.
 
-11. Inner join note.
+### 11. Inner join note.
 
 We generally use the join keyword to query  multiple tables.
 
@@ -253,7 +280,7 @@ If two tables are associated using left join, MySQL will use the left join keywo
 
 When using left jointo query, use a small table on the left and a large table on the right. In general, try to use left join as little as possible.
 
-12. Limit the number of indexes.
+### 12. Limit the number of indexes.
 
 We all know that indexes can significantly improve the performance of query SQL but more number  indexes is not the better.
 
@@ -269,7 +296,7 @@ How can a high concurrency system optimize the number of indexes?
 
 If we can build a joint index, do not build a single index and we can delete a useless single index.
 
-13. Choose the appropriate field type.
+### 13. Choose the appropriate field type.
 
 char represents a fixed string type and the storage space of the field of this type is fixed which will waste storage space.
 
@@ -302,7 +329,7 @@ Use small types as much as possible such as  bit to store boolean values, tinyin
 - decimal is used for the amount field to avoid the problem of loss of precision.
 
 
-14. Improve the efficiency of group by
+### 14. Improve the efficiency of group by
 
 We have many business scenarios that need to use the group by keyword which is used to group and avoid duplicates.
 
@@ -328,7 +355,7 @@ group by user_id
 
 Before our SQL statements do some time-consuming operations, we should reduce the data range as much as possible which can improve the overall performance of SQL.
 
-15. Index optimization.
+### 15. Index optimization.
 
 In SQL optimization, there is a very important content: index optimization.
 
