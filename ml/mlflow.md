@@ -2,17 +2,16 @@
 
 <!-- MarkdownTOC -->
 
-- What is MLflow?
-- What is MLflow Tracking?
-- Tracking Experiments with MLflow Tracking
-    - Breaking Runs Down into Experiments
+- What is MLflow
+- Tracking Experiments
+    - Tracking Experiments with MLflow Tracking
+    - Group Runs into Experiments
     - Logging experiments manually
     - Logging experiments automatically
-- Packaging Projects with MLflow Projects
-    - What are MLflow Projects?
-    - Packaging Python Code for Conda Environments with Projects
+- Packaging Projects
+    - Packaging Python Code for Conda Environments
     - Run Packaged MLflow Projects
-- What are MLflow Models?
+- Deploy Models
     - Saving Models with MLflow Models
     - Providing an input signature and input examples
     - Inferring the input signature automatically
@@ -24,10 +23,16 @@
     - Inference with the Loaded models
     - Serve Models with MLflow Models
     - Inference with a Served Model
-- Build a Python API and integrate it into a React web applicatio
-    - Overview of the Application
+- Build A React Web Application with MLflow
+    - Overview
     - Building the API
     - Building the API endpoints
+- Experiment Tracking With MLflow and DagsHub
+    - What is experiment tracking
+    - Basics of logging experiments with MLflow
+    - Deep dive into MLflow workflow
+    - Logging experiments with Git and DagsHub
+    - Analyzing experiment results with DagsHub
 - ML Pipelines
     - Ploomber
     - PyCaret
@@ -35,51 +40,71 @@
 
 <!-- /MarkdownTOC -->
 
-## What is MLflow?
+## What is MLflow
 
 **MLflow** is an open-source platform for managing machine learning lifecycles that is designed to help data scientists and ML engineers facilitate the tracking of experiments and the deployment of code to a wide range of environments.
 
-MLflow consists of the following four  components:
+MLflow consists of the following four components [4]:
 
-- MLflow Tracking: allows recording of experiments including the tracking of  models, hyperparameters, and artifacts.
+- **MLflow Tracking:** allows recording of experiments including the tracking of models, hyperparameters, and artifacts.
 
-- MLflow Projects: package data science code in a reproducible format.
+- **MLflow Projects:** allows packaging of data science code in a reproducible format.
 
-- MLflow Models: export and deploy machine learning models in various environments.
+- **MLflow Models:** allows export and deployment of ML models in various environments.
 
-- MLflow Registry: enables model storage, versioning, staging, and annotation.
+- **MLflow Registry:** enables model storage, versioning, staging, and annotation.
 
 
-## What is MLflow Tracking?
+## Tracking Experiments
 
-MLflow Tracking is a toolset for running and tracking machine learning experiments. 
+**MLflow Tracking** is a toolset for running and tracking machine learning experiments. 
 
-Tracking relies on the concept of runs to organize and store tracking data. 
+Tracking relies on the concept of **runs** to organize and store tracking data. 
 
-Each run records the following information:
+Each run records the following information [4]:
 
-MLflow also allows runs to be grouped into experiments. If you are going to be performing many tracking runs, you should break them up into experiments to keep everything neat and organized.
+- Code Version: Git commit hash used for the run, if it was run from an MLflow Project.
+
+- Start and end time: the start and end time of the run. 
+
+- Source: Name of the file to launch the run or the project name and entry point for the run if run from an MLflow Project.
+
+- Parameters: Key-value input parameters of your choice. Both keys and values are strings.
+
+- Metrics: Key-value metrics where the value is numeric. Each metric can be updated throughout the course of the run (such as to track if the
+model loss function is converging), and MLflow records the metric full history for visualization.
+
+- Artifacts: Output files in any format such as images (PNGs), models (a pickled scikit-learn model), and data files (such as a Parquet file) as artifacts.
+
+MLflow also allows runs to be grouped into experiments. 
+
+If we are going to be performing many tracking runs, we should break them up into experiments to keep everything neat and organized.
 
 MLflow Tracking allows runs and artifacts to be recorded on:
 
-- A local machine. This is the option we’ll be exploring in the guide below.
+- A local machine which is the option we will be exploring.
 - A local machine with SQLite.
 - A local machine with Tracking Server to listen to REST calls.
 - Remote machines with Tracking Server.
 
 We can view tracked data using the MLflow user interface.
 
-Tracking can be done either manually or automatically. 
+Tracking can be done manually or automatically. 
 
 - With manual tracking, we log parameters, metrics, and artifacts by calling the associated functions and passing the values of interest to them. 
 
-- MLflow also has built-in automatic loggers that record a number of predefined pieces of data for each of the supported packages.
+- MLflow has built-in automatic loggers that record a number of predefined pieces of data for each of the supported packages.
 
-## Tracking Experiments with MLflow Tracking
 
-By default, Tracking records runs in a local mlruns directory where you run the project. We’re going to be using the default directory to keep things simple. You can check the current tracking directory by calling `mlflow.tracking.get_tracking_uri()`.
+### Tracking Experiments with MLflow Tracking
 
-If we want to change the tracking directory, we use `mlflow.set_tracking_uri()` and pass a local or remote path where we want to use to store the data. We also need to prefix the path with `file:/`. 
+By default, Tracking records runs in a local `mlruns` directory where we run the project. 
+
+We will be using the default directory to keep things simple. 
+
+We can check the current tracking directory by calling `mlflow.tracking.get_tracking_uri()`.
+
+If we want to change the tracking directory, we can use `mlflow.set_tracking_uri()` and pass a local or remote path where we want to use to store the data, but we also need to prefix the path with `file:/`. 
 
 ```py
     import mlflow
@@ -88,15 +113,15 @@ If we want to change the tracking directory, we use `mlflow.set_tracking_uri()` 
     from sklearn import datasets
 ```
 
-### Breaking Runs Down into Experiments
+### Group Runs into Experiments
 
-To keep many runs organized and easily scannable, we can group them into _experiments_.
+We can group runs into **experiments** to keep many runs organized and easily scannable,
 
-By default, all runs are grouped into an experiment named “Default” which can be chaned using `mlflow.create_experiment()`.
+By default, all runs are grouped into an experiment named “Default” which can be changed using `mlflow.create_experiment()`.
 
 - If we set an experiment that does not exist, MLflow will create the experiment for us.
 
-- Keep in mind that deleted experiments are stored in mlruns/.trash, so you can recover them if necessary.
+- Keep in mind that deleted experiments are stored in mlruns/.trash, so we can recover them if necessary.
 
 - Runs performed under an experiment are stored in the directory of that experiment under mlruns. Although we assign names to experiments when creating them, the experiment directory names reflect their IDs.
 
@@ -104,13 +129,13 @@ By default, all runs are grouped into an experiment named “Default” which ca
 
 ```py
     # Creating an experiment
-    experiment_id = mlflow.create_experiment(name="test")
+    exp_id = mlflow.create_experiment(name="test")
 
     # Select an existing experiment
     mlflow.set_experiment(experiment_name="test")
 
     # Delete an experiment
-    mlflow.delete_experiment(experiment_id=experiment_id)
+    mlflow.delete_experiment(experiment_id=exp_id)
 ```
 
 ### Logging experiments manually
@@ -139,7 +164,7 @@ To track data with MLflow Tracking, we can use the following functions:
 - mlflow.log_artifact(): log a local file or directory as an artifact. Batch logging is done with mlflow.log_artifacts().
 
 
-Here is a full example:
+Here is a full example [4]:
 
 ```py
     # Checking if the script is executed directly
@@ -198,9 +223,9 @@ Under `artifacts/model`, we will find the files of the model trained with the C 
 
 Depending on what we want to accomplish with experiment tracking, setting up runs can be quite time-consuming. Fortunately, MLflow tracking has built-in functionality for automatic logging with popular data science and ML libraries: scikit-learn, Tensorflow, Pytorch, XGBoost, LightBGM, statsmodels, Spark, and Fastai.
 
-The scikit-learn autologger defines distinct sets of data to be tracked for standalone estimators/pipelines and parameter search estimators. With the autologger, there’s no need to explicitly log metrics, parameters, or artifacts — everything is handled by MLflow automatically. But you can additionally log variables manually if you want to.
+The scikit-learn autologger defines distinct sets of data to be tracked for standalone estimators/pipelines and parameter search estimators. With the autologger, there is no need to explicitly log metrics, parameters, or artifacts — everything is handled by MLflow automatically. But we can also log variables manually if needed.
 
-To demonstrate the autologger, we will use scikit-learn’s `GridSearchCV` algorithm on `LogisticRegression`.
+To demonstrate the autologger, we will use the scikit-learn `GridSearchCV` algorithm on `LogisticRegression` [4]:
 
 ```py
     # Set an experiment for automatic logging
@@ -237,7 +262,9 @@ After training is complete, we will be able to view the logged results in the ML
 
 Compared to our manual logger, the scikit-learn autologger captures more data points, including mean fit time and mean score time. With GridSearchCV, it also shows the best achieved cross-validation score and the best C value.
 
-The directory structure for autologger runs is similar to that of manual runs. However, if you navigate to the artifacts directory of the parent run, you will notice that MLflow has also saved:
+The directory structure for autologger runs is similar to that of manual runs. 
+
+If we navigate to the `artifacts` directory of the parent run, we will see that MLflow has also saved:
 
 - The best fitted estimator.
 
@@ -248,41 +275,42 @@ The directory structure for autologger runs is similar to that of manual runs. H
 - Plots for the training confusion matrix, the precision-recall curve, and the ROC curve.
 
 
-## Packaging Projects with MLflow Projects
 
-### What are MLflow Projects?
+## Packaging Projects
 
-**MLflow Projects** is a component of MLflow that allows users to turn data science and machine learning code into packages reproducible in various environments.
+**MLflow Projects** is a component that allows users to turn data science and machine learning code into packages _reproducible_ in various environments [4].
 
-As of MLflow version 1.21.0, Projects could be used to make packages for the following two environments:
+As of MLflow version 1.21.0, Projects can be used to make packages for the following two environments [4]:
 
-- Conda. If conda is chosen as the target environment, it will be used to handle the dependencies for the packaged code.
+- Conda: If conda is chosen as the target environment, it will be used to handle the dependencies for the packaged code.
 
-- Docker container. MLflow supports Docker for code containerization. If your project contains non-Python code or dependencies, you should use Docker.
+- Docker container: MLflow supports Docker for code containerization. If your project contains non-Python code or dependencies, you should use Docker.
 
-We will be focusing on making packages for conda environments in this post. 
+We will be focusing on making packages for conda environments. 
 
-NOTE: the target environment where the code is intended to be executed should have conda or Docker installed (depending on which method you use).
+NOTE: The target environment where the code is to be executed should have conda or Docker installed (depending on which method you use).
 
-### Packaging Python Code for Conda Environments with Projects
+### Packaging Python Code for Conda Environments
 
 In MLflow, a project is a Git repository or a local path containing your files. To create an MLflow Project, we need the following components:
 
 - The Python scripts we want to execute.
+
 - A conda environment YAML file to handle dependencies.
+
 - An MLproject file to control the flow of the application.
 
-MLflow can use any local directory or GitHub repository as a project even without MLproject or conda env files. However, configuring them gives you more fine-grained control over the project behavior. 
+MLflow can use any local directory or GitHub repository as a project even without MLproject or conda env files. However, configuring them provided more fine-grained control over the project behavior. 
 
 To package Python projects, we need to:
 
-- Create a directory to store our Python scripts, the configuration files listed above, and files that we need to run the scripts (e.g. datasets).
+- Create a directory to store the Python scripts, the configuration files, and files that we need to run the scripts (such as datasets).
 
 - Create a conda environment YAML file.
 
 - Create an MLproject file.
 
-- Modify our Python scripts to accept command line arguments (optional).
+- Modify the Python scripts to accept command line arguments (optional).
 
 ### Run Packaged MLflow Projects
 
@@ -308,21 +336,22 @@ The Python script should be located in the directory above the project and conta
 ```
 
 
-## What are MLflow Models?
 
-MLflow **Models** are a set of instruments that allow you to package machine learning and deep learning models into a standard format that can be reproduced in various environments.
+## Deploy Models
 
-With Models, we can package machine learning/deep learning models for deployment in a wide array of environments.
+**MLflow Models** are a set of instruments to package machine learning and deep learning models into a standard format that can be reproduced in various environments [5].
+
+With Models, we can package ML models for deployment in a wide array of environments.
 
 Models relies on the concept of _flavors_ which describes how packaged models should be run in the target environment. 
 
-There are three main types of model flavors in MLflow:
+There are three main types of model flavors in MLflow [5]:
 
-- Python function. Models saved as a generic Python function can be run in any MLflow environment regardless of which ML/DL package they were built with.
+- Python function: Models saved as a generic Python function can be run in any MLflow environment regardless of which ML/DL package they were built with.
 
-- R function. An R function is the equivalent of a Python function, but in the R programming language.
+- R function: An R function is the equivalent of a Python function, but in the R programming language.
 
-- Framework-specific flavors. MLflow can also save models in a flavor that corresponds to the framework they were built in. For example, a scikit-learn model could be loaded in its native format to enable users to leverage the functionality of scikit-learn.
+- Framework-specific flavors: MLflow can also save models in a flavor that corresponds to the framework they were built in such as scikit-learn  to enable users to leverage the functionality of scikit-learn.
 
 The contents of a packaged model will look similar to the following:
 
@@ -330,7 +359,7 @@ The contents of a packaged model will look similar to the following:
 
 - input_example.json: a file that contains an example input for the model to show the expected signature of input data.
 
-- MLmodel: a file that describes the saved flavors, the path of the model, the model’s input and output signatures, and more.
+- MLmodel: a file that describes the saved flavors, the path of the model, the model input and output signatures, and more.
 
 - model.pkl: the pickled model.
 
@@ -341,13 +370,14 @@ The contents of a packaged model will look similar to the following:
 Here we focus on two functionalities of MLflow Models:
 
 - **Saving** trained models in a local environment.
+
 - **Deploying** trained models in a local environment.
 
 Now, we need to train a scikit-learn estimator. 
 
-We are using scikit-learn’s breast cancer dataset to fit a `LogisticRegression` estimator. 
+We are using the scikit-learn breast cancer dataset to fit a `LogisticRegression` estimator. 
 
-We are splitting the data into train and test sets because we need some data after training to show how MLflow can be used to deploy models.
+We split the data into train and test sets because we need some data after training to show how MLflow can be used to deploy models.
 
 ```py
     # import dependencies
@@ -374,20 +404,23 @@ We are splitting the data into train and test sets because we need some data aft
 
 ### Providing an input signature and input examples
 
-Once our model is trained, we can package it straight away. However, to help others get started with the packaged model, we should also supply the expected input model signature along with input examples. We can also use input signatures to enforce the input format for models loaded as Python functions.
+Once the model is trained, we can package it. However, we should also supply the expected input model signature along with input examples to help others get started with the packaged model. 
+
+We can also use input signatures to enforce the input format for models loaded as Python functions.
 
 There are two ways we can provide the input signature for our model:
 
 - Using internal MLflow tools to infer the signature automatically.
+
 - Specifying the input signature manually.
 
 ### Inferring the input signature automatically
 
 To automatically infer the input signature, we can use the function `mlflow.models.infer_signature()`. 
 
-We are going to be using a pandas.DataFrame as `model_input`. 
+We will be using a pandas.DataFrame as `model_input`. 
 
-The main benefit of a` pandas.DataFrame` is that it can contain the column names of the input features which makes it clearer for future users what the inputs to our model are supposed to be.
+The main benefit of a `pandas.DataFrame` is that it can contain the column names of the input features which makes it clearer for future users what the inputs to our model are supposed to be.
 
 ```py
     # Convert train features into a DataFrame
@@ -400,11 +433,11 @@ The main benefit of a` pandas.DataFrame` is that it can contain the column names
     print(signature)
 ```
 
-We can see that our inputs were inferred to be of type double, while the output was inferred to be a Tensor of type int32.
+We can see that our inputs were inferred to be of type double while the output was inferred to be a Tensor of type int32.
 
 ### Specifying the Input Signature Manually
 
-If you need more control over the input signature, you can specify it manually. To do this, you need these two MLflow classes:
+If we need more control over the input signature, we can specify it manually. To do this, we need these two MLflow classes:
 
 - ColSpec: a class that specifies the data type and name of a column in a dataset. An alternative to ColSpec is TensorSpec, which is used to represent Tensor datasets.
 
@@ -453,12 +486,12 @@ Now, we can create schemas for the breast cancer dataset. Since this dataset has
 
 ### Provide input examples
 
-We can also provide an input example that matches our model signature to help users know the correct format of inputs.
+We can also provide an input example that matches the model signature to help users know the correct format of inputs.
 
-We can provide input examples as a pandas.DataFrame, a numpy.ndarray, a dict, or a list.
+We can provide input examples as a pandas.DataFrame, numpy.ndarray, dict, or list.
 
 
-We can use X_train_df to make sure that the input example matches the input signature, and we pick the two first data rows as an input example.
+We can use `X_train_df` to make sure that the input example matches the input signature, and we pick the two first data rows as an input example.
 
 ```py
     # Create an input example from our feature DataFrame
@@ -481,9 +514,10 @@ We can also specify conda and pip dependencies to help users reproduce the proje
 
 ### Save the model
 
-For scikit-learn, we can use either `mlflow.sklearn.log_model()` or `mlflow.sklearn.save_model()` to package your model:
+For scikit-learn, we can use either `mlflow.sklearn.log_model()` or `mlflow.sklearn.save_model()` to package the model:
 
 - log_model() logs the model under the current run as an artifact.
+
 - save_model() saves the model in the specified directory relative to your project’s path.
 
 ```py
@@ -495,7 +529,7 @@ For scikit-learn, we can use either `mlflow.sklearn.log_model()` or `mlflow.skle
                               input_example=input_example)
 ```
 
-After we save the model, the model along with the environment files and the input example will be saved in the path `/model` under the current working directory.
+After we save the model, the model along with the environment files, and the input example will be saved in the path `/model` under the current working directory.
 
 ### Log the Model as an Artifact
 
@@ -540,7 +574,7 @@ MLflow saves scikit-learn models in two formats or flavors:
 
 Keep in mind the following:
 
-- To load a model that has been saved with `mlflow.sklearn.log_model()`, we can prefix the directory with `runs:/`; specify the ID of the run under which the model was saved (`{run_id}` in our case); specify the path you passed to artifact_path earlier (model). 
+- To load a model that has been saved with `mlflow.sklearn.log_model()`, we can prefix the directory with `runs:/`; specify the ID of the run under which the model was saved (`{run_id}` in this case); specify the path we passed to artifact_path earlier (model). 
 
 When we prefix the path with `runs:/`, MLflow will look for the model in the artifacts path of the indicated run.
 
@@ -574,7 +608,7 @@ With many scikit-learn models (including our sklearn_model), we can also use `pr
 
 ### Serve Models with MLflow Models
 
-We can deploy models saved with MLflow in a variety of environments, ranging from a local machine to cloud platforms like Amazon SageMaker or Microsoft Azure.
+We can deploy models saved with MLflow in a variety of environments, ranging from a local machine to cloud platforms such as Amazon SageMaker or Microsoft Azure.
 
 Here, we perform a local deployment of our saved model using the command line interface. 
 
@@ -584,7 +618,7 @@ Here, we perform a local deployment of our saved model using the command line in
 
 ### Inference with a Served Model
 
-Now that our model is live, we can do inference with it. 
+Now that the model is live, we can do inference with it. 
 
 We can do this either programmatically (from a Python script) or through the command line. 
 
@@ -608,8 +642,9 @@ We are passing the request header headers as a parameter to the function because
 
 Now, we can use the function query to do inference.
 
-- We serialize our test_dataframe as a JSON string.
-- We send a query to our model and inspect the response.
+- We serialize the test_dataframe as a JSON string.
+
+- We send a query to the model and inspect the response.
 
 ```py
     # Convert the test DataFrame to JSON with different data orientations (Records)
@@ -641,20 +676,23 @@ To do inference with a CSV-serialized DataFrame, we would need to pass `{“Cont
 We can also use the command line interface to do predictions.
 
 
-## Build a Python API and integrate it into a React web applicatio
+----------
 
-Here we build a Python API and integrate it into a React web application. This application will allow us to:
+
+
+## Build A React Web Application with MLflow
+
+Here we build a Python API and integrate it into a React web application which will allow us to [6]:
 
 - Quickly try hyperparameter combinations to train linear and logistic regression.
 
 - Deploy best estimators and do inference.
 
+### Overview
 
-### Overview of the Application
+The React application will allow us to use some of the tracking and model deployment features of MLflow with very little code [6]:
 
-The React application will allow us to use some of the tracking and model deployment features of MLflow with very little code:
-
-- Use grid search to quickly try different hyperparameter combinations for linear and logistic regression. To help you achieve this, the app uses scikit-learn’s GridSearchCV, LogisticRegression, and LinearRegression.
+- Use grid search to quickly try different hyperparameter combinations for linear and logistic regression. To help achieve this goal, the app uses scikit-learn’s GridSearchCV, LogisticRegression, and LinearRegression.
 
 - Deploy the best estimators trained with GridSearchCV locally (more about MLflow deployment in PART 2).
 
@@ -685,14 +723,177 @@ Next, we are create two endpoints for our API:
 - /deploy-model : used to deploy models and do inference.
 
 
+----------
+
+
+
+## Experiment Tracking With MLflow and DagsHub
+
+The article [2] discusses techniques for experiment tracking in machine learning;
+
+1. What is MLflow and the basics of its tracking API.
+
+2. How to connect MLflow to DagsHub for better UI and free storage. 
+
+3. Deep dive into MLflow workflow and learn how to enable auto-logging for popular ML frameworks
+
+4. Using DagsHub client logger for lightweight experiment tracking using git
+
+5. Using DagsHub experiments tab to manage all your experiments and their results
+
+### What is experiment tracking
+
+Experiment tracking in machine learning is about saving and versioning the relevant details (metadata) related to each experiment since there will be many failed experiments and ideas before deploying a successful model in production. 
+
+Here are the most common metadata items that need to be tracked for each ML experiment:
+
+- The training and test metric(s)
+- Model hyperparameters and structure
+- Runtime
+- Dependencies of the model
+- The code to reproduce the experiment
+- The data needed to train the model, etc.
+
+Without the right tools, it will be extremely cumbersome to keep track of so many things manually.
+
+### Basics of logging experiments with MLflow
+
+One of the best open-source packages for machine learning experimentation is MLflow. MLflow has a lot of features to package ML projects and deploy them into production, but here we will only focus on the tracking API.
+
+The tracking API is designed to be straightforward. After importing the library, we can start logging model parameters and experiment results.
+
+```py
+import mlflow  # pip install MLflow
+
+with mlflow.start_run():
+    mlflow.log_params(
+        {"model_name": "DecisionTreeClassifier", "max_depth": 5, "subsample": 0.8}
+    )
+    mlflow.log_metrics({"accuracy": 0.83, "roc_auc": 0.80})
+```
+
+These two basic commands generate a special cache inside the root directory named `mlruns`. 
+
+For now, all you need to know about these directories is that you always keep track of them using a version control tool like Git or DVC. Once you have enough experiments to compare, you can run the `mlflow ui` command on the terminal:
+
+By default MLflow uses a local server but a better option is to use a free tracking server such as **DagsHub** so that all MLflow files are stored remotely and are visible to others.
+
+DagsHub is GitHub for data scientists that has dedicated storage systems for data version control (DVC) and experiment tracking with MLflow. 
+
+Any repository on DagsHub exposes a remote tracking URI for MLflow. 
+
+
+To start sending experiment details to this tracking server, here are the steps you need to take:
+
+```py
+import os
+import mlflow
+
+mlflow.set_tracking_uri("https://dagshub.com/BexTuychiev/pet_pawpularity.mlflow")
+
+os.environ["MLFLOW_TRACKING_USERNAME"] = "MLFLOW_TRACKING_USERNAME"
+os.environ["MLFLOW_TRACKING_PASSWORD"] = "MLFLOW_TRACKING_PASSWORD"
+```
+
+After importing MLflow, set the tracking URI to the link on your repo page. Then, set two environment variables for your DagsHub username and password, which are found under your DagsHub account settings.
+
+To avoid adding sensitive info to the scripts and accidentally commit them to git, we can create environment variables. 
+
+```bash
+export MLFLOW_TRACKING_URI="https://dagshub.com/BexTuychiev/pet_pawpularity.mlflow"
+export MLFLOW_TRACKING_USERNAME="your_dagshub_username"
+export MLFLOW_TRACKING_PASSWORD="your_dagshub_password"
+```
+
+Now, all experiments will be logged to DagsHub, which will be visible under the Experiments tab. 
+
+The experiments tab has all the functionality that the MLFlow native UI has and offers much more flexibility and design. We will discuss the features of the experiments tab later.
+
+### Deep dive into MLflow workflow
+
+So far, we have not seen the automated workflow of MLflow and its tracking API. We have been logging parameters and metrics manually using `log_params` or `log_metrics`.
+
+This approach can be tedious when we are still extracting the parameters and metrics on our own. It will also be more work and code to log additional parameters such runtime, model architecture for neural networks, etc.
+
+MLflow exposes separate auto logging classes for many popular ML frameworks to solve this problem:
+
+- sklearn.autolog
+- tensorflow.autolog
+- keras.autolog
+- xgboost.autolog
+- lightgbm.autolog
+- pytorch.autolog
+
+These auto-logging classes record the model parameters, training metrics, and fit params (if available) such as early stopping, epochs, and similar. 
+
+For Sklearn, the `sklearn.autolog` class also records results of hyperparameter tuning trials with GridSearch or the results of Pipeline objects.
+
+Here is an example:
+
+
+The crucial part starts with line 20 where we call the `start_run` context manager. 
+
+MLflow workflow is based on the concept of _runs_
+which can be a chunk of code written under the `start_run` context manager. 
+
+Since we called the `sklearn.autolog()` function at the beginning of the script, experiment details that happen after the `start_run` will be recorded including:
+
+- Model hyperparameters
+- Training metrics for regression such as MSE, R2, MAE, etc.
+- Custom metrics from sklearn.metrics such as RMSE
+
+The `end_run()` function is optional. 
+
+
+Here is another auto logger example with Keras:
+
+
+### Logging experiments with Git and DagsHub
+
+If this seems like too much information, we can choose a more lightweight option such as the DagsHub client package to log experiments. 
+
+Here is a simple function that logs user-defined hyperparameters and metrics to git:
+
+Even though the DagsHub client does not have fancy auto-loggers, it is fully reproducible provided that we are using DVC to track data. 
+
+We can switch to any experiment and the project’s state at the time of finishing the experiment with a single git checkout.
+
+MLflow does record the commit hashes, but all MLflow runs attach themselves to the latest commit, before the experiment happened. Therefore, it will take some work to go back to the code of the experiment which is a definite disadvantage compared to the DagsHub client.
+
+
+### Analyzing experiment results with DagsHub
+
+The experiments tab does more than just show a list. 
+
+The most important feature is comparing experiments. 
+
+We can select the experiments that we want to compare and DagsHub generates several useful comparison metrics:
+
+We can also assign labels to experiments with different targets or data. 
+
+Since dagshub uses git for tracking and MLflow can infer the current commit hash, we can go directly to the project state at the time of running the experiment.
+
+Finally, we can run `git diffs` directly from DagsHub. 
+
+Here are the steps you can take to see the code and file differences between the two experiments:
+
+
+After copying the commit hashes of the experiments you want, go to the files tab and paste them into the two fields. The changed files and directories will be highlighted.
+
+If you press the “File compare” button, you see an in-depth outline of every changed file, script, and notebook:
+
+
+----------
+
+
 
 ## ML Pipelines
 
+The article [3] discusses how to create a machine learning pipeline using Ploomber, Pycaret, and MLFlow for model training and batch inference. 
+
 A machine learning **pipeline** is composed of a sequence of steps that automate a machine learning **workflow**. 
 
-Common steps in a machine learning pipeline include: data collection, data cleaning, feature engineering, model training, model evaluation.
-
-In this article, we create a machine learning pipeline using Ploomber, Pycaret, and MLFlow for model training and batch inference [3]. 
+Common steps in a machine learning pipeline include: data collection, data cleaning, feature engineering, model training, and model evaluation.
 
 ### Ploomber
 
@@ -735,11 +936,18 @@ The project involves the following steps:
 
 
 
+
 ## References
 
-[1] [Managing Machine Learning Lifecycles with MLflow](https://www.instapaper.com/read/1489714170)
+[1] [MLflow Quickstart](https://mlflow.org/docs/latest/quickstart.html)
 
-[2] [MLflow Quickstart](https://mlflow.org/docs/latest/quickstart.html)
+[2] [Complete Guide to Experiment Tracking With MLflow and DagsHub](https://towardsdatascience.com/complete-guide-to-experiment-tracking-with-mlflow-and-dagshub-a0439479e0b9)
 
 [3] [Machine Learning Pipeline with Ploomber, PyCaret and MLFlow](https://towardsdatascience.com/machine-learning-pipeline-with-ploomber-pycaret-and-mlflow-db6e76ee8a10#4a8f)
+
+[4] [Managing Machine Learning Lifecycles with MLflow Part 1](https://kedion.medium.com/managing-machine-learning-lifecycles-with-mlflow-d4ce3d91ee10)
+
+[5] [Managing Machine Learning Lifecycles with MLflow Part 2](https://kedion.medium.com/managing-machine-learning-lifecycles-with-mlflow-a52372c60ba5)
+
+[6] [Managing Machine Learning Lifecycles with MLflow Part 3](https://kedion.medium.com/managing-machine-learning-lifecycles-with-mlflow-f230a03c4803)
 

@@ -12,11 +12,11 @@
 - Cloud Services
     - Deta
     - DagsHub
+    - Digital Ocean
+    - Hetzner
     - Streamlit
+    - Web3.Storage
 - PaaS
-- Observing and Monitoring Model in Production
-- Why monitor ML models in Production
-- Verification and Validation \(V&V\)
 - References
 
 <!-- /MarkdownTOC -->
@@ -114,7 +114,7 @@ The trend now is toward gRPC for microservices since it is more secure, faster, 
 
 **Deta Base** is a super easy to use production-grade NoSQL database that comes with unlimited storage.
 
-**Deta Drive** is an easy to use cloud storage solution by Deta – get 10GB for free
+**Deta Drive** is an easy to use cloud storage solution by Deta (get 10GB for free)
 
 ### DagsHub
 
@@ -130,10 +130,15 @@ The trend now is toward gRPC for microservices since it is more secure, faster, 
 
 ### Streamlit
 
-[Streamlit](https://streamlit.io/) is a Python package that makes it very easy to create dashboards and data applications without the need for any front-end programming expertise
+[Streamlit](https://streamlit.io/) is a Python package that makes it easy to create dashboards and data applications without the need for any front-end programming expertise
 
 All in Python. All for free.
 
+### Web3.Storage
+
+[Web3.Storage](https://web3.storage)
+
+[Store Unlimited Data for Free on IPFS and Retrieve it with Python](https://towardsdatascience.com/store-unlimited-data-for-free-on-ipfs-and-retrieve-it-with-python-8db7297b493d)
 
 
 ## PaaS
@@ -156,75 +161,17 @@ Here are [few alternatives][^three_paas_alternatives] for PaaS:
 
 
 
-## Observing and Monitoring Model in Production
-
-Model monitoring is critical to model viability in the post deployment production stage whoch is often overlooked. 
-
-**Data drift over time:** The quality and accuracy of the model depends on the quality of the data which is complex and never static. The original model was trained with the extracted features may not be as important over time. Some new features may emerge that need to be taken into account. Such features drifts in data require retraining and redeploying the model because the distribution of the variables is no longer relevant.
-
-**Model concept changes over time:** Many practitioners refer to this as model decay or model staleness. When the patterns of trained models no longer hold with the drifting data, the model is no longer valid because the relationships of its input features may not necessarily produce the expected prediction. This, model accuracy degrades.
-
-**Models fail over time:** Models fail for inexplicable reasons: a system failure or bad network connection; an overloaded system; a bad input or corrupted request. Detecting these failures root causes early or its frequency mitigates bad user experience and deters mistrust in the service if the user receives wrong or bogus outcomes.
-
-**Systems degrade over load:** Constantly being vigilant of the health of dedicated model servers or services deployed is also important: data stores, web servers, routers, cluster nodes’ system health, etc.
-
-Collectively, these aforementioned monitoring model concepts are called _model observability_ which is important in MLOps best practices. Monitoring the health of data and models should be part of the model development cycle.
-
-NOTE: For model observability look to Evidently.ai, Arize.ai, Arthur.ai, Fiddler.ai, Valohai.com, or whylabs.ai.
-
-
-Monitoring:
-- performance (prediction vs actual, metrics, thresholds)
-- model drift vs data drift
-- model stability and population shift (PSI and CSI metrics)
-
-
-## Why monitor ML models in Production
-
-1. Data distribution changes : Why are there sudden changes in the values of my features?
-
-2. Model Ownership in Production : Who owns the model in production? The DevOps team? Engineers? Data Scientists?
-
-3. Training-Serving Skew : Why is the model giving poor results in production despite our rigorous testing and validation attempts during development?
-
-4. Model/Concept drift : Why was the model performing well in production and suddenly the performance dipped over time?
-
-5. Black box models : How to interpret and explain my model’s predictions in line with the business objective and to relevant stakeholders?
-
-6. Concerted adversaries : How can I ensure the security of my model? Is my model being attacked?
-
-7. Model Readiness : How to compare results from a newer version(s) of my model against the in-production version(s)?
-
-8. Pipeline health issues : Why does the training pipeline fail when executed? Why does a retraining job take so long to run?
-
-9. Underperforming system : Why is the latency of the predictive service very high? Why am I getting vastly varying latencies for my different models?
-
-10. Cases of extreme events (Outliers): How to track the effect and performance of my model in extreme and unplanned situations?
-
-11. Data Quality Issues : How to ensure the production data is being processed in the same way as the training data was?
-
-
-## Verification and Validation (V&V)
-
-To earn trust, any engineered systems must go through a verification and validation (V&V) process:
-
-- Verification means that the product satisfies the specifications. 
-
-- Validation means ensuring that the specifications actually meet the needs of the user and other affected parties. 
-
-- We need to verify the data that these systems learn from. 
-
-- We need to verify the accuracy and fairness of the results, even in the face of uncertainty that makes an exact result unknowable. 
-
-- We need to verify that adversaries cannot unduly influence the model, nor steal information by querying the resulting model.
-
-
-
 ## References
 
-[Considerations for Deploying Machine Learning Models in Production](https://towardsdatascience.com/considerations-for-deploying-machine-learning-models-in-production-89d38d96cc23?source=rss----7f60cf5620c9---4)
+[1] [Considerations for Deploying Machine Learning Models in Production](https://towardsdatascience.com/considerations-for-deploying-machine-learning-models-in-production-89d38d96cc23?source=rss----7f60cf5620c9---4)
 
-[Machine Learning in Production: Why Is It So Hard and So Many Fail?](https://towardsdatascience.com/machine-learning-in-production-why-is-it-so-difficult-28ce74bfc732)
+[2] [Machine Learning in Production: Why Is It So Hard and So Many Fail?](https://towardsdatascience.com/machine-learning-in-production-why-is-it-so-difficult-28ce74bfc732)
+
+[3] [ML Troubleshooting Is Too Hard Today (But It Doesn’t Have to Be That Way)](https://towardsdatascience.com/ml-troubleshooting-is-too-hard-today-but-it-doesnt-have-to-be-that-way-fbf9a10cac05)
+
+[4] [How to Deploy ML Models to Production](https://medium.com/mlearning-ai/how-to-deploy-ml-models-to-production-ab7ce1c353de)
+
+[5] [Best practices in the deployment of AI models](https://nagahemachandchinta.medium.com/best-practices-in-the-deployment-of-ai-models-c929c3146416)
 
 
 [The Easiest Way to Deploy Your ML/DL Models: Streamlit + BentoML + DagsHub](https://towardsdatascience.com/the-easiest-way-to-deploy-your-ml-dl-models-in-2022-streamlit-bentoml-dagshub-ccf29c901dac)
@@ -233,21 +180,6 @@ To earn trust, any engineered systems must go through a verification and validat
 
 [Serving Python Machine Learning Models With Ease using MLServer](https://pub.towardsai.net/serving-python-machine-learning-models-with-ease-29e1ba9e2155)
 
-
-[Model Drift in Machine Learning](https://towardsdatascience.com/model-drift-in-machine-learning-8023e3d08217)
-
-[Essential guide to Machine Learning Model Monitoring in Production](https://towardsdatascience.com/essential-guide-to-machine-learning-model-monitoring-in-production-2fbb36985108?gi=d5a42b3b9e9)
-
-[Best Practices For Monitoring Machine Learning Models In Production](https://medium.com/artificialis/best-practices-for-monitoring-machine-learning-models-in-production-b8996f2a85b3)
-
-[A Comprehensive Guide on How to Monitor Models in Production](https://medium.com/artificialis/a-comprehensive-guide-on-how-to-monitor-your-models-in-production-c069a8431723)
-
-[Model monitoring](https://medium.com/prosus-ai-tech-blog/model-monitoring-1849fb3afc1e)
-
-
-[Automating Data Drift Thresholding in Machine Learning Systems]https://towardsdatascience.com/automating-data-drift-thresholding-in-machine-learning-systems-524e6259f59)
-
-[Top 3 Python Packages for Machine Learning Validation](https://towardsdatascience.com/top-3-python-packages-for-machine-learning-validation-2df17ee2e13d)
 
 
 [^three_paas_alternatives]: https://medium.com/codex/3-paas-alternatives-to-heroku-db8fc750cc6f?source=rss----29038077e4c6---4 "3 PaaS Alternatives to Heroku"
