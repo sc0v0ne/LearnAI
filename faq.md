@@ -2,26 +2,30 @@
 
 <!-- MarkdownTOC -->
 
-- What is an AI Engineer?
-- Do I need a Master’s Degree?
+- What is an AI Engineer
+- What is the difference between AI and ML
+- Do I need a Master’s Degree
+- Problems with AI
 - Recommended Tutorials and Books
-- How to access Safari Online?
-- How to ask an AI/ML question?
-- How to choose a performance metric?
-- How to Choose an ML Algorithm?
-- Should I start learning ML by coding an algorithm from scratch?
-- Is image channels first or last?
-- How to share your work?
-- How to choose a Cloud Platform?
+- How to access Safari Online
+- Can I learn AI from research papers
+- How to ask an AI/ML question
+- How to choose a performance metric
+- How to Choose an ML Algorithm
+- How to choose classification model
+- Should I start learning ML by coding an algorithm from scratch
+- Is image channels first or last
+- How to share your work
+- How to choose a Cloud Platform
 - Common Questions on Encoding
-    - What if I have hundreds of categories?
-    - What encoding technique is the best?
-    - What if I have a mixture of numeric and categorical data?
+  - What if I have hundreds of categories
+  - What encoding technique is the best
+  - What if I have a mixture of numeric and categorical data
 - Common Questions on Normalization
-    - Which Scaling Technique is Best?
-    - Should I Normalize or Standardize?
-    - Should I Standardize then Normalize?
-    - How Do I Handle Out-of-Bounds Values?
+  - Which Scaling Technique is Best
+  - Should I Normalize or Standardize
+  - Should I Standardize then Normalize
+  - How Do I Handle Out-of-Bounds Values
 - Using AI with Medical Images
 - How to Develop a Chatbot
 - How to Develop Recommender Systems
@@ -63,19 +67,19 @@ Here are some facts to be aware of when learning AI/ML:
 
 - AI is primarily a graduate level (MSCS) topic. 
 
-- All students of AI need to . 
+- All students of AI need to know the history of AI. 
 
 - The study of AI requires: 1) a healthy dose of skepticism and 2) the study of the history of AI which led to its downfall in the 1980s. 
 
 There is currently a resurgence of misinformation and hype in AI research and software development which has led to the term "AI alchemy". 
 
-- 80-85% (most likely higher) of AI projects fail (probably mudh higher for some areas such as AV, RL, and Robotics). Keep in mind these are for the most part experienced software engineers. 
+- 80-85% (most likely higher) of AI projects fail (probably much higher for some areas such as AV, RL, and Robotics). Keep in mind these are for the most part experienced software engineers. 
 
 - There is an ethical dilemma in AI research. 
 
   Almost 34% of AI researchers admit to manipulating results in a recent IEEE survey (most certainly higher since irreproduciblity is a known problem with AI research). 
 
-- Engineering disciplines such as electrical engineering, civil engineering require a college degree, but software engineering (which includes AI/ML) does not require a degree (in the U.S.).  
+- Engineering disciplines such as electrical engineering and civil engineering require a college degree, but software engineering (which includes AI/ML) does not require a degree (in the U.S.).  
 
   In fact, many commercial AI/ML applications have some of the same safety and other risk factors as other commercial engineering applications (perhaps more so with AV and Robotics). 
 
@@ -99,6 +103,18 @@ If you have an .edu email account you can get free access to [Safari Online][^sa
 
 [Creating an Account](https://ecpi.libguides.com/SafariOReilly)
 
+Some good books are “Artificial Intelligence with Python”, “Artificial Intelligence by Example”, and “Programming Machine Learning”.
+
+
+## Can I learn AI from research papers
+
+Research papers are not a good resource for learning a topic. The reader is assumed to already know the core theory and concepts covered in textbooks. Thus, the best approach to learning AI is a good textbook. 
+
+AI is considered a graduate level topic in computer science, so there a lot of Math and CS prerequisites that are needed first to properly learn the core theory and concepts. Otherwise, it will be problematic at some point when you try to actually use AI to solve a real-world problem. 
+
+In general, the results of AI research articles are irreproducible. In fact, there is a major problem with integrity in AI research right now. The further away you get from reputable publications such as IEEE, the worse it gets.  I have seen numerous articles that I have no idea how they were ever published (major mistakes and errors). When learning AI, you need a healthy dose of skepticism in what you read, especially research articles. This is all discussed in the Russell and Norivg and other graduate textbooks. 
+
+[Is My Model Really Better?](https://towardsdatascience.com/is-my-model-really-better-560e729f81d2)
 
 
 ## How to ask an AI/ML question
@@ -121,7 +137,7 @@ Briefly describe the following (1-2 sentences per item):
 
 [How to ask an AI/ML question](https://aicoder.medium.com/how-to-ask-an-ai-ml-question-6cfddaa75bc9)
 
-In AI and CS you should always be able to describe in a few sentences what you are doing and why you are doing it. It is the first step in defining an AI problem. Also, there is a category and/or terminology for everything we do in CS. It always applies whether you are doing research or working on a simple problem. If you have not taken the time to think about the problem and put it into writing then u really don’t know what you are doing, do you?
+In AI and CS, you should always be able to describe in a few sentences what you are doing and why you are doing it. It is the first step in defining an AI problem. Also, there is a category and/or terminology for everything we do in CS. It always applies whether you are doing research or working on a simple problem. If you have not taken the time to think about the problem and put it into writing then u really don’t know what you are doing, do you?
 
 
 
@@ -162,15 +178,55 @@ I have some notes and checklists that I have created concerning the applied AI p
 
 
 
+## How to choose classification model
+
+What do you do when you run a neural network that's barely optimizing (10-20%) over the baseline?
+
+For more context, I am training a four layer neural network whose inputs are 2 x size 100 embeddings and the output is a boolean. The classes in each of my dataset are equally distributed (50% true, 50% false). As things stand, my model can detect falses with 75% accuracy and trues with just over 50%.
+
+-----
+
+Obviously, the model is not working since 50% accuracy is the lowest value which is the same as random guessing (coin toss). 
+
+First, plot the train/val loss per epoch of any models being trained to see what is happening (over/under-fitting) but I always dismiss any models with that low of a baseline accuracy (too much work). 
+
+Next, try to find a few well-performing models with good baseline results for further study. Pretty sure NN will not be the best model (usually XGBoost and Random Forest).
+
+For classification, I always evaluate the following models:
+
+- Logistic Regression
+- Naive Bayes
+- AdaBoost
+- kNN
+- Random Forest
+- Gradient Boosting
+- SGD
+- SVM
+- Tree
+
+I would start by using AutoML tools (Orange, AutoGluon, etc.) or write a test harness to get a baseline on many simpler models.  AutoML tools can perform much of the feature engineering that is needed for the different models (some models require different data prep than others) which is helpful. The tools can also quickly perform PCA and other techniques to help with feature engineering and dimensionality reduction. 
+
+I would first get a baseline on 10-20 simpler models first before trying NN. Even then, I would use tools such as SpaCy to evaluate pretrained NN models. 
+
+Only if all those models failed miserably would I then try to roll my own NN model. In general, you want to find a well-performing model that requires the least effort (hypertuning) - Occam's Razor. Most any model can be forced to fit a dataset using brute-force which is not the correct approach for AI.  
+
+I have lots of notes on text classification/sentiment analysis and NLP data preparation in the "nlp” folder of my repo in nlp.md and nlp_dataprep.md. 
+
+There are a lot of steps to text preprocessing in which mistakes can be made and it is often trial-and-error, so I prefer using AutoML to obtain baselines first before spending a lot of effort in coding. 
+
+https://github.com/codecypher/LearnAI
+
+
+
 ## Should I start learning ML by coding an algorithm from scratch
 
 [How to Learn Machine Learning](https://aicoder.medium.com/how-to-learn-machine-learning-4ba736338a56)
 
-I would recommend using Orange, AutoGluon, PyCaret, and/or simmilar tools to evaluate many models on your dataset. The tools will also help detect any issues with the data as well as perform the most common transforms needed for the various algorithms. Then, select the top 3 for further study. 
+I would recommend using Orange, AutoGluon, PyCaret and similar tools to evaluate many models (10-20) on your dataset. The tools will also help detect any issues with the data as well as perform the most common transforms needed for the various algorithms. Then, select the top 3 for further study. 
 
 AutoML tools are the future of AI, so now would be a good time to see how they work rather than spend a lot of time coding the wrong algorithm from scratch which is a common beginner mistake. In short, you need to learn a data-centric approach.
 
-The rule of thunb (heuristic) is that a DL model should be your last choice (Occam's Razor). 
+The rule of thumb is that a deep learning model should be your last choice (Occam's Razor). 
 
 
 ## Is image channels first or last
@@ -286,6 +342,7 @@ Chatbots are better to use pretrained model and software. You can take a look at
 [Building a Chatbot with Rasa](https://towardsdatascience.com/building-a-chatbot-with-rasa-3f03ecc5b324)
 
 [Python Chatbot Project – Learn to build your first chatbot using NLTK and Keras](https://data-flair.training/blogs/python-chatbot-project/)
+
 
 
 ## How to Develop Recommender Systems
