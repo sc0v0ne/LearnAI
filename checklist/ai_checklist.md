@@ -2,15 +2,16 @@
 
 <!-- MarkdownTOC -->
 
-- When You Should not use ML?
+- When not to use ML
     - Data-related issues
     - Interpretability
     - Technical Debt
     - Better Alternatives
+- Mistakes to Avoid in AI
 - Feature Engineering
 - AI Checklist
-    - When to retrain the model?
-    - How to retrain the model?
+    - When to retrain the model
+    - How to retrain the model
 - Problem Definition Checklist
 - Dataset Selection Checklist
 - Data Preparation Checklist
@@ -20,6 +21,8 @@
 - Deployment Checklist
 - Monitoring Checklist
     - What is a Key Performance Indicator \(KPI\)?
+- 5 Steps to follow for Successful AI Project
+- Common Machine Learning Techniques for AI Development
 - NLP Checklist
     - NLP Python Libraries
     - Text Preprocessing
@@ -32,7 +35,7 @@
 <!-- /MarkdownTOC -->
 
 
-## When You Should not use ML?
+## When not to use ML
 
 The article [1] discusses four reasons when you should not use machine learning.
 
@@ -76,6 +79,46 @@ You should start with the simplest solution that you can implement and iterative
 
 > Simpler = Better (Occam's Razor)
 
+
+
+## Mistakes to Avoid in AI
+
+Here are eight mistakes to avoid when using machine learning [12]:
+
+1. Not understanding the user
+
+What does your user or business really want, you must understand from the beginning
+
+2. Not performing failure analysis
+
+If you don’t perform a failure analysis- an analysis of the frequency of different categories of failure of your system — you may be expending a lot of effort for little result.
+
+3. Not looking at the model
+
+Clearly look for the weights and splits which may end up causing you to choose the wrong model
+
+4. Not using existing solutions
+
+Explore the existing solutions from the major technology companies. It is not always a good idea to create unique solutions
+
+5. Not comparing to a simple baseline model
+
+It is natural to want to start with a complex model. But sometimes a single neutron(logistic regression) performs as well as a deep neural network with six hidden layers
+
+6. Not looking for data leakage
+
+In case of data leakage, the proper information or clues wont be available at the time of prediction, as a result wrong solution would come
+
+7. Not looking at the data
+
+When you don’t look at the data carefully, you can miss useful insights which will lead to a data error and missing data
+
+8. Not qualifying the use case
+
+Before starting a machine learning project, it is important to determine whether the project is worth doing and to consider its ramifications
+
+
+
 ----------
 
 
@@ -85,9 +128,10 @@ Feature engineering is the process of transforming data to extract valuable info
 
 If done correctly, feature engineering can play even a bigger role in model performance than hyperparameter tuning.
 
-A checklist for transforming features for better model performance:l is given in [5]. 
+A checklist for transforming features for better model performance is given in [5]. 
 
 The article [6] explains and implements PCA in Python. 
+
 
 
 ----------
@@ -122,22 +166,19 @@ The two most common architectures for ML model serving are:
 2. **Microservice Based Model Serving:** The model is served independently of the application, and predictions are provided in real-time as per request. This type of architecture provides flexibility in terms of model training and deployment.
 
 
-### When to retrain the model?
+### When to retrain the model
 
 The performance of an ML model degrades over time in production, so it is best to evaluate retraining requirements before model serving. Based on the use case, model monitoring, and evaluation, one can decide when to retrain the model again. One good way to decide on retraining time is to use out-of-time analysis on different time windows.
 
-### How to retrain the model?
+### How to retrain the model
 
-Retraining is essential, and it helps to keep the model up to date. There are broadly two ways to retrain machine learning models — online & offline training.
+Retraining is essential and it helps to keep the model up to date. There are broadly two ways to retrain machine learning models — online & offline training.
 
 Online Training: The model is re-trained while in production. True labels are circulated back to the model at a certain interval to update/ retrain the model. This requires a separate architecture and is generally hard to implement.
 
 For example, when we predict ad-click probability we can get feedback (clicked or not clicked) which can be used to update the model online.
 
 Offline Training: The model is re-trained from scratch, so we have full control over the new model and data to train. The new model is pushed in production using A/B testing or shadow testing.
-
-
-TODO: Add Deployment Checklist
 
 
 
@@ -390,6 +431,59 @@ Managing with the use of KPIs includes setting targets (the desired level of per
 
 
 
+## 5 Steps to follow for Successful AI Project
+
+Using machine learning to help your business achieve edge on competition requires a plan and roadmap [13]. 
+
+You cannot simply hire a group of data scientists and hope that they will be able to produce results for the business.
+
+1. Focus on the Business Problem
+
+Identify Business Problem
+
+Where are the hidden data resources that you can take advantage of?
+
+2. The Machine Learning Cycle
+
+3. Pilot Project
+
+Step 1: Define an opportunity for growth
+Step 2: Conduct pilot project with your concrete idea from Step 1
+Step 3: Evaluation
+Step 4: Next actions
+
+4. Determining the Best Learning Model
+
+5. Tools to determine algorithm selection
+
+
+
+## Common Machine Learning Techniques for AI Development
+
+The article [14] discusses ten ML techniques for AI development:
+
+Supervised ML
+
+1. Regression
+2. Classification
+3. Transfer Learning
+4. Ensemble Methods
+
+Unsupervised ML
+
+5. Clustering
+6. Neural Networks and Deep Learning
+7. Dimensionality Reduction (Supervised and Unsupervised)
+8. Word Embeddings (dimensionality reduction)
+9. Natural Language Processing 
+10. Reinforcement Learning 
+
+
+
+----------
+
+
+
 ## NLP Checklist
 
 There is an NLP checklist given in [7]. 
@@ -515,6 +609,14 @@ NER is the process to find the important labels that are present in the text.
 [10] [Machine Learning Project Checklist](https://github.com/sjosund/ml-project-checklist)
 
 [11] [Deploying Machine Learning Models: A Checklist](https://twolodzko.github.io/ml-checklist)
+
+
+[12] [8 Mistakes to avoid while using Machine Learning](https://medium.com/@monodeepets77/8-mistakes-to-avoid-while-using-machine-learning-d61af954b9c9)
+
+[13] [5 Steps to follow for Successful Machine Learning Project](https://addiai.com/successful-machine-learning-project/)
+
+[14] [10 Machine Learning Techniques for AI Development](https://daffodilsw.medium.com/10-machine-learning-techniques-for-ai-development-15df0953f05f)
+
 
 
 [^ai_hierarchy]: https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007
