@@ -3,14 +3,10 @@
 <!-- MarkdownTOC -->
 
 - Avoid Using Different Library Versions
-- What aspect ratio to use for line plots?
+- What aspect ratio to use for line plots
   - Calculating the aspect ratio
   - Best practices
-- Run ML model training/evaluation with TMUX
 - Watch your training and GPU resources
-- Testing the online inference models
-  - A/B test
-- Monitoring the model
 - References
 
 <!-- /MarkdownTOC -->
@@ -26,7 +22,7 @@ A possible solution to this problem could be to create a virtual environment and
 
 
 
-## What aspect ratio to use for line plots?
+## What aspect ratio to use for line plots
 
 One of the most overlooked aspects of creating charts is the use of correct aspect ratios. 
 
@@ -53,11 +49,6 @@ The `ggthemes` package provides a function called bank_slopes() to calculate the
 **Time-series:** It is best to calculate the aspect ratio since some hidden information can be more pronounced when using the correct aspect ratio for the plot.
 
 
-## Run ML model training/evaluation with TMUX
-
-`tmux` can be used when you want to detach processes from their controlling terminals which allows remote sessions to remain active without beingvisible.
-
-
 ## Watch your training and GPU resources
 
 ```bash
@@ -67,39 +58,7 @@ The `ggthemes` package provides a function called bank_slopes() to calculate the
 ```
 
 
-## Testing the online inference models
-
-ML system testing is also more complex a challenge than testing manually coded systems, due to the fact that ML system behavior depends strongly on data and models that cannot be strongly specified a priori.
-
-Figure: The Machine Learning Test Pyramid.
-
-ML requires more testing than traditional software engineering.
-
-### A/B test
-
-To measure the impact of a new model, we need to augment the evaluation by running statistical A/B tests. 
-
-In an A/B test, users are split into two distinct non-overlapping cohorts. To run an A/B test, the population of users must be split into statistically identical populations that each experience a different algorithm.
-
-
-## Monitoring the model
-
-Once a model has been deployed its behavior must be monitored. 
-
-A model’s predictive performance is expected to degrade over time as the environment changes callef concept drift which occurs when the distributions of the input features or output target shift away from the distribution upon which the model was originally trained.
-
-When concept drift has been detected, we need to retrain the ML model but detecting drift can difficult.
-
-One strategy for monitoring is to use a metric from a deployed model that can be measured over time such as measuring the output distribution. The observed distribution can be compared to the training output distribution, and alerts can notify data scientists when the two quantities diverge.
-
-Popular ML/AI deployment tools: TensorFlow Serving, MLflow, Kubeflow, Cortex, Seldon.io, BentoML, AWS SageMaker, Torchserve, Google AI.
-
-
-
-
 ## References
-
-[Best practices in the deployment of AI models](https://nagahemachandchinta.medium.com/best-practices-in-the-deployment-of-ai-models-c929c3146416)
 
 [Data Science Mistakes to Avoid: Data Leakage](https://towardsdatascience.com/data-science-mistakes-to-avoid-data-leakage-e447f88aae1c)
 
