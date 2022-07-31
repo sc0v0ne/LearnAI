@@ -14,7 +14,7 @@
   - Example of Lazy Execution
   - Wide and narrow transformations
   - How to modify the configuration settings of a Spark job?
-  - Measure if an optimisation is necessary
+  - Measure if an optimization is necessary
   - Recommendation 1: Use the Apache Parquet file format
   - Recommendation 2: Maximise parallelism in Spark
   - Recommendation 3: Beware of shuffle operations
@@ -84,7 +84,7 @@ These properties ensure that processing is orders of magnitude faster and the ex
 
 ## Spark
 
-The simple MapReduce programming model of Hadoop is attractive and is utilized extensively in industry, but performance on certain tasks remain sub-optimal which gave rise to Spark  to provide a speedup over Hadoop. 
+The simple MapReduce programming model of Hadoop is attractive and is utilized extensively in industry, but performance on certain tasks remain sub-optimal which gave rise to Spark to provide a speedup over Hadoop. 
 
 **Spark** is a data processing engine for big data sets that is also open-source and maintained by the Apache Foundation. 
 
@@ -222,7 +222,7 @@ These configuration parameters are visible as read-only in the Environment tab o
 
 In the code associated with this article, the parameters are defined directly in the Spark application code.
 
-### Measure if an optimisation is necessary
+### Measure if an optimization is necessary
 
 Optimizing a process is a time-consuming and therefore costly step in a project.
 
@@ -271,7 +271,7 @@ This last method coalesce decreases the number of partitions while avoiding a sh
 
 We might be tempted to increase the number of partitions by lowering the value of the spark.sql.files.maxPartitionBytes parameter, but this choice can lead to the small file problem. 
 
-There is a deterioration of I/O performance due to the operations performed by the file system (e.g. opening, closing, listing files), which is often amplified with a distributed file system like HDFS. 
+There is a deterioration of I/O performance due to the operations performed by the file system (e.g. opening, closing, listing files) which is often amplified with a distributed file system like HDFS. 
 
 Scheduling problems can also be observed if the number of partitions is too large.
 
