@@ -25,6 +25,7 @@
 - VGG
 - Residual Networks \(ResNet\)
   - Residual Block
+- CV and NLP
 - References
 
 <!-- /MarkdownTOC -->
