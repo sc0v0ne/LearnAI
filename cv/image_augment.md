@@ -3,6 +3,12 @@
 <!-- MarkdownTOC -->
 
 - Image Data Preparation
+- Feature Engineering for Images
+    - Curse of Dimensionality
+    - Reduce Picture Dimension
+    - Histogram of Oriented Gradient
+    - Principal Component Analysis
+    - Manifold Learning
 - Image Augmentation using imgaug
     - Brightness
     - Blurness
@@ -10,10 +16,11 @@
     - Saturation Augmentation
     - Rotation
     - Multiple Augmentations
-- Image Data Preparation
-- Image Data Augmentation
-- Keras Examples
-- Image Data Pipeline
+- Tutorials
+    - Image Data Preparation
+    - Image Data Augmentation
+    - Image Data Pipeline
+    - Keras Examples
 - References
 
 <!-- /MarkdownTOC -->
@@ -31,6 +38,91 @@ In “Learning to Resize Images for Computer Vision Tasks,” Talebi et al. show
 As shown in the paper, this idea helps to consistently improve the performance of the common vision models (pre-trained on ImageNet-1k) such as DenseNet-121, ResNet-50, MobileNetV2, and EfficientNets. 
 
 The example implements the learnable image resizing module as proposed in the paper and demonstrates the process on the Cats and Dogs dataset using the DenseNet-121 architecture.
+
+
+
+## Feature Engineering for Images
+
+Here are some important concepts for feature engineering when dealing with images. 
+
+### Curse of Dimensionality
+
+The _curse of dimensionality_ is used to describe the problems that arise when working with datasets that have a large number of dimensions [4].
+
+One reason is that the number of data points needed to accurately learn the underlying distribution of the data increases exponentially with the number of dimensions. 
+
+Thus, if we have a data set with 100 features, we may need 1,000 or even 10,000 data points to train a well-performing model.
+
+### Reduce Picture Dimension
+
+A simple way to reduce the dimension of our feature vector is to decrease the size of the image with decimation (downsampling) by reducing the resolution of the image [4].
+
+If the color component is not relevant, we can also convert pictures to grayscale to divide the number dimension by three. But there are other ways to reduce the dimension of the picture and potentially extract features. For example, we can use wavelet decomposition.
+
+Wavelet decomposition is a way of breaking down a signal in both space and frequency. In the case of pictures, this means breaking down the image into its horizontal, vertical, and diagonal components.
+
+### Histogram of Oriented Gradient
+
+The HOG feature descriptor is a popular technique used in computer vision and image processing for detecting objects in digital images [4]. 
+
+The HOG descriptor became popular after Dalal and Triggs showed the efficiency of this descriptor in 2005 that focused on pedestrian detection in static images.
+
+The HOG descriptor is a type of feature descriptor that encodes the shape and appearance of an object by computing the distribution of intensity gradients in an image.
+
+The most important parameter in our case is the number of pixels per cell as it will give us a way to find the best trade-off between the number of dimensions and the number of details captured in the picture.
+
+Example of the histogram of oriented gradient with 8 by 8-pixel cells. 
+
+Example of the histogram of oriented gradient with 16 by 16-pixel cells. 
+
+For the example above, the input image has 20,000 dimensions (100 by 200 pixels) and the HOG feature has 2,400 dimensions with the 8 by 8-pixel cell and 576 for the 16 by 16-pixel cell. That’s an 88% and 97% reduction, respectively.
+
+### Principal Component Analysis
+
+We can also use Principal Component Analysis (PCA) to reduce the dimension of our feature vector [4]. 
+
+PCA is a statistical technique that can be used to find the directions (components) that maximize the variance and minimizes the projection error in a dataset.
+
+Axis with the largest variance (in green) and lower projection error (in red) (image by author)
+In other words, PCA can be used to find the directions that represent the most information in the data.
+
+There are a few things to keep in mind when using PCA [4]:
+
+- PCA is best used as a tool for dimensionality reduction, not for feature selection.
+
+- When using PCA for dimensionality reduction, it is important to normalize the data first.
+
+- PCA is a linear transformation, so it will not be able to capture non-linear relationships in the data.
+
+- To reduce to N dimensions, you need at least N-1 observations
+
+
+### Manifold Learning
+
+Manifold Learning is in some ways an extension of linear methods like PCA to reduce dimensionality but for non-linear structures in data [4].
+
+A _manifold_ is a topological space that is locally Euclidean which means that near each point it resembles the Euclidean space. 
+
+Manifolds appear naturally in many areas of mathematics and physics and the study of manifolds is a central topic in differential geometry.
+
+There are a few things to keep in mind when working with manifold learning [4]:
+
+- Manifold learning is a powerful tool for dimensionality reduction.
+
+- Manifold learning can be used to find hidden patterns in data.
+
+- Manifold learning is usually a computationally intensive task, so it is important to have a good understanding of the algorithms before using them.
+
+It is rare that a real-life process uses all of its dimensions to describe its underlying structure. 
+
+For example, in the pictures below only a few dimensions should be necessary to describe the cup's position and rotation.
+
+In this case, once projected with a manifold learning algorithm such as t-distributed Stochastic Neighbor Embedding (t-SNE), only two dimensions are able to encode the cup position and rotation.
+
+
+There are many ways to reduce the dimension of a picture. The approach to take will depend on the type of data and the problem being solved.
+
+Feature engineering is an iterative process, so it helps to have an overview of different possibilities and available approaches.
 
 
 ---------
@@ -176,7 +268,13 @@ for n, images in enumerate(image[0:3]):
 ```
 
 
-## Image Data Preparation
+----------
+
+
+
+## Tutorials
+
+### Image Data Preparation
 
 [How to Manually Scale Image Pixel Data for Deep Learning](https://machinelearningmastery.com/how-to-manually-scale-image-pixel-data-for-deep-learning/)
 
@@ -185,7 +283,7 @@ for n, images in enumerate(image[0:3]):
 [How to Evaluate Pixel Scaling Methods for Image Classification](https://machinelearningmastery.com/how-to-evaluate-pixel-scaling-methods-for-image-classification/)
 
 
-## Image Data Augmentation
+### Image Data Augmentation
 
 [Image Processing and Data Augmentation Techniques for Computer Vision](https://towardsdatascience.com/image-processing-techniques-for-computer-vision-11f92f511e21)
 
@@ -203,23 +301,16 @@ for n, images in enumerate(image[0:3]):
 [Introduction to Test-Time Data Augmentation](https://machinelearningmastery.com/how-to-use-test-time-augmentation-to-improve-model-performance-for-image-classification/)
 
 
+### Image Data Pipeline
 
-## Keras Examples
-
-[3D image classification from CT scans](https://keras.io/examples/vision/3D_image_classification/)
-
-[Learning to Resize in Computer Vision](https://keras.io/examples/vision/learnable_resizer/)
-
-
-
-
-## Image Data Pipeline
-
-[Time to Choose TensorFlow Data over ImageDataGenerator](https://towardsdatascience.com/time-to-choose-tensorflow-data-over-imagedatagenerator-215e594f2435)
-
-We can build better and faster image pipelines using `tf.data`. 
+We can build better and faster image pipelines using `tf.data` [5].  
 
 While training a neural network, it is quite common to use `ImageDataGenerator` class to generate batches of tensor image data with real-time data augmentation, but the `tf.data` API can be used to build a faster input data pipeline with reusable pieces.
+
+
+### Keras Examples
+
+[3D image classification from CT scans](https://keras.io/examples/vision/3D_image_classification/)
 
 
 
@@ -230,4 +321,13 @@ While training a neural network, it is quite common to use `ImageDataGenerator` 
 [2] [5 Image Augmentation Techniques Using imgAug](https://betterprogramming.pub/5-common-image-augmentations-for-machine-learning-c6b5a03ebf38)
 
 [3] [How to Load Large Datasets From Directories](https://machinelearningmastery.com/how-to-load-large-datasets-from-directories-for-deep-learning-with-keras/)
+
+[4] [Feature Engineering for Images](https://towardsdatascience.com/feature-engineering-for-machine-learning-with-picture-data-d7ff8554920)
+
+[5] [Time to Choose TensorFlow Data over ImageDataGenerator](https://towardsdatascience.com/time-to-choose-tensorflow-data-over-imagedatagenerator-215e594f2435)
+
+[6] [An Intuitive Guide to PCA](https://towardsdatascience.com/an-intuitive-guide-to-pca-1174055fc800)
+
+
+[How to Explore a Dataset of Images with Graph Theory](https://towardsdatascience.com/how-to-explore-a-dataset-of-images-with-graph-theory-fd339c696d99)
 
