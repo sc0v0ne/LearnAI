@@ -68,7 +68,7 @@ TODO: Add some notes
 
 - Do not shuffle train/test datasets
 
-- Convert dataset to 3D supervised shape [samples, ntimesteps n_feature]
+- Convert dataset to 3D supervised shape [samples, ntimesteps, n_feature]
 
 - Reframe the problem as supervised learning problem with (X, y) datasets
 

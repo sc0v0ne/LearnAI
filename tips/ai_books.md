@@ -6,8 +6,12 @@
 - Books for Developers
 - PyTorch Books
 - Prerequisites
-- Textbooks
+    - Mathematics
+    - Computer Science
+    - Software Engineering
+- AI Textbooks
 - Code Repos
+- Good Reads
 
 <!-- /MarkdownTOC -->
 
@@ -75,6 +79,8 @@ R. V. Hogg, J. W. McKean, and A. T. Craig, Introduction to Mathematical Statisti
 
 C. Hamacher, Z. Vranesic, S. Zaky, and N. Manjikian, Computer Organization and Embedded Systems, 6th ed., McGraw Hill, ISBN: 978–0–07–338065–0, 2012. 
 
+M. T. Goodrich, R. Tamassia, and M. H. Goldwasser, Data Structures and Algorithms in Java, 6th ed., Wiley, ​ISBN: 978-1118771334, 2014. 
+
 A. S. Tanenbaum and D. J. Wetherall, Computer Networks, 5th ed., Pearson, ISBN: 0-13-212695-8, 2011. 
 
 R. H. Arpaci-Dusseau and A. C. Arpaci-Dusseau, Operating Systems: Three Easy Pieces, 2018, v. 1.01, Available online: https://pages.cs.wisc.edu/~remzi/OSTEP/
@@ -87,8 +93,10 @@ S. McConnell, Code Complete, 2nd ed., Microsoft Press, ISBN: 0-7356-1967-0, 2004
 
 M. Howard and D. LeBlanc, Writing Secure Code, 2nd ed., Microsoft Press Press, ISBN: 0735617228, 2003. 
 
+E. Gamma, R. Helm, R. Johnson, and J. Vlissides, Design Patterns: Elements of Reusable Object-Oriented Software, 1st ed., Addison-Wesley Professional, ISBN-10: 0201633612, 1994. 
 
-## AI/ML Textbooks
+
+## AI Textbooks
 
 E. Alpaydin, Introduction to Machine Learning, 3rd ed., MIT Press, ISBN: 978-0262028189, 2014.
 

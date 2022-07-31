@@ -3,6 +3,7 @@
 <!-- MarkdownTOC -->
 
 - Overview
+- Reinforcement Learning
 - What makes Reinforcement Learning so hard?
 - Summary
 - Quick Start
@@ -28,6 +29,20 @@ RL differs from supervised learning:
 - RL focuses on finding a balance between exploration (of uncharted territory) and exploitation (of current knowledge).
 
 The environment is typically stated in the form of a _Markov decision process (MDP)_ since many RL algorithms use dynamic programming techniques. 
+
+
+## Reinforcement Learning
+
+Reinforcement learning is an artificial intelligence approach that focuses on the learning of the system through its interactions with the environment.
+
+In reinforcement learning, the system’s parameters are adapted based on the feedback obtained from the environment which in turn provides feedback on the decisions made by the system. 
+
+The following diagram shows a person making decisions in order to arrive at their destination.
+
+One day you and decide to try a different route with a view to finding the shortest path. 
+
+This dilemma of trying out new routes or sticking to the best-known route is an example of **exploration** versus **exploitation**:
+
 
 
 ## What makes Reinforcement Learning so hard?

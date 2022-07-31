@@ -411,6 +411,18 @@ Many machine learning algorithms are sensitive to the range and distribution of 
 
 Outliers in input data can affect the training process of ML algorithms abd result in less accurate models.
 
+
+Keep in mind that some suspicious points are often wrongly reduced to outliers [8].
+
+In a regression analysis, these terms are related besides they have different meanings:
+
+- **Influential point:** a subset of the data having an influence on the estimated model. Removing it appears to modify significantly the results of the estimated coefficient.
+
+- **Outlier:** an observation that falls outside the general pattern of the rest of the data. In a regression analysis, these points remain out of the confidence bands due to high residual.
+
+- **High Leverage:** an observation that has the potential to influence predominantly the predicted response. It can be assessed through ∂y_hat/∂y: how much the predicted response differs if we shift slightly the observed response. Generally, they are extreme x-values.
+
+
 ### Extreme Value Analysis
 
 Start with a simple extreme value analysis:
@@ -474,6 +486,10 @@ Spot check some methods that are robust to outliers to see if there is a signifi
 [6] [My Top 10 Pandas Functions for Preparing Data](https://betterprogramming.pub/my-top-10-pandas-functions-for-preparing-data-3ec7a1451a84)
 
 [7] [How to Identify Outliers in your Data](https://machinelearningmastery.com/how-to-identify-outliers-in-your-data/)
+
+[8] [Do Not Dismiss Unusual Data Points as Outliers](https://towardsdatascience.com/do-not-dismiss-unusual-data-points-as-outliers-5132380f2e67)
+
+[9] [A recipe to empirically answer any question quickly](https://towardsdatascience.com/a-recipe-to-empirically-answer-any-question-quickly-22e48c867dd5)
 
 
 [How to build a Machine Learning (ML) Predictive System](https://towardsdatascience.com/machine-learning-ml-based-predictive-system-to-predict-the-satisfaction-level-of-airlines-f0780dbdbc87?source=rss----7f60cf5620c9---4)

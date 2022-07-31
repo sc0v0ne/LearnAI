@@ -442,7 +442,11 @@ Here is the complete example:
 
 We can see that the X component has a three-dimensional structure: [samples, timesteps, features]
 
-The first dimension is the number of samples (in this case 7). The second dimension is the number of time steps per sample (in this case 3) which is the value specified to the split_sequences function. Finally, the last dimension specifies the number of parallel time series or the number of variables (in this case 2 for two parallel series).
+- The first dimension is the number of samples (in this case 7). 
+
+- The second dimension is the number of time steps per sample (in this case 3) which is the value specified to the split_sequences function. 
+
+- The last dimension specifies the number of parallel time series or the number of features (in this case 2 for two parallel series).
 
 This is the exact three-dimensional structure expected by an LSTM as input, so the data is ready to use without further reshaping.
 

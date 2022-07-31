@@ -16,6 +16,13 @@
 
 There are several standard methods to evaluate the performance of ML models. In fact, scikit-learn has a plethora of functions for computing performance metrics in the `sklearn.metrics` library.
 
+In AI, scoring functions such as MSE are used for three main purposes:
+
+- Performance evaluation: How well is the model doing?
+- Model optimization: Which model gets closest to our datapoints?
+- Statistical decision-making: Does the model pass the hypothesis testing criteria?
+
+
 
 ## Performance Metrics For Classification
 

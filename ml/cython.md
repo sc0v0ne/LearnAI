@@ -8,7 +8,7 @@ Creating a Cython package has some enormous benefits but it also takes a bit mor
 
 - If concurrency the problem, it may help using threads (such as waiting for an API) or running code in parallel over multiple CPUs (multiprocessing)?
 
-- Make sure to use a virtual environment. 
+- Make sure to use a virtual environment.
 
 
 ----------

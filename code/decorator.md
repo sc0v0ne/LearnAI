@@ -179,7 +179,7 @@ Here is the complete example using the three decorators in Python: `@staticmetho
 
 The beauty of decorators is that they are easy to apply but provide a lot of extra functionalities for your code. 
 
-Here we disucss some decorators that we can easily apply to real-world problems when debugging  code [3]. 
+Here we disucss some decorators that we can easily apply to real-world problems when debugging code [3].
 
 ### Timer
 
@@ -243,6 +243,7 @@ Here we disucss some decorators that we can easily apply to real-world problems 
         """Check if a number is a prime number"""
         # ....rest of the function
 ```
+
 
 ### Repeat
 

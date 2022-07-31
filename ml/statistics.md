@@ -2,14 +2,25 @@
 
 <!-- MarkdownTOC -->
 
+- What is Statistics
 - Correlation
-  - Which method should you use? Pearson or Spearman’s
+  - Pearson vs Spearman
 - Statistics for Machine Learning
 - References
 
 <!-- /MarkdownTOC -->
 
-Here is a list of the topics covered in the article:
+
+## What is Statistics
+
+Statistics is a collection of tools that you can use to get answers to important questions about data.
+
+We can use _descriptive_ statistical methods to transform raw observations into information that you can understand and share.
+
+We can use _inferential_ statistical methods to reason from small samples of data to whole domains.
+
+
+Here is a list of the topics covered in [1]:
 
 - Descriptive vs Inferential Statistics
 - Data Types
@@ -23,6 +34,7 @@ Here is a list of the topics covered in the article:
 - Probability Distributions
 - Hypothesis Testing
 - Regression
+
 
 
 ## Correlation
@@ -53,7 +65,7 @@ Based on the value, you can deduce the following degrees of correlation:
 
 - No correlation: values close to 0
 
-### Which method should you use? Pearson or Spearman’s
+### Pearson vs Spearman
 
 So which method should you use? 
 
@@ -90,11 +102,11 @@ Statistics for Machine Learning (7-Day Mini-Course)
 
 ## References
 
-[Important Statistics Data Scientists Need to Know](https://www.kdnuggets.com/2021/09/important-statistics-data-scientists.html)
+[1] [Important Statistics Data Scientists Need to Know](https://www.kdnuggets.com/2021/09/important-statistics-data-scientists.html)
 
-[Statistics in Python — Understanding Variance, Covariance, and Correlation](https://towardsdatascience.com/statistics-in-python-understanding-variance-covariance-and-correlation-4729b528db01?source=rss----7f60cf5620c9---4)
+[2] [Statistics in Python — Understanding Variance, Covariance, and Correlation](https://towardsdatascience.com/statistics-in-python-understanding-variance-covariance-and-correlation-4729b528db01?source=rss----7f60cf5620c9---4)
 
-[Statistics for Machine Learning](https://machinelearningmastery.com/start-here/#statistical_methods)
+[3] [Statistics for Machine Learning](https://machinelearningmastery.com/start-here/#statistical_methods)
 
 
 [What does RMSE really mean?](https://towardsdatascience.com/what-does-rmse-really-mean-806b65f2e48e)

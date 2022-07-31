@@ -452,7 +452,7 @@ There are different hardware architectures such as CPU, GPU, FPGAs, AI accelerat
 
 > Intel oneAPI is mainly for Linux64
 
-Therefore, Intel ceeated a unified programming model called oneAPI to solve this very same problem. With oneAPI, it does not matter which hardware architectures (CPU, GPU, FGPA, or accelerators) or libraries or languages, or frameworks you use, the same code runs on all hardware architectures without any changes and additionally provides performance benefits.
+Therefore, Intel created a unified programming model called oneAPI to solve this very same problem. With oneAPI, it does not matter which hardware architectures (CPU, GPU, FGPA, or accelerators) or libraries or languages, or frameworks you use, the same code runs on all hardware architectures without any changes and additionally provides performance benefits.
 
 ```bash
   conda install -c intel intel-aikit
@@ -503,15 +503,21 @@ To use Intel-optimized TensorFlow and Pytorch, you do not have to modify anythin
 ```bash
   conda create -n aikit-tf -c intel intel-aikit-tensorflow  # default is tensorflow 2.5
   conda create -n aikit-pt -c intel intel-aikit-pytorch
-  
+
+  # ==========
+
   # workaround unable to resolve environment for intel-aikit-tensorflow
+  # and mkl-service package failed to import.
   conda create -n aikit-tf
+
+  conda activate aikit-tf
+  mamba update --all -y
 
   # install tensorflow v 2.6
   # incompatible with intel-aikit-modin=2021.4.1
-  mamba install -c intel intel-aikit-tensorflow=2022.0.0  # tensorflow v 2.6
+  mamba install -c intel intel-aikit-tensorflow=2022.2.0  # tensorflow v 2.6
 
-  # needed after install intel-aikit-tensorflow
+  # may be needed after install intel-aikit-tensorflow
   mamba install python-flatbuffers
 ```
 
@@ -961,6 +967,7 @@ The idea is to load 10k instances in each chunk (lines 11–14), perform text pr
 ```
 
 
+
 ----------
 
 
@@ -1045,3 +1052,4 @@ The idea is to load 10k instances in each chunk (lines 11–14), perform text pr
 [8] [Pandas tips to deal with huge datasets](https://kvirajdatt.medium.com/pandas-tips-to-deal-with-huge-datasets-f6a012d4e953)
 
 [9] [Top 2 tricks for compressing and loading huge datasets](https://medium.com/the-techlife/top-2-tricks-for-compressing-and-loading-huge-datasets-91a7e394c933)
+

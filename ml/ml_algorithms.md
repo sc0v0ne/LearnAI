@@ -475,9 +475,9 @@ Below are 10 examples of machine learning algorithm lists that you could create.
 ### Classification and Regression
 
 - AdaBoost
-- kNN
+- Gradient Boosting (xgboost)
 - Random Forest
-- Gradient Boosting
+- kNN
 - SGD
 - SVM
 - Tree

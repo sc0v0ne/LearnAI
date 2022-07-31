@@ -34,6 +34,7 @@
     - Plotting using Pandas-Bokeh
     - Plotting using Cufflinks
 - Plotnine
+- Advanced Data Visualizations
 - Data Visualization Packages
     - AutoViz
     - Missingno
@@ -50,6 +51,8 @@ Matplolib is the basis of image visualization in Python but there are other alte
 ## Choosing Graphs
 
 [This Is How You Should Be Visualizing Your Data](https://towardsdatascience.com/this-is-how-you-should-be-visualizing-your-data-4512495c007b)
+
+[An Atlas of Simple Matplotlib Charts](https://medium.com/geekculture/an-atlas-of-simple-matplotlib-charts-2f6fd32ca4cf()
 
 
 ## Plotting Multiple Graphs in Matplotlib
@@ -1001,7 +1004,18 @@ plotnine is the implementation of the R package ggplot2 in Python.
 
 
 
+## Advanced Data Visualizations
+
+Here are some advanced data visualizations that are good to know [16]:
+
+- Cohort Chart
+- Correlation Matrix
+- Distplots
+
+
+
 ---------
+
 
 
 ## Data Visualization Packages
@@ -1082,6 +1096,13 @@ DSPlot is a Python package that draws and renders images of data structures.
 [14] [10 Must-know Seaborn Visualization Plots for Multivariate Data Analysis in Python](https://towardsdatascience.com/10-must-know-seaborn-functions-for-multivariate-data-analysis-in-python-7ba94847b117)
 
 [15] [Visualizing Multidimensional Categorical Data using Plotly](https://towardsdatascience.com/visualizing-multidimensional-categorical-data-using-plotly-bfb521bc806f)
+
+[16] [Five Advanced Data Visualizations All Data Scientists Should Know](https://towardsdatascience.com/five-advanced-data-visualizations-all-data-scientists-should-know-e042d5e1f532)
+
+
+[Holoviz Is Simplifying Data Visualization in Python](https://towardsdatascience.com/holoviz-is-simplifying-data-visualization-in-python-d51ca89739cf)
+
+[Four Useful Seaborn Visualization Templates](https://towardsdatascience.com/grab-and-use-4-useful-seaborn-visualization-templates-6e5f11a210c9#45f6)
 
 
 

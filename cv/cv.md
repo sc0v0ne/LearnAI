@@ -588,6 +588,14 @@ The skip connection skips training from a few layers and connects directly to th
 
 
 
+## CV and NLP
+
+The article [11] discusses how to detect and extract text, figures, tables from any type of document with Computer Vision. 
+
+
+
+
+
 ## References
 
 [1] [A Gentle Introduction to Computer Vision](https://machinelearningmastery.com/what-is-computer-vision/)
@@ -611,6 +619,8 @@ The skip connection skips training from a few layers and connects directly to th
 [9] [A Gentle Introduction to Object Recognition](https://machinelearningmastery.com/object-recognition-with-deep-learning/)
 
 [10] [A Gentle Introduction to Channels-First and Channels-Last Image Formats](https://machinelearningmastery.com/a-gentle-introduction-to-channels-first-and-channels-last-image-formats-for-deep-learning/)
+
+[11] [Document Parsing with Python and OCR](https://towardsdatascience.com/document-parsing-with-python-ocr-75543448e581)
 
 
 [9 Applications of Deep Learning for Computer Vision](https://machinelearningmastery.com/applications-of-deep-learning-for-computer-vision/

@@ -35,7 +35,8 @@ TODO:
 vffr
 - Review Chapter 11 Time Series of "Python for Data Analysis"
 
-- Review tips on time series data prep
+- Review notes and references on Data Pipelines
+- Review notes and tips on time series data prep
 
 - Using Keras model with scikit-learn
 - Speedup TensorFlow Training

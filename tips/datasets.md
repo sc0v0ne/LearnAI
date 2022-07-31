@@ -42,6 +42,9 @@ Here is a collection of some resources for ML datasets.
 
 [The Complete Collection Of Data Repositories – Part 2](https://www.kdnuggets.com/2022/04/complete-collection-data-repositories-part-2.html)
 
+[50 Public Sources for Machine Learning Datasets](https://towardsdatascience.com/datasets-for-machine-learning-and-data-science-a27a5d0ba03)
+
+[50 Open Source Image Datasets for Computer Vision for Every Use Case](https://www.taqadam.io/open-sourse-datasets/)
 
 
 ## Dataset Cheatsheet
