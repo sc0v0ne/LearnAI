@@ -25,15 +25,23 @@
     - Automatic Transform of Target Variable
 - Complete Regression Example
 - Feature Selection in Scikit-learn
+- Distance Metrics
+- Why can we learn from non-linear models?
+    - Important relationships
+    - non-linear relationships
+    - Interactions
 - Time Series Data Preparation
     - Order of Data Transforms for Time Series
 - References
 
 <!-- /MarkdownTOC -->
 
-## Overview
-
 [Data Preparation](./data_prep.md)
+
+[Dimensionality Reduction](./dimensionality_reduction.md)
+
+
+## Overview
 
 Feature engineering techniques for machine learning are a fundamental topic in machine learning but one that is often overlooked or deceptively simple.
 
@@ -59,6 +67,8 @@ Feature engineering consists of various processes:
 
   It is a good idea to run test datasets to see if your new machine learning model outperforms a recognized benchmark which are often used as measures for comparing the performance of different ML models. 
 
+-----
+
 
 ## Dimensionality Reduction
 
@@ -76,6 +86,7 @@ There are two main methods for reducing dimensionality:
 
   Examples: Backward elimination, Forward selection, and Random forests. 
 
+  
 - In **feature extraction**, we find a combination of new features and an appropriate transformation is applied to the set of features. 
 
   The new set of features contains different values rather than the original values. 
@@ -84,6 +95,7 @@ There are two main methods for reducing dimensionality:
 
 
 ----------
+
 
 
 ## Feature Selection vs Feature Engineering
@@ -495,6 +507,78 @@ The article five different ways to do feature selection for supervised machine l
 
 
 
+## Distance Metrics
+
+There are number of machine learning algorithms (both supervised and unsupervised) that use distance metrics to calculate the similarity between two data points [6] [7] [8]. 
+
+The distance metrics calculate the distance between various data points available in the dataset. If the distance between two data points is less that means they are more likely to be similar and vice-versa.
+
+There are several distance metrics that can be used, depending on the type of data that we have and the algorithm that we are using for our problem statement.
+
+## Why can we learn from non-linear models?
+
+Linear models (such as linear and logistic regression) are less complicated than non-linear models. 
+
+To capture non-linear relationships with these models we need to do feature engineering [8] to create new features to represent non-linear relationships as linear ones. 
+
+To understand what feature to create, we will need to explore our data and we will likely need domain knowledge.
+
+In a sense, black-box models do this feature engineering within the model’s structure since black-box models are good at finding patterns in data. 
+
+The problem is that the inner workings of the blackbox models are too complex, so we cannot understand how they make predictions by looking at the model parameters/ structure alone. Therefore, we need to use additional techniques to understand how they work which is where the field of interpretable machine learning (IML) comes in. 
+
+IML aims to develop methods that we can use to understand how black-box models make predictions. 
+
+### Important relationships
+
+We can understand the important features in our data which are the features that can be used to predict the target variable. 
+
+Most non-linear models are able to handle a large number of features (over 50) and it does not matter if those features are highly correlated. Therefore, we can understand the importance of a large set of features by using non-linear models. 
+
+In comparison, models like linear regression require a smaller set (8–10) of uncorrelated features.
+
+One measure we can use is **permutation feature importance**.
+
+If we use correlation to identify important relationships we may miss some of these features since correlation only gives a measure of linear association [8]. 
+
+In comparison, feature importance tells us how important a feature is to a model's predictions. A model's ability to predict could come from interactions and non-linear relationships which will be reflected in the feature importance score.
+
+SHAP values can also be used to find the absolute mean SHAP value for each feature. Similar to feature importance, this can tell which features have made large contributions to predictions. The problem with both of these measures is they do not tell us the nature of the relationships captured by the model.
+
+### non-linear relationships
+
+To find and visualise non-linear relationships captured by a black-box model, we can use other IML methods.
+
+Examples of visualisations are **partial dependence plots (PDP)** and **accumulated local effects (ALE)** plots. 
+
+Both of these methods show the general relationship between a feature and the model’s predictions. 
+
+- PDPs are easy to understand but they can be negatively impacted by feature dependencies. 
+
+- ALE Plots do not have this problem but they are more complicated and harder to explain.
+
+Another approach is to use SHAP values. For a given prediction, they give the contribution of each feature to that prediction. 
+
+We can plot the SHAP values vs the feature values called a dependencies plot which can show the relationship between a feature’s value and its contributions to predictions.
+
+### Interactions
+
+Interactions are considered to be a type of non-linear relationship since they are non-linear w.r.t. to one feature. 
+
+The relationship of the feature will depend on the value of a third feature. In fact, interactions can be even more complicated. 
+
+The relationship of a feature could depend on the values of two or more features. For most applications, we are only concerned with relationships between two features.
+
+One method of visualising interactions is **ICE Plots**. 
+
+Another approach is to use **SHAP interaction values** which are an extension of SHAP values where both main and interaction effects are considered. We can use these values to visualise interactions. 
+
+We can also calculate the mean absolute interaction effect to highlight important interactions which is similar to a feature importance score but for interactions. 
+
+Another metric used to highlight interactions is the **Friedman’s h-statistic**.
+
+
+
 ## Time Series Data Preparation
 
 [How to Normalize and Standardize Time Series Data in Python](https://machinelearningmastery.com/how-to-scale-data-for-long-short-term-memory-networks-in-python/)
@@ -529,6 +613,15 @@ The order that the transform operations are applied is important.
 
 [5] [Feature Selection in Scikit-learn](https://towardsdatascience.com/feature-selection-in-scikit-learn-dc005dcf38b7?source=rss----7f60cf5620c9---4)
 
+[6] [Guide to Distance Metrics in Machine Learning Algorithms](https://heartbeat.comet.ml/guide-to-distance-metrics-in-machine-learning-algorithms-33754203526f)
+
+[7] [How to decide the perfect distance metric for your machine learning model](https://towardsdatascience.com/how-to-decide-the-perfect-distance-metric-for-your-machine-learning-model-2fa6e5810f11)
+
+[8] [What we can Learn from Black-box Models](https://towardsdatascience.com/what-we-can-learn-from-black-box-models-eda3677c42f2)
+
+
+[Best Practice to Calculate and Interpret Model Feature Importance](https://towardsdatascience.com/best-practice-to-calculate-and-interpret-model-feature-importance-14f0e11ee660)
+
 [How to Perform Feature Selection in a Data Science Project](https://towardsdatascience.com/how-to-perform-feature-selection-in-a-data-science-project-591ba96f86eb)
 
 
@@ -540,7 +633,4 @@ The order that the transform operations are applied is important.
 
 
 [Techniques for Dimensionality Reduction](https://towardsdatascience.com/techniques-for-dimensionality-reduction-927a10135356)
-
-
-
 

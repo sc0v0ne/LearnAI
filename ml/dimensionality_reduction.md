@@ -1,49 +1,48 @@
+# Dimensionality Reduction
+
 <!-- MarkdownTOC -->
 
-- Dimensionality Reduction
-  - What is Dimensionality Reduction?
-  - The Curse of Dimensionality
+- What is Dimensionality Reduction
+- The Curse of Dimensionality
+- PCA Requirements
 - Techniques for Dimensionality Reduction
-  - What is data mining?
-  - What is Dimensional Reduction?
-  - Benefits of Dimensional Reduction
-  - Methods for Dimensional Reduction
-  - Feature Extraction
-    - Linear methods
-    - Non-linear methods
-    - Other methods
-  - Feature Extraction Techniques
-  - Linear Algebra Methods
-  - Manifold Learning
-  - References
+- What is Data Mining
+- What is Dimensional Reduction
+- Benefits of Dimensional Reduction
+- Methods for Dimensional Reduction
+- Feature Extraction
+  - Linear methods
+  - Non-linear methods
+  - Other methods
+- Feature Extraction Techniques
+- Linear Algebra Methods
+- Manifold Learning
+- References
 
 <!-- /MarkdownTOC -->
 
-
-# Dimensionality Reduction
-
-
-## What is Dimensionality Reduction?
+## What is Dimensionality Reduction
 
 **Dimensionality reduction** is the process of reducing the dimension of your feature set. 
 
 Our feature set could be a dataset with a hundred columns (features) or it could be an array of points that make up a large sphere in the three-dimensional space. 
 
-Dimensionality reduction is the process of bringing the number of columns down to twenty or converting the sphere to a circle in the two-dimensional space.
+Dimensionality reduction is the process of bringing the number of columns down to twenty or converting the sphere to a circle in thek two-dimensional space.
 
 Why would we drop 80 columns off our dataset when we could straight up feed it to our machine learning algorithm and let it do the rest?
 
+
 ## The Curse of Dimensionality
 
-The _curse of dimensionality_ refers to all the problems that arise when working with data in the higher dimensions which does not exist in the lower dimensions.
+The _curse of dimensionality_ refers to the problems that arise when working with data in the higher dimensions which does not exist in the lower dimensions.
 
-As the number of features increase, the number of samples also increases proportionally. The more features we have, the more number of samples we will need to have all combinations of feature values well represented in our sample.
+- As the number of features increase, the number of samples also increases proportionally. Thus, the more features we have, the more number of samples we will need to have all combinations of feature values well represented in our sample.
 
-As the number of features increases, the model becomes more complex and the greater the chances of overfitting. 
+- As the number of features increases, the model becomes more complex and the greater the chances of overfitting. 
 
-A machine learning model that is trained on a large number of features, gets increasingly dependent on the data it was trained on and in turn overfitted which results in poor performance on new unseen data.
+- A machine learning model that is trained on a large number of features becomes increasingly dependent on the data it was trained on and in turn overfitted which results in poor performance on new unseen data.
 
-Avoiding overfitting is a major motivation for performing dimensionality reduction. The fewer features our training data has, the fewer assumptions our model makes and the simpler it will be. 
+Avoiding overfitting is a major motivation for performing dimensionality reduction: the fewer features our training data has, the fewer assumptions our model makes and the simpler it will be. 
 
 In addition, dimensionality reduction has the following advantages:
 
@@ -55,7 +54,17 @@ In addition, dimensionality reduction has the following advantages:
   5. Removes redundant features and noise.
 
 
+The curse of dimensionality describes the phenomenon where the feature space becomes increasingly _sparse_ for an increasing number of dimensions of a fixed-size training dataset [1] [2]. 
+
+We can think of even the closest neighbors being too far away in a high-dimensional space to give a good estimate.
+
+> KNN is very susceptible to overfitting due to the curse of dimensionality.
+
+We have discussed the concept of regularization in the section about logistic regression as one way to avoid overfitting. However, in models where regularization is not applicable such as decision trees and KNN, we can use feature selection and dimensionality reduction techniques to help us avoid the curse of dimensionality.
+
+
 ---------
+
 
 
 ## PCA Requirements
@@ -66,7 +75,7 @@ The basic properties that the data set should have are:
 
 - The correlation between the features should be linear.
 
-- The data set should be free of outliers, i.e. individual data points that deviate strongly from the mass.
+- The data set should be free of outliers which means individual data points that deviate strongly from the mass.
 
 - If possible, the variables should be continuous.
 
@@ -74,7 +83,8 @@ The basic properties that the data set should have are:
 
 Not all data sets can be used for Principal Component Analysis. It must be ensured that the data are approximately normally distributed and interval-scaled such as an interval between two numerical values always has the same spacing. 
 
-For example, dates are interval scaled since from 01.01.1980 to 01.01.1981 the time interval is the same as from 01.01.2020 to 01.01.2021 (leap years excluded). In fact, interval scaling must be judged by the user himself and cannot be detected by standardized, statistical tests.
+For example, dates are interval scaled since from 01.01.1980 to 01.01.1981 the time interval is the same as from 01.01.2020 to 01.01.2021 (leap years excluded). In fact, interval scaling must be judged by the user himself and cannot be detected by standardized statistical tests.
+
 
 
 ---------
@@ -83,7 +93,7 @@ For example, dates are interval scaled since from 01.01.1980 to 01.01.1981 the t
 
 # Techniques for Dimensionality Reduction
 
-## What is Data Mining?
+## What is Data Mining
 
 Data mining is the process of discovering trends and insights in high-dimensionality datasets (containing thousands of columns). 
 
@@ -93,7 +103,7 @@ However, large datasets can contain columns with poor-quality data which can low
 
 One way to preserve the structure of high-dimensional data in a low-dimensional space is to use a _dimensional reduction (DR)_ technique. 
 
-## What is Dimensional Reduction?
+## What is Dimensional Reduction
 
 **Dimensionality reduction (DR)** is the process of reducing the number of attributes in a dataset while keeping as much of the variation in the original dataset as possible. 
 
@@ -213,6 +223,7 @@ First, it finds the k-nearest neighbours (kNN) of the points. Second, it estimat
 There are two benefits of LLE algorithm: 
 
 1. LLE is able to detect more features that the linear algebra methods.
+
 2. LLE is more efficient compared to other algorithms.
 
 - t-Distributed Stochastic Neighbour. t-SNE is sensitive to local structures. It is one of the best for visualization purposes, and it is helpful in understanding theoretical properties of a dataset. However, it is one of the most computationally expensive approaches and other techniques such as missing values ratio should be used before applying this technique. Also, all the features should be scaled before applying this technique.
@@ -222,13 +233,20 @@ No single dimensionality reduction technique consistently provides the ‘best�
 
 ## References
 
-[A beginner’s guide to dimensionality reduction in Machine Learning](https://towardsdatascience.com/dimensionality-reduction-for-machine-learning-80a46c2ebb7e)
+[1] E. Alpaydin, Introduction to Machine Learning, 3rd ed., MIT Press, ISBN: 978-0262028189, 2014.
 
-[Techniques for Dimensionality Reduction](https://towardsdatascience.com/techniques-for-dimensionality-reduction-927a10135356)
+[2] S. Raschka. and V. Mirjalili, Python Machine Learning, 2nd ed. Packt, ISBN: 978-1787125933, 2017.
 
-[11 Dimensionality reduction techniques you should know in 2021](https://towardsdatascience.com/11-dimensionality-reduction-techniques-you-should-know-in-2021-dcb9500d388b)
+[3] [A beginner’s guide to dimensionality reduction in Machine Learning](https://towardsdatascience.com/dimensionality-reduction-for-machine-learning-80a46c2ebb7e)
 
-[A Guide to Dimensionality Reduction in Python](https://towardsdatascience.com/a-guide-to-dimensionality-reduction-in-python-ce0c6ab91986?source=rss----7f60cf5620c9---4)
+[4] [Techniques for Dimensionality Reduction](https://towardsdatascience.com/techniques-for-dimensionality-reduction-927a10135356)
+
+[5] [An Intuitive Guide to PCA](https://towardsdatascience.com/an-intuitive-guide-to-pca-1174055fc800)
+
+[6] [11 Dimensionality reduction techniques you should know in 2021](https://towardsdatascience.com/11-dimensionality-reduction-techniques-you-should-know-in-2021-dcb9500d388b)
+
+[7] [A Guide to Dimensionality Reduction in Python](https://towardsdatascience.com/a-guide-to-dimensionality-reduction-in-python-ce0c6ab91986?source=rss----7f60cf5620c9---4)
+
 
 [The Similarity between t-SNE, UMAP, PCA, and Other Mappings](https://towardsdatascience.com/the-similarity-between-t-sne-umap-pca-and-other-mappings-c6453b80f303)
 
