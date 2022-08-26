@@ -3,7 +3,7 @@
 <!-- MarkdownTOC -->
 
 - Overview
-- How does NLU services work?
+- How do NLU services work
 - Language Modeling
 - Steps to create an assistant
 - Language Modeling
@@ -33,9 +33,9 @@ There are many applications for these specific techniques such as text paraphras
 Examples: Extracting the sentiment from a sentence, the intention of the writer, or the semantics of the sentence. 
 
 
-## How does NLU services work?
+## How do NLU services work
 
-In the chatbot world, NLU is usually a _service_ that is called on each message received by a user that tries to understand the intention of this user. 
+In the chatbot world, NLU is usually a _service_ that is called on each message received by a user that tries to understand the intention of the user. 
 
 This will allow the automated agent to know what and how to reply. 
 
@@ -58,7 +58,7 @@ It is possible to create our own NLU service or we can use existing systems such
 
 **Language modeling (LM)** involves developing a statistical model for predicting the next word in a sentence or next letter in a word given whatever has come before. 
 
-LM is a pre-cursor task in applications such as speech recognition and machine translation.
+LM is a precursor task in applications such as speech recognition and machine translation.
 
 
 ----------
@@ -74,8 +74,6 @@ When creating a conversational agent with a NLU service, you have to follow diff
 **Language modeling (LM)** or Text Generation involves developing a statistical model for predicting the next word in a sentence or next letter in a word given whatever has come before. 
 
 LM involves developing a statistical model for predicting the next word in a sentence or next letter in a word given whatever has come before. 
-
-LM is a pre-cursor task in applications such as speech recognition and machine translation.
 
 [How to evaluate Text Generation Models](https://towardsdatascience.com/how-to-evaluate-text-generation-models-metrics-for-automatic-evaluation-of-nlp-models-e1c251b04ec1)
 
@@ -121,27 +119,27 @@ Once you have labeled the data yourself, you feed it into your ML model to train
 
 ### Creating training data
 
-When it comes to intent recognition the process of creating training data looks like this:
+When it comes to intent recognition, the process of creating training data is the following:
 
-1. Convert your data to text
+1. Convert the data to text
 
-  If your input data is speech, i.e., audio files, you will need to convert these into text.
+If your input data is speech (such as audio files) you will need to convert these into text.
 
-2. Choose your intents
+2. Choose the intents
 
-  For example, if you work in customer support, your intents might include “feature request”, “purchase”, and “account closure”
+For example, if you work in customer support, the intents might include “feature request”, “purchase”, and “account closure”
 
 3. Assign each text input an intent
 
-  You will likely need many thousands of labeled data points in your training dataset for your model to become accurate enough to work in production.
+You will likely need many thousands of labeled data points in the training dataset for the model to become accurate enough to work in production.
 
-  The process of manually labeling training data is the most time-consuming and laborious aspect of utilising ML which why we developed our text intent recognition data program. 
+The process of manually labeling training data is the most time-consuming and laborious aspect of utilizing ML which why we developed our text intent recognition data program. 
     
-  You input your raw data and the data program breaks it apart into discrete tasks to produce a coherent labeled output automatically. 
+You input the raw data and the data program breaks it apart into discrete tasks to produce a coherent labeled output automatically. 
     
 ### Training your model
 
-With your training data assembled you can ask us to train a model for you, which would be accessible via API, or you can create your own or choose from many open-source models (such as one from Google’s BERT) and begin the training process yourself. 
+After the training data has been assembled we can to train a model that would be accessible via API, or you can create your own model or choose from many open-source models (such as one from Google’s BERT) and begin the training process yourself. 
 
 Once your model performs well on your validation set, you are ready to let it loose in production.
 
@@ -157,7 +155,7 @@ Intent recognition finds a comfortable home in any situation where there are a l
 
 ## Challenges of NLU
 
-A|ll of the current solutions still use many traditional text mining algorithms to get meaning from unstructured text documents which is far from ideal.
+All of the current solutions still use many traditional text mining algorithms to get meaning from unstructured text documents which is far from ideal.
 
 To better understand the shortcomings of these algorithms used for natural language understanding (NLU), we take a detailed look at the problems of old school approaches at each step of flexible natural language processing. 
 
