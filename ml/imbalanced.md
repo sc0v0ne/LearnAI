@@ -15,6 +15,7 @@
 - Handle Imbalanced Classification without Rebalancing
     - Reasons not to balance your imbalanced data
     - Conclusion
+- Use AUPRC Instead of ROC-AUC
 - Examples of Imbalanced Classification
 - Naive Classifier
 - Keras Imbalanced Classification
@@ -259,6 +260,8 @@ The accuracy paradox is very common because classification accuracy is often the
 Perhaps the best solution is to stratify the dataset to improve model performance [5]. 
 
 
+----------
+
 
 ## Handle Imbalanced Classification without Rebalancing
 
@@ -301,6 +304,30 @@ In scikit-learn, at least for the case of oversampling by instance duplication (
 ### Conclusion
 
 Instead of naïvely or implicitly applying a default threshold of 0.5 or immediately re-training using re-balanced training data, we can try using the original model (trained on the original “imbalanced” data set) and simply plot the trade-off between false positives and false negatives to choose a threshold that may produce a desirable result.
+
+
+
+
+## Use AUPRC Instead of ROC-AUC
+
+The Receiver Operating Characteristic — Area Under the Curve (ROC-AUC) measure is widely used to assess the performance of binary classifiers. 
+
+However, it is sometimes more appropriate to evaluate your classifier based on measuring the Area Under the Precision-Recall Curve (AUPRC) [6].
+
+Calculating the area under each of these curves is now simple — the areas are shown in Figure 2. 
+
+NOTE: the AUPRC is also called Average Precision (AP) which is a term from Information Retrieval.
+
+In sklearn, these calculations are easily computed using `sklearn.metrics.roc_auc_score` and `sklearn.metrics.average_precision_score`.
+
+
+ROC is useful when evaluating general-purpose classification while AUPRC is the better for classifying rare events.
+
+In addition, classification of highly unbalanced data is often better posed as a positives-retrieval task.
+
+
+
+----------
 
 
 
@@ -356,6 +383,10 @@ Naive classifier strategies can be used on predictive modeling projects via the 
 [4] [Step-By-Step Framework for Imbalanced Classification Projects](https://machinelearningmastery.com/framework-for-imbalanced-classification-projects/)
 
 [5] [How To Stratify Data in Machine Learning Projects to Significantly Improve Model Performance](https://towardsdatascience.com/how-to-stratify-data-in-machine-learning-projects-to-significantly-improve-model-performance-4929b600340b)
+
+[6] [Unbalanced Data? Stop Using ROC-AUC and Use AUPRC Instead](https://towardsdatascience.com/imbalanced-data-stop-using-roc-auc-and-use-auprc-instead-46af4910a494)
+
+[7] [Investigating the effects of resampling imbalanced datasets with data validation techniques](https://medium.com/geekculture/investigating-the-effects-of-resampling-imbalanced-datasets-with-data-validation-techniques-f4ca3c8b2b94)
 
 
 [8 Tactics to Combat Imbalanced Classes in Your Machine Learning Dataset](https://machinelearningmastery.com/tactics-to-combat-imbalanced-classes-in-your-machine-learning-dataset/)
