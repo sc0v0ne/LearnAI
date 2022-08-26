@@ -75,6 +75,8 @@ D. Zwillinger, CRC Standard Mathematical Tables and Formulas, 33rd ed., CRC Pres
 
 R. V. Hogg, J. W. McKean, and A. T. Craig, Introduction to Mathematical Statistics, Pearson, ISBN 0134686993, 2019.  
 
+D. P. Bertsekas and J. N. Tsitduklis, Introduction to Probability, 2nd ed., Athena Scientific, ISBN: 978-1-886529-23-6, 2008. 
+
 ### Computer Science
 
 C. Hamacher, Z. Vranesic, S. Zaky, and N. Manjikian, Computer Organization and Embedded Systems, 6th ed., McGraw Hill, ISBN: 978–0–07–338065–0, 2012. 

@@ -1,13 +1,11 @@
 ## IEEE Code of Ethics
 
-[IEEE Code of Ethics](https://www.ieee.org/about/corporate/governance/p7-8.html)
-
 Since AI/ML is software engineering and IEEE is the defacto authority on all things software and hardware related, you should be aware of its rules and standards.
 
 You should also know about the [SWEBOK](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v3) 
 
 
-Here are a few key points in the [IEEE Code of Ethics](https://www.ieee.org/about/corporate/governance/p7-8.html) that all software developers should know and learn:
+Here are a few key points in the IEEE Code of Ethics that all software developers should know and learn:
 
 I. To uphold the highest standards of integrity, responsible behavior, and ethical conduct in professional activities.
 
@@ -25,3 +23,7 @@ II. To treat all persons fairly and with respect, to not engage in harassment or
 
 III. To strive to ensure this code is upheld by colleagues and co-workers.
 
+
+## References
+
+[IEEE Code of Ethics](https://www.ieee.org/about/corporate/governance/p7-8.html)

@@ -270,6 +270,10 @@ The value in the “group1” column is "A", the value in column "A" is 1, etc.
 
 [3] [Natural Language Processing (NLP): Don’t Reinvent the Wheel](https://towardsdatascience.com/natural-language-processing-nlp-dont-reinvent-the-wheel-8cf3204383dd)
 
+[4] [Text Augmentation in a few lines of Python Code](https://towardsdatascience.com/text-augmentation-in-few-lines-of-python-code-cdd10cf3cf84)
+
+[5] [Data Augmentation for Speech Recognition](https://towardsdatascience.com/data-augmentation-for-speech-recognition-e7c607482e78)
+
 
 [Complete Guideline to Implementation of Basic NLP Techniques with NLTK and spaCy](https://towardsdatascience.com/hands-on-implementation-of-basic-nlp-techniques-nltk-or-spacy-687099e02816)
 
@@ -278,9 +282,6 @@ The value in the “group1” column is "A", the value in column "A" is 1, etc.
 [Implementing Various NLP Text Representation in Python](https://towardsdatascience.com/implementing-various-nlp-text-representation-in-python-84781da0ec2d)
 
 [Difference between Bag of Words (BOW) and TF-IDF in NLP with Python](https://pub.towardsai.net/difference-between-bag-of-words-bow-and-tf-idf-in-nlp-with-python-97d3e75a9fd)
-
-
-[Text Augmentation in a few lines of Python Code](https://towardsdatascience.com/text-augmentation-in-few-lines-of-python-code-cdd10cf3cf84)
 
 
 [Boost Performance of Text Classification tasks with Easy Data Augmentation](https://towardsdatascience.com/boost-performance-of-text-classification-tasks-with-easy-data-augmentation-1420d45b914a)

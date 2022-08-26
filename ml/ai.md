@@ -44,6 +44,8 @@ The term **bootstrap** means to randomly draw (with replacement) rows from the t
 
 > The myth of small incremental improvements. 
 
+> Torture the data, and it will confess to anything - Ronald Coase
+
 
 ### Pareto Principle
 

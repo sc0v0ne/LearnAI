@@ -7,6 +7,7 @@
     - wandb
     - Tutorials
 - AutoML Tools
+    - EDA
     - Tutorials
     - SageMaker
 - Time Series Libraries
@@ -64,7 +65,7 @@ Using W&B's lightweight tools, you can quickly track experiments, version and it
 - AutoGluon
 - AutoKeras
 - Auto-ViML
-- AutoViz
+- SpeedML
 
 - FLAML
 - H2O
@@ -74,6 +75,13 @@ Using W&B's lightweight tools, you can quickly track experiments, version and it
 - Kale
 - MediaPipe
 - Ray
+
+
+### EDA
+
+- AutoViz
+- Dataprep
+
 
 ### Tutorials
 

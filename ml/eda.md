@@ -491,10 +491,17 @@ Spot check some methods that are robust to outliers to see if there is a signifi
 
 [9] [A recipe to empirically answer any question quickly](https://towardsdatascience.com/a-recipe-to-empirically-answer-any-question-quickly-22e48c867dd5)
 
+[10] [Major Problems of Machine Learning Datasets: Part 2](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-2-ba82e551fee2)
+
+[11] [Explore and Validate Datasets with TensorFlow Extended](https://pub.towardsai.net/explore-and-validate-datasets-with-tensorflow-extended-fc52cc5e582)
+
 
 [How to build a Machine Learning (ML) Predictive System](https://towardsdatascience.com/machine-learning-ml-based-predictive-system-to-predict-the-satisfaction-level-of-airlines-f0780dbdbc87?source=rss----7f60cf5620c9---4)
 
 [Detecting Outliers Using Python](https://towardsdatascience.com/detecting-outliers-using-python-66b25fc66e67)
+
+
+[Sensitivity Analysis of Dataset Size vs Model Performance](https://machinelearningmastery.com/sensitivity-analysis-of-dataset-size-vs-model-performance/)
 
 [Analysing Fairness in Machine Learning (with Python)](https://towardsdatascience.com/analysing-fairness-in-machine-learning-with-python-96a9ab0d0705)
 

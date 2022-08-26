@@ -99,7 +99,7 @@ Clearly look for the weights and splits which may end up causing you to choose t
 
 4. Not using existing solutions
 
-Explore the existing solutions from the major technology companies. It is not always a good idea to create unique solutions
+Explore the existing solutions from the major technology companies. It is not always a good idea to create unique solutions. 
 
 5. Not comparing to a simple baseline model
 
@@ -335,7 +335,7 @@ Offline Training: The model is re-trained from scratch, so we have full control 
 
 1. How is the model going to be deployed (microservice, package, stand-alone app)?
 
-2. Will the model run in real-time, or in batch mode?
+2. Will the model run in real-time or in batch mode?
 
 3. What computational resources are needed (GPUs, memory, etc.)?
 
@@ -617,6 +617,10 @@ NER is the process to find the important labels that are present in the text.
 
 [14] [10 Machine Learning Techniques for AI Development](https://daffodilsw.medium.com/10-machine-learning-techniques-for-ai-development-15df0953f05f)
 
+
+[15] [The Data Quality Hierarchy of Needs](https://www.kdnuggets.com/2022/08/data-quality-hierarchy-needs.html)
+
+[16] [Major Problems of Machine Learning Datasets: Part 3](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-3-eae18ab40eda)
 
 
 [^ai_hierarchy]: https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007
