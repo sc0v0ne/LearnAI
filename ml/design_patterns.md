@@ -4,8 +4,12 @@
 
 - What is a Design Pattern?
 - How to Classify Design Patterns?
-- Common Design Patterrns
+- Common Design Patterns
 - Design Pattern Cheatsheet
+- Software Design Patterns
+- Data Design Patterns
+- Machine Learning Design Patterns
+- MLOps Design Patterns
 - References
 
 <!-- /MarkdownTOC -->
@@ -34,7 +38,7 @@ Design patterns are categorized according to the type of reuse:
 **Creational:** Allows decoupling and optimizing the creation steps of different objects.
 
 
-## Common Design Patterrns
+## Common Design Patterns
 
 1. Strategy
 
@@ -81,17 +85,41 @@ With Python, we are able to simplify many design patterns due to dynamic typing 
 Figure 1: UML class diagram for the decorator pattern [2].
 
 
-- Design Patterns for Machine Learning
-- More Design Patterns for Machine Learning
-- Data Mesh Observability Pattern
-
-- Design Patterns in Machine Learning for MLOps
-- How (not) to do MLOps
-
-- Common Patterns for Serving ML Models in Production
-
-
 Data Mesh Observability Pattern: real-time understanding of the state of a Data Mesh, how data moves within it, who is using it, and how they are using it.
+
+
+
+## Software Design Patterns
+
+[What Primitive Obsession Is and Why You Already Ruin Your Code Secretly](https://medium.com/codex/what-primitive-obsession-is-and-why-you-already-ruin-your-code-secretly-87120f8acaae)
+
+[12 Front End Performance Patterns You Need to Know](https://medium.com/geekculture/12-front-end-performance-patterns-you-need-to-know-def550620464)
+
+[10 Common Software Architectural Patterns in a nutshell](https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013)
+
+
+## Data Design Patterns
+
+[Data Mesh Observability Pattern](https://towardsdatascience.com/data-mesh-observability-pattern-467438627572)
+
+
+## Machine Learning Design Patterns
+
+[Design Patterns for Machine Learning](https://towardsdatascience.com/design-patterns-for-machine-learning-410be845c0db)
+
+[Understand Machine Learning Through 7 Software Design Patterns](https://betterprogramming.pub/machine-learning-through-7-design-patterns-35a8d5844cf6)
+
+[Understand Machine Learning through More Design Patterns](https://towardsdatascience.com/understand-machine-learning-through-more-design-patterns-9c8430fd2ae8)
+
+
+## MLOps Design Patterns
+
+[Design Patterns in Machine Learning for MLOps](https://towardsdatascience.com/design-patterns-in-machine-learning-for-mlops-a3f63f745ce4)
+
+[How (not) to do MLOps](https://towardsdatascience.com/how-not-to-do-mlops-96244a21c35e)
+
+[Serving ML Models in Production: Common Patterns](https://www.kdnuggets.com/2021/10/serving-ml-models-production-common-patterns.html)
+
 
 
 ## References
@@ -101,22 +129,4 @@ Data Mesh Observability Pattern: real-time understanding of the state of a Data 
 [2] [A Gentle Introduction to Decorators in Python](https://machinelearningmastery.com/a-gentle-introduction-to-decorators-in-python/)
 
 
-[Design Patterns for Machine Learning](https://towardsdatascience.com/design-patterns-for-machine-learning-410be845c0db)
 
-[Understand Machine Learning Through 7 Software Design Patterns](https://betterprogramming.pub/machine-learning-through-7-design-patterns-35a8d5844cf6)
-
-[Understand Machine Learning through More Design Patterns](https://towardsdatascience.com/understand-machine-learning-through-more-design-patterns-9c8430fd2ae8)
-
-
-[12 Front End Performance Patterns You Need to Know](https://medium.com/geekculture/12-front-end-performance-patterns-you-need-to-know-def550620464)
-
-
-[Data Mesh Observability Pattern](https://towardsdatascience.com/data-mesh-observability-pattern-467438627572)
-
-
-[Design Patterns in Machine Learning for MLOps](https://towardsdatascience.com/design-patterns-in-machine-learning-for-mlops-a3f63f745ce4)
-
-[How (not) to do MLOps](https://towardsdatascience.com/how-not-to-do-mlops-96244a21c35e)
-
-
-[Serving ML Models in Production: Common Patterns](https://www.kdnuggets.com/2021/10/serving-ml-models-production-common-patterns.html)
