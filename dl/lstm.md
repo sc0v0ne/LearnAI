@@ -2,6 +2,7 @@
 
 <!-- MarkdownTOC -->
 
+- Overview
 - Structure Of LSTM
 - Understanding LSTM Networks
   - Exploding and Vanishing Gradients
@@ -12,12 +13,15 @@
   - GRU vs LSTM
   - Applications
   - Drawbacks
+- The 5 Step Life-Cycle for LSTM Models in Keras
 - Derivation of Backpropagation through time
 - LSTM Autoencoders
 - Encoder-Decoder with Attention
 - References
 
 <!-- /MarkdownTOC -->
+
+## Overview
 
 Long Short Term Memory (LSTM) is a kind of recurrent neural network.
 
@@ -178,6 +182,20 @@ LSTMs also have a few drawbacks:
 - LSTMs are prone to overfitting and it is difficult to apply the dropout algorithm to curb this issue. Dropout is a regularization method where input and recurrent connections to LSTM units are probabilistically excluded from activation and weight updates while training a network.
  
 
+-----
+
+
+## The 5 Step Life-Cycle for LSTM Models in Keras
+
+The article [2] discusses the 5 steps in the LSTM model life-cycle in Keras:
+
+1. Define Network
+2. Compile Network
+3. Fit Network
+4. Evaluate Network
+5. Make Predictions
+
+
 
 ## Derivation of Backpropagation through time
 
@@ -232,6 +250,11 @@ _Attention_ is an extension to the architecture that addresses this limitation b
 
 ## References
 
+[1] [Long Short-Term Memory Networks (LSTMs)](https://machinelearningmastery.com/start-here/#lstm)
+
+[2] [The 5 Step Life-Cycle for Long Short-Term Memory Models in Keras](https://machinelearningmastery.com/5-step-life-cycle-long-short-term-memory-models-keras/)
+
+
 [Introduction to Long Short Term Memory](https://www.geeksforgeeks.org/deep-learning-introduction-to-long-short-term-memory/)
 
 [Understanding of LSTM Networks](https://www.geeksforgeeks.org/understanding-of-lstm-networks/)
@@ -239,13 +262,11 @@ _Attention_ is an extension to the architecture that addresses this limitation b
 [LSTM – Derivation of Back propagation through time](https://www.geeksforgeeks.org/lstm-derivation-of-back-propagation-through-time/)
 
 
-
 [A Gentle Introduction to LSTM Autoencoders](https://machinelearningmastery.com/lstm-autoencoders/)
 
 [How to Develop an Encoder-Decoder Model for Sequence-to-Sequence Prediction in Keras](https://machinelearningmastery.com/develop-encoder-decoder-model-sequence-sequence-prediction-keras/)
 
 [Implementation Patterns for the Encoder-Decoder RNN Architecture with Attention](https://machinelearningmastery.com/implementation-patterns-encoder-decoder-rnn-architecture-attention/)
-
 
 
 [LSTM for time series prediction](https://towardsdatascience.com/lstm-for-time-series-prediction-de8aeb26f2ca)
