@@ -7,20 +7,25 @@
   - Training a NLU model
   - Limitations of word embeddings
     - Homonyms
-    - Plurals, abbreviations and typos
+    - Plurals, abbreviations, and typos
     - Heavy
   - Training your own embeddings
     - Mixing pre-trained with your own embeddings
     - Giving context to embeddings with transformers
     - Ordering and negation
-- Discover and Classify In-app Message Intent at Airbnb
+- Discover and Classify in-app Message Intent at Airbnb
   - Identifying Message Intent
   - Intent Discovery
   - Labeling: From Unsupervised to Supervised
   - Intent Classification with CNN
 - Using the DIET classifier for intent classification
-  - What is Rasa?
+  - What is Rasa
   - DIET: A Quick Introduction:
+- Tutorials
+  - Text Classification using Python
+  - Sentiment Analysis using Python
+  - Text Classification using AutoML
+  - Sentiment Analysis using AutoML
 - References
 
 <!-- /MarkdownTOC -->
@@ -30,7 +35,7 @@
 
 ### Teaching semantics to a machine: word embeddings
 
-Natural Language Understanding (NLU) is about machine learning, machine learning is about statistics, and statistics are about numbers. 
+**Natural Language Understanding (NLU)** is responsible for mapping the input that is given in natural language to a beneficial representation. 
 
 How can we transform if “apple” is more similar to an “orange” than "hamburger" into a comparison with numbers?
 
@@ -90,7 +95,7 @@ One limitation is that a single work can have several meanings.
 
 A “bank” can be a financial instutition or a follow the river. An embedding of bank would carry an average meaning based on the frequency of the context in which bank is used in the training data.
 
-#### Plurals, abbreviations and typos
+#### Plurals, abbreviations, and typos
 
 Another limitation is that using whole words as features makes typos and abbreviations harder or impossible to understand: if a word not present in the original corpus (such as Wikipedia) it is unknown.
 
@@ -164,7 +169,7 @@ When you include many other examples with negations, it becomes a concept your m
 
 
 
-## Discover and Classify In-app Message Intent at Airbnb
+## Discover and Classify in-app Message Intent at Airbnb
 
 Conversational AI is inspiring us to rethink the customer experience on our platform.
 
@@ -303,7 +308,7 @@ All we have to do is curate training samples carefully and experiment with vario
 
 In this post, we will show how to prepare an NLU pipeline with the DIET classifier and spin up an NLU server to use it as an API.
 
-### What is Rasa?
+### What is Rasa
 
 Rasa is an open-source machine learning framework to automate text and voice-based conversations. 
 
@@ -342,13 +347,76 @@ Go to this link and based on your use case decide how you want to train your mod
 For example, we will train the DIET classifier for both entity recognition and intent classification.
 
 
+----------
+
+
+
+## Tutorials
+
+Here are some useful NLU tutorials and examples.  
+
+### Text Classification using Python
+
+Here are some examples of Text Classification/Sentiment Analysis:
+
+[NLP: Classification and Recommendation Project using scikit-learn](https://towardsdatascience.com/nlp-classification-recommendation-project-cae5623ccaae?gi=cb49766e5c29)
+
+
+[Best Practices for Text Classification with Deep Learning](https://machinelearningmastery.com/best-practices-document-classification-deep-learning/)
+
+[How to Develop a Deep Learning Bag-of-Words Model for Sentiment Analysis (Text Classification)](https://machinelearningmastery.com/deep-learning-bag-of-words-model-sentiment-analysis/)
+
+[Deep Convolutional Neural Network for Sentiment Analysis (Text Classification)](https://machinelearningmastery.com/develop-word-embedding-model-predicting-movie-review-sentiment/)
+
+[How to Use Word Embedding Layers for Deep Learning with Keras](https://machinelearningmastery.com/use-word-embedding-layers-deep-learning-keras/)
+
+[Keras Code Examples](https://keras.io/examples/)
+
+
+### Sentiment Analysis using Python
+
+[3 Simple Ways to get started on NLP Sentiment Analysis](https://medium.com/geekculture/3-simple-ways-to-get-started-on-nlp-sentiment-analysis-d0d102ef5bf8)
+
+[Twitter Sentiment Analysis using NLTK and Python](https://towardsdatascience.com/twitter-sentiment-analysis-classification-using-nltk-python-fa912578614c)
+
+[Classifying Tweets for Sentiment Analysis: NLP in Python for Beginners](https://medium.com/vickdata/detecting-hate-speech-in-tweets-natural-language-processing-in-python-for-beginners-4e591952223)
+
+[Tweet Classification and Clustering in Python](https://medium.com/swlh/tweets-classification-and-clustering-in-python-b107be1ba7c7)
+
+[Identifying Tweet Sentiment in Python](https://towardsdatascience.com/identifying-tweet-sentiment-in-python-7c37162c186b)
+
+
+### Text Classification using AutoML
+
+[From raw text to model prediction in under 30 lines of Python using Atom](https://towardsdatascience.com/from-raw-text-to-model-prediction-in-under-30-lines-of-python-32133d853407)
+
+[Powerful Twitter Sentiment Analysis in Under 35 Lines of Code](https://medium.com/thedevproject/powerful-twitter-sentiment-analysis-in-under-35-lines-of-code-a80460db24f6)
+
+
+[A Gentle Introduction to PyCaret for Machine Learning](https://machinelearningmastery.com/pycaret-for-machine-learning/)
+
+[NLP Text-Classification in Python: PyCaret Approach vs The Traditional Approach](https://towardsdatascience.com/nlp-classification-in-python-pycaret-approach-vs-the-traditional-approach-602d38d29f06)
+
+[Natural Language Processing Tutorial (NLP101) - Level Beginner](http://www.pycaret.org/tutorials/html/NLP101.html)
+
+
+### Sentiment Analysis using AutoML
+
+[Complete Guide to Perform Classification of Tweets with SpaCy](https://towardsdatascience.com/complete-guide-to-perform-classification-of-tweets-with-spacy-e550ee92ca79)
+
+[Sentiment Analysis of Tweets using BERT](https://thinkingneuron.com/sentiment-analysis-of-tweets-using-bert/)
+
+[Fine-Tuning BERT for Tweet Classification with HuggingFace](https://www.kdnuggets.com/2022/01/finetuning-bert-tweets-classification-ft-hugging-face.html)
+
+[How to use SHAP with PyCaret](https://astrobenhart.medium.com/how-to-use-shap-with-pycaret-dc9a31278621)
+
+
 
 ## References
 
-[Discovering and Classifying In-app Message Intent at Airbnb](https://medium.com/airbnb-engineering/discovering-and-classifying-in-app-message-intent-at-airbnb-6a55f5400a0c)
+[1] [Discovering and Classifying In-app Message Intent at Airbnb](https://medium.com/airbnb-engineering/discovering-and-classifying-in-app-message-intent-at-airbnb-6a55f5400a0c)
 
-[Using the DIET classifier for intent classification in dialogue](https://medium.com/the-research-nest/using-the-diet-classifier-for-intent-classification-in-dialogue-489c76e62804)
+[2] [Using the DIET classifier for intent classification in dialogue](https://medium.com/the-research-nest/using-the-diet-classifier-for-intent-classification-in-dialogue-489c76e62804)
 
-[How intent classification works in NLU?](https://botfront.io/blog/how-intent-classification-works-in-nlu/)
-
+[3] [How intent classification works in NLU?](https://botfront.io/blog/how-intent-classification-works-in-nlu/)
 
