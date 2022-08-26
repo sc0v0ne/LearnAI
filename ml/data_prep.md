@@ -22,7 +22,7 @@
     - Complete One-Hot Encoding Example
 - Parsing dates
 - Inconsistent Data Entry
-- Highly Imbalanced Data
+- Imbalanced Datasets
 - Train-Test Split
 - Data Pipelines
 - Bootstrapping
@@ -168,11 +168,14 @@ The article [9] provides some Tips and Tricks to Deal with a Messy Date String C
 
 ### Handle Missing Values
 
+There are various ways of dealing with missing values and it is likely that we will need to determine which method is right for a task at hand on a case-by-case basis [10]. 
+
+
 The removal of samples or dropping of feature columns may not feasible because we might lose too much valuable data. 
 
 We can use interpolation techniques to estimate the missing values from the other training samples in the dataset.
 
-One of the most common interpolation techniques is _mean imputation_ where we simply replace the missing value by the mean value of the entire feature column
+One of the most common interpolation techniques is _mean imputation_ where we simply replace the missing value by the mean value of the entire feature column. 
 
 - Numerical Imputation
 - Categorical Imputation
@@ -358,7 +361,7 @@ We can drop or fill the `NaN` values.
 
 ## Encoding Categorical Features
 
-Machine learning algorithms and deep learning neural networks require that input and output variables are numbers.
+Most machine learning algorithms and deep learning neural networks require that input and output variables are numbers [11].
 
 This means that categorical data must be encoded to numbers before we can use it to fit and evaluate a model.
 
@@ -574,13 +577,18 @@ Method 2: Parse dates using `to_datetime`
 TODO: This will most likely vary 
 
 
-## Highly Imbalanced Data
+## Imbalanced Datasets
 
-Need to upsample, but categories with only 1 entry when oversampled will give a 100% accuracy and artificially inflate the total accuracy/precision.
+Imbalanced data occurs when there is an uneven distribution of classes or labels [10].
 
-[]
+Models trained with imbalanced data usually have high precision and recall scores for the majority class, whereas these scores will likely drop significantly for the minority class.
 
-- We can use `UpSample` in Keras/PyTorch and `pd.resample()`
+In a credit card detection task, the number of non-fraudulent transactions will likely be much greater than the number of fraudulent credit card transactions.
+
+
+Need to upsample but categories with only 1 entry when oversampled will give a 100% accuracy and artificially inflate the total accuracy/precision.
+
+- We can use `UpSample` in Keras/PyTorch and `pd.resample()` in Pandas
 
 
 ----------
@@ -639,10 +647,12 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 
 [Data Science Primer](https://elitedatascience.com/primer)
 
+[Data Preparation for Machine Learning (Python)](https://machinelearningmastery.com/start-here/#dataprep)
+
 [Tour of Data Preparation Techniques for Machine Learning](https://machinelearningmastery.com/data-preparation-techniques-for-machine-learning/)
 
-
 [How to Perform Data Cleaning for Machine Learning with Python?](https://machinelearningmastery.com/basic-data-cleaning-for-machine-learning/)
+
 
 [Preprocessing of the data using Pandas and SciKit](https://mclguide.readthedocs.io/en/latest/sklearn/preprocessing.html)
 
@@ -658,13 +668,14 @@ The bootstrap sampling distribution then allows us to draw statistical inference
 
 ### Categorical Data
 
-[4 Categorical Encoding Concepts to Know for Data Scientists](https://towardsdatascience.com/4-categorical-encoding-concepts-to-know-for-data-scientists-e144851c6383)
-
 [Ordinal and One-Hot Encodings for Categorical Data](https://machinelearningmastery.com/one-hot-encoding-for-categorical-data/)
 
-[Smarter Ways to Encode Categorical Data for Machine Learning](https://towardsdatascience.com/smarter-ways-to-encode-categorical-data-for-machine-learning-part-1-of-3-6dca2f71b159)
-
 [3 Ways to Encode Categorical Variables for Deep Learning](https://machinelearningmastery.com/how-to-prepare-categorical-data-for-deep-learning-in-python/)
+
+
+[4 Categorical Encoding Concepts to Know for Data Scientists](https://towardsdatascience.com/4-categorical-encoding-concepts-to-know-for-data-scientists-e144851c6383)
+
+[Smarter Ways to Encode Categorical Data for Machine Learning](https://towardsdatascience.com/smarter-ways-to-encode-categorical-data-for-machine-learning-part-1-of-3-6dca2f71b159)
 
 [Stop One-Hot Encoding Your Categorical Variables](https://towardsdatascience.com/stop-one-hot-encoding-your-categorical-variables-bbb0fba89809)
 
@@ -728,8 +739,17 @@ W. McKinney, Python for Data Analysis, 2nd ed., Oreilly, ISBN: 978-1-491-95766-0
 [9] [Clean a Messy Date Column with Mixed Formats in Pandas](https://towardsdatascience.com/clean-a-messy-date-column-with-mixed-formats-in-pandas-1a88808edbf7)
 
 
+[10] [Major Problems of Machine Learning Datasets: Part 1](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-1-5d5a06221c90)
+
+[11] [Major Problems of Machine Learning Datasets: Part 2](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-2-ba82e551fee2)
+
+[12] [Major Problems of Machine Learning Datasets: Part 3](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-3-eae18ab40eda)
+
+
 [Build an Anomaly Detection Pipeline with Isolation Forest and Kedro](https://towardsdatascience.com/build-an-anomaly-detection-pipeline-with-isolation-forest-and-kedro-db5f4437bfab)
 
 [6 Tips for Dealing With Null Values](https://towardsdatascience.com/6-tips-for-dealing-with-null-values-e16d1d1a1b33)
 
 [Customizing Sklearn Pipelines: TransformerMixin](https://towardsdatascience.com/customizing-sklearn-pipelines-transformermixin-a54341d8d624?source=rss----7f60cf5620c9---4)
+
+
