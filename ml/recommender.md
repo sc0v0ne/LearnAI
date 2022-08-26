@@ -27,6 +27,8 @@
     - Kaplan-Meier estimator
     - The Cox proportional hazards model
     - Summary
+- How to Develop Recommender Systems
+- Recommender Systems using Python
 - References
 
 <!-- /MarkdownTOC -->
@@ -396,6 +398,27 @@ In summary, we applied survival analysis techniques to browsing information coll
 
 However, it is important to remember the following limitations:
 
+----------
+
+
+## How to Develop Recommender Systems
+
+The article [12] provides a high level overview of recommender systems which may give some ideas for approaches. 
+
+We can also track web browser activity in various ways to build a custom dataset but we should be able to find a toy dataset to work with initially once we decide on an approach.  
+
+Once we decide on an approach (there are many such collaborative filtering for example), we should be able to determine the type of dataset that we need so we can find a toy dataset to use for experimentation and prototyping; it will most likely take a lot of time and effort to build a custom dataset for many of the approaches such as web browser tracking.
+
+Then, we should have a toy dataset that we can use with some AutoML tools to evaluate many different models and be able to narrow the choices to just a few models.
+
+
+## Recommender Systems using Python
+
+[Machine Learning Streaming with Kafka, Debezium, and BentoML](https://towardsdatascience.com/machine-learning-streaming-with-kafka-debezium-and-bentoml-c5f3996afe8f)
+
+[Recommender System using Collaborative Filtering in Pyspark](https://angeleastbengal.medium.com/recommender-system-using-collaborative-filtering-in-pyspark-b98eab2aea75)
+
+
 
 
 ## References
@@ -411,6 +434,8 @@ However, it is important to remember the following limitations:
 [5] [Turning Web Browsing Activity into Product Ratings with Survival Analysis](https://towardsdatascience.com/turning-web-browsing-activity-into-product-ratings-with-survival-analysis-5d5842af2a6d)
 
 [6] [Recommender Systems: Item-Customer Collaborative Filtering](https://towardsdatascience.com/recommender-systems-item-customer-collaborative-filtering-ff0c8f41ae8a)
+
+[7] [Inside recommendations: how a recommender system recommends](https://www.kdnuggets.com/inside-recommendations-how-a-recommender-system-recommends.html/)
 
 
 [Session-Based Recommender Systems with Word2Vec](https://towardsdatascience.com/session-based-recommender-systems-with-word2vec-666afb775509)
