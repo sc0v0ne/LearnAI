@@ -8,13 +8,15 @@
 - Feature Importance
     - Dataset loading and preparation
     - Feature Importance Techniques
+- Correlation
 - Feature Engineering Techniques
 - Scaling vs Normalization
     - Scaling
     - Normalization
     - Normalization vs Standardization
     - Choose between Standardization vs Normalization
-- Log Transform
+- Non-Normal Distribution of Data
+    - Log Transform
 - Normalization Techniques
     - Using maximum absolute scaling
     - Using min-max scaling
@@ -128,6 +130,22 @@ When determining which features are the most important, algorithms such as Rando
 PCA is an algorithm used for dimensionality reduction based on the idea to choose features with high variance as high variance features contain more information. 
 
 
+
+## Correlation
+
+Correlation is a statistical measure that expresses the relation between two variables [10].
+
+
+A positive correlation occurs when an increase in variable A leads to an increase in variable B. 
+
+A negative correlation occurs when an increase in variable A leads to a decrease in variable B.
+
+The range of correlation values is -1 to 1 where 1 represents completely, positively correlated features and -1 represents completely negatively correlated features.
+
+Having two or more highly correlated features in our training data will lead to the problem of **multicollinearity** which affects model performance.
+
+
+
 ----------
 
 
@@ -237,7 +255,18 @@ Standardization can be more practical for many machine learning algorithms since
 In addition, standardization maintains useful information about outliers and makes the algorithm less sensitive to them whereas min-max only scales the data to a limited range of values.
 
 
-## Log Transform
+
+## Non-Normal Distribution of Data
+
+It is important for most machine learning algorithms that features should follow a normal distribution since non-normal distribution of data affects model performance and generates wrong predictions [11].
+
+There are many transformation methods that are used to convert non-normal distribution into a normal distribution [11]:
+
+- Log Transform: we take the log of values of a particular feature.
+
+- Box-Cox Transformation: Box-Cox transformation is a part of the power transformers family.
+
+### Log Transform
 
 Log Transform is the most used technique among data scientists to turn a skewed distribution into a normal or less-skewed distribution. 
 
@@ -251,7 +280,12 @@ Log transform is used to handle confusing data so that the data becomes more app
 
 ## Normalization Techniques
 
-Data Normalization is a typical practice in machine learning which consists of transforming numeric columns to a _standard scale_. Some feature values may differ from others multiple times. Therefore, the features with higher values will dominate the learning process.
+Data Normalization is a typical practice in machine learning which consists of transforming numeric columns to a _standard scale_. 
+
+Some feature values may differ from others multiple times. Therefore, the features with higher values will dominate the learning process [9].
+
+One way to overcome this quirk is to use tree-based models like Random Forest, but if your problem requires the use of regularized linear models or neural networks then you should scale the feature ranges (say 0 to 1).
+
 
 ### Using maximum absolute scaling
 
@@ -503,8 +537,12 @@ Simple ways to filter features for simpler and faster model [5].
 
 It is often useful to filter out non-predictive features and keep the model lean so that the model is faster, easier to explain to stakeholders and simpler to deploy.
 
-The article five different ways to do feature selection for supervised machine learning problem.
+The article [5] five different ways to do feature selection for supervised machine learning problem.
 
+
+Determining which features are most relevant to a particular task is not always straightforward. It may be helpful to use a feature selection technique to help identify features with less importance [10]. 
+
+These feature selection techniques often rank features based on their importance in predicting an outcome. Then we can filter all the features using a threshold value for extracting the most important features.
 
 
 ## Distance Metrics
@@ -618,6 +656,15 @@ The order that the transform operations are applied is important.
 [7] [How to decide the perfect distance metric for your machine learning model](https://towardsdatascience.com/how-to-decide-the-perfect-distance-metric-for-your-machine-learning-model-2fa6e5810f11)
 
 [8] [What we can Learn from Black-box Models](https://towardsdatascience.com/what-we-can-learn-from-black-box-models-eda3677c42f2)
+
+
+[9] [Major Problems of Machine Learning Datasets: Part 1](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-1-5d5a06221c90)
+
+[10] [Major Problems of Machine Learning Datasets: Part 2](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-2-ba82e551fee2)
+
+[11] [Major Problems of Machine Learning Datasets: Part 3](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-3-eae18ab40eda)
+
+[12] [How to Use Power Transforms for Machine Learning](https://machinelearningmastery.com/power-transforms-with-scikit-learn/)
 
 
 [Best Practice to Calculate and Interpret Model Feature Importance](https://towardsdatascience.com/best-practice-to-calculate-and-interpret-model-feature-importance-14f0e11ee660)
