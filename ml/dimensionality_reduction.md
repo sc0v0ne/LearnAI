@@ -3,6 +3,7 @@
 <!-- MarkdownTOC -->
 
 - What is Dimensionality Reduction
+- High-dimensional data
 - The Curse of Dimensionality
 - PCA Requirements
 - Techniques for Dimensionality Reduction
@@ -32,19 +33,33 @@ Dimensionality reduction is the process of bringing the number of columns down t
 Why would we drop 80 columns off our dataset when we could straight up feed it to our machine learning algorithm and let it do the rest?
 
 
+## High-dimensional data
+
+In machine learning, the number (degree) of features in a dataset is referred to as its _dimensionality_.   
+
+Machine learning problems with high dimensionality have a variety of issues [8].
+
+- As the number of features in a dataset increases, the time needed to train the model will also increase. 
+
+- High-dimensional datasets are extremely difficult (if not impossible) to visualize. The harder it is to visualize a dataset, the harder it can be to explain which contributes to the “black box” problem in machine learning. 
+
+- The Curse of Dimensionality: the amount of data needed to train a model grows exponentially with the number of features (dimensions) in a dataset.
+
+
 ## The Curse of Dimensionality
 
-The _curse of dimensionality_ refers to the problems that arise when working with data in the higher dimensions which does not exist in the lower dimensions.
+The _curse of dimensionality_ refers to the problems that arise when working with data in the higher dimensions which does not exist in the lower dimensions [3].
 
-- As the number of features increase, the number of samples also increases proportionally. Thus, the more features we have, the more number of samples we will need to have all combinations of feature values well represented in our sample.
+- As the number of features (dimensions) increase, the number of samples also increases proportionally. Thus, the more features we have, the more samples we will need to have all combinations of feature values well-represented.
 
 - As the number of features increases, the model becomes more complex and the greater the chances of overfitting. 
 
 - A machine learning model that is trained on a large number of features becomes increasingly dependent on the data it was trained on and in turn overfitted which results in poor performance on new unseen data.
 
+
 Avoiding overfitting is a major motivation for performing dimensionality reduction: the fewer features our training data has, the fewer assumptions our model makes and the simpler it will be. 
 
-In addition, dimensionality reduction has the following advantages:
+In addition, dimensionality reduction has the following advantages [3]:
 
   1. Less misleading data means model accuracy improves.
   2. Less dimensions mean less computing. 
@@ -246,6 +261,8 @@ No single dimensionality reduction technique consistently provides the ‘best�
 [6] [11 Dimensionality reduction techniques you should know in 2021](https://towardsdatascience.com/11-dimensionality-reduction-techniques-you-should-know-in-2021-dcb9500d388b)
 
 [7] [A Guide to Dimensionality Reduction in Python](https://towardsdatascience.com/a-guide-to-dimensionality-reduction-in-python-ce0c6ab91986?source=rss----7f60cf5620c9---4)
+
+[8] [Major Problems of Machine Learning Datasets: Part 3](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-3-eae18ab40eda)
 
 
 [The Similarity between t-SNE, UMAP, PCA, and Other Mappings](https://towardsdatascience.com/the-similarity-between-t-sne-umap-pca-and-other-mappings-c6453b80f303)
