@@ -8,7 +8,6 @@
   - Flutter
 - Software Development
 - JetBrains
-- Chrome Extensions
 - Mac Apps
 - Swift
 - iPhone Apps
@@ -43,6 +42,7 @@
 - Python Test Explorer
 - Python Type Hint
 - Python Preview
+- Regex previewer
 - Trailing Spaces
 - YAML Support
 
@@ -52,6 +52,7 @@
 - Color Highlight
 - Coverage Gutters
 - Indent Rainbow
+- Noctis
 - Peacock
 
 - Awesome Flutter Snippets
@@ -59,10 +60,13 @@
 - Docker
 - Folder Templates
 - Image Preview
-- Remote WSL
 - Remove Comments
 - Remove empty lines
 - Todo Tree
+
+- Live server
+- Remote development
+- Remote WSL
 
 
 ### Python
@@ -109,16 +113,20 @@
 github.com/flutter/plugins
 
 - Animations
+- camera
 - file_selector
 - image_picker
+- url_launcher
 
 Advanced
 
 - baseflow/flutter-geolocator
 - baseflow/flutter-permission-handler
 - baseflow/flutter_cached_network_image
-
 - fluttercandies/flutter_photo_manager
+- letsar/flutter_staggered_grid_view
+- adar2378/pin_code_fields
+
 
 
 ## Software Development
@@ -129,10 +137,15 @@ Advanced
 
 ## JetBrains
 
+- asciidoc
+- codeglance-pro
 - Code Time
+- Color Highlighter
 - CSV
 - Database Navigator
 - .env
+- Extra ToolWindow Colorful Icons
+- gitlink
 - GitLive
 - Git Machete
 - Gorgeous Themes
@@ -150,21 +163,12 @@ Advanced
 - String Manipulation
 - Wakatime
 
-- Material Theme UI
 
-
-## Chrome Extensions
-
-- ColorPick
-- Colorzilla
-- Dark Reader
-- Designer Tools
-- Markup Hero
-- Momentum
-- Medium Enhanced Stats
-- Nimbus Screenshot
-- Site Palette
-- WhatFont
+- Hiberbee Theme
+- Gradianto
+- Material UI Theme
+- Monokai Pro Theme
+- One Dark Theme
 
 
 ## Mac Apps
@@ -182,22 +186,40 @@ Advanced
 - Meeter
 - Monitor Control
 - Moom
-- Numi
+- Numi (calculator)
+- Raycast
 - Reader 5
 - Setapp
 - Spark (Mail)
 - Steam Gaming
+- TickTick
 - Tweetbot
+
+- asdf
+- exa  alias ls=”exa --icons -lh”
+- macchina
+- tokei
 
 - Appium
 - CodeKit
 - Dash
 - Figma
+- ImageOptim
 - Navicat Premium
 - Postman
 - TablePlus
 - Tower
 - Transmit
+
+```bash
+  asdf plugin-add nodejs
+  asdf install nodejs latest
+  asdf global nodejs latest
+
+  asdf plugin-add python      # install plugin
+  asdf install python latest  # install package
+  asdf global python latest   # set as default version
+```
 
 
 ## Swift
@@ -226,6 +248,14 @@ Advanced
 - davedelong/time
 - yeahdongcn/UIColor-Hex-Swift
 - devxoul/URLNavigator
+- marmelroy/Zip
+
+- bluejay (Bluetooth)
+- CameraManager
+- DBDebugToolkit
+- KZFileWatchers
+- SVGKit
+
 
 
 ## iPhone Apps
@@ -257,12 +287,17 @@ Advanced
 ## Linux Utilities
 
 - awk
+- bat (batmab and prettybat)
+- duf
 - fkill
+- fzf
 - hstr
 - httpie
+- mktemp
 - rich
 - ripgrep
 - screen
+- Shellcheck
 - tmux
 
 ### awk

@@ -38,11 +38,21 @@ Audio/Video
 ## Browser Extensions
 
 - Awesome Screenshots
+- Nimbus Screenshot
+
+- Medium Enhanced Stats
+
+- ColorPick
 - Colorzilla
+- Dark Reader
+- Designer Tools
+- Eye Dropper
 - Fonts Ninja
 - Form Vault
 - Google Font Previewer
 - JsonVue
+- Markup Hero
+- Momentum
 - Octotree
 - Site Pallette
 - Temp Email
@@ -54,6 +64,8 @@ Audio/Video
 
 UX Design
 
+- Bootstrap Grid Overlay
+- ColorTab
 - Heurio
 - Perfect Pixel
 - UX Check
