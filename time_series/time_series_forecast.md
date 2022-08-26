@@ -9,9 +9,10 @@
     - Time Series Decomposition
     - Time Series Data Preparation
     - Forecast Performance Baseline
-    - 5-Step Forecasting Task
+    - 5 Step Forecasting Task
     - Error Metrics for Time Series Forecasting
 - How to Develop LSTM Models for Time Series Forecasting
+    - The 5 Step Life-Cycle for LSTM Models in Keras
     - Univariate LSTM Models
         - Data Preparation
         - Vanilla LSTM
@@ -22,7 +23,7 @@
     - Multivariate LSTM Models
         - Multiple Input Series
         - Multiple Parallel Series
-    - Time Series Datasets using Keras
+- Time Series Datasets using Keras
 - Categories of Articles
     - Time Series Background
     - Time Series for Beginners
@@ -36,6 +37,9 @@
     - Time Series Examples using PyTorch
     - Time Series Examples using AutoML
     - Time Series Examples using PyCaret
+- Time Series Forecasting Books
+- Confidence Intervals
+    - Nonparametric Confidence Interval
 - References
 
 <!-- /MarkdownTOC -->
@@ -89,6 +93,9 @@ Descriptive models can borrow for the future (to smooth or remove noise), they o
 An important distinction in forecasting is that the future is completely unavailable and must only be estimated from what has already happened.
 
 Time series analysis can be used to remove trend and/or seasonality components which can help with forecasting.
+
+
+In time series forecasting, the evaluation of models on historical data is called _backtesting_. 
 
 
 ## Time Series Decomposition
@@ -170,7 +177,7 @@ A common algorithm used in establishing a baseline performance is the _persisten
 
 
 
-## 5-Step Forecasting Task
+## 5 Step Forecasting Task
 
 The 5 basic steps in a forecasting task are summarized by Hyndman and Athana­sopou­los in their book Forecasting: principles and practice. These steps are:
 
@@ -222,14 +229,25 @@ There are many time series forecasting tutorials and examples using and air poll
 
 Unless you make use of the time series features of tflow Dataset or torch Dataloader you will encounter two issues: 
 
-1. You will have to write a custom function to reframe the problem from time series to a supervised learning problem (X, y) which is what most all ML models including a NN such as LSTM will require. 
+1. We have to write a custom function to reframe the problem from time series to a supervised learning problem (X, y) which is what most all ML models including NN such as LSTM will require. 
 
-2. Your custom function will likely not perform as well as a Dataset/Dataloader and will probably not scale or support parallelization. 
+2. The custom function will likely not perform as well as a Dataset/Dataloader and will probably not scale or support parallelization. 
 
 
 Here, we explore how to develop a suite of different types of LSTM models for time series forecasting.
 
-> The following examples manually convert the time series to supervised problem (split_seauences and series_to_supervised). A better approach is to make use of the time series featues of tflow Datset or torch Daraloader, espcially for multivariate time series. 
+> The following examples manually convert the time series to supervised problem (split_seauences and series_to_supervised). A better approach is to make use of the time series featues of tflow Dataset or torch Daraloader, especially for multivariate time series.
+
+
+## The 5 Step Life-Cycle for LSTM Models in Keras
+
+The article [8] discusses the 5 steps in the LSTM model life-cycle in Keras:
+
+1. Define Network
+2. Compile Network
+3. Fit Network
+4. Evaluate Network
+5. Make Predictions
 
 
 ## Univariate LSTM Models
@@ -501,7 +519,7 @@ The first sample of this dataset would be:
 ----------
 
 
-## Time Series Datasets using Keras
+# Time Series Datasets using Keras
 
 ```py
 def normalize(data: np.ndarray, train_split: float):
@@ -593,6 +611,8 @@ def create_datasets(params: Params, debug: bool = False):
     return train_ds, val_ds, test_ds, mean_array, std_array
 ```
 
+----------
+
 
 
 # Categories of Articles
@@ -600,6 +620,12 @@ def create_datasets(params: Params, debug: bool = False):
 ## Time Series Background
 
 [Taxonomy of Time Series Forecasting Problems](https://machinelearningmastery.com/taxonomy-of-time-series-forecasting-problems/)
+
+[Introduction to Time Series Forecasting (Python)](https://machinelearningmastery.com/start-here/#timeseries)
+
+[Time Series Forecasting as Supervised Learning](https://machinelearningmastery.com/time-series-forecasting-supervised-learning/)
+
+[How to Difference a Time Series Dataset with Python](https://machinelearningmastery.com/difference-time-series-dataset-python/)
 
 [How to Reframe Your Time Series Forecasting Problem](https://machinelearningmastery.com/reframe-time-series-forecasting-problem/)
 
@@ -728,10 +754,131 @@ def create_datasets(params: Params, debug: bool = False):
 
 
 
+# Time Series Forecasting Books
+
+W. W. S. Wei, Multivariate Time Series Analysis and Applications, 1st ed., Wiley, 2019. 
+
+D. C. Montgomery and C. L. Jennings, Introduction to Time Series Analysis and Forecasting, 2nd ed., Wiley, 2015. 
+
+G. Shmueli and  K. C. Lichtendahl Jr., Practical Time Series Forecasting with R, 2nd ed., Axelrod Schnall Publishers, 2016. 
+
+R. J. Hyndman, Forecasting: Principles and Practice, 3rd ed., Otexts, 2021, Available online: https://otexts.com/fpp3/
+
+
+-----
+
+
+# Confidence Intervals
+
+Confidence intervals are a way of quantifying the uncertainty of an estimate. 
+
+Confidence intervals can be used to add a bounds or likelihood on a population parameter (such as a mean) estimated from a sample of independent observations from the population. 
+
+Confidence intervals come from the field of estimation statistics. 
+
+Here are some key facts about CI [9]:
+
+- A confidence interval is a bounds on an estimate of a population parameter.
+
+- The confidence interval for the estimated skill of a classification method can be calculated directly.
+
+- The confidence interval for any arbitrary population statistic can be estimated in a distribution-free way using the bootstrap.
+
+
+A _confidence interval_ (CI) is a bounds on the estimate of a population variable. 
+
+CI is an interval statistic used to quantify the _uncertainty_ on an estimate.
+
+
+CI is different from a _tolerance interval_ that describes the bounds of data sampled from the distribution. 
+
+CI is different from a _prediction interval_ that describes the bounds on a single observation. 
+
+
+A confidence interval provides bounds on a population parameter such as a mean, standard deviation, etc.
+
+In applied machine learning, we may want to use confidence intervals in the presentation of the skill of a predictive model.
+
+A confidence interval could be used in presenting the skill of a classification model:
+
+> Given the sample, there is a 95% likelihood that the range x to y covers the true model accuracy.
+
+or
+
+> The accuracy of the model was x +/- y at the 95% confidence level.
+
+Confidence intervals can also be used in the presentation of the error of a regression predictive model:
+
+> There is a 95% likelihood that the range x to y covers the true error of the model.
+
+or
+
+> The error of the model was x +/- y at the 95% confidence level.
+
+
+The value of a confidence interval is its ability to quantify the uncertainty of the estimate. 
+
+CI provides both a lower and upper bound and a likelihood. 
+
+As a radius measure, the confidence interval is often referred to as the _margin of error_ and may be used to graphically depict the uncertainty of an estimate on graphs through the use of _error bars_.
+
+The larger the sample from which the estimate was drawn, the more precise the estimate and the smaller (better) the confidence interval.
+
+- Smaller Confidence Interval: A more precise estimate.
+
+- Larger Confidence Interval: A less precise estimate.
+
+
+Confidence intervals belong to a field of statistics called estimation statistics that can be used to present and interpret experimental results instead of (or in addition to) statistical significance tests.
+
+Confidence intervals may be preferred in practice over the use of statistical significance tests.
+
+The reason is that they are easier for practitioners and stakeholders to relate directly to the domain. 
+
+CIs can also be interpreted and used to compare machine learning models.
+
+Running the example, we see the calculated radius of the confidence interval calculated and printed:
+
+0.111
+
+- The classification error of the model is 20% +/- 11%
+
+- The true classification error of the model is likely between 9% and 31%.
+
+
+## Nonparametric Confidence Interval
+
+We may not know the distribution for a chosen performance measure, or we may not know the analytical way to calculate a confidence interval for a skill score.
+
+The assumptions that underlie parametric confidence intervals are often violated. 
+
+The predicted variable sometimes is not normally distributed, or the variance of the normal distribution might not be equal at all levels of the predictor variable.
+
+In these cases, the _bootstrap_ resampling method can be used as a nonparametric method for calculating confidence intervals called **bootstrap confidence intervals**.
+
+The bootstrap is a simulated Monte Carlo method where samples are drawn from a fixed finite dataset with replacement and a parameter is estimated on each sample. 
+
+The bootstrap procedure leads to a robust estimate of the true population parameter via sampling.
+
+
+Running the example summarizes the distribution of bootstrap sample statistics including the 2.5th, 50th (median) and 97.5th percentile.
+
+50th percentile (median) = 0.750
+2.5th percentile = 0.741
+97.5th percentile = 0.757
+
+We can then use these observations to make a claim about the sample distribution:
+
+> There is a 95% likelihood that the range 0.741 to 0.757 covers the true statistic mean.
+
+
+----------
+
+
+
 # References
 
-
-[1] W. McKinney, Python for Data Analysis 2nd ed., Oreilly, ISBN: 978-1-491-95766-0, 2018.
+[1] W. McKinney, Python for Data Analysis, 2nd ed., Oreilly, ISBN: 978-1-491-95766-0, 2018.
 
 [2] [Multivariate Time Series Forecasting with LSTMs in Keras](https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/)
 
@@ -744,6 +891,29 @@ def create_datasets(params: Params, debug: bool = False):
 [6] [Don’t Use K-fold Validation for Time Series Forecasting](https://towardsdatascience.com/dont-use-k-fold-validation-for-time-series-forecasting-30b724aaea64)
 
 [7] [Bias-Variance Tradeoff in Time Series](https://towardsdatascience.com/bias-variance-tradeoff-in-time-series-8434f536387a)
+
+[8] [The 5 Step Life-Cycle for Long Short-Term Memory Models in Keras](https://machinelearningmastery.com/5-step-life-cycle-long-short-term-memory-models-keras/)
+
+
+[9] [Confidence Intervals for Machine Learning](https://machinelearningmastery.com/confidence-intervals-for-machine-learning/)
+
+[10] [How to Report Classifier Performance with Confidence Intervals](https://machinelearningmastery.com/report-classifier-performance-confidence-intervals/)
+
+[11] [How to Calculate Bootstrap Confidence Intervals For Machine Learning Results in Python](https://machinelearningmastery.com/calculate-bootstrap-confidence-intervals-machine-learning-results-python/)
+
+[12] [A Gentle Introduction to the Bootstrap Method](https://machinelearningmastery.com/a-gentle-introduction-to-the-bootstrap-method/)
+
+[13] [How To Backtest Machine Learning Models for Time Series Forecasting](https://machinelearningmastery.com/backtest-machine-learning-models-time-series-forecasting/)
+
+
+[A Gentle Introduction to Statistical Tolerance Intervals in Machine Learning](https://machinelearningmastery.com/statistical-tolerance-intervals-in-machine-learning/)
+
+[Prediction Intervals for Machine Learning](https://machinelearningmastery.com/prediction-intervals-for-machine-learning/)
+
+[Understand Time Series Forecast Uncertainty Using Prediction Intervals with Python](https://machinelearningmastery.com/time-series-forecast-uncertainty-using-confidence-intervals-python/)
+
+[Prediction Intervals for Deep Learning Neural Networks](https://machinelearningmastery.com/prediction-intervals-for-deep-learning-neural-networks/)
+
 
 
 [^what_is_tsf]: https://machinelearningmastery.com/time-series-forecasting/ "What Is Time Series Forecasting?"
