@@ -14,6 +14,7 @@
 - How to Choose an ML Algorithm
 - How to choose classification model
 - Should I start learning ML by coding an algorithm from scratch
+- The obsession to understand how algorithms work
 - Is image channels first or last
 - How to share your work
 - How to choose a Cloud Platform
@@ -27,8 +28,8 @@
   - Should I Standardize then Normalize
   - How Do I Handle Out-of-Bounds Values
 - Using AI with Medical Images
+- How does NLP work
 - How to Develop a Chatbot
-- How to Develop Recommender Systems
 - Why are Robots not more common
 
 <!-- /MarkdownTOC -->
@@ -229,6 +230,55 @@ AutoML tools are the future of AI, so now would be a good time to see how they w
 The rule of thumb is that a deep learning model should be your last choice (Occam's Razor). 
 
 
+## The obsession to understand how algorithms work
+
+There seems to be an “obsession” with newcomers to understand how AI algorithms work. However, this is not the recommended approach to solving software engineering problems. 
+
+Here are a few points to keep in mind:
+
+1. There are just too many algorithms for any single person to understand and code from scratch. 
+
+2. In real-world applications, there are usually thousands or millions of model parameters involved. 
+
+3. The focus should be on how to use them (black-box) rather than how things work (white-box)  which is a basic axiom of OOA&D discussed in GoF Design Patterns. 
+
+4. Occam’s Razor (simpler is better than SOTA)
+
+5. No Free Lunch Theorem (no such thing as best). 
+
+6. With effort, almost any algorithm can be made to fit any dataset (brute-force) which is not the proper approach to AI. 
+
+6. Any competent software engineer can implement any algorithm.
+
+
+A common misconception when people begin learning ML is to implement algorithms from scratch. 
+
+Yes that is common misconception when people begin learning ML. I would suggest you do some research into ML teaching methods.
+
+It takes a lot of work to create a robust, reusable framework such as scikit-learn which should be your goal, not a simple novice implementation that is easy to understand. 
+
+Most employers are going to want to see u contribute to open source projects such as scikit-learn rather than roll-your-own for exactly those reasons.
+
+If u really insist on the code from scratch approach, there are lots of reputable sites such as machinelearningmastery.com with tutorials and sample code as well as the Keras Documentation which is pretty good for simple implementations such as you are doing. However, u will not have  accomplished much if u don’t have something to compare to once u r done.
+
+The focus should be on _how to use_ robust ML frameworks to solve real-world problems.
+
+> You do not have to _start_ by implementing machine learning algorithms. You will build your confidence and skill in machine learning a lot faster by learning how to use machine learning algorithms before implementing them.
+
+In a nutshell, the scikit-learn source code is not easy to understand because of the complexity required to create a robust ML framework. The underlying algorithms are actually quite simple.
+
+This is all discussed in the GoF Design Patterns book as well as modern AI and ML textbooks which I am confident u are not using as learning resources.
+
+Note that J. Brownlee has a PhD in CS. Thus, this is not just my personal opinion but how learning ML is done. 
+
+The problem with users posting this kind of material is that they inadvertently drag other newcomers down the same futile rabbit hole of code from scratch. 
+
+[How to Learn AI](https://medium.com/geekculture/how-to-learn-ai-7bb743f0bbdf)
+
+[Stop Coding Machine Learning Algorithms From Scratch](https://machinelearningmastery.com/dont-implement-machine-learning-algorithms/)
+
+
+
 ## Is image channels first or last
 
 A huge gotcha with both PyTorch and Keras. Actually, you need to sometimes need to to watch out when running code between OS (NHWC vs NCHW). I spent a long time tracking down an obscure error message between Linux and macOS that turned out to be the memory format.
@@ -333,6 +383,18 @@ Resampling is just one approach to balance a dataset but it is an advanced conce
 I have some notes on “Dataset Issues” that may help get you started for structured datasets. However, the approach is different for image datasets.
 
 
+## How does NLP work
+
+The most common NLP problems are usually addressed by the NLP preprocessing steps: Tokenization, Stemming, and Lemmatization, plus Keyword extraction, and NER. 
+
+In a nutshell, a well-performing NLP model will simply learn good sentences/phrases an ignores the bad. However, remember that no AI model will achieve 100% accuracy. 
+
+In general, there are few common issues with NLP: Lexical Ambiguity, Syntax Level Ambiguity, and Referential Ambiguity. However, these problems are usually addressed by 1) training with more and larger corpora and 2) training embeddings on your own dataset. There are also other techniques as well.
+
+The most common approach to NLP right now is to start with a pretrained model and then retrain/extend to your own custom dataset.
+
+
+
 ## How to Develop a Chatbot
 
 Chatbots are better to use pretrained model and software. You can take a look at Moodle and Rasa which are popular. There is also an example using NLTK that claims to be somewhat accurate. 
@@ -342,21 +404,6 @@ Chatbots are better to use pretrained model and software. You can take a look at
 [Building a Chatbot with Rasa](https://towardsdatascience.com/building-a-chatbot-with-rasa-3f03ecc5b324)
 
 [Python Chatbot Project – Learn to build your first chatbot using NLTK and Keras](https://data-flair.training/blogs/python-chatbot-project/)
-
-
-
-## How to Develop Recommender Systems
-
-This article give a high level overview of recommender systems which may give some ideas for approaches. You can also track web browser activity in various ways to build a custom dataset but you should be able to find a toy dataset to work with initially once you decide on an approach.  
-
-Once you decide on an approach (there are many such collaborative filtering for example), you should be able to determine the type of dataset that you need which will then allow to find a toy dataset to use for experimentation and prototyping since it will most likely take a lot of time and effort to build a custom dataset for many of the approaches such as web browser tracking. 
-
-Then, you should have a toy dataset on which you can use some AutoML tools to evaluate many different models and be able to narrow the choices to just a few models.
-
-
-[Inside recommendations: how a recommender system recommends](https://www.kdnuggets.com/inside-recommendations-how-a-recommender-system-recommends.html/)
-
-[Recommender System using Collaborative Filtering in Pyspark](https://angeleastbengal.medium.com/recommender-system-using-collaborative-filtering-in-pyspark-b98eab2aea75?source=post_page-----b98eab2aea75-----------------------------------)
 
 
 
