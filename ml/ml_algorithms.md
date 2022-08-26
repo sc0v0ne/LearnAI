@@ -26,6 +26,7 @@
     - Ensemble Algorithms
     - Decision Trees
 - Regression Algorithms Pros and Cons
+- The Elbow Method
 - Examples of Algorithm Lists To Create
 - Tips for Creating Algorithm List
 - Orange Algorithm List
@@ -433,6 +434,25 @@ The article discusses some of the Pros and Cons of 9 common regression algorithm
 —————————-
 
 
+## The Elbow Method
+
+The elbow method is a common heuristic (not a formula) for finding the optimal k value for unsupervised models such as PCA or k-means. 
+
+The best approach to using the elbow method is to create the scree plot and also compute a metric for comparison. Also, AutoML tools such as Orange are good for quickly visualizing the results for the elbow method. 
+
+
+Here are some tutorials that may help:
+
+[Elbow Method for optimal value of k in KMeans](https://www.geeksforgeeks.org/elbow-method-for-optimal-value-of-k-in-kmeans/)
+
+[PCA Example in Python with scikit-learn](https://cmdlinetips.com/2018/03/pca-example-in-python-with-scikit-learn/amp/)
+
+[How to do a Clustering project Step by Step](https://z-ai.medium.com/how-to-do-a-clustering-project-step-by-step-4b41e94fad1)
+
+[Detailed Introduction To K-Means Clustering In Python](https://onepagecodewriter.medium.com/detailed-introduction-to-k-means-clustering-in-python-d8178d7eb123)
+
+
+
 ## Examples of Algorithm Lists To Create
 
 Below are 10 examples of machine learning algorithm lists that you could create.
@@ -504,6 +524,8 @@ Below are 10 examples of machine learning algorithm lists that you could create.
 [2] [Clustering with K-Means: simple yet powerful](https://medium.com/@alexandre.hsd/everything-you-need-to-know-about-clustering-with-k-means-722f743ef1c4)
 
 [3] [A Practical Introduction to 9 Regression Algorithms](https://towardsdatascience.com/a-practical-introduction-to-9-regression-algorithms-389057f86eb9?source=rss----7f60cf5620c9---4)
+
+[4] [You Should Check Out This Effective Framework for Model Selection](https://pub.towardsai.net/a-framework-for-model-selection-ea4dcda2cb3a)
 
 
 [Comprehensive Guide to Decision Tree Learning for Classification](https://therised.medium.com/comprehensive-guide-to-decision-tree-learning-for-classification-61bf2c510c6b)
