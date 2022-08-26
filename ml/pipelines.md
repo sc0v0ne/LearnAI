@@ -1,4 +1,27 @@
-## Data Pipelines
+# Data Pipelines
+
+<!-- MarkdownTOC -->
+
+- Overview
+- Import Libraries
+- Create Simple Pipeline
+- Best Scaler
+- Best Estimator
+- Pipeline with PCA
+- Joblib
+- Pandas pipe
+- Kedro
+- More on scikit-learn pipeline
+- Data Prep
+- Create Pipeline
+- Train and Evaluate Pipeline
+- Modeling Pipeline
+- References
+
+<!-- /MarkdownTOC -->
+
+
+## Overview
 
 There are multiple stages to running machine learning algorithms since it involves a sequence of tasks including pre-processing, feature extraction, model fitting, performance, and validation.
 
@@ -19,7 +42,7 @@ A data pipeline has six basic elements [7]:
 Here we are using the `Pipeline` class from scikit-learn [5]. 
 
 
-### Import Libraries
+## Import Libraries
 
 ```py
     import pandas as pd
@@ -58,7 +81,7 @@ Here we are using the `Pipeline` class from scikit-learn [5].
     trainX, testX, trainY, testY = train_test_split(x, y, test_size = 0.2)
 ```
 
-### Create Simple Pipeline
+## Create Simple Pipeline
 
 ```py
     # Create a pipeline
@@ -75,7 +98,7 @@ Here we are using the `Pipeline` class from scikit-learn [5].
     print('Test Accuracy Score: {:.4f}'.format(accuracy_score(testY, y_predict)))
 ```
 
-### Best Scaler
+## Best Scaler
 
 ```py
     # Create a pipeline
@@ -131,7 +154,7 @@ Convert pipeline to DataFrame and show the best model:
     print(best_model_df)
 ```
 
-### Best Estimator
+## Best Estimator
 
 ```py
     # Create a pipeline
@@ -192,26 +215,28 @@ Convert pipeline to DataFrame and show the best model:
     print(b_model)
 ```
 
-### Pipeline with PCA
+## Pipeline with PCA
 
 Pipeline example with Principal Component Analysis (PCA) [5].
 
 
-### Joblib
+## Joblib
 
 **Joblib** is an open-source Python library that helps to save pipelines to a file that can be used later [10].
 
 
-### Pandas pipe
+## Pandas pipe
 
-The pandas `pipe` function offers a structured and organized way for combining several functions into a single operation.
+The pandas `pipe` function offers a structured and organized way for combining several functions into a single operation [10]. 
 
 As the number of steps increase, the syntax becomes cleaner with the pipe function compared to executing functions.
 
 We can also apply Python design pattern to create scalable data-wrangling pipelines [10].
 
+The tutorial [13] shows how to create a pandas pipe and add multiple chainable functions to perform data processing and visualization. 
 
-### Kedro
+
+## Kedro
 
 [Kedro — A Python Framework for Reproducible Data Science Project](https://towardsdatascience.com/kedro-a-python-framework-for-reproducible-data-science-project-4d44977d4f04)
 
@@ -227,7 +252,7 @@ A scikit-learn pipeline is a component provided by scikit-learn package that all
 
 Thus, pipelines are very helpful because the component can perform all the data preprocessing and model fitting and also help to minimize human error during the data transformation and fitting process [7] [8]. 
 
-### Data Prep
+## Data Prep
 
 ```py
     # convert question mark '?' to NaN
@@ -238,7 +263,7 @@ Thus, pipelines are very helpful because the component can perform all the data 
     df.income = le.fit_transform(df.income)
 ```
 
-### Create Pipeline
+## Create Pipeline
 
 ```py
     # create column transformer component
@@ -268,7 +293,7 @@ Thus, pipelines are very helpful because the component can perform all the data 
         ])
 ```
 
-### Train and Evaluate Pipeline
+## Train and Evaluate Pipeline
 
 ```py
     # create X and y variables
@@ -368,5 +393,6 @@ It is a shift in thinking that may take some time to get used to.
 
 [12] [How To Use Scikit-Learn Pipelines To Simplify Machine Learning Workflow](https://medium.com/geekculture/how-to-use-sklearn-pipelines-to-simplify-machine-learning-workflow-bde1cebb9fa2)
 
+[13] [Simplify Data Processing with Pandas Pipeline](https://www.kdnuggets.com/2022/08/simplify-data-processing-pandas-pipeline.html)
 
 [Recursive Feature Elimination (RFE) for Feature Selection in Python](https://machinelearningmastery.com/rfe-feature-selection-in-python/)
