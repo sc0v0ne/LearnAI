@@ -22,6 +22,7 @@
     - TensorFlow Data Validation
     - TensorFlow Extended
     - TensorFlow Serving
+- Kubeflow
 - References
 
 <!-- /MarkdownTOC -->
@@ -326,6 +327,31 @@ TensorFlow Serving makes it easy to deploy new algorithms and experiments while 
 TensorFlow Serving provides out-of-the-box integration with TensorFlow models, but can be easily extended to serve other types of models and data.
 
 
+## Kubeflow
+
+Kubeflow is the machine learning toolkit for Kubernetes.
+
+Kubeflow is an open-source Kubernetes-based machine learning stack used to simplify the process of deploying, scaling, and managing machine learning systems. 
+
+Kubeflow has several different components that address various steps in building an ML system. 
+
+Kubeflow also allows you to reuse elements of a pipeline for later projects.
+
+You can adapt the configuration to choose the platforms and services that you want to use for each stage of the ML workflow:
+
+1. data preparation
+2. model training,
+3. prediction serving
+4. service management
+
+Some of the available tools in Kubeflow:
+
+- Data exploration
+- Building and training models
+- Hyper-parameter tuning (Katib)
+- Model versioning
+- Model deployment
+- Model production
 
 
 
