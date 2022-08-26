@@ -9,7 +9,7 @@
   - Applications
 - NLP Cheatsheet
 - Introduction to NLP
-- What is NLP?
+  - NLU vs NLG
 - Building a Natural Language Processor
 - Tokenization, Stemming, and Lemmatization
   - Tokenization
@@ -38,12 +38,11 @@
 - Challenges in Natural Language Processing
 - Common Tasks
 - NLP Workflow
-- NLP Pretrained Models
-- NLP Libraries
 - Tutorials
   - HuggingFace Transformers for NLP With Python
-  - Sentiment Analysis using Python
-  - Sentiment Analysis using AutoML
+  - Haystack
+- NLP Pretrained Models
+- NLP Libraries
 - References
 
 <!-- /MarkdownTOC -->
@@ -134,7 +133,7 @@ The general idea with document clustering is to assign each document a vector re
 
 ## NLP Cheatsheet
 
-This article is a checklist for the  exploration needed to develop an NLP model that performs well. 
+This article is a checklist for the exploration needed to develop an NLP model that performs well. 
 
 [NLP Cheatsheet](https://medium.com/javarevisited/nlp-cheatsheet-2b19ebcc5d2e)
 
@@ -145,28 +144,44 @@ This article is a checklist for the  exploration needed to develop an NLP model 
 ----------
 
 
+
 # Introduction to NLP
 
-## What is NLP?
-
-**Natural Language Processing (NLP)** is a method within Artificial Intelligence (AI) that works with the analysis and building of intelligent systems that can function in languages that humans speak.
-
-Natural Language Processing (NLP) is a category of ML concerned with the analysis and building of intelligent systems that can function in languages that humans speak. 
+**Natural Language Processing (NLP)** is concerned with the analysis and building of intelligent systems that can function in languages that humans speak [2]. 
 
 Processing of language is needed when a system wants to work based on input from a user in the form of text or speech and the user is adding input in regular use English [2].
 
-- **Natural Language Understanding (NLU):** The understanding phase is responsible for mapping the input that is given in natural language to a beneficial representation. 
 
-  NLU also analyzes different aspects of the input language that is given to the program.
+**Natural Language Understanding (NLU):** the understanding phase is responsible for mapping the input that is given in natural language to a beneficial representation. 
+
+NLU also analyzes different aspects of the input language that is given to the program.
 
 
-- **Natural Language Generation (NLG):** The generation phase of the processing is used in creating Natural Languages from the first phase. 
+**Natural Language Generation (NLG):** the generation phase of the processing is used in creating Natural Languages from the first phase. 
 
-  Generation starts with Text Planning which is the extraction of relevant content from the base of knowledge. 
+Generation starts with Text Planning which is the extraction of relevant content from the base of knowledge. 
   
-  Next, the Sentence Planning phase chooses the words that will form the sentence. 
+Next, the Sentence Planning phase chooses the words that will form the sentence. 
   
-  Finally, the Text Realization phase is the final creation of the sentence structure.
+Finally, the Text Realization phase is the final creation of the sentence structure.
+
+  
+### NLU vs NLG
+
+NLP is used to turn sets of unstructured data into formats that computers can convert to speech and text.
+
+Natural Language Understanding (NLU)
+
+- NLU reads and makes sense of natural language. 
+- NLU assigns meaning to speech and text. 
+- NLU extracts facts from language. 
+
+Natural Language Generation (NLG)
+
+- NLG creates and outputs more language. 
+- NLG outputs language with the help of machines. 
+- NLG takes the insights that NLU extracts in order to create natural language. 
+
 
 
 ## Building a Natural Language Processor
@@ -184,9 +199,10 @@ There are a total of five execution steps when building a Natural Language Proce
 5. **Pragmatic Analysis:** Once all grammatical and syntactic checks are complete, the sentences are now checked for their relevance in the real world. During Pragmatic Analysis, every sentence is revisited and evaluated once again, this time checking them for their applicability in the real world using general knowledge.
 
 
+
 ## Tokenization, Stemming, and Lemmatization
 
-Here are some taks used for preprocessing text [2]:
+Here are some tasks used for preprocessing text [2]:
 
 ### Tokenization
 
@@ -408,7 +424,7 @@ Summarization is accomplished in two steps: extract and abstract.
 
 ## Guide to NLP
 
-The artcile [5] summarizes some of the most frequently used algorithms in NLP:
+The article [5] summarizes some of the most frequently used algorithms in NLP:
 
 ### Bag of Words
 
@@ -621,6 +637,66 @@ In this step, you need to make use of your communication and representation skil
 
 ----------
 
+
+
+## Tutorials
+
+Here are some useful NLP tutorials and examples.  
+
+### HuggingFace Transformers for NLP With Python
+
+This article [10] explores the use of a simple pre-trained HuggingFace transformer language model for some common NLP tasks in Python.
+
+- Text Classification
+- Named Entity Recognition
+- Text Summarization
+
+
+### Haystack
+
+Haystack is an open-source NLP framework that leverages Transformer models, designed to be the bridge between research and industry on neural search, question answering, semantic document search, and summarization. 
+
+Haystack is a modular framework that integrates with other open-source projects such as Huggingface (Transformers, Elasticsearch, or Milvus).
+
+**Haystack Use Cases**
+
+The main use cases of Haystack are [10]:
+
+- **Question Answering:** ask questions in natural language and find granular answers in your documents.
+
+- **Semantic Search:** retrieve documents according to the meaning of the query, not its keywords.
+
+- **Summarization:** ask a generic question and get summaries of the most relevant documents retrieved.
+
+- **Question Generation:** take a document as input and return generated questions that the document can answer.
+
+For example, Question Answering and Semantic Search can be used to better handle the long tail of queries that chatbots receive, or to automate processes by automatically applying a list of questions to new documents and using the extracted answers.
+
+Haystack can also [10]:
+
+- Use pre-trained models (such as BERT, RoBERTa, MiniLM) or fine-tune them to specific domains.
+
+- Collect user feedback to evaluate, benchmark, and continuously improve the models.
+
+- Scale to millions of docs via retrievers, production-ready backends such as Elasticsearch or FAISS, and a fastAPI REST API.
+
+**How it works**
+
+Haystack works by leveraging **Retriever-Reader** pipelines which harnesses the reading comprehension power of the Reader and applies it to large document bases with the help of the Retriever.
+
+- **Readers** are Closed-Domain Question Answering systems: powerful models that analyze documents and perform the question answering task on them. 
+
+Readers are based on the latest transformer-based language models which benefit from GPU acceleration. However, it is not efficient to use the Reader directly on a large collection of documents.
+
+- **Retriever** helps the Reader by acting as a filter that reduces the number of documents that the Reader has to process. 
+
+Retriever achieves this by scanning through all documents in the database, identifying the relevant ones (usually a small subset), and passing them to the Reader.
+
+Here is a figure that summarizes the Retriever-Reader pipeline [4].
+
+----------
+
+
 ## NLP Pretrained Models
 
 - Polyglot
@@ -628,6 +704,10 @@ In this step, you need to make use of your communication and representation skil
 - GenSim
 - Pattern
 - clean-text
+
+[spaCy](https://github.com/explosion/spaCy) is a library for advanced Natural Language Processing in Python and Cython.
+
+spaCy is built on the very latest research and was designed from day one to be used in real products.
 
 
 ## NLP Libraries
@@ -649,72 +729,6 @@ The most effective methodology is to use a powerful transformer to encode senten
 Calculating the cosine distance between two embeddings gives us the similarity score which is widely used in information retrieval and text summarization such as extract top N most similar sentences from multiple documents. 
 
 The similarity scores can also be used to reduce the dimensionality and to find similar resources.
-
-
-----------
-
-
-
-## Tutorials
-
-### HuggingFace Transformers for NLP With Python
-
-This article [8] explores the use of a simple pre-trained HuggingFace transformer language model for some common NLP tasks in Python.
-
-- Text Classification
-- Named Entity Recognition
-- Text Summarization
-
-[Two minutes NLP — Quick Introduction to Haystack](https://medium.com/nlplanet/two-minutes-nlp-quick-introduction-to-haystack-da86d0402998)
-
-
-### Sentiment Analysis using Python
-
-[Best Practices for Text Classification with Deep Learning](https://machinelearningmastery.com/best-practices-document-classification-deep-learning/)
-
-[How to Develop a Deep Learning Bag-of-Words Model for Sentiment Analysis (Text Classification)](https://machinelearningmastery.com/deep-learning-bag-of-words-model-sentiment-analysis/)
-
-[Deep Convolutional Neural Network for Sentiment Analysis (Text Classification)](https://machinelearningmastery.com/develop-word-embedding-model-predicting-movie-review-sentiment/)
-
-[How to Use Word Embedding Layers for Deep Learning with Keras](https://machinelearningmastery.com/use-word-embedding-layers-deep-learning-keras/)
-
-[Keras Code Examples](https://keras.io/examples/)
-
-
-----------
-
-[Twitter Sentiment Analysis using NLTK and Python](https://towardsdatascience.com/twitter-sentiment-analysis-classification-using-nltk-python-fa912578614c)
-
-[Classifying Tweets for Sentiment Analysis: NLP in Python for Beginners](https://medium.com/vickdata/detecting-hate-speech-in-tweets-natural-language-processing-in-python-for-beginners-4e591952223)
-
-[Tweet Classification and Clustering in Python](https://medium.com/swlh/tweets-classification-and-clustering-in-python-b107be1ba7c7)
-
-[Identifying Tweet Sentiment in Python](https://towardsdatascience.com/identifying-tweet-sentiment-in-python-7c37162c186b)
-
-
-### Sentiment Analysis using AutoML
-
-[From raw text to model prediction in under 30 lines of Python using Atom](https://towardsdatascience.com/from-raw-text-to-model-prediction-in-under-30-lines-of-python-32133d853407)
-
-[Powerful Twitter Sentiment Analysis in Under 35 Lines of Code](https://medium.com/thedevproject/powerful-twitter-sentiment-analysis-in-under-35-lines-of-code-a80460db24f6)
-
-[A Gentle Introduction to PyCaret for Machine Learning](https://machinelearningmastery.com/pycaret-for-machine-learning/)
-
-[NLP Text-Classification in Python: PyCaret Approach vs The Traditional Approach](https://towardsdatascience.com/nlp-classification-in-python-pycaret-approach-vs-the-traditional-approach-602d38d29f06)
-
-[Natural Language Processing Tutorial (NLP101) - Level Beginner](http://www.pycaret.org/tutorials/html/NLP101.html)
-
-
-----------
-
-
-[Complete Guide to Perform Classification of Tweets with SpaCy](https://towardsdatascience.com/complete-guide-to-perform-classification-of-tweets-with-spacy-e550ee92ca79)
-
-[Sentiment Analysis of Tweets using BERT](https://thinkingneuron.com/sentiment-analysis-of-tweets-using-bert/)
-
-[How to use SHAP with PyCaret](https://astrobenhart.medium.com/how-to-use-shap-with-pycaret-dc9a31278621)
-
-[Fine-Tuning BERT for Tweets Classification with HuggingFace](https://www.kdnuggets.com/2022/01/finetuning-bert-tweets-classification-ft-hugging-face.html)
 
 
 
@@ -739,10 +753,29 @@ This article [8] explores the use of a simple pre-trained HuggingFace transforme
 
 [9] [fastText: Enriching Word Vectors with Subword Information](https://sh-tsang.medium.com/review-fasttext-enriching-word-vectors-with-subword-information-bafac50f22a8)
 
+[10] [Two minutes NLP — Quick Introduction to Haystack](https://medium.com/nlplanet/two-minutes-nlp-quick-introduction-to-haystack-da86d0402998)
 
-[NLP: Classification and Recommendation Project](https://towardsdatascience.com/nlp-classification-recommendation-project-cae5623ccaae?gi=cb49766e5c29)
+
+[11] [Get To Know Audio Feature Extraction in Python](https://towardsdatascience.com/get-to-know-audio-feature-extraction-in-python-a499fdaefe42)
+
+
+[Everything You Need to Know to Get Started with NLP](https://towardsdatascience.com/nlp-survey-bde8a27e8ba)
+
+[NLP Cheatsheet](https://medium.com/javarevisited/nlp-cheatsheet-2b19ebcc5d2e)
+
+[Two minutes NLP — Python Regex Cheatsheet](https://medium.com/nlplanet/two-minutes-nlp-python-regular-expressions-cheatsheet-d880e95bb468)
+
+[Two minutes NLP — NLTK cheatsheet](https://medium.com/nlplanet/two-minutes-nlp-nltk-cheatsheet-d09c57267a0b)
+
+[How to tokenize text and pad sequences in Tensorflow](https://towardsdatascience.com/how-to-tokenize-and-pad-sequences-in-tensorflow-fcbbf2e8b3b5)
+
 
 [Top 7 Applications of NLP (Natural Language Processing)](https://www.geeksforgeeks.org/top-7-applications-of-natural-language-processing/)
+
+[3 Simple Ways to get started on NLP Sentiment Analysis](https://medium.com/geekculture/3-simple-ways-to-get-started-on-nlp-sentiment-analysis-d0d102ef5bf8)
+
+[7 Amazing Python Libraries For Natural Language Processing](https://towardsdatascience.com/7-amazing-python-libraries-for-natural-language-processing-50ca6f9f5f11)
+
 
 [The Current Conversational AI and Chatbot Landscape](https://cobusgreyling.medium.com/the-current-conversational-ai-chatbot-landscape-c147e9bcc01b)
 

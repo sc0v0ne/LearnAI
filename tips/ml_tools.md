@@ -8,8 +8,6 @@
 - Computer Vision
 - Deep Learning Tools
 - ML Libraries
-- NLP Pretrained Models
-- NLP Libraries
 - Time Series
 - Pretrained Model Repos
 - Python Libraries
@@ -169,45 +167,6 @@ Snap ML is a library that provides high-speed training of popular machine learni
 
 
 
-## NLP Pretrained Models
-
-- Polyglot
-- SpaCy
-- GenSim
-- Pattern
-- clean-text
-
-[spaCy](https://github.com/explosion/spaCy) is a library for advanced Natural Language Processing in Python and Cython.
-
-spaCy is built on the very latest research and was designed from day one to be used in real products.
-
-
-## NLP Libraries
-
-- Flair
-- TextBlob
-- VADER
-
-The article [7] covers five useful Python recipes for your next NLP projects:
-
-- Check metrics of text data with textstat
-- Misspelling corrector with pyspellchecker
-- Next word prediction with next_word_prediction
-- Create an effective Word Cloud
-- Semantic similarity analysis
-
-Semantic similarity analysis
-
-As opposed to _lexicographical similarity_, _semantic similarity_ measures the likeness of documents/sentences/phrases based on their meaning. 
-
-The most effective methodology is to use a powerful transformer to encode sentences, get their embeddings and then use cosine similarity to calculate their distance/similarity score.
-
-Calculating the cosine distance between two embeddings gives us the similarity score which is widely used in information retrieval and text summarization such as extract top N most similar sentences from multiple documents. 
-
-The similarity scores can also be used to reduce the dimensionality and to find similar resources.
-
-
-
 ## Time Series
 
 - statsmodels
@@ -220,17 +179,12 @@ The similarity scores can also be used to reduce the dimensionality and to find 
 
 ## Pretrained Model Repos
 
-[Model Zoo](https://modelzoo.co/)
-
-[TensorFlow Hub](https://tfhub.dev/)
-
-[TensorFlow Model Garden](https://github.com/tensorflow/models/tree/master/official)
-
-[Hugging Face](https://github.com/huggingface)
-
-[PyTorch Hub](https://pytorch.org/hub/)
-
-[Papers with Code](https://paperswithcode.com/)
+- [Model Zoo](https://modelzoo.co/)
+- [TensorFlow Hub](https://tfhub.dev/)
+- [TensorFlow Model Garden](https://github.com/tensorflow/models/tree/master/official)
+- [Hugging Face](https://github.com/huggingface)
+- [PyTorch Hub](https://pytorch.org/hub/)
+- [Papers with Code](https://paperswithcode.com/)
 
 
 
@@ -297,20 +251,14 @@ PySpark is an interface for Apache Spark in Python. It not only allows you to wr
 
 
 
-
 ## References
 
 [All Top Python Libraries for Data Science Explained](https://towardsdatascience.com/all-top-python-libraries-for-data-science-explained-with-code-40f64b363663)
 
 [26 GitHub Repositories To Inspire Your Next Data Science Project](https://towardsdatascience.com/26-github-repositories-to-inspire-your-next-data-science-project-3023c24f4c3c)
 
-[7 Amazing Python Libraries For Natural Language Processing](https://towardsdatascience.com/7-amazing-python-libraries-for-natural-language-processing-50ca6f9f5f11)
-
 [4 Amazing Python Libraries That You Should Try Right Now](https://towardsdatascience.com/4-amazing-python-libraries-that-you-should-try-right-now-872df6f1c93)
 
-
 [Tools for Efficient Deep Learning](https://towardsdatascience.com/tools-for-efficient-deep-learning-c9585122ded0)
-
-[3 Simple Ways to get started on NLP Sentiment Analysis](https://medium.com/geekculture/3-simple-ways-to-get-started-on-nlp-sentiment-analysis-d0d102ef5bf8)
 
 
