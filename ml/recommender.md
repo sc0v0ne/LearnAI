@@ -2,17 +2,17 @@
 
 <!-- MarkdownTOC -->
 
-- Overview
-- Content-based algorithms
-- Collaborative filtering systems
+- Recommender Systems
+    - Content-based algorithms
+    - Collaborative filtering systems
     - Knowledge-based systems
-- Data collection
-- Recommend using Scikit-Learn and Tensorflow Recommender
+    - Data collection
+- Recommender using Scikit-Learn and Tensorflow
     - Background
-    - Which similarity measure to use?
+    - What similarity measure to use
     - Scikit-Learn Recommender
     - Tensorflow Recommender
-- Building \(and Evaluating\) a Recommender System for Implicit Feedback
+- Building a Recommender System for Implicit Feedback
     - The Feedback Loop
     - Explicit Feedback vs Implicit Feedback
     - The Process
@@ -20,7 +20,7 @@
     - Evaluation
     - Code
 - Implementation using Pyspark
-- i Creating ALS Algorithm
+    - Creating ALS Algorithm
     - Evaluate the Output
 - Turning Web Browsing Activity into Product Ratings with Survival Analysis
     - Survival Analysis
@@ -31,77 +31,81 @@
 
 <!-- /MarkdownTOC -->
 
-## Overview
+## Recommender Systems
 
 In a nutshell, recommender systems predict user interests and recommend relevant items [1].
 
 Recommender systems rely on a combination of data stemming from explicit and implicit information on users and items:
 
-- Characteristic information includes information about items such as categories, keywords, etc. and users with their preferences and profiles. These systems make recommendations based on the user’s item and profile features based on the assumption that if a user was interested in an item in the past, they would be interested in similar items later.
+- Characteristic information: information about items such as categories, keywords, etc. and users with their preferences and profiles. 
 
-- User-item interactions includes information about ratings, number of purchases, likes, etc.
+The systems make recommendations based on the user’s item and profile features based on the assumption that if a user was interested in an item in the past, they would be interested in similar items later.
 
-Based on this, recommender systems fall into two categories: **content-based** systems that use characteristic information and **collaborative filtering** systems based on user-item interactions. 
+- User-item interactions: information about ratings, number of purchases, likes, etc.
 
-In addition, there is a complementary method called the knowledge-based system that relies on explicit knowledge about the item, the user, and recommendation criteria as well as the class of hybrid systems that combine different types of information.
+Thus, recommender systems fall into two categories: **content-based** systems that use characteristic information and **collaborative filtering** systems based on user-item interactions. 
 
-## Content-based algorithms
+In addition, there is a complementary method called the **knowledge-based** system that rely on explicit knowledge about the item, the user, and recommendation criteria as well as **hybrid** systems that combine different types of information.
+
+
+### Content-based algorithms
  
+**Cosine similarity:** the algorithm finds the cosine of the angle between the profile vector and item vector:
 
-Cosine similarity: the algorithm finds the cosine of the angle between the profile vector and item vector:
-
-Based on the cosine value which ranges between -1 to 1 the items are arranged in descending order and one of the two approaches below is used for recommendations:
+Based on the cosine value (which ranges between -1 to 1) the items are arranged in descending order and one of the two approaches is used for recommendations:
 
 - Top-n approach: the top n items are recommended. 
 
 - Rating scale approach: all items above a set threshold are recommended.
 
-Euclidean Distance: since similar items lie in close proximity to each other if plotted in n-dimensional space, we can calculate the distance between items and use it to recommend items to the user:
+**Euclidean Distance:** since similar items lie in close proximity to each other if plotted in n-dimensional space, we can calculate the distance between items and use the distance to recommend items to the user:
 
 However, Euclidean Distance performance falls in large-dimensional spaces which limits the scope of its application.
 
-Pearson’s Correlation: the algorithm shows how much two items are correlated or similar:
+**Pearson’s Correlation:** the algorithm shows how much two items are correlated or similar:
 
 A major drawback of Pearson's algorithm is that it is limited to recommending items that are of the same type.
 
-## Collaborative filtering systems
+
+### Collaborative filtering systems
 
 Unlike content-based systems, collaborative filtering systems utilize user interactions and the preference of other users to filter for items of interest. 
 
-The baseline approach to collaborative filtering is matrix factorization. 
+The baseline approach to collaborative filtering is _matrix factorization_. 
 
 The goal is to complete the unknowns in the matrix of user-items interactions (call it RR).
 
 Suppose we have two matrices UU and II such that U x IU×I is equal to RR in the known entries. Using the U x IU×I product we will also have values for the unknown entries of RR which can be used to generate the recommendations.
 
-A smart way to find matrices UU and II is using a neural network. An interesting way of looking at this method is to think of it as a generalization of classification and regression. 
+A smart way to find matrices UU and II is using a neural network. In fact, we can think of this approach as a generalization of classification and regression. 
 
-Though more intricate and smarter, they should have enough information to work which means a cold start for new e-commerce websites and new users.
+However, we need to have enough information to work which means a cold start for new e-commerce websites and new users.
 
-There are two types of collaborative models: memory-based and model-based:
+There are two types of collaborative models: 
 
 **Memory-based methods** offer two approaches:
 
-- identify **clusters of users** and utilize the interactions of one specific user to predict the interactions of the cluster. 
+- Identify **clusters of users** and utilize the interactions of one specific user to predict the interactions of the cluster. 
 
-- identifiy **clusters of items** that have been rated by a certain user and use them to predict the interaction of the user with a similar item. 
+- Identifiy **clusters of items** that have been rated by a certain user and use them to predict the interaction of the user with a similar item. 
 
 Memory-based techniques are simple to implement and transparent but they encounter major problems with large sparse matrices since the number of user-item interactions can be too low for generating high-quality clusters.
 
 
 **Model-based methods** are based on machine learning and data mining techniques to predict user ratings of unrated items. 
 
-These methods are able to recommend a larger number of items to a larger number of users compared to other methods like memory-based. 
+These methods are able to recommend a larger number of items to a larger number of users compared to other methods such as memory-based. 
 
-Examples of model-based methods include: decision trees, rule-based models, Bayesian methods, and latent factor models.
+Examples of model-based methods: decision trees, rule-based models, Bayesian methods, and latent factor models.
+
 
 ### Knowledge-based systems
 
-**Knowledge-based** recommender systems use explicit information about the item assortment and the client’s preference to generate corresponding recommendations. 
+**Knowledge-based** recommender systems use explicit information about the item assortment and the client’s preferences to generate corresponding recommendations. 
 
 If no item satisfies all the requirements, products satisfying a maximal set of constraints are ranked and displayed. 
 
-Unlike other approaches, it does not depend on large bodies of statistical data about items or user ratings which makes them useful for rarely sold items such as houses or when the user wants to specify requirements manually. 
+Unlike other approaches, KB does not depend on large bodies of statistical data about items or user ratings which makes them useful for rarely sold items such as houses or when the user wants to specify requirements manually. 
 
 Such an approach allows avoiding a ramp-up or cold start problem since recommendations do not depend on a base of user ratings. 
 
@@ -109,16 +113,16 @@ Knowledge-based recommender systems have a conversational style offering a dialo
 
 Knowledge-based systems work on two approaches: 
 
-- constraint-based rely on an explicitly defined set of recommendation rules. 
+- constraint-based: rely on an explicitly defined set of recommendation rules. 
 
-- case-based uses intelligence from different types of similarity measures and retrieving items similar to the specified requirements.
+- case-based: uses intelligence from different types of similarity measures and retrieving items similar to the specified requirements.
 
 
-## Data collection
+### Data collection
  
 Since a product recommendation engine mainly runs on data, data mining and storage are of primary concern.
 
-The data can be collected explicitly and implicitly. 
+The data can be collected explicitly and implicitly:
 
 - Explicit data is information that is provided intentionally which means input from the users such as movie ratings. 
 
@@ -127,24 +131,39 @@ The data can be collected explicitly and implicitly.
 Data scraping is one of the most useful techniques to extract these types of data from the website.
 
 
-## Recommend using Scikit-Learn and Tensorflow Recommender
+----------
+
+
+## Recommender using Scikit-Learn and Tensorflow
+
+The article [2] describes how to recommend sales items to customers by using customer’s individual purchase history using Scikit-Learn and Tensorflow.
 
 Collaborative Filtering for Sales Items sold (binary) per Customer
 
-The article describes how to recommend sales items to customers by using customer’s individual purchase history [2] using Scikit-Learn and Tensorflow Recommender.
-
 ### Background
+
+The article [6] discusses the dataset and many concepts of recommending engines in detail:
 
 Sparse is better than dense (Zen of Python)
 
 Explicit is better than Implicit (Zen of Python)
 .. but implicit is better than nothing. 
 
-In a nutshell: our recommendation is based on the assumption that customers who purchased products in a similar quantity share one or more hidden preferences. Due to this shared latent or hidden features customers will likely purchase similar products.
+In a nutshell: recommendation is based on the assumption that customers who purchase products in a similar quantity share one or more hidden preferences. Due to this shared latent or hidden features, customers will likely purchase similar products.
 
-### Which similarity measure to use?
 
-It is recommended to use Pearson if the data is subject to grade-inflation (different customers may be using different scales). If our data is dense (almost all attributes have non-zero values) and the magnitude of the attribute values is important, use distance measures such as Euclidean or Manhattan. But for our sparse univariate data example we will stick to Cosine Similarity.
+Binary data vs SalesAmount: Collaborative Filtering in this example is based on binary data (a set of just two values). We add a 1 as purchased which means the customer has purchased this item, no matter how many the customer actually has purchased in the past. 
+
+Another approach would be to use the SalesAmount and normalize it if we want to treat the Amount of SalesItems purchased as a kind of taste factor which means that someone who bought SalesItem x 100 times (while another Customer bought that same SalesItem x only 5 times) does not like it as much. 
+
+### What similarity measure to use
+
+It is recommended to use Pearson if the data is subject to grade-inflation (different customers may be using different scales). 
+
+If our data is dense (almost all attributes have non-zero values) and the magnitude of the attribute values is important, use distance measures such as Euclidean or Manhattan. 
+
+Here we have a sparse univariate data example, so we will use Cosine Similarity.
+
 
 ### Scikit-Learn Recommender
 
@@ -159,7 +178,7 @@ For every dataset we will add a 1 as purchased which means this customer has pur
 Another approach would be to use the SalesAmount and normalize it, in case you want to treat the Amount of SalesItems purchased as a kind of taste factor which means that someone who bought SalesItem x 100 times (while another Customer bought that same SalesItem x only 5 times) does not like it as much. 
 
 
-For better reference we add I as a prefix for Item for eacg SalesItem. Otherwise, we would only have customer and SalesItem numbers which can be a little bit puzzling:
+For better reference, we add "I" as a prefix for Item for each SalesItem. Otherwise, we would only have customer and SalesItem numbers which can be confusing:
 
 We calculate the Item-Item cosine similarity:
 
@@ -180,7 +199,10 @@ Define the Customer and SalesItem models:
 Finally, we create the model, train it, and generate predictions:
 
 
-## Building (and Evaluating) a Recommender System for Implicit Feedback
+----------
+
+
+# Building a Recommender System for Implicit Feedback
 
 There are three main algorithms for building a recommender system [3]:
 
@@ -288,7 +310,7 @@ Last.fm may locate musical ‘neighbors’ who listen to similar music and propo
 
 The idea is to use the data to construct a recommendation system that uses collaborative filtering and social influence data to identify artists that a user might like but has not heard yet. 
 
-##i Creating ALS Algorithm
+### Creating ALS Algorithm
 
 Recommender systems frequently employ collaborative filtering methods which are used to fill in the gaps or missing entries in a user-item association matrix. 
 
@@ -303,6 +325,8 @@ Root Mean Square Error (RMSE) is used to evaluate the performance of the recomme
 Unfortunately, pyspark does not support any other function to evaluate the performance of the ALS model. 
 
 We can create ROEM (Rank Ordering Error Metric) on the prediction data to evaluate the performance of the model.
+
+----------
 
 
 
@@ -376,7 +400,7 @@ However, it is important to remember the following limitations:
 
 ## References
 
-[1] [Inside recommendations: how a recommender system recommends](https://www.kdnuggets#.com/2021/11/recommendations-recommender-system.html)
+[1] [Inside recommendations: how a recommender system recommends](https://www.kdnuggets.com/2021/11/recommendations-recommender-system.html)
 
 [2] [Recommend using Scikit-Learn and Tensorflow Recommender](https://towardsdatascience.com/recommend-using-scikit-learn-and-tensorflow-recommender-bc659d91301a)
 
@@ -386,5 +410,9 @@ However, it is important to remember the following limitations:
 
 [5] [Turning Web Browsing Activity into Product Ratings with Survival Analysis](https://towardsdatascience.com/turning-web-browsing-activity-into-product-ratings-with-survival-analysis-5d5842af2a6d)
 
+[6] [Recommender Systems: Item-Customer Collaborative Filtering](https://towardsdatascience.com/recommender-systems-item-customer-collaborative-filtering-ff0c8f41ae8a)
+
+
+[Session-Based Recommender Systems with Word2Vec](https://towardsdatascience.com/session-based-recommender-systems-with-word2vec-666afb775509)
 
 [Learning to rank: A primer](https://towardsdatascience.com/learning-to-rank-a-primer-40d2ff9960af)
