@@ -1,47 +1,10 @@
+# How to Diagnose Overfitting and Underfitting?
+
 <head>
   <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
-# How to Diagnose Overfitting and Underfitting?
-
 Here are some notes on analyzing overfitting and underfitting.
-
-<!-- MarkdownTOC -->
-
-- Solutions to Overfitting
-- Principles of Overfitting and Underfitting
-    - Bias/Variance Trade-off
-    - How to Detect Underfitting and Overfitting
-    - More Simple / Complex Model
-    - More Regularization / Less Regularization
-    - More Features / Fewer Features
-    - Why Getting More Data Sometimes Can’t Help
-- Why is my validation loss lower than my training loss?
-    - Reason 1: Regularization applied during training but not during validation/testing
-    - Reason 2: Training loss is measured during each epoch while validation loss is measured after each epoch
-    - Reason 3: The validation set may be easier than the training set \(or there may be leaks\)
-- Diagnose Overfitting and Underfitting of LSTM Models
-    - Tutorial Overview
-    - Training History in Keras
-    - Diagnostic Plots
-    - Underfit Example
-        - Underfit Example 1
-        - Underfit Example 2
-        - Underfit Example 3
-    - Good Fit Example
-        - Good Fit Example 1
-        - Good Fit Example 2
-    - Overfit Example
-        - Underfit Example 1
-        - Underfit Example 2
-    - Multiple Runs Example
-- Diagnosing Unrepresentative Datasets
-    - Unrepresentative Train Dataset
-    - Unrepresentative Validation Dataset
-- References
-
-<!-- /MarkdownTOC -->
-
 
 ## Solutions to Overfitting
 

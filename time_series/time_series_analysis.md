@@ -1,31 +1,5 @@
 # Time Series Analysis
 
-<!-- MarkdownTOC -->
-
-- How to import time series in python?
-- What is panel data?
-- Visualizing a time series
-- Patterns in a time series
-- Additive and multiplicative time series
-- How to decompose a time series into its components?
-- Stationary and Non-Stationary Time Series
-  - How to make a time series stationary?
-  - Why make a non-stationary series stationary before forecasting?
-  - How to test for stationarity?
-  - What is the difference between white noise and a stationary series?
-- How to detrend a time series?
-- How to deseasonalize a time series?
-- How to test for seasonality of a time series?
-- How to treat missing values in a time series?
-- What is autocorrelation and partial autocorrelation functions?
-  - How to compute partial autocorrelation function?
-- Lag Plots
-- How to estimate the forecastability of a time series?
-- Why and How to smoothen a time series?
-- References
-
-<!-- /MarkdownTOC -->
-
 
 ## Overview
 

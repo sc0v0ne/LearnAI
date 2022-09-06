@@ -1,35 +1,5 @@
 # Time Series Tips
 
-<!-- MarkdownTOC -->
-
-- How to check for gaps in time series data?
-- Time Series Data Preparation
-- Using to_categorical
-- Tips and Tricks for Time Series
-- Tips for Working with Time Series
-  - Removing Noise with Fourier Transform
-  - Removing Noise with Kalman Filter
-  - Dealing with Outliers
-  - The right way to normalize time series data
-  - A flexible way to compute returns
-- More Time Series Tips and Tricks
-- Generating Synthetic Data
-- Common Data Transforms for Time Series Forecasting
-  - Transforms for Time Series Data
-    - Power Transform
-    - Difference Transform
-    - Standardization
-    - Normalization
-  - Considerations for Model Evaluation
-  - Order of Data Transforms
-- Training Time Series Forecasting Models in PyTorch
-  - Data Preprocessing
-  - Model Choice and hyper-parameter selection
-  - Robustness
-- References
-
-<!-- /MarkdownTOC -->
-
 
 ## How to check for gaps in time series data?
 

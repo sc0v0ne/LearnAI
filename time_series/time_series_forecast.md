@@ -1,51 +1,5 @@
 # Time Series Forecasting
 
-<!-- MarkdownTOC levels=1,2,3 -->
-
-- Time Series Forecasting
-    - Describing vs Predicting
-    - Time Series Analysis
-    - Time Series Forecasting
-    - Time Series Decomposition
-    - Time Series Data Preparation
-    - Forecast Performance Baseline
-    - 5 Step Forecasting Task
-    - Error Metrics for Time Series Forecasting
-- How to Develop LSTM Models for Time Series Forecasting
-    - The 5 Step Life-Cycle for LSTM Models in Keras
-    - Univariate LSTM Models
-        - Data Preparation
-        - Vanilla LSTM
-        - Stacked LSTM
-        - Bidirectional LSTM
-        - CNN LSTM
-        - ConvLSTM
-    - Multivariate LSTM Models
-        - Multiple Input Series
-        - Multiple Parallel Series
-- Time Series Datasets using Keras
-- Categories of Articles
-    - Time Series Background
-    - Time Series for Beginners
-    - Time Series Analysis
-    - Time Series Decomposition
-    - Time Series Data Preparation
-    - Time Series Feature Engineering
-    - Forecast Performance Baseline
-    - Time Series Classification
-    - Time Series Forecasting using Keras
-    - Time Series Examples using PyTorch
-    - Time Series Examples using AutoML
-    - Time Series Examples using PyCaret
-- Time Series Forecasting Books
-- Confidence Intervals
-    - Nonparametric Confidence Interval
-- References
-
-<!-- /MarkdownTOC -->
-
-# Time Series Forecasting
-
 ## Describing vs Predicting
 
 We have different goals depending on whether we are interested in understanding a dataset or making predictions.
@@ -704,11 +658,26 @@ def create_datasets(params: Params, debug: bool = False):
 [LSTMs for Human Activity Recognition Time Series Classification](https://machinelearningmastery.com/how-to-develop-rnn-models-for-human-activity-recognition-time-series-classification/)
 
 
+
+## Time Series Forecasting using Python
+
+[The Complete Guide to Time Series Forecasting Using Sklearn, Pandas, and Numpy](https://towardsdatascience.com/the-complete-guide-to-time-series-forecasting-using-sklearn-pandas-and-numpy-7694c90e45c1)
+
+
 ## Time Series Forecasting using Keras
+
+[Quick Keras Recipes](https://keras.io/examples/keras_recipes/)
+
+[Timeseries data preprocessing](https://keras.io/api/preprocessing/timeseries/)
+
+[Working with RNNs](https://keras.io/guides/working_with_rnns/)
+
+
+[Timeseries classification from scratch](https://keras.io/examples/timeseries/timeseries_classification_from_scratch/)
 
 [Timeseries forecasting for weather prediction](https://keras.io/examples/timeseries/timeseries_weather_forecasting)
 
-[Timeseries data preprocessing](https://keras.io/api/preprocessing/timeseries/)
+[Timeseries anomaly detection using an Autoencoder](https://keras.io/examples/timeseries/timeseries_anomaly_detection/)
 
 
 [Predicting stock prices using Deep Learning LSTM model in Python](https://thinkingneuron.com/predicting-stock-prices-using-deep-learning-lstm-model-in-python/)
@@ -754,6 +723,10 @@ def create_datasets(params: Params, debug: bool = False):
 
 
 
+----------
+
+
+
 # Time Series Forecasting Books
 
 W. W. S. Wei, Multivariate Time Series Analysis and Applications, 1st ed., Wiley, 2019. 
@@ -765,7 +738,9 @@ G. Shmueli and  K. C. Lichtendahl Jr., Practical Time Series Forecasting with R,
 R. J. Hyndman, Forecasting: Principles and Practice, 3rd ed., Otexts, 2021, Available online: https://otexts.com/fpp3/
 
 
------
+
+----------
+
 
 
 # Confidence Intervals
@@ -871,8 +846,6 @@ We can then use these observations to make a claim about the sample distribution
 
 > There is a 95% likelihood that the range 0.741 to 0.757 covers the true statistic mean.
 
-
-----------
 
 
 

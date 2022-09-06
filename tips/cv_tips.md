@@ -1,30 +1,5 @@
 # Computer Vision Tips
 
-<!-- MarkdownTOC -->
-
-- Data Augmentation for MNIST
-- MNIST Image Augmentation Using Tensorflow
-  - Step 1: Import the MNIST dataset
-  - Step 2: Identify and Plot Baseline Digits Using Matplotlib
-  - Step 3:  Understand Image Augmentation and Techniques Relevant To MNIST
-    - Overlay Images
-  - Step 4: Augment The MNIST Dataset
-- Command-line Snippets
-- Video/Image manipulation using ffmpeg
-  - Check video duration
-  - Convert video format
-  - Generate dataset from videos
-  - Generate a sequence of frames
-  - Crop a bounding box of video
-- Stack Videos
-- Improve Model Performance
-- Medical Image Overview
-- Medical Image Examples
-- References
-
-<!-- /MarkdownTOC -->
-
-
 ## Data Augmentation for MNIST
 
 [Improving Classification accuracy on MNIST using Data Augmentation](https://towardsdatascience.com/improving-accuracy-on-mnist-using-data-augmentation-b5c38eb5a903?gi=916228e35c66)

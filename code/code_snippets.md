@@ -1,24 +1,5 @@
 # Python Code Snippets
 
-<!-- MarkdownTOC levels=1,2,3 -->
-
-- Show samples from each class
-- Display multiple images in one figure
-- Plot images side by side
-- Visualize a batch of image data
-- Python one-liners
-- Pandas one-liners
-- Utility Classes
-    - Enumeration
-    - Data Classes
-- Iterables
-- Write Shorter Conditionals using Dictionaries
-- Display Pandas DataFrame in table style
-- References
-
-<!-- /MarkdownTOC -->
-
-
 ## Show samples from each class
 
 ```py
@@ -428,6 +409,25 @@ If we define the dictionary _outside_ the function and rerun the experiment, we 
 
 
 
+## RE Library Functions
+
+Here are some common re libraries functions [7]:
+
+- re.search(): This function scans a string for the first location where the regular expression pattern matches.
+
+- re.match(): This function is used to find a regular expression pattern that results in a match at the beginning of the string.
+
+NOTE: Search will loop through the string to find the first appearance of the pattern while match only checks the beginning of the string. For example, the match will return none while the search will return the position.
+
+- re.split(): This function is used to split a string based on a regular expression pattern.
+
+- re.findall(): This function returns a list of character(s) that match the RegEx pattern.
+
+- re.sub(): This function is used to replace any character(s) that match the RegEx pattern with another character(s).
+
+
+
+
 ## References
 
 [1] [Binary Image Classification in PyTorch](https://towardsdatascience.com/binary-image-classification-in-pytorch-5adf64f8c781)
@@ -441,6 +441,12 @@ If we define the dictionary _outside_ the function and rerun the experiment, we 
 [5] [Write Shorter Conditionals (Using Dictionaries)](https://itnext.io/write-shorter-conditionals-using-dictionaries-python-snippets-4-f92c8ce5eb7)
 
 [6] [Powerful One-liners in Pandas Every Data Scientist Should Know](https://towardsdatascience.com/powerful-one-liners-in-pandas-every-data-scientist-should-know-737e721b81b6)
+
+[7] [Understanding Regular Expression for Natural Language Processing](https://heartbeat.comet.ml/understanding-regular-expression-for-natural-language-processing-ce9c4e272a29)
+
+[8] [Regular Expressions Clearly Explained with Examples](https://towardsdatascience.com/regular-expressions-clearly-explained-with-examples-822d76b037b4)
+
+[9] [Regular Expression (RegEx) in Python: The Basics](https://pub.towardsai.net/regular-expression-regex-in-python-the-basics-b8f2cd041bdb)
 
 
 [Python: Pretty Print a Dict (Dictionary) – 4 Ways](https://datagy.io/python-pretty-print-dictionary/)

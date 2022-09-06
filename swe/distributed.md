@@ -1,38 +1,5 @@
 # Distributed Systems
 
-<!-- MarkdownTOC -->
-
-- Kubernetes
-- Kubernetes vs Docker
-- Hadoop
-- Spark
-- Spark vs Hadoop
-- Tips for Optimizing a Spark Job
-  - Application on a toy use case
-  - Decomposition of a Spark job
-  - Lazy Evaluation
-  - Example of Lazy Execution
-  - Wide and narrow transformations
-  - How to modify the configuration settings of a Spark job?
-  - Measure if an optimization is necessary
-  - Recommendation 1: Use the Apache Parquet file format
-  - Recommendation 2: Maximise parallelism in Spark
-  - Recommendation 3: Beware of shuffle operations
-  - Recommendation 4: Use Broadcast Hash Join
-  - Recommendation 5: Cache intermediate results
-  - Recommendation 6: Manage the memory of the executor nodes
-- Spark Performance Tips
-  - Useful Code Snippets
-- PySpark Example
-- Kafka
-  - Key Concepts
-  - Distribution
-  - Messaging
-  - Producer/Consumer
-- References
-
-<!-- /MarkdownTOC -->
-
 ## Kubernetes
 
 Kubernetes is an open-source container orchestration system for automating software deployment, scaling, and management. 

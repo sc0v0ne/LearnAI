@@ -1,14 +1,7 @@
 # Interpretability and Explainability (XAI)
 
-<!-- MarkdownTOC -->
 
-- Verification and Validation
-- Testing vs XAI
-- Predictive vs Explanatory Tradeoff
-- References
-
-<!-- /MarkdownTOC -->
-
+## Overview
 
 A ML model is _interpretable_ (trace input to output) if we can inspect the actual model and understand why it got a particular answer for a given input and how the answer would change when the input changes.
 

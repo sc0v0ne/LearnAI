@@ -1,28 +1,8 @@
+# Concurrency and Parallelism
+
 <head>
   <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
-
-# Concurrency and Parallelism
-
-<!-- MarkdownTOC -->
-
-- Concurrency vs Parallelism
-- Concurrency and Parallelism in Python
-- Types of Parallelization
-- Guide to Asyncio, Threading, and Multiprocessing
-    - Synchronous execution
-    - Asynchronous execution \(async\)
-    - Concurrent execution \(threading\)
-    - Parallel execution \(multiprocessing\)
-    - Major Differences
-    - Comparison of concurrency approaches
-    - Pitfalls
-        - Async
-        - Threading
-        - Multiprocessing
-- References
-
-<!-- /MarkdownTOC -->
 
 **Concurrency** is about dealing with lots of things at once. 
 
@@ -397,4 +377,6 @@ R. H. Arpaci-Dusseau and A. C. Arpaci-Dusseau, Operating Systems: Three Easy Pie
 [2] [Parallelize your python code to save time on data processing](https://towardsdatascience.com/parallelize-your-python-code-to-save-time-on-data-processing-805934b826e2)
 
 [3] [Practical Guide to Asyncio, Threading, and Multiprocessing in Python](https://itnext.io/practical-guide-to-async-threading-multiprocessing-958e57d7bbb8)
+
+[4] [Applying Python multiprocessing in 2 lines of code](https://medium.com/geekculture/applying-python-multiprocessing-in-2-lines-of-code-3ced521bac8f)
 

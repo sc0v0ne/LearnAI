@@ -1,17 +1,5 @@
+# Train-Test Split
 
-<!-- MarkdownTOC -->
-
-- ML Datasets
-    - Training Dataset
-    - Validation Dataset
-    - Test Dataset
-    - About the dataset split ratio
-    - Note on Cross Validation
-- Train-Test Split
-- Train-Validation-Test Split
-- References
-
-<!-- /MarkdownTOC -->
 
 ## ML Datasets
 

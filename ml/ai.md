@@ -1,34 +1,5 @@
 # AI Notes
 
-<!-- MarkdownTOC -->
-
-- Terminology
-  - Pareto Principle
-  - No Free Lunch Theorem
-  - Bias vs Variance Tradeoff
-  - The Curse of Dimensionality
-- When You Should not use ML
-- Disinformation in AI Research
-- Choose the right algorithm
-  - Analyze the Data
-  - Process the data
-  - Transform the data
-  - Choosing the right estimator
-- Artificial Intelligence
-  - How to Choose the Right AI Algorithm
-  - Artificial Intelligence Tutorial
-- Deep Learning
-  - Challenges
-  - Applications
-- Machine Learning for Humans
-- Neural Networks and Deep Learning
-- Deep learning applications
-- Gradient descent
-- What is online learning?
-- References
-
-<!-- /MarkdownTOC -->
-
 ## Terminology
 
 > Occam’s Razor: The simplest model that fits the data is usually the best. 

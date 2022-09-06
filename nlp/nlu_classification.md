@@ -1,36 +1,5 @@
 # NLU Intent Classification
 
-<!-- MarkdownTOC -->
-
-- How Intent Classification Works
-  - Teaching semantics to a machine: word embeddings
-  - Training a NLU model
-  - Limitations of word embeddings
-    - Homonyms
-    - Plurals, abbreviations, and typos
-    - Heavy
-  - Training your own embeddings
-    - Mixing pre-trained with your own embeddings
-    - Giving context to embeddings with transformers
-    - Ordering and negation
-- Discover and Classify in-app Message Intent at Airbnb
-  - Identifying Message Intent
-  - Intent Discovery
-  - Labeling: From Unsupervised to Supervised
-  - Intent Classification with CNN
-- Using the DIET classifier for intent classification
-  - What is Rasa
-  - DIET: A Quick Introduction:
-- Tutorials
-  - Text Classification using Python
-  - Sentiment Analysis using Python
-  - Text Classification using AutoML
-  - Sentiment Analysis using AutoML
-- References
-
-<!-- /MarkdownTOC -->
-
-
 ## How Intent Classification Works
 
 ### Teaching semantics to a machine: word embeddings

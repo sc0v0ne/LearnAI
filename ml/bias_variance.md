@@ -4,21 +4,6 @@
   <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
-<!-- MarkdownTOC -->
-
-- Overview
-- Searching for the Optimal Estimator
-- Bias Variance Decomposition
-  - Bias
-  - Variance
-  - What is Bias?
-  - How to lower the bias?
-  - What is Variance?
-  - How to lower the variance?
-- Effect of Bias and Variance on the Total Error of your Model
-- References
-
-<!-- /MarkdownTOC -->
 
 ## Overview
 

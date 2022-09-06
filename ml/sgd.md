@@ -1,19 +1,5 @@
 # Stochastic Gradient Descent Optimization
 
-<!-- MarkdownTOC -->
-
-- What is Gradient Descent?
-- Contrasting the 3 Types of Gradient Descent
-    - Stochastic Gradient Descent
-    - Batch Gradient Descent
-    - Mini-Batch Gradient Descent
-- Gradient Descent Optimization Algorithms
-- Gradient Checks
-- Parameter Updates
-- References
-
-<!-- /MarkdownTOC -->
-
 ## What is Gradient Descent?
 
 Gradient descent (GD) is an optimization algorithm often used for finding the _weights_ or coefficients of machine learning algorithms such as artificial neural networks and logistic regression.

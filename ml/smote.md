@@ -1,26 +1,12 @@
 # SMOTE for Imbalanced Classification
 
-<!-- MarkdownTOC -->
-
-- Tutorial Overview
-- Synthetic Minority Oversampling Technique
-- SMOTE for Balancing Data
-- SMOTE for Classification
-- SMOTE With Selective Synthetic Sample Generation
-   - Adaptive Synthetic Sampling \(ADASYN\)
-- Refrences
-
-<!-- /MarkdownTOC -->
-
-[SMOTE for Imbalanced Classification with Python](https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/)
-
 Imbalanced classification involves developing predictive models on classification datasets that have a severe class imbalance.
 
 The challenge of working with imbalanced datasets is that most machine learning techniques will ignore and in turn have poor performance on the minority class whereas it is usually performance on the minority class that is most important.
 
 ## Tutorial Overview
 
-This tutorial is divided into five parts:
+The tutorial [1] is divided into five parts:
 
 1. Synthetic Minority Oversampling Technique
 2. Imbalanced-Learn Library
@@ -93,8 +79,10 @@ It may help to remove outliers prior to applying the oversampling procedure whic
 
 ## Refrences
 
-[5 SMOTE Techniques for Oversampling your Imbalance Data](https://towardsdatascience.com/5-smote-techniques-for-oversampling-your-imbalance-data-b8155bdbe2b5?gi=29e5140d8e06)
+[1] [SMOTE for Imbalanced Classification with Python](https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/)
 
-[How to handle Multiclass Imbalanced Data? Not SMOTE](https://towardsdatascience.com/how-to-handle-multiclass-imbalanced-data-say-no-to-smote-e9a7f393c310)
+[2] [5 SMOTE Techniques for Oversampling your Imbalance Data](https://towardsdatascience.com/5-smote-techniques-for-oversampling-your-imbalance-data-b8155bdbe2b5?gi=29e5140d8e06)
+
+[3] [How to handle Multiclass Imbalanced Data? Not SMOTE](https://towardsdatascience.com/how-to-handle-multiclass-imbalanced-data-say-no-to-smote-e9a7f393c310)
 
 

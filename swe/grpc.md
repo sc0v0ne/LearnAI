@@ -1,19 +1,5 @@
 # gRPC
 
-<!-- MarkdownTOC -->
-
-- What is gRPC
-- How does gRPC work
-- Benefits of gRPC
-- gRPC vs REST
-- Protocol Buffers
-- gRPC usage
-- gRPC support in .NET
-- API vs Webhook
-- References
-
-<!-- /MarkdownTOC -->
-
 ## What is gRPC
 
 gRPC is a modern, high-performance framework that is an evolution of the remote procedure call (RPC) protocol [1]. 

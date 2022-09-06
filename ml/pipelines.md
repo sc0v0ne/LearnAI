@@ -1,26 +1,5 @@
 # Data Pipelines
 
-<!-- MarkdownTOC -->
-
-- Overview
-- Import Libraries
-- Create Simple Pipeline
-- Best Scaler
-- Best Estimator
-- Pipeline with PCA
-- Joblib
-- Pandas pipe
-- Kedro
-- More on scikit-learn pipeline
-- Data Prep
-- Create Pipeline
-- Train and Evaluate Pipeline
-- Modeling Pipeline
-- References
-
-<!-- /MarkdownTOC -->
-
-
 ## Overview
 
 There are multiple stages to running machine learning algorithms since it involves a sequence of tasks including pre-processing, feature extraction, model fitting, performance, and validation.

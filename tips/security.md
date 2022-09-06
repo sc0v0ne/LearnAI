@@ -1,23 +1,5 @@
 ## Security
 
-<!-- MarkdownTOC -->
-
-- Typical SDLC Process
-- The Shifting-Left Principle
-- Key Security Concepts
-- STRIDE
-- The Docker Attack Surface
-    - Docker Threat Fundamentals
-    - Docker Threat Modeling with Stride
-        - Docker Client
-        - Docker Host
-        - Docker Registry
-- The Kubernetes Attack Surface
-    - Kubernetes Components
-- References
-
-<!-- /MarkdownTOC -->
-
 
 ## Typical SDLC Process
 

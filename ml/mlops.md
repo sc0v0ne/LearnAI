@@ -1,32 +1,5 @@
 # MLOps
 
-<!-- MarkdownTOC -->
-
-- AI SDLC
-- MLOps
-    - Tracking Model Experiments
-    - Managing Machine Learning Features
-    - Observing and Monitoring Model in Production
-    - What could go wrong after deployment?
-- Modeling Pipeline
-- Monitoring the model
-- Monitoring Model in Production
-- What could go wrong after deployment
-- Why monitor ML models in Production
-- Testing online inference models
-    - A/B test
-- Verification and Validation \(V&V\)
-- Model Validation Tools
-    - Evidently
-    - Deepchecks
-    - TensorFlow Data Validation
-    - TensorFlow Extended
-    - TensorFlow Serving
-- Kubeflow
-- References
-
-<!-- /MarkdownTOC -->
-
 ## AI SDLC
 
 In general, the ML model process involves eight stages which may also include data collection and/or data labeling [1]:

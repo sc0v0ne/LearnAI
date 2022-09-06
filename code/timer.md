@@ -1,18 +1,5 @@
 # Execution Times in Python
 
-<!-- MarkdownTOC -->
-
-- Timer Decorator
-- Building a custom Timer class
-    - Use perf_counter for precision
-    - Use process_time for CPU time
-    - Use a monotonic clock for long processes
-    - Disable garbage collector for accurate timing
-    - Custom Timer class
-    - Timing context manager
-- References
-
-<!-- /MarkdownTOC -->
 
 ## Timer Decorator
 
@@ -47,6 +34,48 @@ Here is a decorator that we can easily apply to real-world problems when debuggi
           break
           return isprime
 ```
+
+
+
+## Logging Method Execution Time in Python
+
+```py
+import logging
+import time
+
+from functools import wraps
+
+logging.basicConfig()
+logger = logging.getLogger("my-logger")
+logger.setLevel(logging.DEBUG)
+
+
+def timed(func):
+    """This decorator prints the execution time for the decorated function."""
+
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        end = time.time()
+        logger.debug("{} ran in {}s".format(func.__name__, round(end - start, 2)))
+        return result
+
+        return wrapper
+```
+
+```py
+from timer import timed
+
+@timed
+def my_printer(max):
+    sum = 0
+    for i in range(max):
+        sum += i
+if __name__ == "__main__":
+my_printer(100000000)
+```
+
 
 
 ## Building a custom Timer class

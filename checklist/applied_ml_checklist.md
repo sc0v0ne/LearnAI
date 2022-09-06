@@ -1,35 +1,5 @@
 # Applied Machine Learning Checklist
 
-<!-- MarkdownTOC -->
-
-- Overview
-- Each Data Problem is Different
-- The Checklist
-    - 5-Step Systematic Process
-    - 1. Define The Problem
-        - 1.1 What is the problem
-        - 1.2 Why does the problem need to be solved
-        - 1.3 How could the problem be solved manually
-    - 2. Prepare The Data
-        - 2.1 Data Description
-        - 2.2 Data Preprocessing
-        - 2.3 Data Transformation
-        - 2.4 Data Summarization
-    - 3. Spot Check Algorithms
-        - 3.1 Create Test Harness
-        - 3.2 Evaluate Candidate Algorithms
-    - 4. Improve Results
-        - 4.1 Algorithm Tuning
-        - 4.2 Ensemble Methods
-        - 4.3 Model Selection
-    - 5. Finalize Project
-        - 5.1 Present Results
-        - 5.2 Operationalize Results
-    - Next Step
-- References
-
-<!-- /MarkdownTOC -->
-
 ## Overview
 
 You can use a checklist to structure your search for the right combination of elements to consistently deliver a good solution to any machine learning (ML) problem.

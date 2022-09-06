@@ -1,20 +1,5 @@
 # AutoML Tools
 
-<!-- MarkdownTOC -->
-
-- Quick Start
-- MLOps Tools
-    - wandb
-    - Tutorials
-- AutoML Tools
-    - EDA
-    - Tutorials
-    - SageMaker
-- Time Series Libraries
-
-<!-- /MarkdownTOC -->
-
-
 Automated Machine Learning (AutoML) is an emerging field in which the process of building machine learning models to model data is automated.
 
 [Platform products for Machine Learning](https://towardsdatascience.com/platform-products-for-machine-learning-3d3749443d2)

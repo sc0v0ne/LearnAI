@@ -1,25 +1,5 @@
 # Factor Analsysis
 
-<!-- MarkdownTOC -->
-
-- Dimensionality Reduction
-- Introduction to Factor Analysis
-    - Types of Factor Analysis
-    - How does factor analysis work?
-    - Terminology
-        - What is a factor?
-        - What are the factor loadings?
-        - What is Eigenvalues?
-        - What are Communalities?
-        - What is Factor Rotation?
-    - Choosing the Number of Factors
-    - Factor Analysis vs PCA
-    - Factor Analysis in python using factor_analyzer package
-- FA vs PCA vs DRO
-- References
-
-<!-- /MarkdownTOC -->
-
 Principal Component Analysis (PCA), Factor Analysis (FA), Linear Discriminant Analysis (LDA) and Truncated Singular Value Decomposition (SVD) are examples of linear dimensionality reduction methods. 
 
 

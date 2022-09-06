@@ -1,27 +1,5 @@
 # LearnAI
 
-<!-- MarkdownTOC -->
-
-- Background
-- Table of Contents
-    - Artificial Intelligence
-    - Checklists
-    - ML Guides
-    - Background
-    - Machine Learning
-    - Feature Engineering
-    - Dataset Issues
-    - Computer Vision
-    - Deep Learning
-    - Natural Language Processing
-    - Reinforcement Learning
-    - Time Series
-    - Tips
-    - Code Samples
-- References
-
-<!-- /MarkdownTOC -->
-
 If you are like me and try to follow the principles of DRY, KISS, Design Patterns, Occam’s Razor, and other software engineering best practices then this repo is for you!
 
 > Don't reinvent the wheel (DRTW)

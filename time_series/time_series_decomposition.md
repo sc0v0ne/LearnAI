@@ -4,33 +4,6 @@
   <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
-<!-- MarkdownTOC -->
-
-- How to Decompose Time Series Data
-    - Combining Time Series Components
-        - Classical Decomposition
-        - Additive Model
-        - Multiplicative Model
-    - Decomposition as a Tool
-    - Automatic Time Series Decomposition
-        - Additive Decomposition
-        - Multiplicative Decomposition
-    - Airline Passengers Dataset
-- Time Series 101 Guide
-    - STL Decomposition
-    - Basic Time Series Forecasting Methods
-- How to isolate trend, seasonality, and noise from a time series
-    - The Seasonal component
-    - The Trend component
-    - The Cyclical component
-    - The Noise component
-    - Additive and Multiplicative effects
-    - Decomposing a time series into trend, seasonal, and noise components
-    - Time series decomposition using statsmodels
-- Avoid Common Mistakes
-- References
-
-<!-- /MarkdownTOC -->
 
 
 ## How to Decompose Time Series Data

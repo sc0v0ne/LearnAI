@@ -1,26 +1,6 @@
 # Memory Usage Tips
 
-<!-- MarkdownTOC levels=1,2,3 -->
-
-- Effective use of Data Types
-    - Numerical Features
-    - DateTime
-    - Categorical
-    - Creating dummy variables for modeling
-    - Converting between String and Datetime
-    - Typecasting while Reading Data
-- Optimizing Memory Usage in Python Applications
-    - Find Bottlenecks
-    - Saving Some RAM
-    - Not Using RAM At All
-- How to Profile Memory Usage
-- References
-
-<!-- /MarkdownTOC -->
-
 Here are some resources to evaluate Python memory usage, also see [Performance](./performance.md). 
-
-
 
 ## Effective use of Data Types
 

@@ -1,62 +1,5 @@
 # [Data Science Primer](https://elitedatascience.com/primer)
 
-[Datasets for Data Science and Machine Learning](https://elitedatascience.com/datasets)
-
-<!-- MarkdownTOC levels=1,2,3 -->
-
-- 1 Bird's Eye View
-  - Key Terminology
-  - Machine Learning Tasks
-  - The Blueprint
-- 2 Exploratory Analysis
-  - Start with Basics
-  - Plot Numerical Distributions
-  - Plot Categorical Distributions
-  - Plot Segmentations
-  - Study Correlations
-- 3 Data Cleaning
-  - Remove Unwanted observations
-  - Fix Structural Errors
-  - Filter Unwanted Outliers
-  - Handle Missing Data
-- 4 Feature Engineering
-  - What is Feature Engineering?
-  - Infuse Domain Knowledge
-  - Create Interaction Features
-  - Combine Sparse Classes
-  - Add Dummy Variables
-  - Remove Unused Features
-- 5 Algorithm Selection
-  - How to Pick ML Algorithms
-  - Why Linear Regression is Flawed
-  - Regularization in Machine Learning
-  - Regularized Regression Algorithms
-  - Decision Tree Algorithms
-  - Tree Ensembles
-  - Summary
-- 6 Model Training
-  - How to Train ML Models
-  - Split Dataset
-  - What are Hyperparameters?
-  - What is Cross-Validation?
-  - Fit and Tune Models
-  - Select the Winning Model
-- Error Metrics in Machine Learning
-- Performance Metrics For Classification
-  - Accuracy
-  - Confusion Matrix
-  - Logarithmic Loss
-  - Area Under Curve \(AUC\)
-  - F1 Score
-- Performance Metrics For Regression
-  - Mean Absolute Error
-  - Mean Squared Error
-  - Root Mean Squared Error
-- References
-
-<!-- /MarkdownTOC -->
-
-
 ## 1 Bird's Eye View
 
 [Data Science Primer](https://elitedatascience.com/primer)
@@ -964,8 +907,11 @@ Finally, use these questions to help you pick the winning model:
 
 # Error Metrics in Machine Learning
 
-Evaluating your machine learning algorithm is an essential part of any project. Your model may give you satisfying results when evaluated using a metric say accuracy_score but may give poor results when evaluated against other metrics such as logarithmic_loss or any other such metric. Most of the times we use classification accuracy to measure the performance of our model, however it is not enough to truly judge our model. 
+Evaluating your machine learning algorithm is an essential part of any project. 
 
+A model may give you satisfying results when evaluated using a metric say accuracy_score but may give poor results when evaluated against other metrics such as logarithmic_loss or any other such metric. 
+
+Most of the times we use classification accuracy to measure the performance of our model, however it is not enough to truly judge our model. 
 
 It is also worth mentioning that _metric_ is different from _loss function_. 
 
@@ -975,6 +921,10 @@ Metrics are used to monitor and measure the performance of a model (during train
 
 If for some tasks the performance metric is differentiable, it can be used both as a loss function (perhaps with some regularizations added to it) and a metric such as MSE.
 
+The article [4] has two parts:
+
+- The first part covers 10 metrics that are widely used for evaluating classification and regression models. 
+- The second part covers 10 metrics that are used to evaluate ranking, computer vision, NLP, and deep learning models.
 
 ## Performance Metrics For Classification
 
@@ -1073,12 +1023,13 @@ Since the errors are squared and due to which RMSE will not be in the same scale
 
 ## References
 
-- [Error Metrics in Machine learning](https://medium.com/analytics-vidhya/error-metrics-in-machine-learning-f9eed7b139f)
+[1] [Datasets for Data Science and Machine Learning](https://elitedatascience.com/datasets)
 
-- [Metrics to Evaluate your Machine Learning Algorithm](https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234)
+[2] [Error Metrics in Machine learning](https://medium.com/analytics-vidhya/error-metrics-in-machine-learning-f9eed7b139f)
 
-- [20 Popular Machine Learning Metrics](https://towardsdatascience.com/20-popular-machine-learning-metrics-part-1-classification-regression-evaluation-metrics-1ca3e282a2ce)
+[3] [Metrics to Evaluate your Machine Learning Algorithm](https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234)
 
-This post has two parts. The first part covers 10 metrics that are widely used for evaluating classification and regression models. The second part covers 10 metrics that are used to evaluate ranking, computer vision, NLP, and deep learning models.
+[4] [20 Popular Machine Learning Metrics](https://towardsdatascience.com/20-popular-machine-learning-metrics-part-1-classification-regression-evaluation-metrics-1ca3e282a2ce)
+
 
 

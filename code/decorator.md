@@ -1,42 +1,5 @@
 # The Decorator Pattern
 
-<!-- MarkdownTOC -->
-
-- Python decorator attributes
-    - @staticmethod
-    - @classmethod
-    - @property
-- Decorator Code Snippets
-    - Timer
-    - Measure Function Performance
-    - Repeat
-    - Show prompt
-    - Try/Catch
-    - Convert Data
-    - Memoization
-    - Function Catalog
-- Separation of Concerns
-    - Logging
-    - Timing
-    - Counting
-    - Checking parameter types
-    - Checking parameter values
-    - Exception handling
-    - Authentication
-    - Ignoring functions
-    - Switching functions
-    - Changing arguments and return values
-    - Memoization
-    - Dynamic application of decorators
-- New Type Annotation Features in Python 3.11
-    - Self — the Class Type
-    - Arbitrary Literal String
-    - Varying Generics
-    - TypedDict — Flexible Key Requirements
-- References
-
-<!-- /MarkdownTOC -->
-
 ## Python decorator attributes
 
 A _decorator_ is a function that takes another function as input, extends its behavior, and returns a new function as output which is possible becaus functions are first-class objects in Python which means they can be passed as arguments to functions and also be returned from functions just like other types of objects such as string, int, or float. Thus, a decorator can be used to decorate a function or a class.

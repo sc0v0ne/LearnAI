@@ -1,16 +1,5 @@
 # AI Tips and Tricks
 
-<!-- MarkdownTOC -->
-
-- ML Tips
-- ML Problem Solving
-- ML Resources
-- Robotics
-- References
-
-<!-- /MarkdownTOC -->
-
-
 [Applied Machine Learning Process](../process/applied_ml.md)
 
 [AI Checklist](../checklist/ai_checklist.md)

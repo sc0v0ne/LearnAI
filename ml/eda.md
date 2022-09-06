@@ -1,30 +1,5 @@
 # Exploratory Data Analysis (EDA)
 
-<!-- MarkdownTOC levels=1,2,3 -->
-
-- Summary Statistics
-    - Statistical Distribution
-    - Anomalies
-- Exploratory Data Analysis
-    - Visualize the Data
-- Essential Code Blocks
-    - Distribution
-    - Summary statistics of numerical features
-    - Summary statistics of categorical features
-    - Plot of numeric features
-    - Plot of categorical features
-    - Grouping and segmentation
-    - Relationships between numeric features
-- How to Identify Outliers
-    - Extreme Value Analysis
-    - Proximity Methods
-    - Projection Methods
-    - Methods Robust to Outliers
-- References
-
-<!-- /MarkdownTOC -->
-
-
 ## Summary Statistics
 
 It is important to know how to extract information from descriptive statistics.
@@ -494,6 +469,8 @@ Spot check some methods that are robust to outliers to see if there is a signifi
 [10] [Major Problems of Machine Learning Datasets: Part 2](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-2-ba82e551fee2)
 
 [11] [Explore and Validate Datasets with TensorFlow Extended](https://pub.towardsai.net/explore-and-validate-datasets-with-tensorflow-extended-fc52cc5e582)
+
+[12] [Advanced EDA Made Simple Using Pandas Profiling](https://pub.towardsai.net/advanced-eda-made-simple-using-pandas-profiling-35f83027061a)
 
 
 [How to build a Machine Learning (ML) Predictive System](https://towardsdatascience.com/machine-learning-ml-based-predictive-system-to-predict-the-satisfaction-level-of-airlines-f0780dbdbc87?source=rss----7f60cf5620c9---4)

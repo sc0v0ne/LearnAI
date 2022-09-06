@@ -1,31 +1,5 @@
 # Time Series Plots
 
-<!-- MarkdownTOC levels=1,2,3 -->
-
-- Time Series Data Visualization in Python
-    - Line Plots
-    - Summary Statistics and Diagnostics
-    - Plot aggregates of the data
-    - Box Plot
-    - Histogram
-    - Kernel Density Plot
-    - Seasonality, Trend, and Noise
-    - Analyzing airline data
-    - Visualizing Multiple Time Series
-    - Case Study: Unemployment Rate
-- Multiple Time-Series Plot
-    - Plot the multiple time-series data
-    - 1. Changing nothing but making the plot interactive.
-    - 2. Comparing one by one with Small Multiple Time Series.
-    - 3. Changing the point of view with Facet Grid
-    - 4. Using color with Heatmap
-    - 5. Applying angles with a Radar chart
-    - 6. Fancy the bar plot with Circular Bar Plot \(Race Track Plot\)
-    - 7. Starting from the center with Radial Plot
-    - 8. Showing densities with Overlapping densities \(Ridge plot\)
-- References
-
-<!-- /MarkdownTOC -->
 
 ## Time Series Data Visualization in Python
 

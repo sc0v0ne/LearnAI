@@ -4,25 +4,6 @@
   <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
-<!-- MarkdownTOC -->
-
-- Challenge of Training Deep Learning Neural Networks
-    - Neural Networks Learn a Mapping Function
-    - Navigating the Non-Convex Error Surface
-    - Components of the Learning Algorithm
-    - Decrease Neural Network Size and Maintain Accuracy
-    - Number of hidden layers and nodes
-    - Batch size
-- Encoder-Decoder
-- Attention
-- Transformer
-    - The Transformer Attention Mechanism
-- Transfer Learning
-    - Transfer learning types
-- References
-
-<!-- /MarkdownTOC -->
-
 
 ## Challenge of Training Deep Learning Neural Networks
 

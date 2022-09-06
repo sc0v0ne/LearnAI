@@ -1,24 +1,5 @@
 # Web Development
 
-<!-- MarkdownTOC -->
-
-- Web Development
-- Browser Extensions
-- Websites for Developers
-- Web Design
-- CSS Websites for Developers
-  - Animista
-  - Clip Path Generator
-  - Responsive Font Calculator
-  - Type Scale
-- CSS Tips
-  - Centered
-  - Border vs Outline
-  - Auto-numbering sections
-- References
-
-<!-- /MarkdownTOC -->
-
 
 ## Web Development
 
@@ -105,6 +86,9 @@ Accessibility
 - [Loops](https://loops.wannathis.one/)
 - [Ls.Graphics](https://www.ls.graphics)
 
+- [Best Icon Resources](https://uxplanet.org/best-icon-resources-i-use-daily-9b7c2da26e83)
+
+
 - [Fontjoy](https://fontjoy.com/6
 - [FontShare](https://www.fontshare.com/)
 - [Type Scale](https://type-scale.com/)
@@ -177,6 +161,8 @@ This will generate fonts using the rem unit it is also handy to see how differen
 Once we have everything looking good, we can copy the generated CSS or view the results in a codepen instance. 
 
 
+----------
+
 
 ## CSS Tips
 
@@ -214,10 +200,46 @@ We can create a CSS counter and use it in a tag type content, so we can auto-inc
 This is done using the counter-increment and content properties:
 
 
+## Design Responsive Website
+
+Here are some tips for designing responsive websites [2];
+
+1. em and rem units instead of px
+
+Always try to use em, percentage, rem units instead of px for sizing so that the size of text, images etc adjust according to the device
+
+2. Proper use of Margin and Padding
+
+We usually use a lot of padding and margin when we make websites for desktops , to make them more attractive. While making it responsive for mobiles, tablets try decreasing the existing padding and margin
+
+3. Use Box-sizing property
+
+It resolves a lot of problems caused by padding. Using box sizing on HTML elements with a percentage width will take padding into account rather than having to adjust the width because of padding
+
+4. Use flex-box property to align content
+Use flexbox to align your HTML elements, such as <div>, <img> etc.It forces elements that can wrap onto multiple lines according to their width
+
+5. Use grid property to design layouts
+
+Use grid property in CSS sheet to create layout of website . Rather than creating extra HTML elements to contain your grid, coloumns and rows, your grid tracks are created within your style sheet
+
+6. Use media query for different screen sizes
+
+Media query should be used to set width and height according to the breakpoints. Breakpoints refer to the width at which the websites look distorted on a particular size of device
+
+7. Use CSS frameworks for Responsive websites
+
+CSS frameworks are great way to build fast and responsive websites.A framework has ready to use code snippets for different purposes. They are very easy to use and embed in your website
+
+
+
+
 
 ## References
 
 [1] [Some handy CSS tricks](https://medium.com/codex/some-handy-css-tricks-8e5a0d3ac25c)
+
+[2] [7 Tips to Design Responsive Website](https://medium.com/@monocosmo77/7-tips-to-design-responsive-website-6adf4f38a487)
 
 
 [10 Google Fonts Every Web Designer Needs To Know](https://uxplanet.org/10-google-fonts-every-web-designer-needs-to-know-de7dc3352d2c)

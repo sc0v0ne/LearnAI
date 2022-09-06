@@ -1,25 +1,5 @@
 # Natural Language Understanding (NLU)
 
-<!-- MarkdownTOC -->
-
-- Overview
-- How do NLU services work
-- Language Modeling
-- Steps to create an assistant
-- Language Modeling
-- Text Generation Examples
-- What is intent recognition?
-  - How intent recognition works
-  - Training data
-  - Creating training data
-  - Training your model
-  - Intent recognition use cases
-- Challenges of NLU
-- References
-
-<!-- /MarkdownTOC -->
-
-
 ## Overview
 
 NLU is a subset of NLP and its purpose is to extract the _meaning_ from the text. 

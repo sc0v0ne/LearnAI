@@ -1,17 +1,6 @@
 # Neural Network
 
-<!-- MarkdownTOC -->
-
-- Weights
-- Bias
-- Weighted Input
-- Activation Functions
-- Loss Functions
-- Gradient Accumulation
-- Complete Neural Network Example using Keras
-- References
-
-<!-- /MarkdownTOC -->
+## Overview
 
 Neural networks are a class of machine learning algorithms used to model complex patterns in datasets using multiple hidden layers and non-linear activation functions. 
 

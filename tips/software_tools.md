@@ -1,31 +1,5 @@
 # Software Development Tools
 
-<!-- MarkdownTOC levels=1,2,3 -->
-
-- VS Code Extensions
-  - Python
-  - JavaScript
-  - Flutter
-- Software Development
-- JetBrains
-- Mac Apps
-- Swift
-- iPhone Apps
-- Figma plugins
-- Linux Utilities
-  - awk
-  - Lucidchart
-  - Screen
-  - httpie
-  - Multipass
-  - rich
-  - tmux
-  - Linux Command Tutorials
-- References
-
-<!-- /MarkdownTOC -->
-
-
 ## VS Code Extensions
 
 - Code Linting
@@ -173,8 +147,10 @@ Advanced
 
 ## Mac Apps
 
-- Alfred
 - Amphetamine
+- KeepingYouAwake
+
+- Alfred
 - Cheat Sheet
 - DaisyDisk
 - Downie
@@ -194,6 +170,7 @@ Advanced
 - Steam Gaming
 - TickTick
 - Tweetbot
+
 
 - asdf
 - exa  alias ls=”exa --icons -lh”
@@ -299,6 +276,7 @@ Advanced
 - screen
 - Shellcheck
 - tmux
+- vnstat
 
 ### awk
 

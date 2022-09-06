@@ -1,34 +1,6 @@
 # Computer Vision
 
-<!-- MarkdownTOC -->
-
-- What is Image Recognition?
-- Overview
-- Image Data Loading
-  - NHWC vs HCHW
-- Kaggle Download
-  - Structure and Populate Subfolders
-  - Plot some image examples
-- Exploratory Data Analysis for Computer Vision
-  - Check the size of the images
-  - Check the blurriness of the images
-  - Check the color distribution
-  - Check for class imbalance
-- Object Recognition
-- Image Classification
-- Object Detection
-- Object Detection Examples
-- Keras Examples
-- Code Snippets
-  - Reading an image
-  - Showing multiple images in a grid
-- VGG
-- Residual Networks \(ResNet\)
-  - Residual Block
-- CV and NLP
-- References
-
-<!-- /MarkdownTOC -->
+## Overview
 
 Computer Vision (CV) is defined as a field of study that seeks to develop techniques to help computers “see” and understand the content of digital images such as photographs and videos.
 

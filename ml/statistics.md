@@ -1,15 +1,5 @@
 # Statistics
 
-<!-- MarkdownTOC -->
-
-- What is Statistics
-- Correlation
-  - Pearson vs Spearman
-- Statistics for Machine Learning
-- References
-
-<!-- /MarkdownTOC -->
-
 
 ## What is Statistics
 

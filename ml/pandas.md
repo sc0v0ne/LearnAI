@@ -1,35 +1,5 @@
 # Pandas
 
-
-<!-- MarkdownTOC -->
-
-- Basics
-- Convert to Best Data Types Automatically
-- Dates
-- Iteration
-- String
-- Indexes
-- Functions
-- Aggregate
-- Pivot
-- Best Format to Save Pandas Data
-    - Formats to Compare
-    - Chosen Metrics
-- Top Five Alternatives to CSV
-    - ORC
-    - Avro
-    - Parquet
-    - Pickle
-    - Feather
-- Better Data Formats
-    - Setup
-    - Parquet vs Feather
-    - Parquet Format
-    - Feather Format
-- References
-
-<!-- /MarkdownTOC -->
-
 ## Basics
 
 [Practical Pandas Tricks - Part 1: Import and Create DataFrame](https://towardsdatascience.com/introduction-to-pandas-part-1-import-and-create-dataframe-e53326b6e2b1)
@@ -39,7 +9,7 @@
 [How To Change Column Type in Pandas DataFrames](https://towardsdatascience.com/how-to-change-column-type-in-pandas-dataframes-d2a5548888f8)
 
 
-## Convert to Best Data Types Automatically
+## Automatically Convert to Best Data Types
 
 When we load data as Pandas dataframe, Pandas automatically assigns a datatype to the variables/columns in the dataframe, typically the datatypes would be int, float and object datatypes. With the recent Pandas 1.0.0, we can make Pandas infer the best datatypes for the variables in a dataframe.
 
@@ -109,6 +79,66 @@ By using the options convert_string, convert_integer, and convert_boolean, it is
 ## Pivot
 
 [5 Minute Guide to Pandas Pivot Tables](https://towardsdatascience.com/5-minute-guide-to-pandas-pivot-tables-df2d02786886)
+
+
+----------
+
+## Performance Tips
+
+### Using at in place of loc
+
+Using ‘loc’/’iloc’ inside loops is not optimal. Instead, we should use at / iat which are much faster than loc / iloc.
+
+at and iat are meant to access a scalar, that is, a single element in the DataFrame. 
+
+```py
+import time
+start = time.time()
+# Iterating through DataFrame 
+for index, row in df.iterrows():
+    df.at[index,'c'] = row.a + row.b
+end = time.time()
+print(end - start)
+```
+
+loc and iloc are meant to access multiple elements(series/dataframe) at the same time, potentially to perform vectorized operations.
+
+```py
+import time
+start = time.time()
+# Iterating through the DataFrame df
+for index, row in df.iterrows():
+        df.loc[index,'c'] = row.a + row.b
+end = time.time()
+print(end - start)
+```
+
+**NOTE:** If we try to access a series using at and iat, it will throw an error.
+
+```py
+df.at[2,'a']
+### Output: 22
+
+df.iat[2,0]
+### Output: 22
+
+## This will generate an error since we are trying to access multiple rows
+df.at[:3,'a']
+```
+
+```py
+df.loc[:3,'a']
+##0    26
+##1    10
+##2    22
+##3    22
+
+df.loc[:3,0]
+##0    26
+##1    10
+##2    22
+##3    22
+```
 
 
 ----------

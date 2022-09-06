@@ -1,28 +1,5 @@
 # Time Series Forecasting
 
-<!-- MarkdownTOC -->
-
-- Background
-- Describing vs Predicting
-  - Time Series Analysis
-  - Time Series Forecasting \(TSF\)
-  - 11 Time Series
-- Time Series Forecasting
-- Time Series Data Preparation
-- Time Series Decomposition
-- Forecast Performance Baseline
-- 5-Step Forecasting Task
-- Error Metrics for Time Series Forecasting
-- Time Series using Keras
-- AutoML
-- Multivariate Time Series Forecasting with LSTMs
-  - Data Preparation
-- Multivariate Multi-Step Time Series Forecasting
-- References
-
-<!-- /MarkdownTOC -->
-
-
 TODO:
 
 - Visualize a time series
@@ -32,7 +9,6 @@ TODO:
 - Dataprep
 - AutoML
 - MLflow
-vffr
 - Review Chapter 11 Time Series of "Python for Data Analysis"
 
 - Review notes and references on Data Pipelines

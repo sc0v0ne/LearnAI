@@ -1,30 +1,5 @@
 # Python Modules and Packages
 
-<!-- MarkdownTOC levels=1,2,3 -->
-
-- Modules
-    - Saving code in a separate file
-    - Namespace
-    - How to Use a Module
-    - Ways to Import
-    - Demo
-    - Peek inside a Module
-    - How to Control Imported Packages
-    - How to Execute Package as main entry function
-- Packages
-    - Modules vs Packages
-    - Package Example
-    - Useful Module Properties for Package Building
-    - Private Properties in Modules
-    - Python Search for Modules
-    - Build a Package
-    - Initialize a Package
-    - Import Module from Package
-    - Publish a Package
-- References
-
-<!-- /MarkdownTOC -->
-
 ## Modules
 
 A _module_ is a file containing Python definitions and statements which is a way to organize independent code blocks

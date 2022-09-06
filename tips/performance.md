@@ -1,73 +1,5 @@
 # Performance
 
-<!-- MarkdownTOC -->
-
-- Why Python is so slow
-    - Single-thread vs multi-threaded
-    - How to speed things up
-- Lightning Fast Iteration
-    - Zip
-    - Itertools
-    - Stop Nesting
-    - Do not Zip dicts!
-    - Filter
-- Optimize Python Code
-    - Use built-in functions rather than coding them from scratch
-    - Focus on Memory Consumption During Code Execution
-    - Memoization in Python
-    - Using C libraries/PyPy to Get Performance Gain
-    - Proper Use of Data Structures and Algorithms
-    - Avoid using + for string concatenation
-    - Use tuple packing notation for swapping two variables
-    - Use list comprehensions rather than loops to construct lists
-    - Use chained comparisons
-    - Use the in operator to test membership
-    - Avoid global variables
-    - Use enumerate if you need a loop index
-    - Use the latest release of Python
-- Optimize Memory Usage
-    - Cache it
-    - Sort big in place
-    - Garbage collector
-- Improve Python Performance
-- Intel oneAPI AI Analytics Toolkit
-    - Intel optimized Modin
-    - Intel optimized Scikit-learn
-    - Intel optimized XGBoost
-    - Intel optimized TensorFlow and Pytorch
-    - Intel optimized Python
-    - Model Zoo for Intel Architecture
-    - Intel Neural Compressor
-- Speedup TensorFlow Training
-    - Use @tf.function decorator
-    - Optimize dataset loading
-    - Use mixed precision
-    - Accelerated Linear Algebra \(XLA\)
-- Improve Tensorflow Performance
-    - Mixed Precision on NVIDIA GPUs
-    - Mix Precision in Tensorflow
-    - Fusing multiple ops into one
-    - Fusion with Tensorflow 2.x
-- Keras GPU Performance
-- Make It Easier to Work with Large Datasets
-    - Explicitly pass the data-types
-    - Select subset of columns
-    - Convert dataframe to parquet
-    - Convert to pkl
-    - Dask
-    - Modin
-    - Vaex
-    - Read using Pandas in Chunks
-- Python Performance
-- Scikit-learn Performance
-- Tensorflow Performance
-- Tensorflow GPU
-- Tensorflow on macOs
-- References
-
-<!-- /MarkdownTOC -->
-
-
 Here are some resources to improve Python performance, also see [Memory Usage](,/memory_usage.md)
 
 
@@ -319,6 +251,7 @@ If for some reason you really need a loop index, you should use the enumerate fu
 ### Use the latest release of Python
 
 New versions of Python are released quite frequently (at the time of writing Python 3.9 has been updated 8 times in the last year). It is worth keeping up to date as new versions often have bug fixes and security fixes, but they sometimes have performance improvements too.
+
 
 
 ## Optimize Memory Usage

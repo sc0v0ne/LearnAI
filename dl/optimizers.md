@@ -1,19 +1,6 @@
 # Optimization Functions
 
-<!-- MarkdownTOC -->
-
-- Stochastic Gradient Descent
-- SGDMomentum
-- AdaGrad
-- RMSprop
-- Adam
-- Summary
-
-<!-- /MarkdownTOC -->
-
-[Neural Network Optimizers from Scratch in Python](https://towardsdatascience.com/neural-network-optimizers-from-scratch-in-python-af76ee087aab?source=rss----7f60cf5620c9---4)
-
-This article covers the mathematical expressions of common non-convex optimizers and their Python implementations from scratch . 
+The article [1] covers the mathematical expressions of common non-convex optimizers and their Python implementations from scratch . 
 
 Understanding the math behind these optimization algorithms can help enlighten your perspective when training complex machine learning models. 
 
@@ -94,4 +81,9 @@ where 𝛿𝑀𝑖 is the first-moment decaying cumulative sum of gradients, �
 ## Summary
 
 Many researchers and data scientists use the Adam optimizer rather than SGD for training large deep neural networks since the Adam optimizer is adaptive to process and has both first and second-order momentum compared to SGD.
+
+
+## References
+
+[1] [Neural Network Optimizers from Scratch in Python](https://towardsdatascience.com/neural-network-optimizers-from-scratch-in-python-af76ee087aab?source=rss----7f60cf5620c9---4)
 

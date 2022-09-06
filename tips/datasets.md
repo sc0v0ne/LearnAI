@@ -1,24 +1,5 @@
 # Datasets
 
-<!-- MarkdownTOC -->
-
-- Dataset Search
-- Dataset Cheatsheet
-- Read Datasets
-- Generate Dummy Data
-- Structured Datasets
-    - HuggingFace
-- Computer Vision Datasets
-    - Medical Image Datasets
-- NLP Datasets
-    - NLP Open Source Datasets
-    - nlp-datasets
-    - Internet Archive
-    - Amazon Reviews and Wikipedia Links
-- Working with Large Datasets
-
-<!-- /MarkdownTOC -->
-
 Here is a collection of some resources for ML datasets.
 
 

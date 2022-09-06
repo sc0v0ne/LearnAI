@@ -1,33 +1,10 @@
 # Imbalanced Classification
 
-<!-- MarkdownTOC -->
-
-- Imbalanced Classification Problems
-- Causes of Class Imbalance
-- Challenge of Imbalanced Classification
-- How to Handle Imbalanced Classes
-    - Collect More Data
-    - Try Changing the Performance Metric
-    - Try Different Algorithms
-    - Try a Different Perspective
-    - Accuracy Paradox
-    - Stratify the Dataset
-- Handle Imbalanced Classification without Rebalancing
-    - Reasons not to balance your imbalanced data
-    - Conclusion
-- Use AUPRC Instead of ROC-AUC
-- Examples of Imbalanced Classification
-- Naive Classifier
-- Keras Imbalanced Classification
-- Computer Vision Imbalanced Classification
-- References
-
-<!-- /MarkdownTOC -->
-
 Class imbalance naturally occurs in certain types of classification problems such as credit approval (dataset usually contains much more approved credits than rejected) or fraud detection.
 
 Class imbalance means that one of the modalities of a categorical variable is over-represented with respect to the others. 
 
+## Overview
 
 An imbalanced classification problem is a problem that involves predicting a class label where the distribution of class labels in the training dataset is skewed (there are many more examples for one class than the other classes). 
 

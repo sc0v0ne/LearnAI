@@ -1,20 +1,5 @@
 # Recommended Resources
 
-<!-- MarkdownTOC -->
-
-- Quickstart Resources
-- Books for Developers
-- PyTorch Books
-- Prerequisites
-    - Mathematics
-    - Computer Science
-    - Software Engineering
-- AI Textbooks
-- Code Repos
-- Good Reads
-
-<!-- /MarkdownTOC -->
-
 [AI Learning Resources](https://aicoder.medium.com/ai-learning-resources-b49da21fd3b8)
 
 [Software Engineering Body of Knowledge (SWEBOK)](https://www.computer.org/education/bodies-of-knowledge/software-engineering)

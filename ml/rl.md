@@ -1,21 +1,5 @@
 # Reinforcement Learning
 
-<!-- MarkdownTOC -->
-
-- Overview
-- Reinforcement Learning
-- What makes Reinforcement Learning so hard?
-- Summary
-- Quick Start
-- Basic RL on freecodecamp
-- Basic RL on towardsdatascience
-- RL using OpenAI Gym
-- Advanced RL
-- References
-
-<!-- /MarkdownTOC -->
-
-
 ## Overview
 
 [Reinforcement learning](https://en.wikipedia.org/wiki/Reinforcement_learning?wprov=sfti1) (RL) is an area of machine learning concerned with how intelligent agents ought to take actions in an environment in order to maximize the notion of cumulative reward. 

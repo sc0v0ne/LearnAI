@@ -1,20 +1,8 @@
-## [Robotics Technology](https://builtin.com/robotics)
+## Robotics Technology
 
-<!-- MarkdownTOC -->
+Robotics is an interdisciplinary sector of science and engineering dedicated to the design, construction and use of mechanical robots. 
 
-- What Is Robotics?
-- Types of Robots
-    - Pre-Programmed Robots
-    - Humanoid Robots
-    - Autonomous Robots
-    - Teleoperated Robots
-    - Augmenting Robots
-- 4 Types of Robots Every Manufacturer Should Know
-
-<!-- /MarkdownTOC -->
-
-
-Robotics is an interdisciplinary sector of science and engineering dedicated to the design, construction and use of mechanical robots. Our guide will give you a concrete grasp of robotics, including different types of robots and how they are being applied across industries.
+The guide [1] provides a concrete grasp of robotics, including different types of robots and how they are being applied across industries.
 
 ### What Is Robotics?
 
@@ -83,10 +71,10 @@ Augmenting robots either enhance current human capabilities or replace the capab
 
 Some examples of augmenting robots are robotic prosthetic limbs or exoskeletons used to lift hefty weights.
 
+----------
 
 
-
-## [4 Types of Robots Every Manufacturer Should Know](https://www.nist.gov/blogs/manufacturing-innovation-blog/4-types-robots-every-manufacturer-should-know)
+## Types of Robots
 
 1. Articulated Robots
 
@@ -171,3 +159,8 @@ Cartesian robots are unable to reach into or around obstacles easily.
 Their exposed sliding mechanisms make them less suited for dusty/dirty environments.
 
 
+## References
+
+[1] [Robotics Technology](https://builtin.com/robotics)
+
+[2] [4 Types of Robots Every Manufacturer Should Know](https://www.nist.gov/blogs/manufacturing-innovation-blog/4-types-robots-every-manufacturer-should-know)

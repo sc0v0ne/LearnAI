@@ -1,27 +1,5 @@
 # Project Management
 
-<!-- MarkdownTOC -->
-
-- Project Quickstart
-- Avoid project drift
-  - Define the deliverable
-  - Be specific about the deliverable in the contract
-  - Create a project timeline
-  - Structured project meetings
-- Managing Design Feedback in Meetings
-  - Good feedback starts with good preparation
-  - Don’t take design solutions at face value
-  - Resist the urge to respond immediately
-  - Repeat back and align
-  - Express gratitude and define actions in public
-- Changing Software Requirements
-  - Assumptions
-- Feedback
-- References
-
-<!-- /MarkdownTOC -->
-
-
 ## Project Quickstart
 
 1. Who is the user?

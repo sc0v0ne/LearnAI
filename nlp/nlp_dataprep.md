@@ -1,24 +1,5 @@
 # NLP Text Preprocessing
 
-<!-- MarkdownTOC -->
-
-- What is NLP Text Preprocessing
-     - NLP Text Preprocessing Steps
-     - Key Findings
-- Pre-Processing
-- Preprocessing Textual Data with Pandas
-     - String
-     - Split
-     - Combine
-- Lowercase
-     - Capitalize
-     - Index
-     - Encoding categorical values
-- References
-
-<!-- /MarkdownTOC -->
-
-
 ## What is NLP Text Preprocessing
 
 NLP Text preprocessing is a method to clean the text in order to make it ready to feed to models. Noise in the text comes in varied forms like emojis, punctuations, different cases. All these noises are of no use to machines and hence need to clean it.
@@ -273,6 +254,12 @@ The value in the “group1” column is "A", the value in column "A" is 1, etc.
 [4] [Text Augmentation in a few lines of Python Code](https://towardsdatascience.com/text-augmentation-in-few-lines-of-python-code-cdd10cf3cf84)
 
 [5] [Data Augmentation for Speech Recognition](https://towardsdatascience.com/data-augmentation-for-speech-recognition-e7c607482e78)
+
+[6] [How To Perfectly Clean Your Text Data For NLP](https://heartbeat.comet.ml/how-to-perfectly-clean-your-text-data-for-nlp-29cfae79e243)
+
+[7] [Understanding Regular Expression for Natural Language Processing](https://heartbeat.comet.ml/understanding-regular-expression-for-natural-language-processing-ce9c4e272a29)
+
+[8] [Two minutes NLP — Python Regular Expressions cheatsheet](https://medium.com/nlplanet/two-minutes-nlp-python-regular-expressions-cheatsheet-d880e95bb468)
 
 
 [Complete Guideline to Implementation of Basic NLP Techniques with NLTK and spaCy](https://towardsdatascience.com/hands-on-implementation-of-basic-nlp-techniques-nltk-or-spacy-687099e02816)

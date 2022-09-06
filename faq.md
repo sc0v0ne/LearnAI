@@ -1,39 +1,5 @@
 # Frequently Asked Questions
 
-<!-- MarkdownTOC -->
-
-- What is an AI Engineer
-- What is the difference between AI and ML
-- Do I need a Master’s Degree
-- Problems with AI
-- Recommended Tutorials and Books
-- How to access Safari Online
-- Can I learn AI from research papers
-- How to ask an AI/ML question
-- How to choose a performance metric
-- How to Choose an ML Algorithm
-- How to choose classification model
-- Should I start learning ML by coding an algorithm from scratch
-- The obsession to understand how algorithms work
-- Is image channels first or last
-- How to share your work
-- How to choose a Cloud Platform
-- Common Questions on Encoding
-  - What if I have hundreds of categories
-  - What encoding technique is the best
-  - What if I have a mixture of numeric and categorical data
-- Common Questions on Normalization
-  - Which Scaling Technique is Best
-  - Should I Normalize or Standardize
-  - Should I Standardize then Normalize
-  - How Do I Handle Out-of-Bounds Values
-- Using AI with Medical Images
-- How does NLP work
-- How to Develop a Chatbot
-- Why are Robots not more common
-
-<!-- /MarkdownTOC -->
-
 ## What is an AI Engineer
 
 [Artificial Intelligence Engineering](https://www.sei.cmu.edu/our-work/artificial-intelligence-engineering/)
@@ -369,6 +335,25 @@ You may normalize your data by calculating the minimum and maximum on the traini
 Later, you may have new data with values smaller or larger than the minimum or maximum respectively.
 
 One simple approach to handling this may be to check for out-of-bound values and change their values to the known minimum or maximum prior to scaling. Alternately, you can estimate the minimum and maximum values used in the normalization manually based on domain knowledge.
+
+
+
+## Optimize Performance
+
+Performance is always an issue with ML models upon deployment. 
+
+Rather than trying to find the perfect tool, I would 1) analyze your system architecture for possible bottlenecks and 2) profile memory usage of both the ML model and the deployed system and 3) review common performance optimization techniques for ML models such as optimizing Python code, tensorflow code, mixed precision, other data formats such as parquet, concurrency and parallelism tools such as modin. Sorry, there really is no silver bullet. 
+
+I have some notes on memory optimization and performance in the tips folder under LearnAI. The first step would be to identify the bottlenecks or performance issues. 
+
+The simplest things to try would be modin and parquet which can greatly improve performance for common ML use cases. The other approaches or even trying another tool will require a lot more time and effort. However, 
+
+https://publish.obsidian.md/serve?url=notes.cogentcoder.com/
+https://medium.com/geekculture/what-is-real-time-streaming-data-processing-b726b1b271d1
+
+https://towardsdatascience.com/machine-learning-streaming-with-kafka-debezium-and-bentoml-c5f3996afe8f
+
+https://publish.obsidian.md/serve?url=notes.cogentcoder.com
 
 
 

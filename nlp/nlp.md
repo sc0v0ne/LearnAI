@@ -1,52 +1,5 @@
 # Natural Language Processing (NLP)
 
-<!-- MarkdownTOC levels=1,2,3 -->
-
-- Basics
-  - Terminology
-  - Common Tasks
-  - Python Libraries
-  - Applications
-- NLP Cheatsheet
-- Introduction to NLP
-  - NLU vs NLG
-- Building a Natural Language Processor
-- Tokenization, Stemming, and Lemmatization
-  - Tokenization
-  - Stemming
-  - Lemmatization
-- Data Chunking
-- Topic Modeling and Identifying Patterns in Data
-- Challenges in Natural Language Processing
-- Conmon NLP Techniques
-- Lemmatization and Stemming
-- Keyword extraction
-- Named Entity Recognition \(NER\)
-- Topic Modeling
-- Sentiment Analysis
-- Summarization
-- Guide to NLP
-  - Bag of Words
-  - TF-IDF
-  - Tokenization
-  - Stop Words Removal
-  - Stemming
-  - Lemmatization
-  - Topic Modeling
-- Data Mining
-- Pattern Recognition
-- Challenges in Natural Language Processing
-- Common Tasks
-- NLP Workflow
-- Tutorials
-  - HuggingFace Transformers for NLP With Python
-  - Haystack
-- NLP Pretrained Models
-- NLP Libraries
-- References
-
-<!-- /MarkdownTOC -->
-
 ## Basics
 
 ### Terminology
@@ -149,7 +102,7 @@ This article is a checklist for the exploration needed to develop an NLP model t
 
 **Natural Language Processing (NLP)** is concerned with the analysis and building of intelligent systems that can function in languages that humans speak [2]. 
 
-Processing of language is needed when a system wants to work based on input from a user in the form of text or speech and the user is adding input in regular use English [2].
+Processing of language is needed when a system wants to work based on input from a user in the form of text or speech and the user is adding input in regular use English.
 
 
 **Natural Language Understanding (NLU):** the understanding phase is responsible for mapping the input that is given in natural language to a beneficial representation. 
@@ -722,7 +675,11 @@ The article [7] covers 5 useful Python recipes for your next NLP projects:
 
 Semantic similarity analysis
 
-As opposed to _lexicographical similarity_, _semantic similarity_ measures the likeness of documents/sentences/phrases based on their meaning. 
+_semantic similarity_ measures the likeness of documents/sentences/phrases based on their meaning whereas 
+
+_Lexical similarity_ is a measure of the degree to which the word sets or vocabulary of two given languages are similar. 
+
+_Semantic similarity_ is a metric defined over a set of documents or terms where the idea of distance between items is based on the likeness of their meaning or semantic content. 
 
 The most effective methodology is to use a powerful transformer to encode sentences, get their embeddings and then use cosine similarity to calculate their distance/similarity score.
 

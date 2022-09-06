@@ -1,19 +1,5 @@
 # Design Patterns
 
-<!-- MarkdownTOC -->
-
-- What is a Design Pattern?
-- How to Classify Design Patterns?
-- Common Design Patterns
-- Design Pattern Cheatsheet
-- Software Design Patterns
-- Data Design Patterns
-- Machine Learning Design Patterns
-- MLOps Design Patterns
-- References
-
-<!-- /MarkdownTOC -->
-
 ## What is a Design Pattern?
 
 A _design pattern_ is defined by four essential elements:

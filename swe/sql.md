@@ -1,30 +1,6 @@
 # SQL
 
 
-<!-- MarkdownTOC -->
-
-- SQL Tips
-  - 1. Avoid using `select *`.
-  - 2. Replace “union" with "union all".
-  - 3. Small table drives big table.
-  - 4. Bulk operations.
-  - 5. Use limit.
-  - 6. Do not use too many values in the in keyword.
-  - 7. Incremental query.
-  - 8. Efficient paging.
-  - 9. Replacing subqueries with join queries.
-  - 10. Join tables should not be too many.
-  - 11. Inner join note.
-  - 12. Limit the number of indexes.
-  - 13. Choose the appropriate field type.
-  - 14. Improve the efficiency of group by
-  - 15. Index optimization.
-- N+1 Query Problem
-- References
-
-<!-- /MarkdownTOC -->
-
-
 ## SQL Tips
 
 Here are some tips on SQL optimization[1]:

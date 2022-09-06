@@ -1,42 +1,5 @@
 # Data Preparation
 
-<!-- MarkdownTOC levels=1,2,3 -->
-
-- Overview
-- Data Preparation
-    - Import data
-    - Format adjustments
-    - Correct inconsistencies
-    - Handle errors in variables
-- Data Cleaning
-    - Check Data Types
-    - Handle Missing Values
-    - Handle Duplicate Values
-    - Handle Outliers
-    - Remove Outliers
-- Encoding Categorical Features
-    - Integer \(Ordinal\) Encoding
-    - Encoding Class Labels
-    - One-Hot Encoding of Nominal Features
-    - Dummy Variable Encoding
-    - Complete One-Hot Encoding Example
-- Parsing dates
-- Inconsistent Data Entry
-- Imbalanced Datasets
-- Train-Test Split
-- Data Pipelines
-- Bootstrapping
-- Code Examples and References
-    - Data Preparation
-    - Categorical Data
-    - Scaling
-    - Normalization
-    - Train-Test Split
-- Data Sampling
-- References
-
-<!-- /MarkdownTOC -->
-
 [Feature Engineering](./feature_engineering.md)
 
 [Dimensionality Reduction](./dimensionality_reduction.md)
@@ -62,6 +25,58 @@ You try to handle the "worst" cases and not necessarily every case.
 Exploratory Data Analysis (EDA) is crucial: summary stats and making plots of the data.
 
 NOTE: It is estimated that 80% of AI project development time is spent on preparing the data [6]. 
+
+
+
+## ETL vs ELT
+ 
+ETL and ELT (extract, transform, load, or extract, load, and transform). 
+
+ETL transforms the data before loading it into a data warehouse while ELT loads the data and allows the transformation to be handled within the data warehouse [13]. 
+
+- **Extract:** This refers to pulling the source data from the original database or data source. 
+
+  With ETL, the data goes into a temporary staging area. 
+
+  With ELT, it goes immediately into a data lake storage system.
+
+- **Transform:** This refers to the process of changing the format/structure of the information so that it can integrate with the target system and the rest of the data within that system.
+
+- **Load:** This refers to the process of inserting the information into a data storage system. 
+
+  In ELT scenarios, raw/unstructured data is loaded, then transformed within the target system. 
+
+  In ETL, the raw data is transformed into structured data prior to reaching the target.
+
+### Kestra
+
+**Kestra** is an infinitely scalable orchestration and scheduling platform, creating, running, scheduling, and monitoring millions of complex pipelines.
+
+Kestra can manage ETL and ELT in the same solution, handling even the most complex workflows. 
+
+ETL processes can be used to scrub sensitive data, ensuring compliance, loading the transformed data within a temporary table. 
+
+With Kestra’s capacity for parallel flows, the rest of the data can be handled by ELT.
+
+Kestra is able to perform ELT workloads on its own or with integrations to many popular solutions. 
+
+Kestra can handle loading data from BigQuery, CopyIn, Postgres, and more. 
+
+A simple query can be performed to move the data, for example, SQL INSERT INTO SELECT statements. 
+
+Dependencies between flows can be handled with Kestra’s trigger mechanisms to transform the data within the database (cloud or physical).
+
+ETL is just as easily managed by Kestra’s flexible workflows. 
+
+FileTransform plugins are one possible method, but you can write a simple Python/Javascript/Groovy script to transform an extracted dataset data row per row. 
+
+For example, you can remove columns with personal data, clean columns by removing dates, and more. Integrating a custom docker image into your workflow is another method that can be used to transform the data. 
+
+Not only can you transform data row per row, you can potentially handle conversion of data between formats, for example, transforming AVRO data to JSON or CSV, or vice versa.
+ 
+This is not usually possible with most solutions. Most ELT tools often prevent ETL processes by design because they cannot handle heavy transform operations. 
+
+Kestra is able to handle both because all transformations are considered to be row per row, and therefore do not use any memory to perform the function, only CPU.
 
 
 
@@ -744,6 +759,8 @@ W. McKinney, Python for Data Analysis, 2nd ed., Oreilly, ISBN: 978-1-491-95766-0
 [11] [Major Problems of Machine Learning Datasets: Part 2](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-2-ba82e551fee2)
 
 [12] [Major Problems of Machine Learning Datasets: Part 3](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-3-eae18ab40eda)
+
+[13] [ELT vs ETL: Why not both?](https://medium.com/geekculture/elt-vs-etl-why-not-both-d0c4a0d30fc0)
 
 
 [Build an Anomaly Detection Pipeline with Isolation Forest and Kedro](https://towardsdatascience.com/build-an-anomaly-detection-pipeline-with-isolation-forest-and-kedro-db5f4437bfab)

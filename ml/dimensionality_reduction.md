@@ -1,27 +1,5 @@
 # Dimensionality Reduction
 
-<!-- MarkdownTOC -->
-
-- What is Dimensionality Reduction
-- High-dimensional data
-- The Curse of Dimensionality
-- PCA Requirements
-- Techniques for Dimensionality Reduction
-- What is Data Mining
-- What is Dimensional Reduction
-- Benefits of Dimensional Reduction
-- Methods for Dimensional Reduction
-- Feature Extraction
-  - Linear methods
-  - Non-linear methods
-  - Other methods
-- Feature Extraction Techniques
-- Linear Algebra Methods
-- Manifold Learning
-- References
-
-<!-- /MarkdownTOC -->
-
 ## What is Dimensionality Reduction
 
 **Dimensionality reduction** is the process of reducing the dimension of your feature set. 

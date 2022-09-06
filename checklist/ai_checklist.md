@@ -1,40 +1,5 @@
 # AI Checklists
 
-<!-- MarkdownTOC -->
-
-- When not to use ML
-    - Data-related issues
-    - Interpretability
-    - Technical Debt
-    - Better Alternatives
-- Mistakes to Avoid in AI
-- Feature Engineering
-- AI Checklist
-    - When to retrain the model
-    - How to retrain the model
-- Problem Definition Checklist
-- Dataset Selection Checklist
-- Data Preparation Checklist
-- Design Checklist
-- Training Checklist
-- Pre-deployment Checklist
-- Deployment Checklist
-- Monitoring Checklist
-    - What is a Key Performance Indicator \(KPI\)?
-- 5 Steps to follow for Successful AI Project
-- Common Machine Learning Techniques for AI Development
-- NLP Checklist
-    - NLP Python Libraries
-    - Text Preprocessing
-    - Word Embeddings
-    - Text Similarity
-    - Named Entity Recognition
-    - NLP Deep Learning Models
-- References
-
-<!-- /MarkdownTOC -->
-
-
 ## When not to use ML
 
 The article [1] discusses four reasons when you should not use machine learning.

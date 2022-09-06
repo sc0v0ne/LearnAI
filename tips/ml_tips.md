@@ -1,16 +1,5 @@
 # Machine Learning Tips
 
-<!-- MarkdownTOC -->
-
-- Avoid Using Different Library Versions
-- What aspect ratio to use for line plots
-  - Calculating the aspect ratio
-  - Best practices
-- Watch your training and GPU resources
-- References
-
-<!-- /MarkdownTOC -->
-
 
 ## Avoid Using Different Library Versions
 

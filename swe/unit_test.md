@@ -1,15 +1,5 @@
 # Python Unit Testing
 
-<!-- MarkdownTOC -->
-
-- Overview
-- Test Driven Development
-- PyUnit fFamework
-- Unit Testing in Action
-- References
-
-<!-- /MarkdownTOC -->
-
 
 ## Overview
 

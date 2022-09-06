@@ -1,20 +1,5 @@
 # LSTM Articles
 
-<!-- MarkdownTOC -->
-
-- Data Preparation for LSTM
-- LSTM Behaviour
-- Modeling with LSTM
-- LSTM for Time Series
-- Deep Learning for Time Series Forecasting
-    - Model Types
-    - Human Activity Recognition \(multivariate classification\)
-    - Forecast Electricity Usage \(multivariate, multi-step\)
-    - Forecast Air Pollution \(multivariate, multi-step\)
-- Tuning
-
-<!-- /MarkdownTOC -->
-
 Long Short-Term Memory (LSTM) Recurrent Neural Networks are designed for sequence prediction problems and are a state-of-the-art deep learning technique for challenging prediction problems.
 
 [Guide to Long Short-Term Memory Networks (LSTMs)](https://machinelearningmastery.com/start-here/#deeplearning)

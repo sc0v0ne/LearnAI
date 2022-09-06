@@ -1,19 +1,5 @@
 # Machine Learning Performance Metrics
 
-<!-- MarkdownTOC -->
-
-- Performance Metrics For Classification
-- Performance Metrics For Regression
-- Confidence Intervals
-  - Classifier Error with Confidence Intervals
-  - Validation Dataset
-  - Confidence Interval Example
-  - Nonparametric Confidence Interval
-- Confidence Intervals
-- References
-
-<!-- /MarkdownTOC -->
-
 There are several standard methods to evaluate the performance of ML models. In fact, scikit-learn has a plethora of functions for computing performance metrics in the `sklearn.metrics` library.
 
 In AI, scoring functions such as MSE are used for three main purposes:

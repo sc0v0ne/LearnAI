@@ -1,20 +1,5 @@
 # Machine Learning Tools
 
-<!-- MarkdownTOC levels=1,2 -->
-
-- How to choose an ML framework
-- Data Exploration Tools
-- Feature Engineering Tools
-- Computer Vision
-- Deep Learning Tools
-- ML Libraries
-- Time Series
-- Pretrained Model Repos
-- Python Libraries
-- References
-
-<!-- /MarkdownTOC -->
-
 Here is a list of ML tools that I have found to be helpful for AI engineering.
 
 For items without links, see **Github Lists**. 

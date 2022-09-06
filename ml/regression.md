@@ -1,20 +1,6 @@
 # Guide to Classification and Regression
 
-<!-- MarkdownTOC -->
-
-- Exploratory Data Analysis \(EDA\)
-    - Why do we need univariate analysis?
-    - Why do we need correlation analysis?
-- Feature Engineering
-- Model Implementation
-- Model Evaluation
-- Guide to Logistic Regression
-- Terminology
-- Classification Examples
-- Regression Examples
-- References
-
-<!-- /MarkdownTOC -->
+## Overview
 
 Linear regression is a good starting point when dealing with regression problems and can be considered the _baseline_ model. 
 
@@ -176,6 +162,19 @@ The parameters of the train function are called _hyperparameters_ such as iterat
 [Building a Random Forest Classifier to Predict Neural Spikes](https://medium.com/@mzabolocki/building-a-random-forest-classifier-for-neural-spike-data-8e523f3639e1)
 
 [KNN Algorithm for Classification and Regression: Hands-On With Scikit- Learn](https://cdanielaam.medium.com/knn-algorithm-for-classification-and-regression-hands-on-with-scikit-learn-4c5ec558cdba)
+
+
+## Classification Examples using Keras
+
+[Structured data classification from scratch](https://keras.io/examples/structured_data/structured_data_classification_from_scratch/)
+
+[Image classification with modern MLP models](https://keras.io/examples/vision/mlp_image_classification/)
+
+[3D image classification from CT scans](https://keras.io/examples/vision/3D_image_classification/)
+
+
+[Imbalanced classification: credit card fraud detection](https://keras.io/examples/structured_data/imbalanced_classification/)
+
 
 
 ## Regression Examples

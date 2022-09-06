@@ -1,23 +1,6 @@
 # Common Machine Learning Mistakes
 
-<!-- MarkdownTOC -->
-
-- Put Machine Learning on a pedestal
-- Write Machine Learning Code
-- Doing Things Manually
-- Reinvent Solutions to Common Problems
-- Ignoring the Math
-- Python Mistakes To Avoid
-    - Always looping over ranges
-    - Import *
-    - String Concatenation
-    - Using bare excepts
-    - Mutable Defaults
-    - Checking types with ==
-    - Equality for singletons
-- References
-
-<!-- /MarkdownTOC -->
+## Overview
 
 There are five common mistakes that programmers make when getting started in machine learning:
 

@@ -1,30 +1,5 @@
 # Machine Learning Cheatsheet
 
-<!-- MarkdownTOC -->
-
-- Compute-centric vs Data-centric
-- Maximum Likelihood Estimation
-- Empirical risk minimization
-- Neural Networks
-   - Layers
-      - Convolution
-      - Dropout
-      - Pooling
-   - Loss Functions
-      - Cross-Entropy
-      - Mean Absolute Error \(L1\)
-      - MSE \(L2\)
-   - Optimizers
-      - What is Optimizer?
-   - Regularization
-      - What is overfitting?
-      - What is Regularization?
-   - Architectures
-      - Autoencoder
-      - VAE
-
-<!-- /MarkdownTOC -->
-
 ## Compute-centric vs Data-centric
 
 Machine learning is bifurcating between two computing paradigms: compute-centric computing and data-centric computing. 

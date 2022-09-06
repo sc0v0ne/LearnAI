@@ -1,26 +1,5 @@
 # Long Short-Term Memory Networks
 
-<!-- MarkdownTOC -->
-
-- Overview
-- Structure Of LSTM
-- Understanding LSTM Networks
-  - Exploding and Vanishing Gradients
-  - Architecture
-  - Hidden layers of LSTM
-  - Conventional LSTM
-  - Variations
-  - GRU vs LSTM
-  - Applications
-  - Drawbacks
-- The 5 Step Life-Cycle for LSTM Models in Keras
-- Derivation of Backpropagation through time
-- LSTM Autoencoders
-- Encoder-Decoder with Attention
-- References
-
-<!-- /MarkdownTOC -->
-
 ## Overview
 
 Long Short Term Memory (LSTM) is a kind of recurrent neural network.

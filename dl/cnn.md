@@ -1,33 +1,5 @@
 # Convolutional Neural Networks (CNN)
 
-<!-- MarkdownTOC -->
-
-- Overview
-- 1. Introduction
-- 2. Architecture
-  - 2.1 Convolution
-  - 2.2 Non-linearity
-  - 2.3 Stride and Padding
-  - 2.4 Pooling
-  - 2.5 Hyperparameters
-  - 2.6 Fully Connected
-  - 2.7 Training
-- 3. Intuition
-- 4. Implementation
-  - 4.1) Dropout
-  - 4.2 Model Performance
-  - 4.3 Data Augmentation
-  - 4.4 Updated Model
-- 5. VGG Model
-- 6. Visualization
-- 7. Conclusion
-- Basics of Convolutional Neural Networks
-- CNN using PyTorch
-
-<!-- /MarkdownTOC -->
-
-[Convolutional Neural Networks (CNN)](https://towardsdatascience.com/applied-deep-learning-part-4-convolutional-neural-networks-584bc134c1e2)
-
 ## Overview
 
 Welcome to Part 4 of Applied Deep Learning series:
@@ -349,5 +321,9 @@ The entire code for this article is available here if you want to hack on it you
 
 [Complete Guide to build CNN in Pytorch and Keras](https://medium.com/analytics-vidhya/complete-guide-to-build-cnn-in-pytorch-and-keras-abc9ed8b8160)
 
+
+## References
+
+[1] [Convolutional Neural Networks (CNN)](https://towardsdatascience.com/applied-deep-learning-part-4-convolutional-neural-networks-584bc134c1e2)
 
 

@@ -1,30 +1,5 @@
 # Image Augmentation
 
-<!-- MarkdownTOC -->
-
-- Image Data Preparation
-- Feature Engineering for Images
-    - Curse of Dimensionality
-    - Reduce Picture Dimension
-    - Histogram of Oriented Gradient
-    - Principal Component Analysis
-    - Manifold Learning
-- Image Augmentation using imgaug
-    - Brightness
-    - Blurness
-    - Gaussian Noise
-    - Saturation Augmentation
-    - Rotation
-    - Multiple Augmentations
-- Tutorials
-    - Image Data Preparation
-    - Image Data Augmentation
-    - Image Data Pipeline
-    - Keras Examples
-- References
-
-<!-- /MarkdownTOC -->
-
 ## Image Data Preparation
 
 When training vision models, it is common to resize images to a lower dimension ((224 x 224), (299 x 299), etc.) to allow mini-batch learning and also to keep up the compute limitations [1]. 

@@ -1,45 +1,5 @@
 # MLflow
 
-<!-- MarkdownTOC -->
-
-- What is MLflow
-- Tracking Experiments
-    - Tracking Experiments with MLflow Tracking
-    - Group Runs into Experiments
-    - Logging experiments manually
-    - Logging experiments automatically
-- Packaging Projects
-    - Packaging Python Code for Conda Environments
-    - Run Packaged MLflow Projects
-- Deploy Models
-    - Saving Models with MLflow Models
-    - Providing an input signature and input examples
-    - Inferring the input signature automatically
-    - Specifying the Input Signature Manually
-    - Provide input examples
-    - Save the model
-    - Log the Model as an Artifact
-    - Load the saved models
-    - Inference with the Loaded models
-    - Serve Models with MLflow Models
-    - Inference with a Served Model
-- Build A React Web Application with MLflow
-    - Overview
-    - Building the API
-    - Building the API endpoints
-- Experiment Tracking With MLflow and DagsHub
-    - What is experiment tracking
-    - Basics of logging experiments with MLflow
-    - Deep dive into MLflow workflow
-    - Logging experiments with Git and DagsHub
-    - Analyzing experiment results with DagsHub
-- ML Pipelines
-    - Ploomber
-    - PyCaret
-- References
-
-<!-- /MarkdownTOC -->
-
 ## What is MLflow
 
 **MLflow** is an open-source platform for managing machine learning lifecycles that is designed to help data scientists and ML engineers facilitate the tracking of experiments and the deployment of code to a wide range of environments.

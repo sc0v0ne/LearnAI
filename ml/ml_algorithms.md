@@ -1,44 +1,5 @@
 # Machine Learning Algorithms
 
-<!-- MarkdownTOC levels=1,2,3 -->
-
-- Background
-- Categories of ML Algorithms
-- Overview of Machine Learning Algorithms
-- Machine Learning Techniques
-- Algorithms Grouped by Learning Style
-    - Supervised Learning
-    - Unsupervised Learning
-    - Semi-Supervised Learning
-    - Reinforcement Learning
-- Algorithms Grouped By Similarity
-    - Classification Algorithms
-    - Regression Algorithms
-    - Instance-based Algorithms
-    - Decision Tree Algorithms
-    - Bayesian Algorithms
-    - Clustering Algorithms
-    - Association Rule Learning Algorithms
-    - Artificial Neural Network Algorithms
-    - Deep Learning Algorithms
-    - Dimensionality Reduction Algorithms
-    - Principal Component Analysis \(PCA\)
-    - Ensemble Algorithms
-    - Decision Trees
-- Regression Algorithms Pros and Cons
-- The Elbow Method
-- Examples of Algorithm Lists To Create
-- Tips for Creating Algorithm List
-- Orange Algorithm List
-    - Regression
-    - Classification
-    - Classification and Regression
-    - Dimensionality Reduction
-    - Clustering
-- References
-
-<!-- /MarkdownTOC -->
-
 ## Background
 
 [Understand Machine Learning Algorithms](https://machinelearningmastery.com/start-here/#algorithms)

@@ -1,14 +1,5 @@
 # How to Learn AI
 
-<!-- MarkdownTOC -->
-
-- Tutorials and Books
-- Consulting and Freelance
-- References
-
-<!-- /MarkdownTOC -->
-
-
 [How to Learn AI](https://medium.com/geekculture/how-to-learn-ai-7bb743f0bbdf)
 
 [How to Learn Python for Machine Learning](https://machinelearningmastery.com/how-to-learn-python-for-machine-learning/)

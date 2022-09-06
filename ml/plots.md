@@ -1,51 +1,5 @@
 # Plots and Graphs
 
-<!-- MarkdownTOC levels=1,2,3 -->
-
-- Choosing Graphs
-- Plotting Multiple Graphs in Matplotlib
-    - Import libraries
-    - Load datasets
-    - plt.subplots\(\)
-    - plt.subplot\(\)
-    - Comparison between plt.subplots\(\) and plt.subplot\(\)
-    - plt.tight_layout\(\)
-    - Set Title for Figure
-- How to Customize Matplotlib Plots
-    - Colors
-    - Labels
-- Seaborn
-    - Overview
-    - Import Dataset
-    - Scatter Plot
-    - Line Plot
-    - Histogram
-    - Box Plot
-    - Seaborn Tips
-- Plots for Multivariate Data Analysis using Seaborn
-    - Explore relationships between numeric columns
-    - Binned Scatterplot
-    - Exploring the relationships between categorical and numeric relationships
-    - Box plot
-    - Remarks
-- Bokeh and Cufflinks
-    - Import the Dataset
-    - Plotting using Pandas
-    - Plotting using Pandas-Bokeh
-    - Plotting using Cufflinks
-- Plotnine
-- Advanced Data Visualizations
-- Data Visualization Packages
-    - AutoViz
-    - Missingno
-    - Yellowbricks
-    - Mito
-- Trees and Graphs
-- References
-
-<!-- /MarkdownTOC -->
-
-
 Matplolib is the basis of image visualization in Python but there are other alternatives such as seaborn and plotly (which is browser-based).
 
 ## Choosing Graphs

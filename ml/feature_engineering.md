@@ -1,43 +1,5 @@
 # Feature Engineering
 
-<!-- MarkdownTOC levels=1,2,3 -->
-
-- Overview
-- Dimensionality Reduction
-- Feature Selection vs Feature Engineering
-- Feature Importance
-    - Dataset loading and preparation
-    - Feature Importance Techniques
-- Correlation
-- Feature Engineering Techniques
-- Scaling vs Normalization
-    - Scaling
-    - Normalization
-    - Normalization vs Standardization
-    - Choose between Standardization vs Normalization
-- Non-Normal Distribution of Data
-    - Log Transform
-- Normalization Techniques
-    - Using maximum absolute scaling
-    - Using min-max scaling
-    - Using z-score scaling
-- Transform Target Variables for Regression
-    - Importance of Data Scaling
-    - How to Scale Target Variables
-    - Automatic Transform of Target Variable
-- Complete Regression Example
-- Feature Selection in Scikit-learn
-- Distance Metrics
-- Why can we learn from non-linear models?
-    - Important relationships
-    - non-linear relationships
-    - Interactions
-- Time Series Data Preparation
-    - Order of Data Transforms for Time Series
-- References
-
-<!-- /MarkdownTOC -->
-
 [Data Preparation](./data_prep.md)
 
 [Dimensionality Reduction](./dimensionality_reduction.md)

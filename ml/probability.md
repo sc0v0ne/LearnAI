@@ -1,38 +1,5 @@
 # Probability Review
 
-<!-- MarkdownTOC -->
-
-- Probability Spaces
-- Random variables
-- Axioms of Probability Theory
-- Joint probability
-- Conditional Probability
-- Probability Rules
-- Bayes’ Rule \(Theorem\)
-- General form of Bayes' Rule
-- Independence
-- Reasoning under Uncertainty
-- Why Reason Probabilistically?
-- Axioms of Probability Theory
-- Joint Probability Distribution
-  - Example
-- Conditional Probabilities
-- Example: Computing Conditional Probability from the Joint Probability Distribution
-- Some important rules related to conditional probability
-- General form of Bayes' Rule
-- Conditional Independence in General
-- Conditional independence in Bayesian Networks
-  - Example
-- The specific case of Figure 14.2
-- Example on p. 514
-- Terminology
-  - Binomial Distribution
-  - Code Samples
-- References
-
-<!-- /MarkdownTOC -->
-
-
 ## Probability Spaces
 
 - A _sample space_ is a collection of basic outcomes or sample points.

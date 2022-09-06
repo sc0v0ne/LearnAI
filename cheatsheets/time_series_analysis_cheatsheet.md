@@ -1,34 +1,5 @@
 # Time Series Analysis
 
-<!-- MarkdownTOC -->
-
-- Background
-- Time Series Analysis
-    - Patterns in a time series
-    - Additive and multiplicative time series
-    - How to decompose a time series into its components?
-    - Stationary and Non-Stationary Time Series
-    - Time Series Decomposition
-        - Classical Decomposition
-        - Additive Model
-        - Multiplicative Model
-    - Decomposition as a Tool
-    - Automatic Time Series Decomposition
-- Time Series 101 Guide
-    - STL Decomposition
-    - Basic Time Series Forecasting Methods
-- How to isolate trend, seasonality, and noise from a time series
-    - The Seasonal component
-    - The Trend component
-    - The Cyclical component
-    - The Noise component
-    - Additive and Multiplicative effects
-    - Time series decomposition using statsmodels
-- More Topics for Review
-- References
-
-<!-- /MarkdownTOC -->
-
 
 ## Background
 

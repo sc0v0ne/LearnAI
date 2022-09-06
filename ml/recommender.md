@@ -1,49 +1,16 @@
 # Recommender Systems
 
-<!-- MarkdownTOC -->
-
-- Recommender Systems
-    - Content-based algorithms
-    - Collaborative filtering systems
-    - Knowledge-based systems
-    - Data collection
-- Recommender using Scikit-Learn and Tensorflow
-    - Background
-    - What similarity measure to use
-    - Scikit-Learn Recommender
-    - Tensorflow Recommender
-- Building a Recommender System for Implicit Feedback
-    - The Feedback Loop
-    - Explicit Feedback vs Implicit Feedback
-    - The Process
-    - How to measure Similarity
-    - Evaluation
-    - Code
-- Implementation using Pyspark
-    - Creating ALS Algorithm
-    - Evaluate the Output
-- Turning Web Browsing Activity into Product Ratings with Survival Analysis
-    - Survival Analysis
-    - Kaplan-Meier estimator
-    - The Cox proportional hazards model
-    - Summary
-- How to Develop Recommender Systems
-- Recommender Systems using Python
-- References
-
-<!-- /MarkdownTOC -->
-
 ## Recommender Systems
 
 In a nutshell, recommender systems predict user interests and recommend relevant items [1].
 
 Recommender systems rely on a combination of data stemming from explicit and implicit information on users and items:
 
-- Characteristic information: information about items such as categories, keywords, etc. and users with their preferences and profiles. 
+- **Characteristic information:** information about items such as categories, keywords, etc. and users with their preferences and profiles. 
 
 The systems make recommendations based on the user’s item and profile features based on the assumption that if a user was interested in an item in the past, they would be interested in similar items later.
 
-- User-item interactions: information about ratings, number of purchases, likes, etc.
+- **User-item interactions:** information about ratings, number of purchases, likes, etc.
 
 Thus, recommender systems fall into two categories: **content-based** systems that use characteristic information and **collaborative filtering** systems based on user-item interactions. 
 
@@ -77,7 +44,7 @@ The baseline approach to collaborative filtering is _matrix factorization_.
 
 The goal is to complete the unknowns in the matrix of user-items interactions (call it RR).
 
-Suppose we have two matrices UU and II such that U x IU×I is equal to RR in the known entries. Using the U x IU×I product we will also have values for the unknown entries of RR which can be used to generate the recommendations.
+Suppose we have two matrices UU and II such that U x IU d I is equal to RR in the known entries. Using the U x IU x I product we will also have values for the unknown entries of RR which can be used to generate the recommendations.
 
 A smart way to find matrices UU and II is using a neural network. In fact, we can think of this approach as a generalization of classification and regression. 
 
@@ -138,7 +105,7 @@ Data scraping is one of the most useful techniques to extract these types of dat
 
 ## Recommender using Scikit-Learn and Tensorflow
 
-The article [2] describes how to recommend sales items to customers by using customer’s individual purchase history using Scikit-Learn and Tensorflow.
+The article [6] describes how to recommend sales items to customers by using customer’s individual purchase history using Scikit-Learn and Tensorflow.
 
 Collaborative Filtering for Sales Items sold (binary) per Customer
 
@@ -226,7 +193,8 @@ The article [3] covers Collaborative Filtering and how to evaluate the model.
 
 ### The Feedback Loop
 
-In the real world, recommendation systems are not easy to develop as they sound such as After watching a movie on Netflix or Amazon Prime, would you end up rating it? How many times do you rate a movie on Netflix? perhaps one out of twenty times which is where the concept of Explicit and Implicit feedback comes into the picture [4].
+In the real world, recommendation systems are not easy to develop as they sound such as After watching a movie on Netflix or Amazon Prime,
+would you end up rating it? How many times do you rate a movie on Netflix? perhaps one out of twenty times which is where the concept of Explicit and Implicit feedback comes into the picture [4].
 
 The explicit technique relies more on the user’s preference for an item often measured by ratings. Usually, ratings can be captured using a Likert scale of 5 or 10. 
 
@@ -295,8 +263,10 @@ For evaluation, the ml_metrics package can be used and an easy demo can be found
 
 The Instacart Market Basket Analysis dataset from Kaggle is a nice dataset to use to try predicting which products will be in a user’s next order.
 
+----------
 
-## Implementation using Pyspark
+
+## Music Recommender using Pyspark
 
 The article [4] develops a use case for Music recommendations. 
 
@@ -329,7 +299,6 @@ Unfortunately, pyspark does not support any other function to evaluate the perfo
 We can create ROEM (Rank Ordering Error Metric) on the prediction data to evaluate the performance of the model.
 
 ----------
-
 
 
 ## Turning Web Browsing Activity into Product Ratings with Survival Analysis
@@ -398,12 +367,13 @@ In summary, we applied survival analysis techniques to browsing information coll
 
 However, it is important to remember the following limitations:
 
+
 ----------
 
 
 ## How to Develop Recommender Systems
 
-The article [12] provides a high level overview of recommender systems which may give some ideas for approaches. 
+The article [7] provides a high level overview of recommender systems which may give some ideas for approaches. 
 
 We can also track web browser activity in various ways to build a custom dataset but we should be able to find a toy dataset to work with initially once we decide on an approach.  
 
@@ -414,10 +384,37 @@ Then, we should have a toy dataset that we can use with some AutoML tools to eva
 
 ## Recommender Systems using Python
 
+[Learning to Rank for Product Recommendations with XGBRanker](https://towardsdatascience.com/learning-to-rank-for-product-recommendations-a113221ad8a7)
+
 [Machine Learning Streaming with Kafka, Debezium, and BentoML](https://towardsdatascience.com/machine-learning-streaming-with-kafka-debezium-and-bentoml-c5f3996afe8f)
 
 [Recommender System using Collaborative Filtering in Pyspark](https://angeleastbengal.medium.com/recommender-system-using-collaborative-filtering-in-pyspark-b98eab2aea75)
 
+
+
+## Performance Metrics for Ranking
+
+The most common performance measures are [10]:
+
+- Normalized Discounted Cumulative Gain (NDCG) 
+- Mean Average Precision (MAP)
+
+NDCG is the enhanced version of CG (Cumulative Gain). 
+
+In CG, recommending an order does not matter. If the results contain relevant items in any order, this will result in a higher value and indicate that our predictions are good. 
+
+We need prioritize relevant items when recommending. Therefore, we need to penalize when low relevance items appear earlier in the results which is what DCG achieves. 
+
+However, DCG suffers when different users have a different set of item/interaction counts which is where Normalized Discounted Cumulative Gain (NDCG) comes into play.
+
+
+We also need to evaluate the coverage of the recommender model using the coverage metric. 
+
+The coverage metric computes the percentage of training products in the test set which means the more coverage better the model. 
+
+In some cases, the model tries to predict popular merchants to maximize NDCG and MAP@k. 
+
+When we have doubts about our evaluation metric, we can quickly check the coverage of the model. Here, we get around 2% coverage which indicates that the model can be improved.
 
 
 
@@ -437,7 +434,12 @@ Then, we should have a toy dataset that we can use with some AutoML tools to eva
 
 [7] [Inside recommendations: how a recommender system recommends](https://www.kdnuggets.com/inside-recommendations-how-a-recommender-system-recommends.html/)
 
+[8] [Learning to rank: A primer](https://towardsdatascience.com/learning-to-rank-a-primer-40d2ff9960af)
+
+[9] [Learning to Rank: A Complete Guide to Ranking using Machine Learning](https://towardsdatascience.com/learning-to-rank-a-complete-guide-to-ranking-using-machine-learning-4c9688d370d4)
+
+[10] [Learning to Rank for Product Recommendations with XGBRanker](https://towardsdatascience.com/learning-to-rank-for-product-recommendations-a113221ad8a7)
+
 
 [Session-Based Recommender Systems with Word2Vec](https://towardsdatascience.com/session-based-recommender-systems-with-word2vec-666afb775509)
 
-[Learning to rank: A primer](https://towardsdatascience.com/learning-to-rank-a-primer-40d2ff9960af)

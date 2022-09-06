@@ -1,15 +1,5 @@
 # Discrete Probability Distributions in Machine Learning
 
-<!-- MarkdownTOC -->
-
-- Tutorial Overview
-- Discrete Probability Distribution
-- Poisson Process
-- Poisson Distribution
-- References
-
-<!-- /MarkdownTOC -->
-
 The probability for a discrete random variable can be summarized with a **discrete probability distribution**.
 
 Discrete probability distributions are used in machine learning in the modeling of binary and multi-class classification problems as well as in evaluating the performance for binary classification models such as the calculation of confidence intervals and in the modeling of the distribution of words in text for natural language processing.

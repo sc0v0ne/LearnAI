@@ -1,30 +1,4 @@
-# Cross Validatio
-
-<!-- MarkdownTOC -->
-
-- What is model validation?
-- Holdout validation
-- What are bias and variance in the context of model validation?
-    - Bias
-    - Variance
-- What is cross validation?
-    - K-Fold Cross Validation
-    - Leave One Out Cross Validation
-    - Stratified Cross-validation
-- Where and when should different methods be implemented?
-    - Hold out method
-    - K-Fold Cross Validation
-    - LOOCV
-- What are some advantages and disadvantages of the different cross validation techniques?
-- Holdout Validation
-- K-fold
-    - LOOCV
-- When would you not want to use cross validation?
-- Key Terminology
-- Ways to cross-validate your data
-- References
-
-<!-- /MarkdownTOC -->
+# Cross Validation
 
 ## What is model validation?
 
