@@ -9,6 +9,7 @@
 - Gitlens
 - Markdownlint
 - Markdown Preview Enhanced
+- PolaCode
 - Prettier
 - Pubspec Assist
 - Python
@@ -25,6 +26,7 @@
 - CodeSnap
 - Color Highlight
 - Coverage Gutters
+- Github Copilot
 - Indent Rainbow
 - Noctis
 - Peacock
@@ -127,22 +129,29 @@ Advanced
 - ignore
 - Indent Rainbow
 - PlantUML
+- Python Security
 - Quokka
 - Rainbow CSV 
 - Rainbow Brackets
-- Save Actions
 - SequenceDiagram
 - Smart Search
 - Stepsize
 - String Manipulation
 - Wakatime
 
+- CPU Usage Indicator
+- Icon Viewer
+- Save Actions
+- Source Synchronizer
+- Test Management
 
 - Hiberbee Theme
 - Gradianto
 - Material UI Theme
 - Monokai Pro Theme
 - One Dark Theme
+
+
 
 
 ## Mac Apps
@@ -271,6 +280,7 @@ Advanced
 - hstr
 - httpie
 - mktemp
+- od (view binary file)
 - rich
 - ripgrep
 - screen
@@ -418,4 +428,6 @@ resize-pane –t 2 --R 5 : Moves the boundary line 5 cells to the right.
 [Top 10 VS Code Extensions to Boost Productivity](https://towardsdatascience.com/top-10-vs-code-extensions-to-boost-productivity-526595b18325)
 
 [7 Useful iOS Libraries You Should Use in Your Next ProjectーPart- 3](https://medium.com/geekculture/7-useful-ios-libraries-you-should-use-in-your-next-projectーpart-3-426215bbfe0c)
+
+[How to start contributing to open-source projects](https://towardsdatascience.com/how-to-start-contributing-to-open-source-projects-41fcfb654b2e)
 
