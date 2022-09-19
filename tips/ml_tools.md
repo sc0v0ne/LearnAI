@@ -2,12 +2,11 @@
 
 Here is a list of ML tools that I have found to be helpful for AI engineering.
 
-For items without links, see **Github Lists**. 
+For items without links, see **Github Stars**. 
 
-[GitHub Lists](https://github.com/codecypher?tab=stars)
+[GitHub Stars](https://github.com/codecypher?tab=stars)
 
 [Github Student Developer Pack](https://education.github.com/pack)
-
 
 [HuggingFace Spaces](https://huggingface.co/spaces/launch)
 
@@ -25,7 +24,7 @@ For items without links, see **Github Lists**.
 - TensorFlow Data Validation
 - Great Expectations
 
-NOTE: It is best to install the Orange native executable on your local machine rather than install using anaconda and/or pip.
+**NOTE:** It is best to install the Orange native executable on your local machine rather than install using anaconda and/or pip.
 
 ### Tutorials
 
@@ -46,27 +45,6 @@ There are many tools that will help you in automating the entire feature enginee
 
 [The Only Web Scraping Tool you need for Data Science](https://medium.com/nerd-for-tech/the-only-web-scraping-tool-you-need-for-data-science-f388e2afa187)
 
-
-
-## Computer Vision
-
-- ageitgey/face_recognition
-
-### OpenCV
-
-[OpenCV](https://docs.opencv.org/master/d9/df8/tutorial_root.html)
-
-OpenCV is a huge open-source library for computer vision, machine learning, and image processing. 
-
-OpenCV supports a wide variety of programming languages like Python, C++, Java, etc. 
-
-OpenCV can process images and videos to identify objects, faces, or eve handwriting.
-
-### openpilot
-
-The openpilot repo is an open-source driver assistance system that performs the functions of Adaptive Cruise Control (ACC), Automated Lane Centering (ALC), Forward Collision Warning (FCW) and Lane Departure Warning (LDW) for a growing variety of supported car makes, models, and model years. 
-
-However, you will need to buy their product and install it on your car and it is not completely DIY but reduces the effort.
 
 
 ## Deep Learning Tools
@@ -115,15 +93,30 @@ When used with a loop (here we use with a loop over a torch.utils.data.DataLoade
 
 ## ML Libraries
 
-- Miniforge with mamba (mambaforge)
+- mambaforge (miniforge with Mamba)
 - Kedro
+
 - ONNX
 - openai/gym
-- poetry
-- pyenv
-- PyMC
+- PyMC (Bayesian statistical modeling)
 - Snap ML
-- Streamlit
+
+
+### Poetry: Dependency Management for Python
+
+[Poetry Docs](https://python-poetry.org/docs/)
+
+Poetry helps you declare, manage and install dependencies of Python projects, ensuring you have the right stack everywhere.
+
+poetry is a tool to handle dependency installation as well as building and packaging of Python packages. It only needs one file to do all of that: the new, standardized pyproject.toml.
+
+This means poetry uses `pyproject.toml` to replace setup.py, requirements.txt, setup.cfg, MANIFEST.in and Pipfile.
+
+### PySpark
+
+[Getting Started](https://spark.apache.org/docs/latest/api/python/getting_started/index.html)
+
+PySpark is an interface for Apache Spark in Python. It not only allows you to write Spark applications using Python APIs, but also provides the PySpark shell for interactively analyzing your data in a distributed environment. PySpark supports most of Spark’s features such as Spark SQL, DataFrame, Streaming, MLlib (Machine Learning) and Spark Core.
 
 ### Snap ML
 
@@ -135,14 +128,7 @@ Snap ML is a library that provides high-speed training of popular machine learni
 
 [IBM Snap ML Examples](https://github.com/IBM/snapml-examples)
 
-
 ### Tutorials
-
-[Introduction to OpenCV](https://www.geeksforgeeks.org/introduction-to-opencv/)
-
-[OpenCV Python Tutorial](https://www.geeksforgeeks.org/opencv-python-tutorial/)
-
-[How to start contributing to open-source projects](https://towardsdatascience.com/how-to-start-contributing-to-open-source-projects-41fcfb654b2e)
 
 [A Gentle Introduction to Bayesian Belief Networks](https://machinelearningmastery.com/introduction-to-bayesian-belief-networks/)
 
@@ -161,7 +147,6 @@ Snap ML is a library that provides high-speed training of popular machine learni
 - TsFresh
 
 
-
 ## Pretrained Model Repos
 
 - [Model Zoo](https://modelzoo.co/)
@@ -176,8 +161,9 @@ Snap ML is a library that provides high-speed training of popular machine learni
 ## Python Libraries
 
 - dateutil
-- Pipreqs
 - Poetry
+- pipreqs
+- pyenv
 - tqdm
 - urllib3
 
@@ -222,17 +208,40 @@ Since Modin is still under development, I do experience occasional warning/error
 
 Pickle can be used to save and load the python classes or PyTorch models for reuse.
 
-### PySpark
-
-[Getting Started](https://spark.apache.org/docs/latest/api/python/getting_started/index.html)
-
-PySpark is an interface for Apache Spark in Python. It not only allows you to write Spark applications using Python APIs, but also provides the PySpark shell for interactively analyzing your data in a distributed environment. PySpark supports most of Spark’s features such as Spark SQL, DataFrame, Streaming, MLlib (Machine Learning) and Spark Core.
-
 ### Debugging Tools
 
 - heartrate
 - Loguru
 - snoop
+
+
+
+## CV Libraries
+
+- OpenCV
+- openpilot
+
+- ageitgey/face_recognition
+- qubvel/segmentation_models
+
+
+
+## NLP Libraries
+
+- NLTK
+- GenSim
+- Polyglot
+- SpaCy
+- Textblob
+
+- Pattern
+- clean-text
+
+- Presidio
+- PySBD
+- SymSpell
+- TextAttack
+
 
 
 
