@@ -16,7 +16,7 @@ There are two main categories of ML models:
 
 - Predictive models focus on the model’s ability to produce accurate predictions.
 
-- Explanatory models focus more on understanding the relationships between the variables in the data.
+- Explanatory models focus on understanding the relationships between the variables in the data.
 
 ML models (especially ensemble models and neural networks) are predictive models that are much better at predictions than traditional models such as linear/logistic regression.
 
@@ -28,7 +28,7 @@ In general, ML and deep learning models are great for prediction but lack  expla
 
 Maintaining ML models over time can be challenging and expensive. 
 
-There are several types of “debt” to consider when maintaining ML models:
+There are several types of debt to consider when maintaining ML models:
 
 - Dependency debt: The cost of maintaining multiple versions of the same model, legacy features, and underutilized packages.
 
@@ -56,7 +56,7 @@ What does your user or business really want, you must understand from the beginn
 
 2. Not performing failure analysis
 
-If you don’t perform a failure analysis- an analysis of the frequency of different categories of failure of your system — you may be expending a lot of effort for little result.
+If you do not perform a failure analysis (an analysis of the frequency of different categories of failure of your system) you may be expending a lot of effort for little result.
 
 3. Not looking at the model
 
@@ -76,11 +76,11 @@ In case of data leakage, the proper information or clues wont be available at th
 
 7. Not looking at the data
 
-When you don’t look at the data carefully, you can miss useful insights which will lead to a data error and missing data
+When you do not look at the data carefully, you can miss useful insights which will lead to a data error and missing data
 
 8. Not qualifying the use case
 
-Before starting a machine learning project, it is important to determine whether the project is worth doing and to consider its ramifications
+Before starting a machine learning project, it is important to determine whether the project is worth doing and to consider its ramifications. 
 
 
 
