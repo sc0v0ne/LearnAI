@@ -2,7 +2,33 @@
 
 Class imbalance naturally occurs in certain types of classification problems such as credit approval (dataset usually contains much more approved credits than rejected) or fraud detection.
 
-Class imbalance means that one of the modalities of a categorical variable is over-represented with respect to the others. 
+Class imbalance means that one of the modalities of a categorical variable is over-represented with respect to the others.
+
+The best survey articles on imbalanced datasets found ao far are [8] and [9].
+
+----------
+
+The paper [8] provides an overview of different methodologies used to deal with imbalanced data. 
+
+The study compares the performance of some typical imbalance methods on 15 data sets from UCI/Keel databases are testedwhere each data set contains at least 500 samples and the range of imbalance ratio is wide. 
+
+They evaluate four class-imbalance methods on eight modeling algorithms and measure the performance with F-score and AUC. 
+
+The results show that: 1) the choice of modeling algorithms has more impact on the performance and 2) the class-imbalance methods are more effective on simple linear algorithms such as Logistic Regression and Linear SVC.
+
+They found that imbalance methods do not always have consistent improvements which depends on the modeling algorithm that is used. 
+
+They found that different imbalance methods do not have signiﬁcant different behaviors. 
+
+Using more complicated ensemble modeling algorithms will achieve best performance on imbalanced data, even without applying imbalance methods.
+
+The authors provide the following recommendations for static imbalanced datasets [8]:
+
+- If AUC or F-score is the main objective of the model, we recommend to use more complicated ensemble modeling algorithms without imbalance methods. 
+
+- If model interpretation is a key objective, we recommend to use linear algorithms combined with any of the imbalance methods studied in the paper. In general, none of the imbalance methods performed significantly better than the others. 
+
+
 
 ## Overview
 
@@ -364,6 +390,11 @@ Naive classifier strategies can be used on predictive modeling projects via the 
 [6] [Unbalanced Data? Stop Using ROC-AUC and Use AUPRC Instead](https://towardsdatascience.com/imbalanced-data-stop-using-roc-auc-and-use-auprc-instead-46af4910a494)
 
 [7] [Investigating the effects of resampling imbalanced datasets with data validation techniques](https://medium.com/geekculture/investigating-the-effects-of-resampling-imbalanced-datasets-with-data-validation-techniques-f4ca3c8b2b94)
+
+
+[8] [Survey of Imbalanced Data Methodologies](https://arxiv.org/abs/2104.02240)
+
+[9] [A survey on learning from imbalanced data streams](https://arxiv.org/abs/2204.03719)
 
 
 [8 Tactics to Combat Imbalanced Classes in Your Machine Learning Dataset](https://machinelearningmastery.com/tactics-to-combat-imbalanced-classes-in-your-machine-learning-dataset/)
