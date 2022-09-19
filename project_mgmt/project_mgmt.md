@@ -1,18 +1,30 @@
 # Project Management
 
+Here are some notes on project management.
+
+Every software engineer and manager needs to read the following:
+
+R. L. Glass, _Facts and Fallacies of Software Engineering_, Addison-Wesley Professional, 1st ed., ISBN: 0321117425, 2002.
+
+F. Brooks, _The Mythical Man-Month_, Anniversary Edition, Addison-Wesley Professional, 1995. 
+
+T. Demarco, _Peopleware: Productive Projects and Teams_, 2nd ed., Dorset House, 1999. 
+
+
+
 ## Project Quickstart
 
 1. Who is the user?
 
-  Once you identify the core user, you can identify their core needs.
+Once you identify the core user, you can identify their core needs.
 
-  If the software does not solve a problem, it doesn’t merit being adopted.
+If the software does not solve a problem, it doesn’t merit being adopted.
 
-2. How many people will use it?
+2. How many people will use the application?
 
-  Most projects must reach a critical number of users in order to be successful, pay the bills, and get off the ground.
+Most projects must reach a critical number of users in order to be successful, pay the bills, and get off the ground.
 
-  Choosing the feature that will carry the most impact is essential to making sure the time of the entire team goes into the work with the biggest pay-off.
+Choosing the feature that will carry the most impact is essential to making sure the time of the entire team goes into the work with the biggest pay-off.
 
 3. Is it the easiest possible solution?
 
