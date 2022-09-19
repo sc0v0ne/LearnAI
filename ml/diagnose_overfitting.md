@@ -1,9 +1,5 @@
 # How to Diagnose Overfitting and Underfitting?
 
-<head>
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
-</head>
-
 Here are some notes on analyzing overfitting and underfitting.
 
 ## Solutions to Overfitting
@@ -166,14 +162,11 @@ Getting more data can help with overfitting (not underfitting) if the model is n
 
 Some tools such as data cleaning and cross-validation or hold-out validation are common practices in  machine learning projects that can also be used to combat overfitting.
 
-<div>
-  <div>
-        <img width="600" alt="Techniques (extended)" src="https://towardsdatascience.com/overfitting-and-underfitting-principles-ea8964d9c45c" />
-    </div>
-  <div class="caption">Figure 1: Techniques to fight underfitting and overfitting (extended)</div>
-</div>
 
-Table: Techniques to fight underfitting and overfitting (extended). 
+![Techniques (extended)|600xauto {Techniques to fight underfitting and overfitting (extended)}](https://towardsdatascience.com/overfitting-and-underfitting-principles-ea8964d9c45c)
+
+
+**Table:** Techniques to fight underfitting and overfitting (extended). 
 
 
 —————
@@ -329,32 +322,18 @@ This can be diagnosed from a plot where the training loss is lower than the vali
 
 #### Underfit Example 1
 
-<div class="image-preview">
-    <div>
-        <img width="600" alt="Underfit Example 1" src="https://machinelearningmastery.com/wp-content/uploads/2017/07/Diagnostic-Line-Plot-Showing-an-Underfit-Model.png" />
-    </div>
-    <div class="caption">Figure 2: Plot showing underfit model</div>
-</div>
+![Underfit Example 1|600xauto {Plot showing underfit model}](https://machinelearningmastery.com/wp-content/uploads/2017/07/Diagnostic-Line-Plot-Showing-an-Underfit-Model.png)
 
 
 #### Underfit Example 2
-<div class="image-preview">
-    <div>
-        <img width="600" alt="Underfit Example 2" src="https://machinelearningmastery.com/wp-content/uploads/2019/02/Example-of-Training-Learning-Curve-Showing-An-Underfit-Model-That-Does-Not-Have-Sufficient-Capacity.png" />
-    </div>
-    <div class="caption">Figure 3: Plot of Training Learning Curve of Underfit Model That Does Not Have Sufficient Capacity</div>
-</div>
+
+![Underfit Example 2|600xauto {Plot of Training Learning Curve of Underfit Model That Does Not Have Sufficient Capacity}](https://machinelearningmastery.com/wp-content/uploads/2019/02/Example-of-Training-Learning-Curve-Showing-An-Underfit-Model-That-Does-Not-Have-Sufficient-Capacity.png)
+
 
 #### Underfit Example 3
 
-<div class="image-preview">
-    <div>
-        <img width="600" alt="Underfit Example 3" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Training-Learning-Curve-Showing-An-Underfit-Model-That-Requires-Further-Training.png" />
-    </div>
-    <div class="caption">Figure 4: Plot of Training Learning Curve Showing an Underfit Model That Requires Further Training</<div>
-        
-    </div>>
-</div>
+![Underfit Example 3|600xauto {Plot of Training Learning Curve Showing an Underfit Model That Requires Further Training}](https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Training-Learning-Curve-Showing-An-Underfit-Model-That-Requires-Further-Training.png)
+
 
 A plot of learning curves shows underfitting if:
 
@@ -368,23 +347,16 @@ A good fit is a case where the performance of the model is good on both the trai
 
 This can be diagnosed from a plot where the train and validation loss decrease and stabilize around the same point.
 
+
 #### Good Fit Example 1
 
-<div class="image-preview">
-    <div>
-        <img width="600" alt="Plot showing good fit" src="https://machinelearningmastery.com/wp-content/uploads/2017/07/Diagnostic-Line-Plot-Showing-a-Good-Fit-for-a-Model.png" />
-    </div>
-    <div class="caption">Figure 5: Plot showing good fit</div>
-</div>
+![Goodfit Example 1|600xauto {Plot showing good fit}](https://machinelearningmastery.com/wp-content/uploads/2017/07/Diagnostic-Line-Plot-Showing-a-Good-Fit-for-a-Model.png)
+
 
 #### Good Fit Example 2
+    
+![Goodfit Example 2|600xauto {Plot of Train and Validation Learning Curves Showing a Good Fit}](https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-A-Good-Fit.png)
 
-<div class="image-preview">
-    <div>
-        <img width="600" alt="Plot of Train and Validation Learning Curves Showing a Good Fit" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-A-Good-Fit.png" />
-    </div>
-    <div class="caption">Figure 6: Plot of Train and Validation Learning Curves Showing a Good Fit</div>
-</div>
 
 
 ### Overfit Example
@@ -394,22 +366,14 @@ An overfit model is one where performance on the train set is good and continues
 This can be diagnosed from a plot where the train loss slopes down and the validation loss slopes down, hits an inflection point, and starts to slope up again.
 
 #### Underfit Example 1
+    
+![Underfit Example 1|600xauto {Plot showing underfit model}](https://machinelearningmastery.com/wp-content/uploads/2017/07/Diagnostic-Line-Plot-Showing-an-Overfit-Model.png)
 
-<div class="image-preview">
-    <div>
-        <img width="600" alt="Underfit Example 1" src="https://machinelearningmastery.com/wp-content/uploads/2017/07/Diagnostic-Line-Plot-Showing-an-Overfit-Model.png" />
-    </div>
-  <div class="caption">Figure 7: Plot showing underfit model</div>
-</div>
 
 #### Underfit Example 2
 
-<div class="image-preview">
-    <div>
-        <img width="600" alt="Underfit Example 2" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-An-Overfit-Model.png" />
-    </div>
-    <div class="caption">Figure 8: Plot of Train and Validation Learning Curves Showing an underfit Model"</div>
-</div>
+![Underfit Example 2|600xauto {Plot of Train and Validation Learning Curves Showing an underfit model}](https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-An-Overfit-Model.png)
+
 
 ### Multiple Runs Example
 
@@ -442,12 +406,7 @@ This may occur if the training dataset has too few examples as compared to the v
 This situation can be identified by a learning curve for training loss that shows improvement and similarly a learning curve for validation loss that shows improvement, but a large gap remains between both curves.
 
 
-<div class="image-preview">
-    <div>
-        <img width="600" alt="Unrepresentative Train Dataset" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-a-Training-Dataset-the-May-be-too-Small-Relative-to-the-Validation-Dataset.png" />
-    </div>
-    <div class="caption">Figure 9: Plot of Train and Validation Learning Curves Showing a Training Dataset That May Be too Small Relative to the Validation Dataset</div>
-</div>
+![Unrepresentative Train Dataset|600xauto {Plot of Train and Validation Learning Curves Showing a Training dataset that may be too small relative to the Validation dataset}](https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-An-Overfit-Model.png)
 
 
 ### Unrepresentative Validation Dataset
@@ -458,36 +417,26 @@ This may occur if the validation dataset has too few examples as compared to the
 
 This case can be identified by a learning curve for training loss that looks like a good fit (or other fits) and a learning curve for validation loss that shows noisy movements around the training loss.
 
-<div class="image-preview">
-    <div>
-        <img width="600" alt="Unrepresentative Validation Dataset 1" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-a-Validation-Dataset-the-May-be-too-Small-Relative-to-the-Training-Dataset.png" />
-    </div>
-    <div class="caption">Figure 10: Plot of Train and Validation Learning Curves Showing a Validation Dataset That May Be too Small Relative to the Training Dataset</div>
-</div>
 
-Figure: Plot of Train and Validation Learning Curves Showing a Validation Dataset That May Be too Small Relative to the Training Dataset
+![Unrepresentative Validation Dataset 1|600xauto {Plot of Train and Validation Learning Curves Showing a Validation dataset that may be too small relative to the Training dataset}](https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-a-Validation-Dataset-the-May-be-too-Small-Relative-to-the-Training-Dataset.png)
 
 This may also be identified by a validation loss that is lower than the training loss which indicates that the validation dataset may be easier for the model to predict than the training dataset.
 
-<div class="image-preview">
-    <div>
-        <img width="600" alt="Unrepresentative Validation Dataset 2" src="https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-a-Validation-Dataset-that-is-Easier-to-Predict-than-the-Training-Dataset.png" />
-    </div>
-    <div class="caption">Figure 11: Plot of Train and Validation Learning Curves Showing a Validation Dataset That Is Easier to Predict Than the Training Dataset</div>
-</div>
+
+![Unrepresentative Validation Dataset 2|600xauto {Plot of Train and Validation Learning Curves Showing a dataset that is easier to Predict than the Training dataset}](https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-a-Validation-Dataset-that-is-Easier-to-Predict-than-the-Training-Dataset.png)
 
 
 ## References
 
-[Overfitting and Underfitting Principles](https://towardsdatascience.com/overfitting-and-underfitting-principles-ea8964d9c45c)
+[1] [Overfitting and Underfitting Principles](https://towardsdatascience.com/overfitting-and-underfitting-principles-ea8964d9c45c)
 
-[How to Diagnose Overfitting and Underfitting of LSTM Models](https://machinelearningmastery.com/diagnose-overfitting-underfitting-lstm-models/)
+[2] [How to Diagnose Overfitting and Underfitting of LSTM Models](https://machinelearningmastery.com/diagnose-overfitting-underfitting-lstm-models/)
 
 
-[Why is my validation loss lower than my training loss?](https://www.pyimagesearch.com/2019/10/14/why-is-my-validation-loss-lower-than-my-training-loss/)
+[3] [Why is my validation loss lower than my training loss?](https://www.pyimagesearch.com/2019/10/14/why-is-my-validation-loss-lower-than-my-training-loss/)
 
-[How to Mitigate Overfitting with K-Fold Cross-Validation using sklearn](https://towardsdatascience.com/how-to-mitigate-overfitting-with-k-fold-cross-validation-518947ed7428)
+[4] [How to Mitigate Overfitting with K-Fold Cross-Validation using sklearn](https://towardsdatascience.com/how-to-mitigate-overfitting-with-k-fold-cross-validation-518947ed7428)
 
-[How to use Learning Curves to Diagnose Machine Learning Model Performance](https://machinelearningmastery.com/learning-curves-for-diagnosing-machine-learning-model-performance/)
+[5] [How to use Learning Curves to Diagnose Machine Learning Model Performance](https://machinelearningmastery.com/learning-curves-for-diagnosing-machine-learning-model-performance/)
 
-[Solutions against overfitting for tabular data and classical machine learning](https://towardsdatascience.com/solutions-against-overfitting-for-machine-learning-on-tabular-data-857c080651fd?source=rss----7f60cf5620c9---4)
+[6] [Solutions against overfitting for tabular data and classical machine learning](https://towardsdatascience.com/solutions-against-overfitting-for-machine-learning-on-tabular-data-857c080651fd?source=rss----7f60cf5620c9---4)
