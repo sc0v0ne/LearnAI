@@ -523,8 +523,9 @@ plt.show()
 
 ---------
 
+## Pretrained CV Models
 
-## VGG
+### VGG
 
 Given a photograph of an object, determine which of 1,000 specific objects the photograph shows.
 
@@ -545,7 +546,7 @@ The second is to classify images, each labeled with one of 1000 categories which
 [How to Develop VGG, Inception, and ResNet Modules from Scratch in Keras](https://machinelearningmastery.com/how-to-implement-major-architecture-innovations-for-convolutional-neural-networks/)
 
 
-## Residual Networks (ResNet)
+### Residual Networks (ResNet)
 
 After the first CNN-based architecture (AlexNet) that win the ImageNet 2012 competition, every subsequent winning architecture uses more layers in a deep neural network to reduce the error rate which works for less number of layers.
 
@@ -566,6 +567,33 @@ The skip connection skips training from a few layers and connects directly to th
 The article [11] discusses how to detect and extract text, figures, tables from any type of document with Computer Vision. 
 
 
+## CV Libraries
+
+- ageitgey/face_recognition
+- qubvel/segmentation_models
+
+### OpenCV
+
+[OpenCV](https://docs.opencv.org/master/d9/df8/tutorial_root.html)
+
+OpenCV is a huge open-source library for computer vision, machine learning, and image processing. 
+
+OpenCV supports a wide variety of programming languages like Python, C++, Java, etc. 
+
+OpenCV can process images and videos to identify objects, faces, or eve handwriting.
+
+### openpilot
+
+The openpilot repo is an open-source driver assistance system that performs the functions of Adaptive Cruise Control (ACC), Automated Lane Centering (ALC), Forward Collision Warning (FCW) and Lane Departure Warning (LDW) for a growing variety of supported car makes, models, and model years. 
+
+However, you will need to buy their product and install it on your car and it is not completely DIY but reduces the effort.
+
+
+### Tutorials
+
+[Introduction to OpenCV](https://www.geeksforgeeks.org/introduction-to-opencv/)
+
+[OpenCV Python Tutorial](https://www.geeksforgeeks.org/opencv-python-tutorial/)
 
 
 
@@ -595,5 +623,7 @@ The article [11] discusses how to detect and extract text, figures, tables from 
 
 [11] [Document Parsing with Python and OCR](https://towardsdatascience.com/document-parsing-with-python-ocr-75543448e581)
 
+
+[Build a Semantic Segmentation Model With One Line Of Code](https://pub.towardsai.net/build-a-semantic-segmentation-model-with-one-line-of-code-32b6eab0cb81)
 
 [9 Applications of Deep Learning for Computer Vision](https://machinelearningmastery.com/applications-of-deep-learning-for-computer-vision/
