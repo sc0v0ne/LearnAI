@@ -1,5 +1,14 @@
 # Time Series Forecasting
 
+## Terminology
+
+The article [14] is a detailed list of concepts related to time series forecasting and their explanations, along with packages for Python.
+
+A univariate time series data contains only one single time-dependent variable. 
+
+A multivariate time series data consists of multiple time-dependent variables.
+
+
 ## Describing vs Predicting
 
 We have different goals depending on whether we are interested in understanding a dataset or making predictions.
@@ -877,6 +886,8 @@ We can then use these observations to make a claim about the sample distribution
 [12] [A Gentle Introduction to the Bootstrap Method](https://machinelearningmastery.com/a-gentle-introduction-to-the-bootstrap-method/)
 
 [13] [How To Backtest Machine Learning Models for Time Series Forecasting](https://machinelearningmastery.com/backtest-machine-learning-models-time-series-forecasting/)
+
+[14] [A Curated List of Important Time Series Forecasting Concepts](https://pub.towardsai.net/a-curated-list-of-important-time-series-forecasting-concepts-eb2306b55c19)
 
 
 [A Gentle Introduction to Statistical Tolerance Intervals in Machine Learning](https://machinelearningmastery.com/statistical-tolerance-intervals-in-machine-learning/)

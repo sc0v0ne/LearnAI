@@ -441,5 +441,7 @@ When we have doubts about our evaluation metric, we can quickly check the covera
 [10] [Learning to Rank for Product Recommendations with XGBRanker](https://towardsdatascience.com/learning-to-rank-for-product-recommendations-a113221ad8a7)
 
 
+[An Intuitive Explanation of Collaborative Filtering](https://www.kdnuggets.com/2022/09/intuitive-explanation-collaborative-filtering.html?utm_source=rss&utm_medium=rss&utm_campaign=an-intuitive-explanation-of-collaborative-filtering)
+
 [Session-Based Recommender Systems with Word2Vec](https://towardsdatascience.com/session-based-recommender-systems-with-word2vec-666afb775509)
 

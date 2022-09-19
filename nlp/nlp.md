@@ -652,18 +652,26 @@ Here is a figure that summarizes the Retriever-Reader pipeline [4].
 
 ## NLP Pretrained Models
 
-- Polyglot
-- SpaCy
-- GenSim
-- Pattern
-- clean-text
-
-[spaCy](https://github.com/explosion/spaCy) is a library for advanced Natural Language Processing in Python and Cython.
-
-spaCy is built on the very latest research and was designed from day one to be used in real products.
+- HuggingFace
 
 
 ## NLP Libraries
+
+Here are some useful NLP libraries [12] [13]:
+
+- NLTK
+- GenSim
+- Polyglot
+- SpaCy
+- Textblob
+
+- Pattern
+- clean-text
+
+- Presidio
+- PySBD
+- SymSpell
+- TextAttack
 
 The article [7] covers 5 useful Python recipes for your next NLP projects:
 
@@ -716,6 +724,11 @@ The similarity scores can also be used to reduce the dimensionality and to find 
 [11] [Get To Know Audio Feature Extraction in Python](https://towardsdatascience.com/get-to-know-audio-feature-extraction-in-python-a499fdaefe42)
 
 
+[12] [7 Amazing Python Libraries For Natural Language Processing](https://towardsdatascience.com/7-amazing-python-libraries-for-natural-language-processing-50ca6f9f5f11)
+
+[13] [4 More Little-Known NLP Libraries That Are Hidden Gems](https://towardsdatascience.com/4-more-little-known-nlp-libraries-that-are-hidden-gems-e77a71d1bc57)
+
+
 [Everything You Need to Know to Get Started with NLP](https://towardsdatascience.com/nlp-survey-bde8a27e8ba)
 
 [NLP Cheatsheet](https://medium.com/javarevisited/nlp-cheatsheet-2b19ebcc5d2e)
@@ -730,8 +743,6 @@ The similarity scores can also be used to reduce the dimensionality and to find 
 [Top 7 Applications of NLP (Natural Language Processing)](https://www.geeksforgeeks.org/top-7-applications-of-natural-language-processing/)
 
 [3 Simple Ways to get started on NLP Sentiment Analysis](https://medium.com/geekculture/3-simple-ways-to-get-started-on-nlp-sentiment-analysis-d0d102ef5bf8)
-
-[7 Amazing Python Libraries For Natural Language Processing](https://towardsdatascience.com/7-amazing-python-libraries-for-natural-language-processing-50ca6f9f5f11)
 
 
 [The Current Conversational AI and Chatbot Landscape](https://cobusgreyling.medium.com/the-current-conversational-ai-chatbot-landscape-c147e9bcc01b)

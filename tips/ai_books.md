@@ -4,6 +4,8 @@
 
 [Software Engineering Body of Knowledge (SWEBOK)](https://www.computer.org/education/bodies-of-knowledge/software-engineering)
 
+[Directory of Open Access Journals](https://doaj.org)
+
 If you have an .edu email account you can get free access to [oreilly.com](https://www.oreilly.com/) which has  good books on a variety of AI/ML topics.
 
 The following books are available on  [oreilly.com](https://www.oreilly.com/):
@@ -11,6 +13,7 @@ The following books are available on  [oreilly.com](https://www.oreilly.com/):
 - Practical Convolutional Neural Networks
 - Neural Network Projects with Python
 - Generative Adversarial Networks Projects
+
 
 
 ## Quickstart Resources
@@ -102,22 +105,26 @@ D. Jurafsky and J. H. Martin, 2nd edition. Speech and Language Processing. Prent
 B. Siciliano, L. Sciavicco, L. Villani, and G. Oriolo, Robotics: Modeling, Planning and Control, London: Springer, ISBN: 978-1-84628-641-4, 2010.
 
 
+## Good Reads
+
+Every software engineer and manager needs to read the following:
+
+R. L. Glass, _Facts and Fallacies of Software Engineering_, Addison-Wesley Professional, 1st ed., ISBN: 0321117425, 2002.
+
+F. Brooks, _The Mythical Man-Month_, Anniversary Edition, Addison-Wesley Professional, 1995. 
+
+T. Demarco, _Peopleware: Productive Projects and Teams_, 2nd ed., Dorset House, 1999. 
+
+
+B. W. Kernighan, _The Practice of Programming_.
+
+J. Bentley, _Programming Pearls_.
+
+
+
 ## Code Repos
 
 aima-python: Python code for Artificial Intelligence: A Modern Approach. Accessed: June 14, 2020. [Online]. Available: https://github.com/aimacode/aima-python, 0.17.3. 2020.
 
 Python Machine Learning Code Repository, Accessed: 11/14/2021. [Online].  Available Online: https://github.com/rasbt/python-machine-learning-book-3rd-edition
-
-
-## Good Reads
-
-R. L. Glass, Facts and Fallacies of Software Engineering, Addison-Wesley Professional, 1st ed., ISBN: 0321117425, 2002.
-
-F. Brooks, The Mythical Man-Month 
-
-J. Bentley, Programming Pearls
-
-T. Demarco, Peopleware: Productive Projects and Teams 
-
-B. W. Kernighan, The Practice of Programming
 
