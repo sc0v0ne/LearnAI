@@ -2,6 +2,9 @@
 
 If you are like me and try to follow the principles of DRY, KISS, Design Patterns, Occam’s Razor, and other software engineering best practices then this repo is for you!
 
+**NOTE:** The latest version of the repo is available via Obsidian Publish at https://notes.cogentcoder.com
+
+
 > Don't reinvent the wheel (DRTW)
 
 > Occam’s Razor: The simplest algorithm that fits the data is usually the best. - simple is better
