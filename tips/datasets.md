@@ -12,6 +12,8 @@ Here is a collection of some resources for ML datasets.
 
 [Google Dataset Search](https://datasetsearch.research.google.com)
 
+[OpenML Datasets](https://www.openml.org/search?type=data&sort=runs&status=active)
+
 [HuggingFace Datasets](https://github.com/huggingface/datasets)
 
 [The Best Data is Free Data using Socrata Open Data API](https://towardsdatascience.com/the-best-data-is-free-data-of-course-b88230b5b47f)
@@ -41,7 +43,15 @@ List of public datasets in computer vision, NLP, and more.
 
 A tutorial to read UCI datasets without downloading them locally in any format
 
-This tutorial explains how you can read five different types of data file format: data, csv, arff, zip, and rar
+This tutorial explains how you can read five different types of data file format: data, csv, arff, zip, and rar. 
+
+
+## Working with Large Datasets
+
+[Memory Usage Tips](./tips/memory_usage.md)
+
+[A Big Problem with Linear Regression and How to Solve It](https://towardsdatascience.com/robust-regression-23b633e5d6a5)
+
 
 
 ## Generate Dummy Data
@@ -49,6 +59,9 @@ This tutorial explains how you can read five different types of data file format
 [How to generate dummy data in Python](https://towardsdatascience.com/how-to-generate-dummy-data-in-python-a05bce24a6c6)
 
 How to generate fake data using the Faker library. 
+
+
+----------
 
 
 ## Structured Datasets
@@ -65,7 +78,7 @@ HuggingFace Datasets is a lightweight library providing two main features:
 
 
 
-## Computer Vision Datasets
+## CV Datasets
 
 [Open Source Datasets for Computer Vision](https://www.kdnuggets.com/2021/08/open-source-datasets-computer-vision.html)
 
@@ -140,9 +153,3 @@ The Internet Archive has been archiving the web for 20 years and has preserved b
 Here we list Amazon Reviews and Wikipedia Links for general NLP and the Standford Sentiment Treebank and Twitter US Airlines Reviews specifically for sentiment analysis. 
 
 
-
-## Working with Large Datasets
-
-[Memory Usage Tips](./tips/memory_usage.md)
-
-[A Big Problem with Linear Regression and How to Solve It](https://towardsdatascience.com/robust-regression-23b633e5d6a5)
