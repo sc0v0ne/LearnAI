@@ -95,6 +95,7 @@ When used with a loop (here we use with a loop over a torch.utils.data.DataLoade
 
 - mambaforge (miniforge with Mamba)
 - Kedro
+- OpenML
 
 - ONNX
 - openai/gym
