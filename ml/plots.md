@@ -132,14 +132,12 @@ The articles [3] and [13] discuss how to use matplotlib colormaps which are used
 
     # show available styles
     print(plt.style.available)
-
-
 ```
 
-### Labels
+
+### Data Point Labels
 
 Here are some examples of how to label the values of data points on plots with matplotlib [4].
-
 
 ```py
     fig, ax = plt.subplots(figsize=(12,8))
@@ -147,15 +145,140 @@ Here are some examples of how to label the values of data points on plots with m
     plt.xlabel("x values", size=12)
     plt.ylabel("y values", size=12)
     plt.title("Learning more about pyplot with random numbers chart", size=15)
-
+  
     # increase the frequency of the x and y ticks to match the actual values of x and the possible values of y
     plt.xticks(x, size=12)
     plt.yticks([i for i in range(20)], size=12)
     plt.show()
 ```
 
+We can also use the `.annotate()` method [17]:
+
+```py
+    import pandas as pd
+    import numpy as np
+    import matplotlib.pyplot as plt
+    from matplotlib.dates import DateFormatter
+    import matplotlib.dates as mdates
+
+    np.random.seed(106)
+
+    df = pd.DataFrame({
+        'Date': pd.date_range('2022-04-01', '2023-03-31'),
+        'Amount': np.random.randn(365).cumsum()})
+
+    fig, ax = plt.subplots(figsize=(10,6))
+
+    date_format = DateFormatter('%Y-%b')
+    ax.xaxis.set_major_formatter(date_format)
+    ax.xaxis.set_minor_locator(mdates.MonthLocator())
+
+    # Add some room
+    ax.set_ylim(-20, 15)
+
+    # Add arrow at max value
+    max_idx = np.argmax(df['Amount'])
+    max_loc = df['Date'].iloc[max_idx], df['Amount'].iloc[max_idx]
+    text_loc = df['Date'].iloc[max_idx+20], 10
+
+    ax.annotate(
+        text='Woah!', 
+        xy=(max_loc),
+        xytext=(text_loc),
+        arrowprops=dict(arrowstyle="->", connectionstyle="angle3,angleA=0,angleB=-90")
+        )
+
+    ax.plot(df['Date'], df['Amount'])
+```
+
+### Customize Date Labels
+
+Here is an example of customizing rhe date x-axis labels [17]:
+
+```py
+    import pandas as pd
+    import numpy as np
+    import matplotlib.pyplot as plt
+    from matplotlib.dates import DateFormatter
+    import matplotlib.dates as mdates
+
+    np.random.seed(106)
+
+    df = pd.DataFrame({
+        'Date': pd.date_range('2022-04-01', '2023-03-31'),
+        'Amount': np.random.randn(365).cumsum()})
+
+    fig, ax = plt.subplots(figsize=(10,6))
+
+    date_format = DateFormatter('%Y-%b')
+    ax.xaxis.set_major_formatter(date_format)
+    ax.xaxis.set_minor_locator(mdates.MonthLocator())
+
+    ax.plot(df['Date'], df['Amount'])
+```
+
+
+## Make Plots Prettier
+
+Matplotlib provides a lot of customizability which can often seem overwhelming,
+
+Here we perform the following [17]:
+
+- We remove the spines from the top and the right sides. 
+
+- We use the `.text()` method to add both a title and a subtitle. 
+
+The process of adding text can be a bit trial-and-error. 
+
+```py
+    import pandas as pd
+    import numpy as np
+    import matplotlib.pyplot as plt
+    from matplotlib.dates import DateFormatter
+    import matplotlib.dates as mdates
+
+    # Import timedelta
+    from datetime import timedelta
+
+    np.random.seed(106)
+
+    df = pd.DataFrame({
+        'Date': pd.date_range('2022-04-01', '2023-03-31'),
+        'Amount': np.random.randn(365).cumsum()})
+
+    fig, ax = plt.subplots(figsize=(10,6))
+
+    date_format = DateFormatter('%Y-%b')
+    ax.xaxis.set_major_formatter(date_format)
+    ax.xaxis.set_minor_locator(mdates.MonthLocator())
+
+    ax.set_ylim(-20, 15)
+
+    max_idx = np.argmax(df['Amount'])
+    max_loc = df['Date'].iloc[max_idx], df['Amount'].iloc[max_idx]
+    text_loc = df['Date'].iloc[max_idx+20], 10
+
+    ax.annotate(text='Woah!', xy=(max_loc),xytext=(text_loc),arrowprops=dict(arrowstyle="->", connectionstyle="angle3,angleA=0,angleB=-90"))
+
+    # Remove Spines
+    ax.spines[['top', 'right']].set_visible(False)
+
+    # Add Titles
+    ax.text(
+      x=df['Date'].min()-timedelta(20), 
+      y=18.5, s='Analyzing Stock Prices', 
+      ha='left', fontsize=18, weight='bold')
+    ax.text(
+      x=df['Date'].min()-timedelta(20), 
+      y=16.5, s='April 2022 - Mar 2023', 
+      ha='left', fontsize=15)
+
+    ax.plot(df['Date'], df['Amount'], color='black')
+```
+
 
 ----------
+
 
 
 ## Seaborn
@@ -1052,6 +1175,8 @@ DSPlot is a Python package that draws and renders images of data structures.
 [15] [Visualizing Multidimensional Categorical Data using Plotly](https://towardsdatascience.com/visualizing-multidimensional-categorical-data-using-plotly-bfb521bc806f)
 
 [16] [Five Advanced Data Visualizations All Data Scientists Should Know](https://towardsdatascience.com/five-advanced-data-visualizations-all-data-scientists-should-know-e042d5e1f532)
+
+[17] [3 Matplotlib Tips You Need to Know](https://towardsdatascience.com/3-matplotlib-tips-you-need-to-know-1b24e41552d5)
 
 
 [Holoviz Is Simplifying Data Visualization in Python](https://towardsdatascience.com/holoviz-is-simplifying-data-visualization-in-python-d51ca89739cf)
