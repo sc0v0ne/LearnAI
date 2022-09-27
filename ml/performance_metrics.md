@@ -70,6 +70,30 @@ In a sense, MAE is similar to mean, MSE is similar to variance, and RMSE is simi
 When values can be zero, accuracy (MPE/MAPE) does not make sense. If you exclude the zero values then the calculation is meaningless (the error metric must be computed on all the samples).
 
 
+
+## Compute Average Metrics
+
+In general, ML models are _stochastic_ which means that you will get different results for each run or trial. Therefore, you must run several trials (say 10 or 100) and compute the average of several performance metrics. 
+
+```
+Average metrics on 10 trials:
+
+     train_acc  train_mae  train_rmse  train_mape  test_acc    test_mae   test_rmse  test_mape
+0     0.966114  51.862437   61.589781    0.033886  0.975992   71.262462   90.968560   0.024008
+1     0.989419  17.364505   23.621316    0.010581  0.979806   58.396311   79.787652   0.020194
+2     0.988656  18.333088   24.960092    0.011344  0.978941   61.487530   84.414621   0.021059
+3     0.983232  27.145072   32.716903    0.016768  0.966736   99.446103  119.955462   0.033264
+4     0.987102  21.268157   28.235588    0.012898  0.963391  109.194594  129.714324   0.036609
+5     0.981368  28.204099   36.886347    0.018632  0.979347   59.652040   83.378827   0.020653
+6     0.947403  80.983944   92.722108    0.052597  0.973736   77.595416  102.693152   0.026264
+7     0.986551  22.535717   29.933627    0.013449  0.957849  125.900201  147.230188   0.042151
+8     0.983055  26.716388   33.393365    0.016945  0.972420   82.131250   98.375309   0.027580
+9     0.989172  18.111209   24.411895    0.010828  0.978705   61.881334   82.536847   0.021295
+avg   0.980207  31.252462   38.847102    0.019793  0.972692   80.694724  101.905494   0.027308
+```
+
+
+
 ----------
 
 
