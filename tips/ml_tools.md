@@ -107,7 +107,7 @@ When used with a loop (here we use with a loop over a torch.utils.data.DataLoade
 
 [Poetry Docs](https://python-poetry.org/docs/)
 
-Poetry helps you declare, manage and install dependencies of Python projects, ensuring you have the right stack everywhere.
+Poetry helps you declare, manage, and install dependencies of Python projects, ensuring you have the right stack everywhere.
 
 poetry is a tool to handle dependency installation as well as building and packaging of Python packages. It only needs one file to do all of that: the new, standardized pyproject.toml.
 
