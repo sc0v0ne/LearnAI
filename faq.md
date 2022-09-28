@@ -9,6 +9,7 @@ In simplest terms, an AI Engineer is a type of software engineer specializing in
 > In a nutshell, when you create a program to solve an AI problem you are performing AI engineering. 
 
 
+
 ## What is the difference between AI and ML
 
 In AI, we define things in terms of _agents_ (agent programs) and the _standard model_ (rational agents). Thus, we are performing _machine learning_ when the agent is a _computer_ versus Robot, AV, or UAV. 
@@ -25,7 +26,6 @@ If you are going to spend the time to study AI/ML then you might as well invest 
 The best approach would be to find several job postings that look interesting to you and see what skills and tools they require.
 
 [How to Learn Machine Learning](https://aicoder.medium.com/how-to-learn-machine-learning-4ba736338a56)
-
 
 
 ## Problems with AI
@@ -71,6 +71,20 @@ If you have an .edu email account you can get free access to [Safari Online][^sa
 [Creating an Account](https://ecpi.libguides.com/SafariOReilly)
 
 Some good books are “Artificial Intelligence with Python”, “Artificial Intelligence by Example”, and “Programming Machine Learning”.
+
+
+## What software do you recommend
+
+It is best to use standalone .py files rather than notebooks. 
+
+Some tools that I use regularly are mambaforge, Kedro, mlflow, git, dvc, scimitar-learn, tensorflow, NLTK, OpenCV, 
+
+Some cloud tools that I use are comet.ml, DagsHub, and Deta. 
+
+There are also some AutoML tools that I use a lot such as AutoGluon, DataPrep, and Orange. You can take a look at my Github Stars lists and LearnAI repo. 
+
+https://github.com/codecypher
+
 
 
 ## Can I learn AI from research papers
