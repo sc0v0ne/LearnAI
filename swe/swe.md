@@ -26,6 +26,28 @@ Pareto principle has been found to be applicable in almost every aspect of our l
 - 80% of all problems at work are caused by 20% of the coworkers.
 
 
+## Rule of Six
+
+The brain has three memory functions that work together to understand code [8]:
+
+- **Long-term memory (LTM):** Stores information for long-term retrieval, such as keywords, syntax, and commonly used idioms and patterns.
+
+- **Short-term memory (STM):** Stores new information for short-term retrieval (less than 30 seconds!), such as variable names and special values.
+
+- **Working memory (WM):** Processes information from LTM and STM to draw conclusions and derive new knowledge.
+
+STM and WM are small. Both can only store about 4 to 6 things at a time! Overload them and you’ve got a recipe for confusion.
+
+
+> **Rule of six:** A line of code containing 6+ pieces of information should be simplified.
+
+There are two strategies which can be used to break up code: SPLIT and MORF
+
+SIMPLE: Split Into MultiPle LinEs
+
+MORF: Move out and Rewrite as a Function
+
+
 
 ## SOLID Design Principles
 
@@ -258,6 +280,8 @@ With software systems, it is less work to rebuild a new system than it is to per
 [6] [The Database Is Not the Most Important Part](https://betterprogramming.pub/the-database-is-not-the-most-important-part-b87d8af01959)
 
 [7] [The Myth of Small Incremental Improvements](https://betterprogramming.pub/the-myth-of-small-incremental-improvements-fd0bfd5e1977)
+
+[8][Want Cleaner Code? Use the Rule of Six](https://betterprogramming.pub/want-cleaner-code-use-the-rule-of-six-c21635ee2185)
 
 
 [Systems Design Crash Course for ML Engineers](https://towardsdatascience.com/systems-design-crash-course-for-ml-engineers-aafae1cf1890)
