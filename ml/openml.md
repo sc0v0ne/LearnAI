@@ -4,29 +4,26 @@
 
 OpenML is readily integrated with scikit-learn through the Python API.
 
-
 ```py
-from sklearn import ensemble
-from openml import tasks, flows, Runs
+    from sklearn import ensemble
+    from openml import tasks, flows, Runs
 
-task = tasks.get_task(3954)
-clf = ensemble.RandomForestClassifier()
-flow = flows.sklearn_to_flow(clf)
-run = runs.run_flow_on_task(task, flow)
-result = run.publish()
+    task = tasks.get_task(3954)
+    clf = ensemble.RandomForestClassifier()
+    flow = flows.sklearn_to_flow(clf)
+    run = runs.run_flow_on_task(task, flow)
+    result = run.publish()
 ```
 
 Key features:
 
-- Query and download OpenML datasets and use them however you like
+- Query and download OpenML datasets and use them however you like.
+- Build any sklearn estimator or pipeline and convert to OpenML flows.
+- Run any flow on any task and save the experiment as run objects.
+- Upload your runs for collaboration or publishing.
+- Query, download, and reuse all shared runs.
 
-- Build any sklearn estimator or pipeline and convert to OpenML flows
-
-- Run any flow on any task and save the experiment as run objects
-
-- Upload your runs for collaboration or publishing
-
-- Query, download and reuse all shared runs
+----------
 
 
 
@@ -35,27 +32,27 @@ Key features:
 The OpenML Python package allows to use datasets and tasks from OpenML together with scikit-learn and share the results online.
 
 ```py
-import openml
-from sklearn import impute, tree, pipeline
+    import openml
+    from sklearn import impute, tree, pipeline
 
-# Define a scikit-learn classifier or pipeline
-clf = pipeline.Pipeline(
-    steps=[
-        ('imputer', impute.SimpleImputer()),
-        ('estimator', tree.DecisionTreeClassifier())
-    ]
-)
-# Download the OpenML task for the german credit card dataset with 10-fold cross-validation.
-task = openml.tasks.get_task(32)
+    # Define a scikit-learn classifier or pipeline
+    clf = pipeline.Pipeline(
+        steps=[
+            ('imputer', impute.SimpleImputer()),
+            ('estimator', tree.DecisionTreeClassifier())
+        ]
+    )
+    # Download the OpenML task for the german credit card dataset with 10-fold cross-validation.
+    task = openml.tasks.get_task(32)
 
-# Run the scikit-learn model on the task.
-run = openml.runs.run_model_on_task(clf, task)
+    # Run the scikit-learn model on the task.
+    run = openml.runs.run_model_on_task(clf, task)
 
-# Publish the experiment on OpenML (optional, requires an API key.
-# You can get your own API key by signing up to OpenML.org)
-run.publish()
+    # Publish the experiment on OpenML (optional, requires an API key.
+    # You can get your own API key by signing up to OpenML.org)
+    run.publish()
 
-print(f'View the run online: {run.openml_url}')
+    print(f'View the run online: {run.openml_url}')
 ```
 
 You can find more examples in our **Examples Gallery**.
