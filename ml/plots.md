@@ -118,6 +118,127 @@ When plotting multiple graphs, it is common to see labels of some subplots overl
 
 
 
+## Subplots
+
+> One Figure, many Axes.  
+
+We need to define two fundamental Matplotlib object types: Figure and Axes [18].
+
+The _Figure_ can be considered as the outermost container that holds everything together; All other objects stay alive in this container. 
+
+A Figure can have one or more Axes objects. 
+
+We need an _Axes_ object to draw something; Each subplot on a Figure is actually an Axes object.
+
+### Overlapping Axes objects
+
+We can add multiple Axes objects to a Figure by placing them on top of each other. 
+
+Their sizes are actually the same. 
+
+The Axes objects share the same x-axis and y-axis by default.
+
+```py
+    import matplotlib.pyplot as plt
+
+    # create a Figure object
+    plt.figure(figsize=(14,5))
+
+    # Figure title
+    plt.title("September Sales", fontsize=15)
+
+    # first Axes
+    plt.plot(df["date"], df["store1"])
+
+    # second Axes
+    plt.plot(df["date"], df["store2"])
+
+    # add legend
+    plt.legend(["Store1", "Store2"])
+
+    plt.show()
+```
+
+### Axes objects in different positions
+
+We can also place Axes objects in different positions on a Figure.
+
+There are two steps in this process:
+
+1. Arrangement of the positions of Axes objects
+2. Creating plots on each Axes object
+
+The arrangement can be made using the `add_subplot` or `subplot` functions. 
+
+The `subplot` function is a wrapper of `add_subplot` which is more frequently used.
+
+We first create the schema for subplots. 
+
+The nrows and ncols parameters can be used for this task. 
+
+We can create as many Axes objects as needed. Each ax can be accessed with its index.
+
+```py
+    # create Figure with 4 Axes objects.
+    fig, axs = plt.subplots(nrows=2, ncols=2)
+```
+
+```py
+    # Figure with 2 Axes objects
+    fig, axs = plt.subplots(
+        figsize=(10,5),
+        ncols=2,
+        sharey=True
+    )
+
+    # Figure title
+    fig.suptitle("Histogram", fontsize=16)
+
+    # First Axes
+    axs[0].hist(sales["price"])
+    axs[0].set_title("Price", fontsize=14)
+
+    # Second Axes
+    axs[1].hist(sales["cost"], color="green")
+    axs[1].set_title("Cost", fontsize=14)
+
+    plt.show()
+```
+
+The `sharex` and `sharey` parameters can be used to eliminate redundant axis ticks. 
+
+In the Figure above, both plots can have the same y-axis, so we can remove the y-axis from the left one by setting the value of the `sharey` parameter as `True`.
+
+
+### Subplot2grid
+
+The `subplot` function divides the Figure into cells where each subplot occupies one cell. 
+
+The `subplot2grid` function allows subplots occupy multiple cells so we can create grid structures. 
+
+Here we define a two-by-two grid. The position of the subplot on top is defined as the first row and first column that spans over 2 columns. The ones on the bottom are the second-row plots and each occupies a single cell.
+
+```py
+    # Create Figure
+    plt.figure(figsize=(8,4))
+
+    # top
+    ax1 = plt.subplot2grid((2, 2), (0, 0), colspan=2)
+
+    # bottom left
+    ax2 = plt.subplot2grid((2, 2), (1, 0))
+
+    # bottom right
+    ax2 = plt.subplot2grid((2, 2), (1, 1))
+
+    plt.show()
+```
+
+The `colspan` and `rowspan` parameters are used for creating subplots that occupy more than one cell.
+
+
+
+
 ## How to Customize Matplotlib Plots
 
 ### Colors
@@ -127,8 +248,8 @@ We can set the plotting style and customize matplotlib parameters using `rcParam
 The articles [3] and [13] discuss how to use matplotlib colormaps which are used to make plots more accessible for people with color vision deficiencies.
 
 ```py
-    plt.style.use('fivethirtyeight')    # customize the plotting style
-    plt.style.use('default')            # reset to default style
+    plt.style.use('fivethirtyeight')  # customize the plotting style
+    plt.style.use('default')  # reset to default style
 
     # show available styles
     print(plt.style.available)
@@ -1177,6 +1298,8 @@ DSPlot is a Python package that draws and renders images of data structures.
 [16] [Five Advanced Data Visualizations All Data Scientists Should Know](https://towardsdatascience.com/five-advanced-data-visualizations-all-data-scientists-should-know-e042d5e1f532)
 
 [17] [3 Matplotlib Tips You Need to Know](https://towardsdatascience.com/3-matplotlib-tips-you-need-to-know-1b24e41552d5)
+
+[18] [Super Flexible Matplotlib Structure for Subplots](https://pub.towardsai.net/super-flexible-matplotlib-structure-for-subplots-d26b005252f1)
 
 
 [Holoviz Is Simplifying Data Visualization in Python](https://towardsdatascience.com/holoviz-is-simplifying-data-visualization-in-python-d51ca89739cf)
