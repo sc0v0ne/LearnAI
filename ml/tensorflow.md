@@ -9,6 +9,7 @@ Here are some useful tutorials on tensorflow.
 
 [Keras Code Examples](https://keras.io/examples/)
 
+
 [How to Load a Dataset in TensorFlow](https://medium.com/geekculture/how-to-load-a-dataset-in-tensorflow-263b53d69ffa)
 
 [3 ways to create a Machine Learning model with Keras and TensorFlow 2.0 (Sequential, Functional, and Model Subclassing)](https://towardsdatascience.com/3-ways-to-create-a-machine-learning-model-with-keras-and-tensorflow-2-0-de09323af4d3)
