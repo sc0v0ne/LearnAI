@@ -1,10 +1,5 @@
 # Time Series Decomposition
 
-<head>
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
-</head>
-
-
 
 ## How to Decompose Time Series Data
 
@@ -247,12 +242,8 @@ The example below decomposes the airline passenger dataset as a multiplicative m
 
 Running the example plots the observed, trend, seasonal, and residual time series.
 
-<div class="image-preview">
-    <div>
-        <img width="600" alt="Mulitplicative Decomposition" src="https://machinelearningmastery.com/wp-content/uploads/2017/01/Multiplicative-Decomposition-of-Airline-Passenger-Dataset.png" />
-    </div>
-    <div class="caption">Figure 1: Multiplicative decomposition of airline passenger dataset.</div>
-</div>
+
+![Mulitplicative Decomposition|600xauto {Figure 1: Multiplicative decomposition of airline passenger dataset.}](https://machinelearningmastery.com/wp-content/uploads/2017/01/Multiplicative-Decomposition-of-Airline-Passenger-Dataset.png)
 
 
 We can see that the trend and seasonality information extracted from the series does seem reasonable. 
