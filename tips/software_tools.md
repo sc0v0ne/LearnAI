@@ -105,6 +105,22 @@ Advanced
 
 
 
+## Safari Extensions
+
+- DuckDuckGo Privacy Essentials
+- Evernote Web Clipper
+- Hover for Safari
+- Liner - Web and PDF Highlighter
+- Neo Noir
+- NewsGuard
+- Raindrop.io
+- RSS Button
+- Speed Player
+- Turn Off the Lights
+- URL Linker
+
+
+
 ## Software Development
 
 - Notion
@@ -133,6 +149,7 @@ Advanced
 - Quokka
 - Rainbow CSV 
 - Rainbow Brackets
+- Save Actions
 - SequenceDiagram
 - Smart Search
 - Stepsize
@@ -356,7 +373,7 @@ The program running in the Tmux session will continue to run after you detach fr
   tmux attach-session -t 0
 ```
 
-#### Common Tmux commands for managing windows and panes
+#### Tmux Commands
 
 ```
 - Ctrl+b c  Create a new window (with shell)
