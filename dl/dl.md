@@ -1,10 +1,5 @@
 # Deep Learning
 
-<head>
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
-</head>
-
-
 ## Challenge of Training Deep Learning Neural Networks
 
 [A Gentle Introduction to the Challenge of Training Deep Learning Neural Network Models](https://machinelearningmastery.com/a-gentle-introduction-to-the-challenge-of-training-deep-learning-neural-network-models/)
@@ -167,13 +162,7 @@ In transfer learning, there are three kinds of methods that can be used (dependi
 How to choose the method to be used?
 
 
-<div class="image-preview">
-    <div>
-        <img width="600" alt="Transfer learning quadrant" src="https://miro.medium.com/max/1722/1*ZSx3ZsBxs3kE87ybpY4NnA.png" />
-    </div>
-</div>
-
-Figure: Transfer learning quadrant
+![Transfer learning quadrant|600xauto {Figure 1: Transfer learning quadrant}](https://miro.medium.com/max/1722/1*ZSx3ZsBxs3kE87ybpY4NnA.png)
 
 
 - Quadrant 1: large data size but has a small data similarity. In this case, better if we develop the model from scratch
