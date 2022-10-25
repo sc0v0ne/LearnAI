@@ -1,15 +1,14 @@
 # Web Development
 
-Here are some use notes on web development. 
-
+Here are some notes on web development.
 
 ## CSS Tips
 
-Here are a few handy CSS tips and features [1]. 
+Here are a few handy CSS tips and features [1].
 
 ### Centered
 
-Position an element at the center of the screen.  
+Position an element at the center of the screen.
 
 ```css
   .centered {
@@ -18,7 +17,7 @@ Position an element at the center of the screen.
       left: 50%;
       transform: translate(-50%, 50%);
   }
-  
+
   // position in the center of another element
   .block {
       display: grid;
@@ -28,13 +27,13 @@ Position an element at the center of the screen.
 
 ### Border vs Outline
 
-The border is inside the element — if we increase the size of the border, then we increase the size of the element. 
+The border is inside the element — if we increase the size of the border, then we increase the size of the element.
 
 The outline is outside the element — if we increase the size of the outline, the element will keep its size and the ribbon around it will grow.
 
 ### Auto-numbering sections
 
-We can create a CSS counter and use it in a tag type content, so we can auto-increment a variable and prefix some elements with it. 
+We can create a CSS counter and use it in a tag type content, so we can auto-increment a variable and prefix some elements with it.
 
 This is done using the counter-increment and content properties:
 
@@ -83,29 +82,30 @@ CSS frameworks are great way to build fast and responsive websites.A framework h
 
 - Deta
 - Streamlit
+- Mogenius
 
 - Beautiful Soup
 - Django
 - Selenium
 
 
-### Flask vs FastApi
+### Flask vs FastAPI
 
-Python has many web frameworks, the most popular being Django and Flask. 
+Python has many web frameworks, the most popular being Django and Flask.
 
-FastAPI is a web framework for Python and in many ways resembles the simplicity of Flask. What makes FastAPI different is that it runs on ASGI web servers (such as uvicorn) while Flask only runs on WSGI web servers. This difference can result in a huge performance gap. 
+FastAPI is a web framework for Python and in many ways resembles the simplicity of Flask. What makes FastAPI different is that it runs on ASGI web servers (such as uvicorn) while Flask only runs on WSGI web servers. This difference can result in a huge performance gap.
 
-In short: with asynchronous code, threads can do more work in the same amount of time which results in more work done per unit time that results in a performance boost. 
+In short: with asynchronous code, threads can do more work in the same amount of time which results in more work done per unit time that results in a performance boost.
 
 A comparison of two different RestAPI frameworks [4]:
 
-**Flask** was released in 2010, a micro web framework written in python to support the deployment of web applications with a minimal amount of code. 
+**Flask** was released in 2010, a micro web framework written in python to support the deployment of web applications with a minimal amount of code.
 
-Flask is designed to be an easy setup that is flexible and fast to deploy as a microservice. 
+Flask is designed to be an easy setup that is flexible and fast to deploy as a microservice.
 
 Flask is built on **WSGI (Python Web Server Gateway Interface)** which means the server will tie up a worker for each request.
 
-**FastAPI** was released in 2018. FastAPI works similarly to Flask which supports the deployment of web applications with a minimal amount of code. 
+**FastAPI** was released in 2018. FastAPI works similarly to Flask which supports the deployment of web applications with a minimal amount of code.
 
 FastAPI is faster compare to Flask since it is built on **ASGI (Asynchronous Server Gateway Interface)** which supports concurrency / asynchronous code by declaring the endpoints with `async def` syntax.
 
@@ -113,7 +113,7 @@ FastAPI also supports Swagger documentation. Upon deploying with FastAPI Framewo
 
 ### Comparison of Flask and FastAPI
 
-Flask does not provide validation on the data format which means the user can pass any type of data such as string or integer etc. (Alternatively, a validation script on the input data receive can be built into the script, but this will require additional effort). 
+Flask does not provide validation on the data format which means the user can pass any type of data such as string or integer etc. (Alternatively, a validation script on the input data receive can be built into the script, but this will require additional effort).
 
 FastAPI allows developers to declare additional criteria and validation on the parameter received.
 
@@ -139,6 +139,7 @@ Thus, it is probably best to adopt FastAPI in the future since it has asynchrono
 
 [The Nice Way To Deploy An ML Model using Docker and VSCode](https://towardsdatascience.com/the-nice-way-to-deploy-an-ml-model-using-docker-91995f072fe8)
 
+
 ### Pydantic
 
 All the data validation is performed under the hood by Pydantic, so you get all the benefits from it. And you know you are in good hands.
@@ -155,7 +156,7 @@ Define how data should be in pure with canonical Python; validate it with pydant
 
 ## Streamlit vs Deta
 
-Basically, Streamlit Cloud is tied closely to your GitHub repo (Pros and Cons) which means you will need admin access to be able to setup the repo with Streamlit. 
+Basically, Streamlit Cloud is tied closely to your GitHub repo (Pros and Cons) which means you will need admin access to be able to setup the repo with Streamlit.
 
 Deta does not require GitHub account or repo access which is perhaps more flexible for personal use.
 
@@ -164,6 +165,7 @@ Deta does not require GitHub account or repo access which is perhaps more flexib
 [Deta Docs](https://docs.deta.sh/docs/home)
 
 [Getting Started](https://docs.deta.sh/docs/micros/getting_started/)
+
 
 
 
@@ -188,4 +190,7 @@ Deta does not require GitHub account or repo access which is perhaps more flexib
 [10 Google Fonts Every Web Designer Needs To Know](https://uxplanet.org/10-google-fonts-every-web-designer-needs-to-know-de7dc3352d2c)
 
 [3 Best Websites to find Pro and Free Templates for your Portfolio](https://medium.com/geekculture/3-best-websites-to-find-pro-free-templates-for-your-portfolio-c7745792e60)
+
+
+
 

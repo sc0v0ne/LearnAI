@@ -493,3 +493,8 @@ Consumers have a group-name label and each message published is sent to one cons
 
 [7] [Kafka: Learn All About Consumers](https://medium.com/@maverick11/learn-all-about-kafka-consumers-fba36b94e724)
 
+
+[Serverless computing vs containers](https://www.cloudflare.com/learning/serverless/serverless-vs-containers/)
+
+
+

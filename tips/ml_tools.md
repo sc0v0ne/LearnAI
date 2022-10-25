@@ -200,7 +200,7 @@ Using modin is as simple as replacing the pandas import:
   import modin.pandas as pd
 ```
 
-I have a sample [notebook](../python/book_recommender_knn.ipynb) that demonstrates using modin. 
+I have a sample [Notebook](../python/book_recommender_knn.ipynb) that demonstrates using modin. 
 
 Since Modin is still under development, I do experience occasional warning/error messages but everything seems to be working. However, the developers seem to be quick to answer questions and provide assistance in troubleshooting issues. Highly recommend trying it out. 
 
