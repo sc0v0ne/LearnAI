@@ -250,7 +250,7 @@ Consider how your validation set was acquired:
 Every deep learning practitioner has made the above mistakes at least once in their career.
 
 
-—————
+----------
 
 
 
