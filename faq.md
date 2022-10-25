@@ -126,6 +126,8 @@ In AI and CS, you should always be able to describe in a few sentences what you 
 
 [Machine Learning Performance Metrics](./ml/performance_metrics.md) 
 
+In general, all the data preparation, memory optimization, and hypertuning methods and techniques that you can possibly apply to the model and dataset will result in only a small performance improvement, say 3-5% improvement in accuracy. Therefore, it is always best to obtain a baseline for many models using the dataset with AutoML tools then choose the top performers for further study.  
+
 
 
 ## How to Choose an ML Algorithm
@@ -167,7 +169,7 @@ For more context, I am training a four layer neural network whose inputs are 2 x
 
 -----
 
-Obviously, the model is not working since 50% accuracy is the lowest value which is the same as random guessing (coin toss). 
+Obviously, the model is not working since 50% accuracy is the lowest possible accuracy which is the same as random guessing (coin toss). 
 
 First, plot the train/val loss per epoch of any models being trained to see what is happening (over/under-fitting) but I always dismiss any models with that low of a baseline accuracy (too much work). 
 
@@ -286,6 +288,24 @@ A key ML skill needed is deployment. There are several options available but the
 [Comparison of Basic Deep Learning Cloud Platforms](https://aicoder.medium.com/comparison-of-basic-deep-learning-cloud-platforms-9a4b69f44a46)
 
 [Colaboratory FAQ](https://research.google.com/colaboratory/faq.html#resource-limits)
+
+
+
+## How to Choose a Dataset
+
+When learning ML, it is best to look for the following properies in a dataset:
+
+1. Categorical, Integer, or Real data types. 
+
+2. Evenly distributed which means the same number of occurrences for each possible value of the class or target feature.
+
+3. A large dataset, say thousands of samples for each possible value of the target feature.
+
+4. Multivariate data types but not time series.
+
+5. Try to keep the maximum number of features to 10 or so.
+
+6. Try to avoid datasets for anomaly or fraud detection since they are almost always imbalanced and difficult to solve.
 
 
 
