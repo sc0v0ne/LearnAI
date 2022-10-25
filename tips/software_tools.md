@@ -105,22 +105,6 @@ Advanced
 
 
 
-## Safari Extensions
-
-- DuckDuckGo Privacy Essentials
-- Evernote Web Clipper
-- Hover for Safari
-- Liner - Web and PDF Highlighter
-- Neo Noir
-- NewsGuard
-- Raindrop.io
-- RSS Button
-- Speed Player
-- Turn Off the Lights
-- URL Linker
-
-
-
 ## Software Development
 
 - Notion

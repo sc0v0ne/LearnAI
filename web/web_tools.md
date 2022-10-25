@@ -16,7 +16,7 @@ Audio/Video
 - Remove Bg Image
 
 
-## Browser Extensions
+## Chrome Extensions
 
 - Awesome Screenshots
 - Nimbus Screenshot
@@ -58,65 +58,23 @@ Accessibility
 - WAVE
 
 
-## Websites for Developers
+## Safari Extensions
 
-- [Browser frame](https://browserframe.com/)
-- [Can I use](https://caniuse.com/?search=Grid)
-- [Codepen](https://codepen.io/)
-- [DevDocs](https://devdocs.io/)
-- [LambdaTest](https://www.lambdatest.com/)
-- [Meta Tags](https://metatags.io/)
-- [Peppertype](https://www.peppertype.ai/)
-- [Profile Pic Maker](https://pfpmaker.com/)
-- [Regex101](https://regex101.com/)
-- [Resume.io](https:/resume.io)
-- [Roadmap](https://roadmap.sh/)
-- [Small Dev Tools](https://smalldev.tools/)
-- [TypeScript Playground](https://www.typescriptlang.org/)
-- [Web Page Test](https://www.webpagetest.org/)
+- DuckDuckGo Privacy Essentials
+- Evernote Web Clipper
+- Hover for Safari
+- Liner - Web and PDF Highlighter
+- Neo Noir
+- NewsGuard
+- Raindrop.io
+- RSS Button
+- Speed Player
+- Turn Off the Lights
+- URL Linker
 
 
 
-## Web Design
-
-- [Compressor.io](https://compressor.io/)
-- [Coolors](https://coolors.co/)
-- [CSSIcons](https://css.gg/)
-- [Flaticon](https://www.flaticon.com/)
-- [Loops](https://loops.wannathis.one/)
-- [Ls.Graphics](https://www.ls.graphics)
-
-- [Best Icon Resources](https://uxplanet.org/best-icon-resources-i-use-daily-9b7c2da26e83)
-
-
-- [Fontjoy](https://fontjoy.com/6
-- [FontShare](https://www.fontshare.com/)
-- [Type Scale](https://type-scale.com/)
-
-- [Editor X](https://www.editorx.com/
-- [Figma](https://www.figma.com)
-- [Mockflow](https://mockflow.com)
-- [Mockuuups](https://mockuuups.studio/)
-- [Octopus](https://octopus.do/)
-- [SipApp](https://sipapp.io/)
-
-
-## CSS Websites for Developers
-
-- [Animation pausing](https://waitanimate.wstone.uk/)
-- [Color Palette Generator](https://mybrandnewlogo.com/color-palette-generator)
-- [CSS Generator](https://html-css-js.com/css/generator/box-shadow/)
-- [Cubic Bezier Generator](https://cubic-bezier.com/#.17,.67,.83,.67)
-- [Gradient Generator](https://cssgradient.io/)
-- [Grid Generator](https://cssgrid-generator.netlify.app/)
-- [Hamburgers](https://jonsuh.com/hamburgers/)
-- [Layout Generator](https://layout.bradwoods.io/)
-- [Layout Patterns](https://web.dev/patterns/layout/)
-- [Responsively](https://responsively.app/)
-- [SchemeColor](https://www.schemecolor.com/)
-- [SVG Generator](https://haikei.app/)
-- [Transition Animation Generator](https://www.transition.style/)
-
+## CSS Tools
 
 ### Animista
 
@@ -177,6 +135,64 @@ Once we have everything looking good, we can copy the generated CSS or view the 
 
 [Design Resources for Developers](https://github.com/bradtraversy/design-resources-for-developers)
 
+
+## Websites for Developers
+
+- [Browser frame](https://browserframe.com/)
+- [Can I use](https://caniuse.com/?search=Grid)
+- [Codepen](https://codepen.io/)
+- [DevDocs](https://devdocs.io/)
+- [LambdaTest](https://www.lambdatest.com/)
+- [Meta Tags](https://metatags.io/)
+- [Peppertype](https://www.peppertype.ai/)
+- [Profile Pic Maker](https://pfpmaker.com/)
+- [Regex101](https://regex101.com/)
+- [Resume.io](https:/resume.io)
+- [Roadmap](https://roadmap.sh/)
+- [Small Dev Tools](https://smalldev.tools/)
+- [TypeScript Playground](https://www.typescriptlang.org/)
+- [Web Page Test](https://www.webpagetest.org/)
+
+
+## Web Design
+
+- [Compressor.io](https://compressor.io/)
+- [Coolors](https://coolors.co/)
+- [CSSIcons](https://css.gg/)
+- [Flaticon](https://www.flaticon.com/)
+- [Loops](https://loops.wannathis.one/)
+- [Ls.Graphics](https://www.ls.graphics)
+
+- [Best Icon Resources](https://uxplanet.org/best-icon-resources-i-use-daily-9b7c2da26e83)
+
+
+- [Fontjoy](https://fontjoy.com/6
+- [FontShare](https://www.fontshare.com/)
+- [Type Scale](https://type-scale.com/)
+
+- [Editor X](https://www.editorx.com/
+- [Figma](https://www.figma.com)
+- [Mockflow](https://mockflow.com)
+- [Mockuuups](https://mockuuups.studio/)
+- [Octopus](https://octopus.do/)
+- [SipApp](https://sipapp.io/)
+
+
+## CSS Websites for Developers
+
+- [Animation pausing](https://waitanimate.wstone.uk/)
+- [Color Palette Generator](https://mybrandnewlogo.com/color-palette-generator)
+- [CSS Generator](https://html-css-js.com/css/generator/box-shadow/)
+- [Cubic Bezier Generator](https://cubic-bezier.com/#.17,.67,.83,.67)
+- [Gradient Generator](https://cssgradient.io/)
+- [Grid Generator](https://cssgrid-generator.netlify.app/)
+- [Hamburgers](https://jonsuh.com/hamburgers/)
+- [Layout Generator](https://layout.bradwoods.io/)
+- [Layout Patterns](https://web.dev/patterns/layout/)
+- [Responsively](https://responsively.app/)
+- [SchemeColor](https://www.schemecolor.com/)
+- [SVG Generator](https://haikei.app/)
+- [Transition Animation Generator](https://www.transition.style/)
 
 
 
