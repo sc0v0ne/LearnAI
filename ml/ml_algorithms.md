@@ -2,9 +2,7 @@
 
 ## Background
 
-[Understand Machine Learning Algorithms](https://machinelearningmastery.com/start-here/#algorithms)
-
-Machine learning is about machine learning algorithms.
+Machine learning is about machine learning algorithms [1].
 
 You need to know what algorithms are available for a given problem, how they work, and how to get the most out of them.
 
@@ -20,10 +18,11 @@ Here is how to get started with machine learning algorithms:
 - The Bias-Variance Trade-Off
 - Overfitting and Underfitting With Algorithms
 
-**Step 3:** Discover how top machine learning algorithms work.
+**Step 3:** Discover how the top machine learning algorithms work.
 
 - Machine Learning Algorithms Mini-Course
 - Master Machine Learning Algorithms
+
 
 
 ----------
@@ -31,55 +30,46 @@ Here is how to get started with machine learning algorithms:
 
 ## Categories of ML Algorithms
 
-[A Tour of Machine Learning Algorithms](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/)
+There are two common approaches to categorizing ML algorithms [2]:
 
-[ML Cheatsheet - Algorithms](https://mclguide.readthedocs.io/en/latest/sklearn/guide.html#algorithms)
-
-[63 Machine Learning Algorithms](https://medium.com/swlh/63-machine-learning-algorithms-introduction-5e8ea4129644)
-
-
-There are two common approaches to categorizing ML algorithms:
-
-- Grouping of algorithms by learning style
-- Grouping of algorithms by similarity in form or function
+- Group algorithms by learning style
+- Group algorithms by similarity in form or function
 
 
-<img width="800" alt="Taxonomy of 63 Machine Learning Algorithms" src="https://miro.medium.com/max/4056/1*A9QcGlMRQBAl6cfhxS-XeA.png" />
-
-<center>Figure: 63 Machine Learning Algorithms by Priyanshu Jain</center>
+![Taxonomy of 63 Machine Learning Algorithms|600xauto {Figure: 63 Machine Learning Algorithms by Priyanshu Jain}](https://miro.medium.com/max/4056/1*A9QcGlMRQBAl6cfhxS-XeA.png)
 
 
 ## Overview of Machine Learning Algorithms
 
-When crunching data to model business decisions, you are most usually using supervised and unsupervised learning methods.
+When crunching data to model business decisions, we will usually be using supervised and unsupervised learning methods [1] [2].
 
 A hot topic at the moment is semi-supervised learning methods in areas such as image classification where there are large datasets with very few labeled examples.
 
 
 ## Machine Learning Techniques
 
-[10 Machine Learning Techniques for AI Development](https://daffodilsw.medium.com/10-machine-learning-techniques-for-ai-development-15df0953f05f)
+Data set, algorithms, models, feature extraction, and training are 5 crucial components of Machine Learning [6]. 
 
-Data set, algorithms, models, feature extraction, and training are 5 crucial components of Machine Learning . Depending upon the scenario, data type, input, etc., there are different ways an ML model learns: supervised and unsupervised.
+Depending upon the scenario, data type, input, etc., there are different ways an ML model learns: supervised and unsupervised.
 
 In general, there are 10 Machine Learning techniques that are commonly used for AI development.
 
-1. Regression (Supervised ML)
-2. Classification (Supervised ML)
-3. Transfer Learning (Supervised ML)
-4. Clustering (Unsupervised ML)
-5. Ensemble Methods (Supervised ML)
-6. Neural Networks and Deep Learning (Unsupervised ML)
-7. Dimensionality Reduction (Supervised and Unsupervised Learning)
-8. Word Embeddings (Unsupervised Learning)
-9. Natural Language Processing (Unsupervised Learning)
-10. Reinforcement Learning (Unsupervised Learning)
+1. Regression (supervised)
+2. Classification (supervised)
+3. Transfer Learning (supervised)
+4. Clustering (unsupervised)
+5. Ensemble Methods (supervised)
+6. Neural Networks and Deep Learning (unsupervised)
+7. Dimensionality Reduction (supervised and unsupervised)
+8. Word Embeddings (unsupervised)
+9. Natural Language Processing (unsupervised)
+10. Reinforcement Learning (unsupervised)
 
 
 
 ## Algorithms Grouped by Learning Style
 
-There are four ways an algorithm can model a problem based on its interaction with the experience, environment, or whatever we want to call the input data.
+There are four ways an algorithm can model a problem based on its interaction with the experience, environment, or whatever we want to call the input data [2].
 
 It is popular in machine learning and AI textbooks to consider the learning styles that an algorithm can adopt.
 
@@ -90,7 +80,9 @@ This _taxonomy_ or way of organizing machine learning algorithms is useful becau
 
 In supervised learning, the input data is called training data and has a known label or result. 
 
-The model is prepared through a training process in which it is required to make predictions and is corrected when those predictions are wrong. The training process continues until the model achieves a desired level of accuracy on the training data.
+The model is prepared through a training process in which it is required to make predictions and is corrected when those predictions are wrong. 
+
+The training process continues until the model achieves a desired level of accuracy on the training data.
 
 Examples problems: classification and regression.
 
@@ -102,9 +94,9 @@ In unsupervised learning, the input data is not labeled, so the data does not ha
 
 The model is prepared by deducing structures present in the input data which may be to extract general rules through a mathematical process to systematically reduce redundancy or to organize data by similarity.
 
-Example problems: clustering, dimensionality reduction and association rule learning.
+Example problems: clustering, dimensionality reduction, and association rule learning.
 
-Example algorithms: the Apriori algorithm and K-Means.
+Example algorithms: The Apriori algorithm, K-Means, and PCA. 
 
 ### Semi-Supervised Learning
 
@@ -133,12 +125,33 @@ With reinforcement learning, you do not have any labelled data for training purp
 Once agents have been taught using reinforcement learning, they can  apply this knowledge elsewhere in their environment.
 
 
+## The Elbow Method
+
+The _elbow method_ is a common heuristic (not a formula) for finding the optimal k value for unsupervised models such as PCA or k-means. 
+
+The best approach to using the elbow method is to create the scree plot and also compute a metric for comparison. Also, AutoML tools such as Orange are good for quickly visualizing the results for the elbow method. 
+
+
+Here are some tutorials that may help:
+
+[Elbow Method for optimal value of k in KMeans](https://www.geeksforgeeks.org/elbow-method-for-optimal-value-of-k-in-kmeans/)
+
+[PCA Example in Python with scikit-learn](https://cmdlinetips.com/2018/03/pca-example-in-python-with-scikit-learn/amp/)
+
+[How to do a Clustering project Step by Step](https://z-ai.medium.com/how-to-do-a-clustering-project-step-by-step-4b41e94fad1)
+
+[Detailed Introduction To K-Means Clustering In Python](https://onepagecodewriter.medium.com/detailed-introduction-to-k-means-clustering-in-python-d8178d7eb123)
+
+
+----------
+
+
 
 ## Algorithms Grouped By Similarity
 
-Algorithms are often grouped by similarity in terms of their function (how they work). For example, tree-based methods and neural network inspired methods.
+Algorithms are often grouped by similarity in terms of their function (how they work). For example, tree-based methods and neural network inspired methods [2].
 
-This is perhaps the most useful way to group algorithms and it is the approach we will use in [1].
+This is perhaps the most useful way to group algorithms and it is the approach we will use in [5].
 
 This is a useful grouping method but it is not perfect. However, there are algorithms that could just as easily fit into multiple categories.
 
@@ -366,13 +379,16 @@ Decision Trees are an important type of algorithm for predictive modeling machin
 
 The classical decision tree algorithms have been around for decades and modern variations like random forest are among the most powerful techniques available.
 
-[How to Tune the Number and Size of Decision Trees with XGBoost in Python](https://machinelearningmastery.com/tune-number-size-decision-trees-xgboost-python/)
 
 Gradient boosting involves the creation and addition of decision trees sequentially, each attempting to correct the mistakes of the learners that came before it.
 
-This raises the question as to how many trees (weak learners or estimators) to configure in your gradient boosting model and how big each tree should be
+This raises the question as to how many trees (weak learners or estimators) to configure in your gradient boosting model and how big each tree should be. 
+
+
+[How to Tune the Number and Size of Decision Trees with XGBoost in Python](https://machinelearningmastery.com/tune-number-size-decision-trees-xgboost-python/)
 
 [Decision Trees vs Random Forest](https://medium.com/mlearning-ai/decision-trees-vs-random-forest-c0fcabb757f2)
+
 
 
 ## Regression Algorithms Pros and Cons
@@ -392,31 +408,12 @@ The article discusses some of the Pros and Cons of 9 common regression algorithm
 9. XGBoost Regression
 
 
-—————————-
-
-
-## The Elbow Method
-
-The elbow method is a common heuristic (not a formula) for finding the optimal k value for unsupervised models such as PCA or k-means. 
-
-The best approach to using the elbow method is to create the scree plot and also compute a metric for comparison. Also, AutoML tools such as Orange are good for quickly visualizing the results for the elbow method. 
-
-
-Here are some tutorials that may help:
-
-[Elbow Method for optimal value of k in KMeans](https://www.geeksforgeeks.org/elbow-method-for-optimal-value-of-k-in-kmeans/)
-
-[PCA Example in Python with scikit-learn](https://cmdlinetips.com/2018/03/pca-example-in-python-with-scikit-learn/amp/)
-
-[How to do a Clustering project Step by Step](https://z-ai.medium.com/how-to-do-a-clustering-project-step-by-step-4b41e94fad1)
-
-[Detailed Introduction To K-Means Clustering In Python](https://onepagecodewriter.medium.com/detailed-introduction-to-k-means-clustering-in-python-d8178d7eb123)
-
+----------
 
 
 ## Examples of Algorithm Lists To Create
 
-Below are 10 examples of machine learning algorithm lists that you could create.
+Here are 10 examples of machine learning algorithm lists that we could create [8].
 
 - Regression algorithms
 - SVM algorithms
@@ -432,9 +429,9 @@ Below are 10 examples of machine learning algorithm lists that you could create.
 
 ## Tips for Creating Algorithm List
 
-- Start with why you want the list and use that to define the type of list to create.
+- Start with why we want the list and use that to define the type of list to create.
 
-- Only capture the algorithm properties you actually need, keep it as simple as possible.
+- Only capture the algorithm properties we actually need, keep it as simple as possible.
 
 
 ----------
@@ -478,15 +475,28 @@ Below are 10 examples of machine learning algorithm lists that you could create.
 - Hierarchical Clustering
 
 
+
+
 ## References
 
-[1] [A Tour of Machine Learning Algorithms](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/)
+[1] [Understand Machine Learning Algorithms](https://machinelearningmastery.com/start-here/#algorithms)
 
-[2] [Clustering with K-Means: simple yet powerful](https://medium.com/@alexandre.hsd/everything-you-need-to-know-about-clustering-with-k-means-722f743ef1c4)
+[2] [A Tour of Machine Learning Algorithms](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/)
 
-[3] [A Practical Introduction to 9 Regression Algorithms](https://towardsdatascience.com/a-practical-introduction-to-9-regression-algorithms-389057f86eb9?source=rss----7f60cf5620c9---4)
+[3] [Clustering with K-Means: simple yet powerful](https://medium.com/@alexandre.hsd/everything-you-need-to-know-about-clustering-with-k-means-722f743ef1c4)
 
-[4] [You Should Check Out This Effective Framework for Model Selection](https://pub.towardsai.net/a-framework-for-model-selection-ea4dcda2cb3a)
+[4] [A Practical Introduction to 9 Regression Algorithms](https://towardsdatascience.com/a-practical-introduction-to-9-regression-algorithms-389057f86eb9?source=rss----7f60cf5620c9---4)
+
+[5] [You Should Check Out This Effective Framework for Model Selection](https://pub.towardsai.net/a-framework-for-model-selection-ea4dcda2cb3a)
+
+[6] [10 Machine Learning Techniques for AI Development](https://daffodilsw.medium.com/10-machine-learning-techniques-for-ai-development-15df0953f05f)
+
+[7] [63 Machine Learning Algorithms](https://medium.com/swlh/63-machine-learning-algorithms-introduction-5e8ea4129644)
+
+[8] [Take Control By Creating Targeted Lists of Machine Learning Algorithms](https://machinelearningmastery.com/create-lists-of-machine-learning-algorithms/)
+
+
+[ML Cheatsheet - Algorithms](https://mclguide.readthedocs.io/en/latest/sklearn/guide.html#algorithms)
 
 
 [Comprehensive Guide to Decision Tree Learning for Classification](https://therised.medium.com/comprehensive-guide-to-decision-tree-learning-for-classification-61bf2c510c6b)
