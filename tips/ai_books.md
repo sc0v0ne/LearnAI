@@ -109,12 +109,14 @@ B. Siciliano, L. Sciavicco, L. Villani, and G. Oriolo, Robotics: Modeling, Plann
 
 Every software engineer and manager needs to read the following:
 
-R. L. Glass, _Facts and Fallacies of Software Engineering_, Addison-Wesley Professional, 1st ed., ISBN: 0321117425, 2002.
+T. Demarco, _Peopleware: Productive Projects and Teams_, 2nd ed., Dorset House, 1999. 
 
 F. Brooks, _The Mythical Man-Month_, Anniversary Edition, Addison-Wesley Professional, 1995. 
 
-T. Demarco, _Peopleware: Productive Projects and Teams_, 2nd ed., Dorset House, 1999. 
+R. L. Glass, _Facts and Fallacies of Software Engineering_, Addison-Wesley Professional, 1st ed., ISBN: 0321117425, 2002.
 
+
+The following are helpful to software engineers:
 
 B. W. Kernighan, _The Practice of Programming_.
 

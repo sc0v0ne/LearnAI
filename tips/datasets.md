@@ -32,9 +32,9 @@ Here is a collection of some resources for ML datasets.
 
 ## Dataset Cheatsheet
 
-[ML Cheatsheet Dataset List](https://ml-cheatsheet.readthedocs.io/en/latest/datasets.html)
+Here is a list of public datasets in computer vision, NLP, and more:
 
-List of public datasets in computer vision, NLP, and more.
+[ML Cheatsheet Dataset List](https://ml-cheatsheet.readthedocs.io/en/latest/datasets.html)
 
 
 ## Read Datasets
@@ -66,7 +66,9 @@ How to generate fake data using the Faker library.
 
 ## Structured Datasets
 
-### [HuggingFace](https://github.com/huggingface/datasets)
+### HuggingFace
+
+[HuggingFace](https://github.com/huggingface/datasets)
 
 [Forget Complex Traditional Approaches to handle NLP Datasets, HuggingFace Dataset Library](https://medium.com/@arjunkumbakkara/forget-complex-traditional-approaches-to-handle-nlp-datasets-huggingface-dataset-library-is-your-f7445ea79267)
 
