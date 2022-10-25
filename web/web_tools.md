@@ -166,6 +166,20 @@ The default is 16px which matches any browser's default root font.
 Once we have everything looking good, we can copy the generated CSS or view the results in a codepen instance. 
 
 
+
+## Graphics
+
+[Glaze](https://www.glazestock.com/)
+
+[icons8](https://icons8.com/illustrations)
+
+[unDraw](https://undraw.co/)
+
+[Design Resources for Developers](https://github.com/bradtraversy/design-resources-for-developers)
+
+
+
+
 ## References
 
 [1] [Animista](https://animista.net/)
