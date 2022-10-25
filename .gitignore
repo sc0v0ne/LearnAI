@@ -352,6 +352,7 @@ MigrationBackup/
 
 # Added to file
 .idea/
+.nova/
 .spyproject/
 data/
 nlp/book
