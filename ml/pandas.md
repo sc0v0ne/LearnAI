@@ -1,6 +1,11 @@
 # Pandas
 
-## Basics
+Here are some tips on using Pandas.
+
+
+## First Steps
+
+### Basics
 
 [Practical Pandas Tricks - Part 1: Import and Create DataFrame](https://towardsdatascience.com/introduction-to-pandas-part-1-import-and-create-dataframe-e53326b6e2b1)
 
@@ -9,7 +14,7 @@
 [How To Change Column Type in Pandas DataFrames](https://towardsdatascience.com/how-to-change-column-type-in-pandas-dataframes-d2a5548888f8)
 
 
-## Automatically Convert to Best Data Types
+### Automatically Convert to Best Data Types
 
 When we load data as Pandas dataframe, Pandas automatically assigns a datatype to the variables/columns in the dataframe, typically the datatypes would be int, float and object datatypes. With the recent Pandas 1.0.0, we can make Pandas infer the best datatypes for the variables in a dataframe.
 
@@ -38,50 +43,52 @@ By default, `convert_dtypes` will attempt to convert a Series (or each Series in
 By using the options convert_string, convert_integer, and convert_boolean, it is possible to turn off individual conversions to StringDtype, the integer extension types, or BooleanDtype, respectively.
 
 
-## Dates
+### Dates
 
 [11 Essential Tricks To Demystify Dates in Pandas](https://towardsdatascience.com/11-essential-tricks-to-demystify-dates-in-pandas-8644ec591cf1)
 
 [Dealing With Dates in Pandas](https://towardsdatascience.com/dealing-with-dates-in-pandas-6-common-operations-you-should-know-1ea6057c6f4f)
 
 
-## Iteration
+### Iteration
 
 [How To Loop Through Pandas Rows](https://cmdlinetips.com/2018/12/how-to-loop-through-pandas-rows-or-how-to-iterate-over-pandas-rows/amp/)
 
 
-## String
+### String
 
 [String Operations on Pandas DataFrame](https://blog.devgenius.io/string-operations-on-pandas-dataframe-88af220439d1)
 
 
-## Indexes
+### Indexes
 
 [How To Convert a Column to Row Name/Index in Pandas](https://cmdlinetips.com/2018/09/how-to-convert-a-column-to-row-name-index-in-pandas/amp/)
 
 [8 Quick Tips on Manipulating Index with Pandas](https://towardsdatascience.com/8-quick-tips-on-manipulating-index-with-pandas-c10ef9d1b44f)
 
 
-## Functions
+### Functions
 
 [apply() vs map() vs applymap() in Pandas](https://towardsdatascience.com/apply-vs-map-vs-applymap-pandas-529acdf6d744)
 
 [How to Combine Data in Pandas](https://towardsdatascience.com/how-to-combine-data-in-pandas-5-functions-you-should-know-651ac71a94d6)
 
 
-## Aggregate
+### Aggregate
 
 [6 Lesser-Known Pandas Aggregate Functions](https://towardsdatascience.com/6-lesser-known-pandas-aggregate-functions-c9831b366f21)
 
 [Pandas Groupby and Sum](https://cmdlinetips.com/2020/07/pandas-groupby-and-sum/amp/)
 
 
-## Pivot
+### Pivot
 
 [5 Minute Guide to Pandas Pivot Tables](https://towardsdatascience.com/5-minute-guide-to-pandas-pivot-tables-df2d02786886)
 
 
 ----------
+
+
 
 ## Performance Tips
 
@@ -92,56 +99,130 @@ Using ‘loc’/’iloc’ inside loops is not optimal. Instead, we should use a
 at and iat are meant to access a scalar, that is, a single element in the DataFrame. 
 
 ```py
-import time
-start = time.time()
-# Iterating through DataFrame 
-for index, row in df.iterrows():
-    df.at[index,'c'] = row.a + row.b
-end = time.time()
-print(end - start)
+    import time
+    
+    start = time.time()
+    # Iterating through DataFrame 
+    for index, row in df.iterrows():
+        df.at[index,'c'] = row.a + row.b
+    end = time.time()
+    print(end - start)
 ```
 
 loc and iloc are meant to access multiple elements(series/dataframe) at the same time, potentially to perform vectorized operations.
 
 ```py
-import time
-start = time.time()
-# Iterating through the DataFrame df
-for index, row in df.iterrows():
-        df.loc[index,'c'] = row.a + row.b
-end = time.time()
-print(end - start)
+    import time
+
+    start = time.time()
+    # Iterating through the DataFrame df
+    for index, row in df.iterrows():
+            df.loc[index,'c'] = row.a + row.b
+    end = time.time()
+    print(end - start)
 ```
 
 **NOTE:** If we try to access a series using at and iat, it will throw an error.
 
 ```py
-df.at[2,'a']
-### Output: 22
+    df.at[2,'a']
+    ### Output: 22
 
-df.iat[2,0]
-### Output: 22
+    df.iat[2,0]
+    ### Output: 22
 
-## This will generate an error since we are trying to access multiple rows
-df.at[:3,'a']
+    ## This will generate an error since we are trying to access multiple rows
+    df.at[:3,'a']
 ```
 
 ```py
-df.loc[:3,'a']
-##0    26
-##1    10
-##2    22
-##3    22
+    df.loc[:3,'a']
+    ##0    26
+    ##1    10
+    ##2    22
+    ##3    22
 
-df.loc[:3,0]
-##0    26
-##1    10
-##2    22
-##3    22
+    df.loc[:3,0]
+    ##0    26
+    ##1    10
+    ##2    22
+    ##3    22
 ```
 
 
+
+
+## How to Speedup Pandas
+
+### 1. Use itertuples() instead of iterrows()
+
+Data manipulation often requires iterating over DataFrame rows.
+
+```py
+    answers_list : list[int] = []
+    for index, row in df.iterrows():
+        answers_list.append(simple_sum(row["col1"], row["col2"]))
+```
+
+However, `iterrows()` is often the go-to option for such use cases. However, it is very slow and can be easily swapped by `itertuples()`.
+
+```py
+    answers_list : list[int] = []
+    for row in df.itertuples():
+        answers_list.append(simple_sum(row.col1, row.col2))
+```
+
+### 2. Appending new rows efficiently:
+
+Consider the same task as above i.e. adding two columns of a dataframe. Only this time, the goal is to create a new dataframe containing original data along with a column of summed values.
+
+An inefficient way of accomplishing the task would involve initializing a new dataframe and appending new rows to it from a loop. For a dataframe with 100k rows, it takes roughly 56s to complete the task.
+
+Appending rows to a dataframe in a loop is an extremely bad idea. 
+
+A better alternative would be to accumulate the results in a `list` and create a new dataframe from the list.
+
+```py
+    new_list = []
+
+    for row in df.itertuples():
+
+        new_row = {"col1": [row.col1], "col2": [row.col2], "col3": [simple_sum(row.col1, row.col2)]}
+        new_list.append(new_row)
+        
+    new_df = pd.DataFrame(new_list)
+```
+
+### 3. apply() is just a glorified for loop
+
+A more traditional way of applying a function to dataframe rows involves using the `apply()` method which uses a loop with an added overhead. 
+
+This can often be avoided by leveraging vectorized operations.
+
+```py
+    def conditional_multiplication(a: int) -> int:
+        """
+        Multiply by 2 if input is > 1000 else multiply by 3
+        """
+        if a >= 1000:
+            return a * 2
+        else:
+            return a * 3
+    
+    # A suboptimal solution
+    df["conditional_mul_result"] = df["col2"].apply(conditional_multiplication)
+```
+
+
+```py
+    # Here we leverage NumPy vector operations
+    df["conditional_mul_result_optimized"] = np.where(df["col2"] >= 1000, df["col2"]* 2, df["col2"] * 3)
+```
+
+
+
 ----------
+
 
 
 ## Best Format to Save Pandas Data
@@ -181,110 +262,6 @@ It seems that feather format is an ideal candidate to store the data between Jup
 
 This comparison does not imply that you should use this format in every possible case. For example, the feather format is not expected to be used as a long-term file storage. Also, it does not take into account all possible situations when other formats could perform better. 
 
-
-## Top Five Alternatives to CSV
-
-The article [3] discuss five alternatives to CSV for data storage:
-
-<div class="image-preview">
-    <div>
-        <img width="600" alt="Write time comparison" src="https://miro.medium.com/max/1400/1*y1k2bephs6fp5d7SyMj1Zw.png" />
-    </div>
-    <div class="caption">Figure 2: Write time comparison in seconds./div>
-</div>
-
-The difference in write times is very interesting. Pretty much any format will have much faster write time than CSV.
-
-<div class="image-preview">
-    <div>
-        <img width="600" alt="Read time comparison" src="https://miro.medium.com/max/1400/1*Z0MGbtavEHrSH2SiR0my6A.png" />
-    </div>
-    <div class="caption">Figure 3: Read time comparison in seconds./div>
-</div>
-
-The read time for CSV is not bad but Apache Avro is terrible. Pickle has the fastest read time, so it looks like the most promising option when working only in Python.
-
-<div class="image-preview">
-    <div>
-        <img width="600" alt="File size comparison" src="https://miro.medium.com/max/1400/1*mcbAJp_cwseCI0pxfPI2FQ.png" />
-    </div>
-    <div class="caption">Figure 4: File size comparison in MB./div>
-</div>
-
-Pretty much any file format has a smaller file size than CSV. The file size reduction ranges from 2.4x to 4.8x, depending on the file format.
-
-### ORC
-
-ORC stands for Optimized Row Columnar which is a data format optimized for reads and writes in Hive. 
-
-Since Hive is painfully slow, the developers at Hortonworks decided to develop the ORC file format to improve speed.
-
-In Python, we can use the `read_orc()` function from Pandas to read ORC files. Unfortunately, there is no alternative function for writing ORC files, so we will have to use PyArrow.
-
-```py
-    # save pandas dataframe to ORC file
-    table = pa.Table.from_pandas(df, preserve_index=False)
-    orc.write_table(table, '10M.orc')
-    
-    # read ORC file to dataframe
-    df = pd.read_orc('10M.orc')
-```
-
-### Avro
-
-Avro is an open-source project that provides services of data serialization and exchange for Apache Hadoop. 
-
-Avro stores a JSON-like schema with the data, so the correct data types are known in advance which where the compression happens.
-
-Avro has an API for every major programming language, but it does not support Pandas by default.
-
-### Parquet
-
-Apache Parquet is a data storage format designed for efficiency using the column storage architecture, since it allows you to skip data that isn’t relevant quickly. Therefore, both queries and aggregations are faster which results in hardware savings.
-
-Pandas has full support for Parquet files.
-
-```py
-    # save dataframe to parquet file
-    df.to_parquet('10M.parquet')
-
-    # read [arquet file to dataframe
-    df = pd.read_parquet('10M.parquet')
-```
-
-### Pickle
-
-We can use the pickle module to serialize objects and save them to a file. We can then deserialize the serialized file to load them back when needed. 
-
-Pickle has one major advantage over other formats: we can use it to store any Python object.
-
-One of the most widely used functionalities is saving machine learning models after the training is complete.
-
-The biggest downside is that Pickle is Python-specific, so cross-language support is not guaranteed which could be a deal-breaker for any project requiring data communication between Python and R, for example.
-
-```py
-    # save dataframe to pickle file
-    with open('10M.pkl', 'wb') as f:
-        pickle.dump(df, f)
-    
-    # load pickle file
-    with open('10M.pkl', 'rb') as f:
-        df = pickle.load(f)
-```
-
-### Feather
-
-Feather is a data format for storing data frames. It’s designed around a simple premise — to push data frames in and out of memory as efficiently as possible. It was initially designed for fast communication between Python and R, but you’re not limited to this use case.
-
-We can use the feather library to work with Feather files in Python. It’s the fastest available option currently.
-
-```py
-    # save Pandas DataFrames to Feather file
-    feather.write_dataframe(df, '10M.feather')
-    
-    # load Feather file
-    df = feather.read_dataframe('10M.feather')
-```
 
 
 ## Better Data Formats
@@ -374,6 +351,448 @@ We can read/write a Feather file format the same way as CSV/Parquet.
 ```
 
 
+## Top Five Alternatives to CSV
+
+The article [3] discuss five alternatives to CSV for data storage:
+
+![Write time comparison|600xauto {Figure 2: Write time comparison in seconds.}](https://miro.medium.com/max/1400/1*y1k2bephs6fp5d7SyMj1Zw.png)
+
+
+The difference in write times is very interesting. Pretty much any format will have much faster write time than CSV.
+
+![Read time comparison|600xauto {Figure 3: Read time comparison in seconds.}](https://miro.medium.com/max/1400/1*Z0MGbtavEHrSH2SiR0my6A.png)
+
+The read time for CSV is not bad but Apache Avro is terrible. Pickle has the fastest read time, so it looks like the most promising option when working only in Python.
+
+![File size comparison|600xauto {Figure 4: File size comparison in MB.}](https://miro.medium.com/max/1400/1*mcbAJp_cwseCI0pxfPI2FQ.png)
+
+Pretty much any file format has a smaller file size than CSV. The file size reduction ranges from 2.4x to 4.8x, depending on the file format.
+
+### ORC
+
+ORC stands for Optimized Row Columnar which is a data format optimized for reads and writes in Hive. 
+
+Since Hive is painfully slow, the developers at Hortonworks decided to develop the ORC file format to improve speed.
+
+In Python, we can use the `read_orc()` function from Pandas to read ORC files. Unfortunately, there is no alternative function for writing ORC files, so we will have to use PyArrow.
+
+```py
+    # save pandas dataframe to ORC file
+    table = pa.Table.from_pandas(df, preserve_index=False)
+    orc.write_table(table, '10M.orc')
+    
+    # read ORC file to dataframe
+    df = pd.read_orc('10M.orc')
+```
+
+### Avro
+
+Avro is an open-source project that provides services of data serialization and exchange for Apache Hadoop. 
+
+Avro stores a JSON-like schema with the data, so the correct data types are known in advance which where the compression happens.
+
+Avro has an API for every major programming language, but it does not support Pandas by default.
+
+### Parquet
+
+Apache Parquet is a data storage format designed for efficiency using the column storage architecture, since it allows you to skip data that isn’t relevant quickly. Therefore, both queries and aggregations are faster which results in hardware savings.
+
+Pandas has full support for Parquet files.
+
+```py
+    # save dataframe to parquet file
+    df.to_parquet('10M.parquet')
+
+    # read [arquet file to dataframe
+    df = pd.read_parquet('10M.parquet')
+```
+
+### Pickle
+
+We can use the pickle module to serialize objects and save them to a file. We can then deserialize the serialized file to load them back when needed. 
+
+Pickle has one major advantage over other formats: we can use it to store any Python object.
+
+One of the most widely used functionalities is saving machine learning models after the training is complete.
+
+The biggest downside is that Pickle is Python-specific, so cross-language support is not guaranteed which could be a deal-breaker for any project requiring data communication between Python and R, for example.
+
+```py
+    # save dataframe to pickle file
+    with open('10M.pkl', 'wb') as f:
+        pickle.dump(df, f)
+    
+    # load pickle file
+    with open('10M.pkl', 'rb') as f:
+        df = pickle.load(f)
+```
+
+### Feather
+
+Feather is a data format for storing data frames. It’s designed around a simple premise — to push data frames in and out of memory as efficiently as possible. It was initially designed for fast communication between Python and R, but you’re not limited to this use case.
+
+We can use the feather library to work with Feather files in Python. It’s the fastest available option currently.
+
+```py
+    # save Pandas DataFrames to Feather file
+    feather.write_dataframe(df, '10M.feather')
+    
+    # load Feather file
+    df = feather.read_dataframe('10M.feather')
+```
+
+
+----------
+
+
+
+## Effective use of Data Types
+
+Make effective use of data types to prevent crashing of memory.
+
+Pandas offer a vast list of API for data explorations and visualization which makes it more popular among the data scientist community. 
+
+Dask, modin, Vaex are some of the open-source packages that can scale up the performance of Pandas library and handle large-sized datasets.
+
+When the size of the dataset is comparatively larger than memory using such libraries is preferred, but when dataset size comparatively equal or smaller to memory size, we can optimize the memory usage while reading the dataset. 
+
+Here, we discuss how to optimize memory usage while loading the dataset using `read_csv()`.
+
+Using `df.info()` we can view the default data types and memory usage.
+
+
+The default list of data types assigned by Pandas are:
+
+|  dtype        |                 Usage                  |
+| :------------ | :------------------------------------- |
+| object        | Text or mixed numeric and text values  |
+| int64         | Integer numbers                        |
+| float64       | Floating-point numbers                 |
+| bool          | True/False values                      |
+| datetime64    | Date and time values                   |
+| timedelta[ns] | Difference between two datetime values |
+| category      | Finite list of text values             |
+
+
+### Numerical Features
+
+For all numerical values, Pandas assigns float64 data type to a feature column having at least one float value, and int64 data type to a feature column having all feature values as integers.
+
+Here is a list of the ranges of each datatype:
+
+|  Data Type    |                            Description                                   |
+| :------------ | :----------------------------------------------------------------------- |
+| bool_         | Boolean stored as a byte                                                 |
+| int_          | Default integer type (same as C long)                                    |
+| intc          | Same as C int (int32 or int64)                                           |
+| intp          | Integer used for indexing (ssize_t - int32 or int64)                     |
+| int8          | Integer (-2^7 to 2^7 - 1)                                                |
+| int16         | Integer (-2^15 to 2^15 - 1)                                              |
+| intn          | Integer (-2^(n-1) to 2^(n-1) - 1)                                        |
+| uint8         | Unsigned integer (0 to 255)                                              |
+| uint16        | Unsigned integer (0 to 2^16 - 1)                                         |
+| uint32        | Unsigned integer (0 to 2^32 - 1)                                         |
+| float_        | Shorthand for float64                                                    |
+| float16       | Half-precision float: sign bit, 5-bit exponent, and 10-bit mantissa    |
+| float32       | Single-precision float: sign bit, 8-bit exponent, and 32-bit mantissa  |
+| float64       | Double-precision float: sign bit, 11-bit exponent, and 52-bit mantissa |
+| complex_      | Shorthand for complex128                                                 |
+| complex64     | Complex number represented by two 32-bit floats                          |
+| complex128     | Complex number represented by two 64-bit floats                          |
+
+
+NOTE: A value with data type as int8 takes 8x times less memory compared to int64 data type.
+
+### DateTime
+
+By default, datetime columns are assigned as object data type that can be downgraded to DateTime format.
+
+### Categorical
+
+Pandas assign non-numerical feature columns as object data types which can be downgraded to category data types.
+
+The non-numerical feature column usually has categorical variables which are mostly repeating. 
+
+For example, the gender feature column has just 2 categories ‘Male’ and ‘Female’ that are repeating over and over again for all the instances which are re-occupying the space. 
+
+Assigning gender to category datatype is a more compact representation.
+
+**Better performance with categoricals**
+
+If you do a lot of analytics on a particular dataset, converting to categorical can yield substantial overall performance gains. 
+
+A categorical version of a DataFrame column will often use significantly less memory.
+
+#### Better performance with categoricals
+
+If you do a lot of analytics on a particular dataset, converting to categorical can yield substantial overall performance gains. A categorical version of a DataFrame column will often use significantly less memory, too.
+
+#### Categorical Methods
+
+Series containing categorical data have several special methods similar to the `Series.str` specialized string methods. This also provides convenient access to the categories and codes. 
+
+The special attribute cat provides access to categorical methods:
+
+```py
+    s = pd.Series(['a', 'b', 'c', 'd'] * 2)
+
+    cat_s = s.astype('category')
+    cat_s.cat.codes
+    cat_s.cat.categories
+
+
+    actual_categories = ['a', 'b', 'c', 'd', 'e']
+
+    cat_s2 = cat_s.cat.set_categories(actual_categories)
+    cat_s2.value_counts()
+    ```
+
+In large datasets, categoricals are often used as a convenient tool for memory savings and better performance. After you filter a large DataFrame or Series, many of the categories may not appear in the data.
+
+```py
+  cat_s3 = cat_s[cat_s.isin(['a', 'b'])]
+  cat_s3.cat.remove_unused_categories()
+```
+
+Table 12-1: Categorical methods for Series in pandas
+
+### Creating dummy variables for modeling
+
+When using statistics or machine learning tools, we usually transform categorical data into dummy variables callwd _one-hot encoding_ which involves creating a DataFrame with a column for each distinct category; these columns contain 1s for occurrences of a given category and 0 otherwise.
+
+```py
+    cat_s = pd.Series(['a', 'b', 'c', 'd'] * 2, dtype='category')
+    
+    pd.get_dummies(cat_s)
+```
+
+
+### Converting between String and Datetime
+
+You can format datetime objects and pandas Timestamp objects as strings using `str` or the `strftime` method passing a format specification. 
+
+```py
+    stamp = datetime(2011, 1, 3)
+
+    str(stamp)
+    stamp.strftime('%Y-%m-%d')
+```
+
+You can use many of the same format codes to convert strings to dates using `datetime.strptime`. 
+
+```py
+    value = '2011-01-03'
+
+    datetime.strptime(value, '%Y-%m-%d')
+
+    datestrs = ['7/6/2011', '8/6/2011']
+
+    [datetime.strptime(x, '%m/%d/%Y') for x in datestrs]
+```
+
+pandas is generally oriented toward working with arrays of dates whether used as an axis index or a column in a DataFrame. 
+
+The `to_datetime` method parses many different kinds of date representations. It also handles values that should be considered missing (None, empty string, etc.). 
+
+NaT (Not a Time) is pandas’s null value for timestamp data.
+
+
+12.2 Advanced GroupBy Use
+
+12.3 Techniques for Method Chaining
+
+The pipe Method
+
+You can accomplish a lot with built-in pandas functions and the approaches to method chaining with callables that we just looked at. 
+
+Sometimes you need to use your own functions or functions from third-party libraries. 
+
+```py
+    a = f(df, arg1=v1)
+    b = g(a, v2, arg3=v3)
+    c = h(b, arg4=v4)
+
+    result = (df.pipe(f, arg1=v1)
+            .pipe(g, v2, arg3=v3)
+            .pipe(h, arg4=v4))
+```
+
+The statement `f(df)` and `df.pipe(f)` are equivalent but `pipe` makes chained invocation easier.
+
+
+### Typecasting while Reading Data
+
+The `read_csv` function includes a type parameter which accepts user-provided data types in a key-value format that can use instead of the default ones. 
+
+The DateTime feature column can be passed to the `parse_dates` parameter.
+
+```py
+    dtype_dict = {
+        'vendor_id': 'int8',
+        'passenger_count': 'int8',
+        'pickup_longitude': 'float16',
+        'pickup_latitude': 'float16',
+        'dropoff_longitude': 'float16',
+        'dropoff_latitude': 'float16',
+        'store-and_fwd_flag': 'category',
+        'trip_duration': 'int32'
+    }
+
+    dates = ['pickup_datetime', 'dropoff_datetime']
+
+    df = pd.read_csv("../data/train.csv",
+                     dtype=dtype_dict,
+                     parse_dates=dates)
+
+    print(df.shape)
+    print(df.info(verbose=False, memory_usage='deep'))
+```
+
+
+----------
+
+
+
+## Make It Easier to Work with Large Datasets
+
+Pandas mainly uses a single core of CPU to process instructions and does not take advantage of scaling up the computation across various cores of the CPU to speed up the workflow [7]. 
+
+Thus, Pandas can cause memory issues when reading large datasets since it fails to load larger-than-memory data into RAM.
+
+There are various other Python libraries that do not load the large data at once but interacts with system OS to map the data with Python. In addition, they utilize all the cores of the CPU to speed up the computations. 
+
+The article [8] provides some tips on working with huge datasets using pandas:
+
+- Explicitly pass the data-types
+- Select subset of columns
+- Convert dataframe to parquet
+- Convert to pkl
+
+### Explicitly pass the data-types
+
+```py
+    import pandas as pd
+    df = pd.read_csv(data_file, 
+                     n_rows = 100, 
+                     dtype={'col1': 'object', 'col2': 'float32',})
+```
+
+### Select subset of columns
+
+```py
+    cols_to_use = ['col1', 'col2',]
+    df = pd.read_csv(data_file, usecols=cols_to_use)
+```
+
+### Convert dataframe to parquet
+
+```py
+    df.to_parquet()
+    df = pd.read_parquet()
+```
+
+### Convert to pkl
+
+```py
+    df.to_pickle(‘train.pkl’) 
+```
+
+The article [9] discusses four Python libraries that can read and process large-sized datasets.
+
+- Dask
+- Modin
+- Vaex
+- Pandas with chunks
+
+### Dask
+
+Dask is an open-source Python library that provides multi-core and distributed parallel execution of larger-than-memory datasets
+
+Dask provides the high-performance implementation of the function that parallelizes the implementation across all the cores of the CPU.
+
+Dask provides API similar to Pandas and Numpycwhich makes it easy for developers to switch between the libraries.
+
+```py
+    import dask.dataframe as dd
+
+    # Read the data using dask
+    df_dask = dd.read_csv("DATA/text_dataset.csv")
+
+    # Parallelize the text processing with dask
+    df_dask['review'] = df_dask.review.map_partitions(preprocess_text)
+```
+
+### Modin
+
+Modin is another Python library that speeds up Pandas notebooks, scripts, or workflows. 
+
+Modin distributes both data and computations. 
+
+Modin partitions a DataFrame along both axes so it performs on a matrix of partitions.
+
+In contrast to Pandas, Modin utilizes all the cores available in the system, to speed up the Pandas workflow, only requiring users to change a single line of code in their notebooks.
+
+```py
+    import modin.pandas as md
+
+    # read data using modin
+    modin_df = pd.read_csv("DATA/text_dataset.csv")
+
+    # Parallel text processing of review feature 
+    modin_df['review'] = modin_df.review.apply(preprocess_text)
+```
+
+### Vaex
+
+Vaex is a Python library that uses an _expression system_ and _memory mapping_ to interact with the CPU and parallelize the computations across various cores of the CPU.
+
+Instead of loading the entire data into memory, Vaex just memory maps the data and creates an expression system.
+
+Vaex covers some of the API of pandas and is efficient to perform data exploration and visualization for a large dataset on a standard machine.
+
+```py
+    import vaex
+
+    # Read the data using Vaex
+    df_vaex = vaex.read_csv("DATA/text_dataset.csv")
+
+    # Parallize the text processing
+    df_vaex['review'] = df_vaex.review.apply(preprocess_text)
+```
+
+
+### Read using Pandas in Chunks
+
+Pandas loads the entire dataset into RAM which may cause a memory overflow issue while reading large datasets.
+
+Instead, we can read the large dataset in _chunks_ and perform data processing for each chunk.
+
+The idea is to load 10k instances in each chunk (lines 11–14), perform text processing for each chunk (lines 15–16), and append the processed data to the existing CSV file (lines 18–21).
+
+```py
+    # append to existing CSV file or save to new file
+    def saveDataFrame(data_temp):
+        
+        path = "DATA/text_dataset.csv"
+        if os.path.isfile(path):
+            with open(path, 'a') as f:
+                data_temp.to_csv(f, header=False)
+        else:
+            data_temp.to_csv(path, index=False)
+            
+    # Define chunksize
+    chunk_size = 10**3
+
+    # Read and process the dataset in chunks
+    for chunk in tqdm(pd.read_csv("DATA/text_dataset.csv", chunksize=chunk_size)):
+        preprocessed_review = preprocess_text(chunk['review'].values)
+         saveDataFrame(pd.DataFrame({'preprocessed_review':preprocessed_review, 
+               'target':chunk['target'].values
+             }))
+```
+
+
+
 
 ## References
 
@@ -386,3 +805,20 @@ We can read/write a Feather file format the same way as CSV/Parquet.
 [4] [Optimize Python Performance with Better Data Storage](https://towardsdatascience.com/optimize-python-performance-with-better-data-storage-d119b43dd25a)
 
 
+[5] [How to Speed up Pandas by 100x](https://medium.com/geekculture/simple-tricks-to-speed-up-pandas-by-100x-3b7e705783a8)
+
+[6] [How we optimized Python API server code 100x](https://towardsdatascience.com/how-we-optimized-python-api-server-code-100x-9da94aa883c5)
+
+
+[7] [4 Python Libraries that make it easier to Work with Large Datasets](https://towardsdatascience.com/4-python-libraries-that-ease-working-with-large-dataset-8e91632b8791)
+
+[8] [Pandas tips to deal with huge datasets](https://kvirajdatt.medium.com/pandas-tips-to-deal-with-huge-datasets-f6a012d4e953)
+
+[9] [Optimize Pandas Memory Usage for Large Datasets](https://towardsdatascience.com/optimize-pandas-memory-usage-while-reading-large-datasets-1b047c762c9b)
+
+[10] [Top 2 tricks for compressing and loading huge datasets](https://medium.com/the-techlife/top-2-tricks-for-compressing-and-loading-huge-datasets-91a7e394c933)
+
+
+[11] [How to Speed Up Pandas with Modin](https://towardsdatascience.com/how-to-speed-up-pandas-with-modin-84aa6a87bcdb)
+
+[12] [Speed Up Your Pandas Workflow with Modin](https://towardsdatascience.com/speed-up-your-pandas-workflow-with-modin-9a61acff0076)
