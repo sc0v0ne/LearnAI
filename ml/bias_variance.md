@@ -1,10 +1,5 @@
 # Bias Variance Trade-off
 
-<head>
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
-</head>
-
-
 ## Overview
 
 The bias-variance trade-off will help us understand the concepts of models over-fitting and under-fitting the training data.
@@ -146,13 +141,7 @@ Variance: Var(f) = E[(f - E(f))²]
 
 The relation between the bias, variance, and total error can be explained by the following graph.
 
-<div class="image-preview">
-  <div>
-    <img width="600" alt="Effect of Bias and Variance" src="https://miro.medium.com/max/1178/0*JZRamWbawb7e1P6n.png" />
-  </div>
-  <div class="caption">Figure 1: The relation between the bias, variance, and total error.</div>
-</div>
-
+![Effect of Bias and Variance|600xauto {Figure 1: The relation between the bias, variance, and total error.}](https://miro.medium.com/max/1178/0*JZRamWbawb7e1P6n.png)
 
 The x-axis represents the complexity of our model and the y-axis is the error value.
 
@@ -173,13 +162,7 @@ The optimal complexity point is where we achieve the right balance between the b
 
 Here are a few examples of how under-fitting, optimal-fitting and over-fitting looks like:
 
-<div class="image-preview">
-  <div>
-    <img width="600" alt="Examples of model fitting" src="https://miro.medium.com/max/1400/0*VK_AEm-3wqlZw4f4.png" />
-  </div>
-  <div class="caption">Figure 2: Examples of how under-fitting, optimal-fitting, and over-fitting.</div>
-</div>
-
+![Effect of model fitting|600xauto {Figure 2: Examples of how under-fitting, optimal-fitting, and over-fitting.}](https://miro.medium.com/max/1400/0*VK_AEm-3wqlZw4f4.png)
 
 For models with high variance (rightmost column), we can see that the underlying noise is also captured which leads to awesome training performance, but terrible test performance since the generalization is poorest in this case. 
 

@@ -57,24 +57,13 @@ The two terms refer to two different ways of looking at a signal, either as its 
 
 In the **time domain**, a signal is a wave that varies in amplitude (y-axis) over time (x-axis). It is more likely that you are used to seeing graphs in the time domain.
 
-<div class="image-preview">
-    <div>
-        <img width="600" alt="A signal in the time domain" src="https://files.realpython.com/media/timedomain.cc67471385a2.png" />
-    </div>
-    <div class="caption">Figure 1: Plot of a signal in the time domain."</div>
-</div>
-
+![A signal in the time domain|600xauto {Figure 1: Plot of a signal in the time domain.}](https://files.realpython.com/media/timedomain.cc67471385a2.png)
 
 In the **frequency domain**, a signal is represented as a series of frequencies (x-axis) that each have an associated power (y-axis). 
 
 The following image is the above audio signal after being Fourier transformed:
 
-<div class="image-preview">
-    <div>
-        <img width="600" alt="A signal in the frequency domain" src="https://files.realpython.com/media/freqdomain.fdeba267dfda.png" />
-    </div>
-    <div class="caption">Figure 2: Plot of a signal in the frequency domain."</div>
-</div>
+![A signal in the frequency domain|600xauto {Figure 2: Plot of a signal in the frequency domain.}](https://files.realpython.com/media/freqdomain.fdeba267dfda.pn)
 
 
 ### Types of Fourier Transforms
@@ -105,21 +94,9 @@ The DCT and DST are a kina like two halves that together make up the Fourier tra
 
 An **even function** is symmetrical about the y-axis whereas an **odd function** is symmetrical about the origin.
 
-<div class="image-preview">
-    <div>
-        <img width="600" alt="A signal in the time domain" src="https://files.realpython.com/media/evenandodd.8410a9717f96.png" />
-    </div>
-    <div class="caption">Figure 3: Plot of an even function."</div>
-</div>
+![Plot of even/odd function|600xauto {Figure 3: Plot of an even and odd function.}](https://files.realpython.com/media/evenandodd.8410a9717f96.png)
 
 Here, the odd function is symmetrical about y = -x which is described as being symmetrical about the origin.
-
-<div class="image-preview">
-    <div>
-        <img width="600" alt="A signal in the time domain" src="https://files.realpython.com/media/evenandodd.8410a9717f96.png" />
-    </div>
-    <div class="caption">Figure 3: Plot of an odd function."</div>
-</div>
 
 When we calculate the Fourier transform, we pretend the function we are calculating it on is infinite. 
 
@@ -181,12 +158,8 @@ Fourier transform does not just give the frequencies present in the signal, it a
 
 The **Inverse Fourier Transform** is the opposite of the Fourier Transform which takes the frequency-domain representation of a given signal as input and mathematically synthesizes the original signal.
 
-<div class="image-preview">
-    <div>
-        <img width="600" alt="Fourier Transform" src="https://miro.medium.com/max/1400/1*e-_z80BnbHWyFTfRLblJ_w.gif" />
-    </div>
-    <div class="caption">Figure 4: Fourier Transform."</div>
-</div>
+![Fourier Transform|600xauto {Figure 4: Fourier Transform.}](https://miro.medium.com/max/1400/1*e-_z80BnbHWyFTfRLblJ_w.gif)
+
 
 ### 3. Fast Fourier Transform (FFT)
 
