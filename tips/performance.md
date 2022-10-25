@@ -3,6 +3,7 @@
 Here are some resources to improve Python performance, also see [Memory Usage](,/memory_usage.md)
 
 
+
 ## Why Python is so slow
 
 Slowness vs waiting
@@ -366,7 +367,7 @@ The rule of thumb is that a computer is a sum of its parts or weakest link. In a
 
 Thus, there is no silver bullet hardware or software technology that will magically improve computer performance.
 
-Hardware upgrades (vertical scaling) usually provide only marginal improvement in performance. However, we can achieve as much as 30-100x performance improvement using software libraries and code refactoring to improve parallelization (horizontal scaling) [2][3].
+Hardware upgrades (vertical scaling) usually provide only marginal improvement in performance. However, we can achieve as much as 30-100x performance improvement using software libraries and code refactoring to improve parallelization (horizontal scaling) [2] [3].
 
 > There is no silver bullet to improve performance.
 
@@ -519,168 +520,24 @@ The tool automatically optimizes low-precision recipes by applying different com
 
 
 
-## Make It Easier to Work with Large Datasets
-
-Pandas mainly uses a single core of CPU to process instructions and does not take advantage of scaling up the computation across various cores of the CPU to speed up the workflow [8]. 
-
-Thus, Pandas can cause memory issues when reading large datasets since it fails to load larger-than-memory data into RAM.
-
-There are various other Python libraries that do not load the large data at once but interacts with system OS to map the data with Python. In addition, they utilize all the cores of the CPU to speed up the computations. 
-
-The article [8] provides some tips on working with  huge datasets using pandas:
-
-- Explicitly pass the data-types
-- Select subset of columns
-- Convert dataframe to parquet
-- Convert to pkl
-
-### Explicitly pass the data-types
-
-```py
-    import pandas as pd
-    df = pd.read_csv(data_file, 
-                     n_rows = 100, 
-                     dtype={'col1': 'object', 'col2': 'float32',})
-```
-
-### Select subset of columns
-
-```py
-    cols_to_use = ['col1', 'col2',]
-    df = pd.read_csv(data_file, usecols=cols_to_use)
-```
-
-### Convert dataframe to parquet
-
-```py
-    df.to_parquet()
-    df = pd.read_parquet()
-```
-
-### Convert to pkl
-
-```py
-    df.to_pickle(‘train.pkl’) 
-```
-
-The article [7] discusses four Python libraries that can read and process large-sized datasets.
-
-- Dask
-- Modin
-- Vaex
-- Pandas with chunks
-
-### Dask
-
-Dask is an open-source Python library that provides multi-core and distributed parallel execution of larger-than-memory datasets
-
-Dask provides the high-performance implementation of the function that parallelizes the implementation across all the cores of the CPU.
-
-Dask provides API similar to Pandas and Numpycwhich makes it easy for developers to switch between the libraries.
-
-```py
-    import dask.dataframe as dd
-
-    # Read the data using dask
-    df_dask = dd.read_csv("DATA/text_dataset.csv")
-
-    # Parallelize the text processing with dask
-    df_dask['review'] = df_dask.review.map_partitions(preprocess_text)
-```
-
-### Modin
-
-Modin is another Python library that speeds up Pandas notebooks, scripts, or workflows. 
-
-Modin distributes both data and computations. 
-
-Modin partitions a DataFrame along both axes so it performs on a matrix of partitions.
-
-In contrast to Pandas, Modin utilizes all the cores available in the system, to speed up the Pandas workflow, only requiring users to change a single line of code in their notebooks.
-
-```py
-    import modin.pandas as md
-
-    # read data using modin
-    modin_df = pd.read_csv("DATA/text_dataset.csv")
-
-    # Parallel text processing of review feature 
-    modin_df['review'] = modin_df.review.apply(preprocess_text)
-```
-
-### Vaex
-
-Vaex is a Python library that uses an _expression system_ and _memory mapping_ to interact with the CPU and parallelize the computations across various cores of the CPU.
-
-Instead of loading the entire data into memory, Vaex just memory maps the data and creates an expression system.
-
-Vaex covers some of the API of pandas and is efficient to perform data exploration and visualization for a large dataset on a standard machine.
-
-```py
-    import vaex
-
-    # Read the data using Vaex
-    df_vaex = vaex.read_csv("DATA/text_dataset.csv")
-
-    # Parallize the text processing
-    df_vaex['review'] = df_vaex.review.apply(preprocess_text)
-```
-
-
-### Read using Pandas in Chunks
-
-Pandas loads the entire dataset into RAM which may cause a memory overflow issue while reading large datasets.
-
-Instead, we can read the large dataset in _chunks_ and perform data processing for each chunk.
-
-The idea is to load 10k instances in each chunk (lines 11–14), perform text processing for each chunk (lines 15–16), and append the processed data to the existing CSV file (lines 18–21).
-
-```py
-    # append to existing CSV file or save to new file
-    def saveDataFrame(data_temp):
-        
-        path = "DATA/text_dataset.csv"
-        if os.path.isfile(path):
-            with open(path, 'a') as f:
-                data_temp.to_csv(f, header=False)
-        else:
-            data_temp.to_csv(path, index=False)
-            
-    # Define chunksize
-    chunk_size = 10**3
-
-    # Read and process the dataset in chunks
-    for chunk in tqdm(pd.read_csv("DATA/text_dataset.csv", chunksize=chunk_size)):
-        preprocessed_review = preprocess_text(chunk['review'].values)
-         saveDataFrame(pd.DataFrame({'preprocessed_review':preprocessed_review, 
-               'target':chunk['target'].values
-             }))
-```
-
-
-
-----------
-
-
-
-## Python Performance
-
-[How to Speed Up Pandas with Modin](https://towardsdatascience.com/how-to-speed-up-pandas-with-modin-84aa6a87bcdb)
-
-[Speed Up Your Pandas Workflow with Modin](https://towardsdatascience.com/speed-up-your-pandas-workflow-with-modin-9a61acff0076)
-
-[How we optimized Python API server code 100x](https://towardsdatascience.com/how-we-optimized-python-api-server-code-100x-9da94aa883c5)
-
-
 ## Scikit-learn Performance
 
-[How to Speed up Scikit-Learn Model Training](https://medium.com/distributed-computing-with-ray/how-to-speed-up-scikit-learn-model-training-aaf17e2d1e1)
+Sometimes scikit-learn models can take a long time to train. How can we create the best scikit-learn model in the least amount of time? [7]
+
+There are a few approaches to solving this problem:
+
+- Changing your optimization function (solver).
+
+- Using different hyperparameter optimization techniques (grid search, random search, early stopping).
+
+- Parallelize or distribute your training with joblib and Ray.
+
 
 
 
 ## References
 
-[1] [Why Python is so slow and how to speed it up](https://towardsdatascience.com/why-is-python-so-slow-and-how-to-speed-it-up-485b5a84154e
+[1] [Why Python is so slow and how to speed it up](https://towardsdatascience.com/why-is-python-so-slow-and-how-to-speed-it-up-485b5a84154e)
 
 [2] [Lightning Fast Iteration Tips For Python Programmers](https://towardsdatascience.com/lightning-fast-iteration-tips-for-python-programmers-61d4f72bf4f0)
 
@@ -690,12 +547,9 @@ The idea is to load 10k instances in each chunk (lines 11–14), perform text pr
 
 [5] [5 Tips To Optimize Your Python Code](https://towardsdatascience.com/try-these-5-tips-to-optimize-your-python-code-c7e0ccdf486a?source=rss----7f60cf5620c9---4)
 
+
 [6] [Introduction to Intel oneAPI AI Analytics Toolkit](https://pub.towardsai.net/introduction-to-intels-oneapi-ai-analytics-toolkit-8dd873925b96?gi=25547ad4241c)
 
 
-[7] [4 Python Libraries that make it easier to Work with Large Datasets](https://towardsdatascience.com/4-python-libraries-that-ease-working-with-large-dataset-8e91632b8791)
-
-[8] [Pandas tips to deal with huge datasets](https://kvirajdatt.medium.com/pandas-tips-to-deal-with-huge-datasets-f6a012d4e953)
-
-[9] [Top 2 tricks for compressing and loading huge datasets](https://medium.com/the-techlife/top-2-tricks-for-compressing-and-loading-huge-datasets-91a7e394c933)
+[7] [How to Speed up Scikit-Learn Model Training](https://medium.com/distributed-computing-with-ray/how-to-speed-up-scikit-learn-model-training-aaf17e2d1e1)
 
