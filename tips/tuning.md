@@ -17,12 +17,16 @@ There are two types of hyperparameters:
 - Algorithm hyperparameters: influence the speed and quality of training (such as learning rate and activation function).
 
 
-A practical guide to hyperparameter optimization using three methods: grid, random and bayesian search (with skopt)
+A practical guide to hyperparameter optimization using three methods: grid, random and bayesian search (with skopt) [1]. 
 
 1. Introduction to hyperparameter tuning.
+
 2. Explanation about hyperparameter search methods.
+
 3. Code examples for each method.
+
 4. Comparison and conclusions.
+
 
 ### Simple pipeline used in all the examples
 
@@ -55,6 +59,8 @@ A practical guide to hyperparameter optimization using three methods: grid, rand
 
 The basic method to perform hyperparameter tuning is to try all the possible combinations of parameters.
 
+Here we try to find the best values for learning_rate (5 values), max_depth (5 values), and n_estimators (5 values) — 125 iterations in Total.
+
 ### Random Search
 
 in randomized search, only part of the parameter values are evaluated. 
@@ -67,9 +73,12 @@ Sampling without replacement is performed when the parameters are presented as a
 
 The advantage of randomized search is that you can extend your search limits without increasing the number of iterations. You can also use random search to find narrow limits to continue a thorough search in a smaller area.
 
+
 ### Bayesian Search
 
-The main difference with Bayesian search is that the algorithm optimizes its parameter selection in each round according to the previous round score. Thus, the algorithm optimizes the choice and theoretically reaches the best parameter set faster than the other methods which means that this method will choose only the relevant search space and discard the range of values that will most likely not deliver the best solution. 
+The main difference with Bayesian search is that the algorithm optimizes its parameter selection in each round according to the previous round score [1]. 
+
+Therefore, the algorithm optimizes the choice and theoretically reaches the best parameter set faster than the other methods which means that this method will choose only the relevant search space and discard the range of values that will most likely not deliver the best solution. 
 
 Thus, Bayesian search can be beneficial when you have a large amount of data and/or the learning process is slow and you want to minimize the tuning time.
 
@@ -92,7 +101,7 @@ Thus, Bayesian search can be beneficial when you have a large amount of data and
                         n_jobs=8,
                         scoring='roc_auc',
                         random_state=123)
-    
+                        
     model_bay = reg_bay.fit(X, y)
 ```
 
@@ -232,30 +241,30 @@ Tensorflow provides Model Optimization Toolkit for pruning and other post-traini
 
 ## References
 
-[1] [5 Effective Ways to Improve the Accuracy of Your Machine Learning Models](https://towardsdatascience.com/5-effective-ways-to-improve-the-accuracy-of-your-machine-learning-models-f1ea1f2b5d65)
+[1] [Hyperparameter Tuning Methods](https://towardsdatascience.com/bayesian-optimization-for-hyperparameter-tuning-how-and-why-655b0ee0b399)
 
-[2] [Are You Sure That You Can Implement Image Classification Networks?](https://pub.towardsai.net/are-you-sure-that-you-can-implement-image-classification-networks-d5f0bffb242d)
-
-[3] [Profiling Neural Networks to improve model training and inference speed](https://pub.towardsai.net/profiling-neural-networks-to-improve-model-training-and-inference-speed-22be473492bf)
-
-[4] [How to Speed up Scikit-Learn Model Training](https://medium.com/distributed-computing-with-ray/how-to-speed-up-scikit-learn-model-training-aaf17e2d1e1)
-
-[5] [How to Speed Up XGBoost Model Training](https://towardsdatascience.com/how-to-speed-up-xgboost-model-training-fcf4dc5dbe5f?source=rss----7f60cf5620c9---4)
+[2] [A Practical Introduction to Grid Search, Random Search, and Bayes Search](https://towardsdatascience.com/a-practical-introduction-to-grid-search-random-search-and-bayes-search-d5580b1d941d)
 
 
-[^practical_intro_search]: https://towardsdatascience.com/a-practical-introduction-to-grid-search-random-search-and-bayes-search-d5580b1d941d "A Practical Introduction to Grid Search, Random Search, and Bayes Search"
+[3] [How to Grid Search Hyperparameters for Deep Learning Models in Python With Keras](https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/)
 
-[^hypertuning_methods]: https://towardsdatascience.com/bayesian-optimization-for-hyperparameter-tuning-how-and-why-655b0ee0b399 "Hyperparameter Tuning Methods"
+[4] [Hyperparameter Tuning with KerasTuner and TensorFlow](https://towardsdatascience.com/hyperparameter-tuning-with-kerastuner-and-tensorflow-c4a4d690b31a)
 
+[5] [Introduction to the Keras Tuner](https://www.tensorflow.org/tutorials/keras/keras_tuner)
 
-[^how_to_grid_search_keras]: https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/ "How to Grid Search Hyperparameters for Deep Learning Models in Python With Keras"
-
-[^hypertuning_keras_tuner]: https://towardsdatascience.com/hyperparameter-tuning-with-kerastuner-and-tensorflow-c4a4d690b31a "Hyperparameter Tuning with KerasTuner and TensorFlow"
-
-[^intro_keras_tuner]: https://www.tensorflow.org/tutorials/keras/keras_tuner "Introduction to the Keras Tuner"
+[6] [How to Grid Search Deep Learning Models for Time Series Forecasting](https://machinelearningmastery.com/how-to-grid-search-deep-learning-models-for-time-series-forecasting/)
 
 
-[^howto_grid_search_tsf]: https://machinelearningmastery.com/how-to-grid-search-deep-learning-models-for-time-series-forecasting/ "How to Grid Search Deep Learning Models for Time Series Forecasting"
+[5 Effective Ways to Improve the Accuracy of Your Machine Learning Models](https://towardsdatascience.com/5-effective-ways-to-improve-the-accuracy-of-your-machine-learning-models-f1ea1f2b5d65)
+
+[Are You Sure That You Can Implement Image Classification Networks?](https://pub.towardsai.net/are-you-sure-that-you-can-implement-image-classification-networks-d5f0bffb242d)
+
+[Profiling Neural Networks to improve model training and inference speed](https://pub.towardsai.net/profiling-neural-networks-to-improve-model-training-and-inference-speed-22be473492bf)
+
+[How to Speed up Scikit-Learn Model Training](https://medium.com/distributed-computing-with-ray/how-to-speed-up-scikit-learn-model-training-aaf17e2d1e1)
+
+[How to Speed Up XGBoost Model Training](https://towardsdatascience.com/how-to-speed-up-xgboost-model-training-fcf4dc5dbe5f?source=rss----7f60cf5620c9---4)
+
 
 [^sklearn_hypertuning]: https://machinelearningmastery.com/scikit-optimize-for-hyperparameter-tuning-in-machine-learning/ "Scikit-Optimize for Hyperparameter Tuning in Machine Learning"
 
