@@ -475,6 +475,14 @@ The **consumer** reads from a server and can be on separate processes or separat
 Consumers have a group-name label and each message published is sent to one consumer instance within each consumer group that is subscribed to it.
 
 
+----------
+
+
+## Distributed Tools
+
+- [Envoy](https://www.envoyproxy.io/)
+
+
 
 ## References
 
