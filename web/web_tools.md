@@ -1,6 +1,6 @@
 # Web Development Tools
 
-Here are some tools and resources for the web developer. 
+Here are some tools and resources for web developers. 
 
 
 ## Dev Tools
@@ -9,11 +9,16 @@ Here are some tools and resources for the web developer.
 - Selenium
 - ShareX (Windows)
 
+- [Teller](https://teller.io/)
+
+
 Audio/Video
 
 - LottieFiles
 - Remove Bg Video
 - Remove Bg Image
+
+- [OsTicket](https://osticket.com/)
 
 
 ## Chrome Extensions
@@ -136,7 +141,11 @@ Once we have everything looking good, we can copy the generated CSS or view the 
 [Design Resources for Developers](https://github.com/bradtraversy/design-resources-for-developers)
 
 
-## Websites for Developers
+----------
+
+
+
+## Web Development
 
 - [Browser frame](https://browserframe.com/)
 - [Can I use](https://caniuse.com/?search=Grid)
@@ -155,6 +164,8 @@ Once we have everything looking good, we can copy the generated CSS or view the 
 
 
 ## Web Design
+
+- [Penpot](https://penpot.app/)
 
 - [Compressor.io](https://compressor.io/)
 - [Coolors](https://coolors.co/)
@@ -178,7 +189,7 @@ Once we have everything looking good, we can copy the generated CSS or view the 
 - [SipApp](https://sipapp.io/)
 
 
-## CSS Websites for Developers
+## CSS Websites
 
 - [Animation pausing](https://waitanimate.wstone.uk/)
 - [Color Palette Generator](https://mybrandnewlogo.com/color-palette-generator)
