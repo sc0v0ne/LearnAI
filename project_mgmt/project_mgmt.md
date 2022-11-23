@@ -166,7 +166,7 @@ We have the skills to create the software.
 
 - If the development team died on a boat party, another team could pick up based on source control and documentation. 
 
-## Feedback
+### Feedback
 
 The best tool to combat assumptions is teamwork, questions, and feedback [4]:
 
@@ -187,6 +187,38 @@ Feedback is a fundamental tool in software development, agile develoment is base
 Finding problems, assumption and other potential change as soon as possible where its easier and quicker to fix.
 
 
+----------
+
+
+## Project Startup Red Flags
+
+There are several red flags with tech startups that you need to be aware of before applying to these types of companies. 
+
+While it could be argued that these red flags apply to all companies, they tend to be unique features of startups that you will noy be aware of until you have worked for one.
+
+1. A lack of credible monetization led by people without a solid track record in the industry
+
+You need to determine how much money the company has, how long it is expected to last, who is running the show, and how the money is expected to be spent. 
+
+2. No obvious market, direction, or customer base
+
+You need to determine whether or not you buy into what the company is selling when you are doing your pre-interview research. 
+
+3. The key product is still in the initial phases of development
+
+The startup may be a sinking ship.
+
+4. A lack of staff
+
+It is vital to broach the topic of staffing early on in the conversation. Having an idea of team member workloads and responsibilities can help you decide whether the team is running short-staffed or conservatively.
+
+5. We’re a family
+
+Workplace family culture [6] is a toxic effect that creates an exaggerated sense of loyalty that can become harmful, can create a power dynamic where employees can get taken advantage of, and causes personal and professional lines to become blurred.
+
+What you need to look for in a startup is a team who can work together professionally, values new ideas of how to handle menial data problems, and prioritizes healthy work-life balances.
+
+
 
 ## References
 
@@ -198,3 +230,6 @@ Finding problems, assumption and other potential change as soon as possible wher
 
 [4] [Assumptions Are Deadly to Development Teams and Software Projects](https://itnext.io/assumptions-are-deadly-to-development-teams-and-software-projects-12b9bc740673)
 
+[5] [5 Data Science Startup Red Flags You Need to Be Aware of Before Applying](https://towardsdatascience.com/5-data-science-startup-red-flags-you-need-to-be-aware-of-before-applying-a06a039aa87d)
+
+[6] [The Toxic Effects of Branding Your Workplace a “Family”](https://hbr.org/2021/10/the-toxic-effects-of-branding-your-workplace-a-family#:~:text=According%20to%20research%2C%20when%20an,attach%20themselves%20to%20the%20organization.)
