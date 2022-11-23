@@ -226,6 +226,40 @@ The important part is that now we have inverted the dependency which means the d
 
 
 
+## Inversion of Control vs Dependency Injection
+
+IoC is a generic term meaning that rather than having the application call the methods in a framework, the framework calls implementations provided by the application.
+
+DI is a form of IoC where implementations are passed into an object through constructors/setters/service lookups which the object will "depend" on in order to behave correctly.
+
+IoC without using DI would be the Template pattern because the implementation can only be changed through sub-classing.
+
+DI Frameworks are designed to make use of DI and can define interfaces (or Annotations in Java) to make it easy to pass in the implementations.
+
+IoC Containers are DI frameworks that can work outside of the programming language. In some you can configure which implementations to use in metadata files (e.g. XML) which are less invasive. With some you can do IoC that would normally be impossible like inject an implementation at pointcuts.
+
+
+
+Inversion of Control (IoC) means that objects do not create other objects on which they rely to do their work. Instead, they get the objects that they need from an outside source (e.g. a container or an xml config file).
+
+Dependency Injection (DI) means that this is done without the object intervention usually by a framework component that passes constructor parameters and set properties.
+
+
+### Advantages of IoC
+
+Here are some advantages of Inversion Of Control (IoC) [9]:
+
+- Inversion of control makes your code loosely coupled
+
+- Inversion of control makes it easy for the programmer to write great unit tests
+
+
+
+
+----------
+
+
+
 ## Software Engineering Myths
 
 Incremental changes do not provide emergency exits for a failing system. It also does not recognize when a tool is not useful. 
@@ -265,11 +299,22 @@ With software systems, it is less work to rebuild a new system than it is to per
 
 
 
+
+## API vs Web Service
+
+All web services are also APIs because they expose the data and/or functionality of an application, however not all APIs are web services. 
+
+
+
+
 ## References
 
 [1] [SOLID Coding in Python](https://towardsdatascience.com/solid-coding-in-python-1281392a6a94)
 
-[2] [The S.O.L.I.D Principles in Pictures()]https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898)
+[2] [The S.O.L.I.D Principles in Pictures()](https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898)
+
+[CUPID for better coding](https://medium.com/codex/cupid-for-better-coding-4c6eb401c8f5)
+
 
 [3] [The Single Responsibility Principle Explained in Python](https://betterprogramming.pub/the-single-responsibility-principle-explained-in-python-622e2d996d86)
 
@@ -282,6 +327,8 @@ With software systems, it is less work to rebuild a new system than it is to per
 [7] [The Myth of Small Incremental Improvements](https://betterprogramming.pub/the-myth-of-small-incremental-improvements-fd0bfd5e1977)
 
 [8][Want Cleaner Code? Use the Rule of Six](https://betterprogramming.pub/want-cleaner-code-use-the-rule-of-six-c21635ee2185)
+
+[9] [Inversion of Control vs Dependency Injection](https://stackoverflow.com/questions/6550700/inversion-of-control-vs-dependency-injection)
 
 
 [Systems Design Crash Course for ML Engineers](https://towardsdatascience.com/systems-design-crash-course-for-ml-engineers-aafae1cf1890)
