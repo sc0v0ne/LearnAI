@@ -1,19 +1,26 @@
-# Dealing With Small Data
+# Dealing With Small Dataset
 
 ## Overview
 
-Keep these points in mind when dealing with small data:
+Keep these points in mind when dealing with small datasets [1]:
 
 - Realize that your model will not generalize that well.
+
 - Do some data augmentation.
 
 - Generate some synthetic data.
+
 - Beware of lucky splits: k-fold Cross-Validation is a better choice.
+
 - Use transfer learning.
+
 - Try an ensemble of weak learners such as SVM.
 
 
-## How to address the problem of less data?
+
+## How to address the problem of less data
+
+The article [2] discusses how the size of the data set impacts traditional Machine Learning algorithms and few ways to mitigate these issues.
 
 ### Change the loss function
 
@@ -98,20 +105,24 @@ The idea of aggregating multiple weak learners/different models has shown great 
 Both Bagging and Boosting techniques have shown great results across a variety of problems and should be explored along with methods discussed above to get better results.
 
 
+### Key factors in training Neural Nets with small dataset
 
-## Key factors in training Neural Nets with small dataset
+Here are a few important factors which influence the network optimization process [2]:
 
-- Optimization Algorithm: Adam, RMSprop, Adagrad, and Stochastic Gradient descent are a few variations of gradient descent which optimize the gradient update process and improve model performance.
+- **Optimization Algorithm:** Adam, RMSprop, Adagrad, and Stochastic Gradient descent are a few variations of gradient descent which optimize the gradient update process and improve model performance.
 
-- Loss function: Hinge loss is one such example which makes training with small datasets possible. 
+- **Loss function:** Hinge loss is one example that makes training with small datasets possible. 
 
-- Parameter initialization: The initial state of the parameters greatly influences the optimization process.
+- **Parameter initialization:** The initial state of the parameters greatly influences the optimization process.
 
-- Data size: Data size is a very crucial part of training neural networks. Larger datasets can help us better learn model parameters and improve the optimization process and imparts generalization.
+- **Data size:** Data size is a very crucial part of training neural networks. Larger datasets can help us better learn model parameters and improve the optimization process and imparts generalization.
 
 Figure 1: Basic implications of fewer data and possible approaches and techniques to solve it
 
-## Ways to overcome optimization difficulties
+
+### Ways to overcome optimization difficulties
+
+We discussed a few of the above techniques in Part 1. Here discuss the remaining techniques that are more relevant to deep learning [2].
 
 1. Transfer learning
 
@@ -157,9 +168,9 @@ There are various ways of implementing Meta-Learning and we will discuss one suc
 
 A meta-learning framework typically consists of a network which has two models:
 
-a) A neural network called Optimize or a Learner which is treated as a low-level network and is used for prediction.
+- A neural network called Optimize or a Learner which is treated as a low-level network and is used for prediction.
 
-b) We have another neural network which is called Optimizer or Meta-Learner or High-Level model which updates the weights of the lower-level network.
+- We have another neural network which is called Optimizer or Meta-Learner or High-Level model which updates the weights of the lower-level network.
 
 This results in a two-way nested training process. 
 
@@ -169,8 +180,7 @@ We also calculate a meta loss at the end of these steps of the low-level network
 
 This process helps us figure out the best parameters to train on makes the learning process more efficient. 
 
-
-## Addressing the lack of Generalization
+### Addressing the lack of Generalization
 
 1. Data Augmentation
 
@@ -187,22 +197,24 @@ We can achieve this by augmenting our data in a few of the following ways:
 
 Fast.ai has some of the best transform functions for data augmentation which makes the data augmentation task very easy using just a few lines of codes. 
 
-2. Data Generation:
+2. Data Generation
 
-a) Semi-Supervised Learning: A lot of times we have a large corpus of data available but only a smart part of it is labeled. The large corpus can be any publically available data set or proprietary data. 
+- Semi-Supervised Learning: A lot of times we have a large corpus of data available but only a smart part of it is labeled. The large corpus can be any publically available data set or proprietary data. 
 
 In such scenarios, semi-supervised learning can be a good technique to solve the problem of less labeled data.
 
-b) GAN: Generative adversarial networks are a type of generative models which can generate new data that looks very close to real data.
+- GAN: Generative adversarial networks are a type of generative models which can generate new data that looks very close to real data.
+
+
 
 
 ## References
 
-[Breaking the curse of small data sets in Machine Learning](https://towardsdatascience.com/breaking-the-curse-of-small-data-sets-in-machine-learning-part-2-894aa45277f4)
+[1] [7 Tips for Dealing With Small Data](https://towardsdatascience.com/7-tips-for-dealing-with-small-data-7ffbd3d399a3)
 
-[7 Tips for Dealing With Small Data](https://towardsdatascience.com/7-tips-for-dealing-with-small-data-7ffbd3d399a3)
+[2] [Breaking the curse of small data sets in Machine Learning: Part 1/2](https://towardsdatascience.com/breaking-the-curse-of-small-data-sets-in-machine-learning-part-2-894aa45277f4)
 
-[Is a Small Dataset Risky?](https://towardsdatascience.com/is-a-small-dataset-risky-b664b8569a21)
+[3] [Is a Small Dataset Risky?](https://towardsdatascience.com/is-a-small-dataset-risky-b664b8569a21)
 
 
 [OpenAI Glow and the Art of Learning from Small Datasets](https://jrodthoughts.medium.com/openai-glow-and-the-art-of-learning-from-small-datasets-e6b0a0cd6fe4)
