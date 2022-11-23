@@ -28,31 +28,6 @@ The best approach would be to find several job postings that look interesting to
 [How to Learn Machine Learning](https://aicoder.medium.com/how-to-learn-machine-learning-4ba736338a56)
 
 
-## Problems with AI
-
-Here are some facts to be aware of when learning AI/ML:
-
-- AI is primarily a graduate level (MSCS) topic. 
-
-- All students of AI need to know the history of AI. 
-
-- The study of AI requires: 1) a healthy dose of skepticism and 2) the study of the history of AI which led to its downfall in the 1980s. 
-
-There is currently a resurgence of misinformation and hype in AI research and software development which has led to the term "AI alchemy". 
-
-- 80-85% (most likely higher) of AI projects fail (probably much higher for some areas such as AV, RL, and Robotics). Keep in mind these are for the most part experienced software engineers. 
-
-- There is an ethical dilemma in AI research. 
-
-  Almost 34% of AI researchers admit to manipulating results in a recent IEEE survey (most certainly higher since irreproduciblity is a known problem with AI research). 
-
-- Engineering disciplines such as electrical engineering and civil engineering require a college degree, but software engineering (which includes AI/ML) does not require a degree (in the U.S.).  
-
-  In fact, many commercial AI/ML applications have some of the same safety and other risk factors as other commercial engineering applications (perhaps more so with AV and Robotics). 
-
-[IEEE Dataport](https://ieee-dataport.org)
-
-[IEEE Share Your Data and Code](https://conferences.ieeeauthorcenter.ieee.org/get-published/share-your-data-and-code/)
 
 
 ## Recommended Tutorials and Books
@@ -222,7 +197,7 @@ Here are a few points to keep in mind:
 
 2. In real-world applications, there are usually thousands or millions of model parameters involved. 
 
-3. The focus should be on how to use them (black-box) rather than how things work (white-box)  which is a basic axiom of OOA&D discussed in GoF Design Patterns. 
+3. The focus should be on how to use them (black-box) rather than how things work (white-box)  which is a basic axiom of OOA&D discussed in GoF Design Patterns. In a nutshell, black-box is the proper object-oriented approach to modeling complex systems.
 
 4. Occam’s Razor (simpler is better than SOTA)
 
@@ -231,6 +206,8 @@ Here are a few points to keep in mind:
 6. With effort, almost any algorithm can be made to fit any dataset (brute-force) which is not the proper approach to AI. 
 
 6. Any competent software engineer can implement any algorithm.
+
+
 
 
 A common misconception when people begin learning ML is to implement algorithms from scratch. 
@@ -391,17 +368,6 @@ https://publish.obsidian.md/serve?url=notes.cogentcoder.com
 
 
 
-## Using AI with Medical Images
-
-Small and imbalanced datasets are common in medical applications. However, it is still considered an open research problem in CS. Thus, there is not standard “recipe” for data prep. Just some heuristics that people have come up with. So u will need to do some research to justify your final choice of data prep techniques, especially for medical datasets. 
-
-At least one of the articles discusses X-ray images which may have some references that are helpful (not sure). I would try searching on arxiv.org for “Survey” articles that would list some peer-reviewed journal articles on the type of images that u are working with.
-
-Resampling is just one approach to balance a dataset but it is an advanced concept, so you need to have a thorough understanding of the core ML concepts. Otherwise, your results will be suspect. 
-
-I have some notes on “Dataset Issues” that may help get you started for structured datasets. However, the approach is different for image datasets.
-
-
 ## How does NLP work
 
 The most common NLP problems are usually addressed by the NLP preprocessing steps: Tokenization, Stemming, and Lemmatization, plus Keyword extraction, and NER. 
@@ -411,6 +377,22 @@ In a nutshell, a well-performing NLP model will simply learn good sentences/phra
 In general, there are few common issues with NLP: Lexical Ambiguity, Syntax Level Ambiguity, and Referential Ambiguity. However, these problems are usually addressed by 1) training with more and larger corpora and 2) training embeddings on your own dataset. There are also other techniques as well.
 
 The most common approach to NLP right now is to start with a pretrained model and then retrain/extend to your own custom dataset.
+
+
+
+## TextRank
+
+Can someone explain to me the damping factor `d` in the TextRank formula? `S = d*S.M + (1 - d)` where `M` is the adjacency matrix of nodes.
+
+It js explained in Mihalcea & Tarau (2004) as "the probability of jumping from a given vertex to another random vertex in the graph" but it does noy quite sink it for me.
+
+
+TextRank is a classic technique for keyword extraction and text summarization that is based on PageSearch except for text rather than pages. Recall that d is the damping constant and it comes from the PageRank algorithm. Basically, d is the probability (at any step) that an imaginary web surfer will continue clicking on page links. 
+
+In general, you should be cautious about giving into the temptation to try to understand the internal details of ML algorithms. 1) there are simply too many algorithms for any person to fully understand and 2) any competent software engineer can implement any algorithm, so u really haven’t accomplished very much 3) it is paramount to learn how to _use_ the algorithms to solve common textbook problems and eventually be able to solve real-world problems, in that order. Exploring the implementation details should come much later, if at all. Anyway, that’s my expert advice. 
+
+
+[PageRank](https://en.wikipedia.org/wiki/PageRank?wprov=sfti1)
 
 
 
