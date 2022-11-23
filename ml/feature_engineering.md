@@ -7,9 +7,24 @@
 
 ## Overview
 
-Feature engineering techniques for machine learning are a fundamental topic in machine learning but one that is often overlooked or deceptively simple.
+**Feature engineering (FE)** is a subset of data transformation which is a critical element of data preprocessing [13].
 
-Feature engineering consists of various processes:
+There are three fundamenatal processes in FE [13]: 
+
+1. Feature Extraction
+2. Feature Selection
+3. Feature Projection
+
+Feature Projection (FP) is the process of mapping high-dimensional data to a lower-dimensional space which usually involves reducing the number of features fed to an ML algorithm [13]. 
+
+FP can help reduce the complexity of the resulting model which reduces the chance of overfitting. 
+
+FP can help reduce computational time and effort while not significantly affecting the model's accuracy.
+
+There are two main classes of feature projection techniques: linear projection [linear discriminant analysis (LDA) and principal component analysis (PCA)] and non-linear projection [kernel principal component analysis (KPCA) and principal curves].
+
+
+Feature engineering consists of various processes [1]:
 
 - **Exploratory Data Analysis:** Exploratory data analysis (EDA) is a powerful and simple tool that can be used to improve your understanding of your data by exploring its properties. 
 
@@ -21,17 +36,36 @@ Feature engineering consists of various processes:
 
   The goal is to plot and visualize the data. If something is not adding up with the new features we can reduce the number of features used, speed up training, or increase the accuracy of a model.
 
+  
 - **Feature Selection:** The process of creating new variables that will be most helpful for our model which can include adding or removing some features. 
 
-- **Feature Extraction:** The process of extracting features from a dataset to identify useful information. 
+  Feature Selection (FS) is the process of choosing the most relevant features for the training process: correlation analysis, feature importance, and mutual information.
+  
+  Correlation analysis: The correlation coefficient measures the relationship between two variables and takes a value between -1 and +1. 
+  
+  A positive correlation means both variables move in the same direction (that is, as one increases, the other increases, and vice versa). 
+  
+  The larger the magnitude of the coefficient the stronger the correlation between the variables. 
+  
+  In feature selection, features having a higher correlation with the target variable are chosen because they have a higher predictive power.
+  
+  Feature importance: Some tree methods such as random forests and gradient-boosting algorithms provide feature importance scores that show the effect of each feature on the target prediction. These scores may be used the choose the most relevant features.
+ 
+  Mutual information measures the reduction in the uncertainty of one variable based on the knowledge of another variable. A reduction in uncertainty results from having more information about the variable. Features with high mutual information scores are considered more relevant and are chosen for ML modeling.
+  
+
+- **Feature Extraction:** The process of extracting new features from a dataset to identify useful information which often involves domain-specific knowledge. 
 
   Without distorting the original relationships or other information, we compress the amount of data into manageable quantities for algorithms to process.
+
 
 - **Benchmark:** A Benchmark Model is the most user-friendly, dependable, transparent, and interpretable model against which you can measure your final model. 
 
   It is a good idea to run test datasets to see if your new machine learning model outperforms a recognized benchmark which are often used as measures for comparing the performance of different ML models. 
 
+  
 -----
+
 
 
 ## Dimensionality Reduction
@@ -66,9 +100,10 @@ There are two main methods for reducing dimensionality:
 
 Dimensionality reduction can be done using feature selection methods as well as feature engineering methods.
 
-_Feature selection_ is the process of identifying and selecting relevant features for your sample. 
+_Feature selection_ is the process of identifying and selecting relevant features for a sample. 
 
 _Feature engineering_ is manually generating new features from existing features by applying some transformation or performing some operation on them.
+
 
 
 ## Feature Importance
@@ -95,7 +130,7 @@ PCA is an algorithm used for dimensionality reduction based on the idea to choos
 
 ## Correlation
 
-Correlation is a statistical measure that expresses the relation between two variables [10].
+**Correlation** is a statistical measure that expresses the relation between two variables [10].
 
 
 A positive correlation occurs when an increase in variable A leads to an increase in variable B. 
@@ -627,6 +662,9 @@ The order that the transform operations are applied is important.
 [11] [Major Problems of Machine Learning Datasets: Part 3](https://heartbeat.comet.ml/major-problems-of-machine-learning-datasets-part-3-eae18ab40eda)
 
 [12] [How to Use Power Transforms for Machine Learning](https://machinelearningmastery.com/power-transforms-with-scikit-learn/)
+
+
+[13] [3 Fundamental Processes in Feature Engineering](https://towardsdatascience.com/3-fundamental-processes-in-feature-engineering-d6b84983754)
 
 
 [Best Practice to Calculate and Interpret Model Feature Importance](https://towardsdatascience.com/best-practice-to-calculate-and-interpret-model-feature-importance-14f0e11ee660)
