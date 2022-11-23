@@ -1,8 +1,12 @@
 # Bias Variance Trade-off
 
+
+> If you torture the data long enough, it will confess to anything - Ronald Coase
+
+
 ## Overview
 
-The bias-variance trade-off will help us understand the concepts of models over-fitting and under-fitting the training data.
+The **bias-variance trade-off** helps us understand the concepts of models over-fitting and under-fitting the training data.
 
 The processing done by a neuron can be denoted as:
 
@@ -17,13 +21,13 @@ There are two main sources of error for a model in a supervised setting:
 
 - **Bias** is the difference between the expected value and true value of the learning algorithm. 
 
-  A high bias will make the algorithm miss the relevant relationships between the features and the target (also called underfitting)
+  A high bias will make the algorithm miss the relevant relationships between the features and the target which is called _underfitting_. 
 
-- **Variance** is an error due to sensitivity to small fluctuations in the training data. 
+- **Variance** is the error due to sensitivity to small fluctuations in the training data. 
 
-  A high variance will make the algorithm model the random noise of the training data (also called overfitting).
+  A high variance will make the algorithm model the random noise of the training data which is called _overfitting_. 
 
-Ideally, we want to find the sweet spot where the sum of these two components is minimized which will give you the best performing model.
+Ideally, we want to find the sweet spot where the sum of these two components is minimized which will give us the best performing model.
 
 
 ## Searching for the Optimal Estimator
@@ -94,18 +98,18 @@ Thus, the total error for your model is the addition of three kinds of errors:
 
 
 
-### What is Bias?
+### What is Bias
 
 In the figure, you can see that that the training error (blue dotted line) keeps on decreasing. In the initial phase, it is too high (High Bias). Later, it decreases (Low Bias).
 
 High Bias means the model is not fitting the training data. 
 
-### How to lower the bias?
+### How to lower the bias
 
 - Increase the number of epochs (iterations)
 - Try a Bigger network
 
-### What is Variance?
+### What is Variance
 
 The variance of a model is the difference between validation error and training error. 
 
@@ -116,7 +120,7 @@ Variance gives us the information about the generalization power of our model.
 - If the Variance is high, the model is not performing well on the validation set. 
 - We always want a low variance.
 
-### How to lower the variance?
+### How to lower the variance
 
 - Increase the training set data
 - Try Regulariszation
@@ -137,7 +141,7 @@ Variance: Var(f) = E[(f - E(f))²]
 
 
 
-## Effect of Bias and Variance on the Total Error of your Model
+## Effect of Bias and Variance on the Total Error of a Model
 
 The relation between the bias, variance, and total error can be explained by the following graph.
 

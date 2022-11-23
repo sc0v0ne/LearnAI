@@ -24,20 +24,13 @@ When we say that a learning algorithm is _good_, we only quantify how well its i
 Thus, a general-purpose universal optimization strategy is theoretically impossible and the only way one strategy can outperform another is if it is specialized to the specific problem under consideration. 
 
 
-### Bias vs Variance Tradeoff
-
-The bias-variance trade-off will help us understand the concepts of models over-fitting and under-fitting to training data.
-
-> If you torture the data long enough, it will confess - Ronald Coase
-
-
 ### The Curse of Dimensionality
 
 The _curse of dimensionality_ refers to the problems that arise when working with data in the higher dimensions which does not exist in lower dimensions.
 
 - As the number of features increase, the number of samples also increases proportionally. Thus, the more features we have, the more number of samples we will need to have all combinations of feature values well represented in our sample.
 
-- As the number of features increases, the model becomes more complex and the greater the chances of overfitting. 
+- As the number of features increase, the model becomes more complex and the greater the chances of overfitting. 
 
 - A machine learning model that is trained on a large number of features becomes increasingly dependent on the data it was trained on and in turn overfitted which results in poor performance on new unseen data.
 
@@ -50,6 +43,17 @@ Avoiding overfitting is a major motivation for performing dimensionality reducti
 Always start with a feasibility study and know when not to use AI [7]. 
 
 Technically, AI/ML is a graduate level topic which has several undergraduate prerequisites in math and CS which is probably why 80% or more of AI projects fail [4][5]. 
+
+
+### Systematic Generalization
+
+Current Machine Learning has issues with reliability due to the poor performance of OOD (Out-Of-Distribution) sample representation [12]. 
+
+We are used to relying on the IID (Independent & Identically Distributed) hypothesis that the test distribution and the training distribution are the same. 
+
+Without this assumption, we need some alternative hypothesis to perform the generalization.
+
+
 
 
 ## Disinformation in AI Research
@@ -351,6 +355,8 @@ After being exposed to a certain portion of the dataset, the model is not allowe
 [10] [Neural Networks and Deep Learning](https://medium.com/machine-learning-for-humans/neural-networks-deep-learning-cdad8aeae49b)
 
 [11] [Choosing the right estimator](https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html)
+
+[12] [The Gap Between Deep Learning and Human Cognitive Abilities](https://www.kdnuggets.com/2022/10/gap-deep-learning-human-cognitive-abilities.html)
 
 
 
