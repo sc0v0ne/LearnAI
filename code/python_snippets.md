@@ -155,72 +155,52 @@ Here are some helpful python one-liners that can save time [3]:
 ```
 
 
-## Pandas one-liners
-
-Here are some helpful Pandas one-liners [6]:
-
 ```py
-  # n-largest values in a series
-  # find the top-n paid roles 
-  data.nlargest(n, "Employee Salary", keep = "all")
-  
-  # n-smallest values in a series
-  data.nsmallest(n, "Employee Salary", keep = "all")
-```
+# swap two variables
+a,b = b,a
 
-```py
-  # Crosstab computes a cross-tabulation of two (or more) columns/series and returns a frequency of each combination
-  # compute the number of employees working from each location within every company
-  pd.crosstab(data["Company Name"], data["Employee Work Location"])
-  result_crosstab = pd.crosstab(data["Company Name"], data["Employee Work Location"])
-  sns.heatmap(result_crosstab, annot=True)
-  
-  # compute aggregation on average salary
-  result_crosstab = pd.crosstab(index = data["Company Name"], 
-                columns=data["Employment Status"], 
-                values = data["Employee Salary"], 
-                aggfunc=np.mean)
-  sns.heatmap(result_crosstab, annot=True, fmt='g')
-  
-  
-  # Similar to crosstabs, pivot tables in Pandas provide a way to cross-tabulate your data.
-  pd.pivot_table(data, 
-               index=["Company Name"], 
-               columns=["Employee Work Location"], 
-               aggfunc='size', 
-               fill_value=0)
+# reverse list 
+lst = [2,3,22,4,1]
+lst[::-1]
 
-  result_pivot = pd.pivot_table(data, 
-            index=["Company Name"], 
-            columns=["Employee Work Location"], 
-            aggfunc='size', 
-            fill_value=0)
-               
-  sns.heatmap(result_pivot, annot=True, fmt='g')
-```
+# find square of even numbers with list comprehension
+result2 = [i**2 for i in range(10) if i%2==0]
+print(result2)
 
-```py
-  # Mark duplicate rows
-  # Marks all duplicates as True except for the first occurrence.
-  new_data.duplicated(keep="first")
-  
-  # create filtered Dataframe with no duplicates
-  # Marks all duplicates as True
-  new_data[~new_data.duplicated(keep=False)]
-  
-  # check duplicates on a subset of columns
-  new_data.duplicated(subset=["Company Name", "Employee Work Location"], keep=False)
-  
-  # Remove duplicates
-  new_data.drop_duplicates(keep="first")
-  
-  # drop duplicates on a subset of columns
-  new_data.drop_duplicates(subset=["Company Name", "Employee Work Location"], keep = False)
-  view raw
+# Dictionary comprehension
+myDict = {x: x**2 for x in [1,2,3,4,5]}
+print(myDict)
+
+# lambda function to square a number
+sqr = lambda x: x * x 
+sqr(10)
+
+file]
+
+
+# Read file contents into a list: one-liner
+file_lines = [line.strip() for line in open(filename)]
+
+# convert binary number to int 
+n = '100' ##binary 100
+dec_num = int(n,base = 2)
+print(dec_num)
+
+from itertools import combinations
+print(list(combinations([1, 2, 3, 4], 2)))
+
+from itertools import permutations
+print(list(permutations([1, 2, 3, 4], 2)))
+
+
+# Find longest string
+words = ['This', 'is', 'a', 'list', 'of', 'keyword']
+print(max(words, key=len))
 ```
 
 
 ---------
+
 
 
 
@@ -411,7 +391,7 @@ If we define the dictionary _outside_ the function and rerun the experiment, we 
 
 ## RE Library Functions
 
-Here are some common re libraries functions [7]:
+Here are some common re libraries functions [6]:
 
 - re.search(): This function scans a string for the first location where the regular expression pattern matches.
 
@@ -428,6 +408,65 @@ NOTE: Search will loop through the string to find the first appearance of the pa
 
 
 
+## Better Error Handling
+
+Clean up your code by creating your own custom exceptions [9].
+
+### Create custom exceptions
+
+```py
+class InvalidCredentialsException(Exception):
+    def __str__(self):
+        return f"Invalid email-password combination"
+
+class UserNotFoundException(Exception):
+    email:str
+    def __init__(self, email:str, *args, **kwargs):
+        self.email = email
+        super().__init__(args, kwargs)
+
+    def __str__(self):
+        return f"Could not find an account associated with email '{self.email}'"
+```
+
+### Cleanup the login function
+
+In addition to looking much nicer the function is more clean and pure; it is only responsible for logging in, so it does not need to know anything about redirecting and popups. 
+
+This kind of logic should be limited to a few places in your project and should not be littered throughout the application. 
+
+```py
+def login(email: str, password: str) -> None:
+    """ Logs in a user """
+
+    if (not userexists(email=email)):
+        raise UserNotFoundException(email=email)
+
+    if (not credentials_valid(email=email, password=password)):
+        raise InvalidCredentialsException()
+```
+
+
+Calling the login
+
+In `main.py` file we can now call the login function:
+
+```py
+try:
+    login_clean(email=my_email, password=my_pass)
+    show_popup("logged in!")
+    redirect(target_page='my_account')
+except UserNotFoundException as e:
+    show_popup(f"Unable to log in: {e}")
+    redirect(target_page='/register')
+except InvalidCredentialsException as e:
+    show_popup(f"Unable to log in: {e}")
+except Exception as e:
+    show_popup("Something went wrong: try again later")
+```
+    
+
+
 ## References
 
 [1] [Binary Image Classification in PyTorch](https://towardsdatascience.com/binary-image-classification-in-pytorch-5adf64f8c781)
@@ -440,13 +479,14 @@ NOTE: Search will loop through the string to find the first appearance of the pa
 
 [5] [Write Shorter Conditionals (Using Dictionaries)](https://itnext.io/write-shorter-conditionals-using-dictionaries-python-snippets-4-f92c8ce5eb7)
 
-[6] [Powerful One-liners in Pandas Every Data Scientist Should Know](https://towardsdatascience.com/powerful-one-liners-in-pandas-every-data-scientist-should-know-737e721b81b6)
 
-[7] [Understanding Regular Expression for Natural Language Processing](https://heartbeat.comet.ml/understanding-regular-expression-for-natural-language-processing-ce9c4e272a29)
+[6] [Understanding Regular Expression for Natural Language Processing](https://heartbeat.comet.ml/understanding-regular-expression-for-natural-language-processing-ce9c4e272a29)
 
-[8] [Regular Expressions Clearly Explained with Examples](https://towardsdatascience.com/regular-expressions-clearly-explained-with-examples-822d76b037b4)
+[7] [Regular Expressions Clearly Explained with Examples](https://towardsdatascience.com/regular-expressions-clearly-explained-with-examples-822d76b037b4)
 
-[9] [Regular Expression (RegEx) in Python: The Basics](https://pub.towardsai.net/regular-expression-regex-in-python-the-basics-b8f2cd041bdb)
+[8] [Regular Expression (RegEx) in Python: The Basics](https://pub.towardsai.net/regular-expression-regex-in-python-the-basics-b8f2cd041bdb)
+
+[9] [Why and how custom exceptions lead to cleaner, better code](https://towardsdatascience.com/why-and-how-custom-exceptions-lead-to-cleaner-better-code-2382216829fd)
 
 
 [Python: Pretty Print a Dict (Dictionary) – 4 Ways](https://datagy.io/python-pretty-print-dictionary/)
