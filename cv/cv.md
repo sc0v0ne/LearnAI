@@ -2,9 +2,9 @@
 
 ## Overview
 
-Computer Vision (CV) is defined as a field of study that seeks to develop techniques to help computers “see” and understand the content of digital images such as photographs and videos.
+Computer Vision (CV) is defined as a field of study that seeks to develop techniques to help computers “see” and understand the content of digital images such as photographs and videos [1].
 
-Many popular computer vision applications involve trying to recognize things in photographs:
+Many popular computer vision applications involve trying to recognize things in photographs [1]:
 
 - **Object Classification:** What broad category of object is in this photograph?
 
@@ -20,58 +20,64 @@ Many popular computer vision applications involve trying to recognize things in 
 
 - **Object Recognition:** What objects are in this photograph and where are they?
 
-
 - Facial Recognition
 
 
-## What is Image Recognition?
 
-Image recognition or image classification is the task of recognizing images and classifying them in one of the several predefined individual classes.
+## Image segmentation
 
-Image recognition can perform different tasks including:
+**Semantic segmentation** is the process to allocate a semantic label to every pixel present in an image [5]. 
 
-- **Classification:** It is the recognition of the class of an image where an image contains only a single object.
+For example, traffic sign detection aims to classify each pixel as a car, a pedestrian, or a road sign.
 
-- **Tagging:** It is a classification task but it can also identify the presence of numerous concepts or entities within an image. Thus, one or more tags can be allotted to a specific image.
+Semantic segmentation (SS) is different from standard segmentation tasks which labels the pixels according to their physical properties (their color). 
 
-- **Detection:** This is finding an entity in an image. Once the object is found, a bounding box is placed around the object in question.
+SS aims at annotating each pixel with its object label. The algorithm to identify objects works under the learning architecture of neural networks.
 
-- **Segmentation:** It is a detection task but it is also responsible for locating an element in an image to the nearest pixel. In some cases, it is necessary to maintain a higher degree of accuracy such as the development of autonomous cars.
+
+Image segmentation is the process of partitioning a digital image (still images and video images) into multiple segments. These segments are homogeneous regions in terms of content and characteristics. Segmentation is used in computer vision and image processing tasks, such as object recognition and scene understanding.
+
+There are two common types of Image Segmentation [5]:
+
+- Semantic Segmentation
+- Instant Segmentation
+
 
 
 ## Overview
 
-The following sections discuss several important CV concepts:
+The following sections discuss several important CV concepts [2]:
 
-- Image Data Loading
+- Image Data Handling
 - Image Data Preparation
 - Image Data Augmentation
 
+- Image Classification
 - Object Recognition
 - Object Classification
 - Object Detection
 
 
 
-## Image Data Loading
+## Image Data Handling
 
-For CV projects, it can be confusing to determine which library to choose to read and manipulate image datasets [3] [4].
+For CV projects, it can be confusing to determine which library to choose to read and manipulate image datasets [6] [7].
 
-The `sklearn.datasets` package embeds some small toy datasets which can be accessed using the dataset loading utilities [5]. 
+The `sklearn.datasets` package embeds some small toy datasets which can be accessed using the dataset loading utilities [8]. 
 
-The Keras deep learning library provides access to four standard computer vision datasets [6].
+The Keras deep learning library provides access to four standard computer vision datasets [10].
 
-The Keras deep learning library provides a sophisticated API for loading, preparing, and augmenting image data [7]. 
+The Keras deep learning library provides a sophisticated API for loading, preparing, and augmenting image data [9]. 
 
 ### NHWC vs HCHW
 
-You will often encounter obscure image format issues going between Linux and macOS (NHWC vs HCHW) [10]. 
+You will often encounter obscure image format issues going between Linux and macOS (NHWC vs HCHW) [4]. 
 
 
 
 ## Kaggle Download
 
-We can download datasets from Kaggle using an API token [1]. 
+We can download datasets from Kaggle using an API token. 
 
 ```bash
   %%capture
@@ -116,7 +122,7 @@ We can download datasets from Kaggle using an API token [1].
 
 To facilitate the management of the dataset, we create an easy-to-manage folder structure.
 
-The goal is to have a folder called training that will contain within it, the subfolders dog and cat which will obviously contain all the images of the respective pets.
+The goal is to have a folder called `train` that will contain the subfolders dog and cat which will obviously contain all the images of the respective pets.
 
 The same thing should be done for the validation folder.
 
@@ -211,14 +217,17 @@ Now we shuffle the data and populate the new  subfolders.
 
 
 
-## Exploratory Data Analysis for Computer Vision
+## Exploratory Data Analysis for CV
 
-There are four steps that we should perform doing before we starting any image processing tasks:
+There are four steps to perform before starting image processing tasks [11]:
 
-1. Check the size of the images in the dataset
-2. Check the blurriness of the images in the dataset
-3. Check the color distribution of the images in the dataset
-4. Check for there is class imbalance
+1. Check the size of the images in the dataset. 
+
+2. Check the blurriness of the images in the dataset. 
+
+3. Check the color distribution of the images in the dataset. 
+
+4. Check for there is class imbalance. 
 
 ### Check the size of the images
 
@@ -378,7 +387,7 @@ Input: An image with one or more objects, such as a photograph.
 Output: One or more bounding boxes and a class label for each bounding box.
 
 
-- **Object segmentation:** Instances of recognized objects are indicated by highlighting the specific pixels of the object instead of a coarse bounding box which is sometimes called “object instance segmentation” or “semantic segmentation”. 
+- **Object segmentation:** Instances of recognized objects are indicated by highlighting the specific pixels of the object instead of a coarse bounding box which is sometimes called _object instance segmentation_ or _semantic segmentation_. 
 
 
 <img width="600" alt="Overview of Object Recognition Computer Vision Tasks" src="https://machinelearningmastery.com/wp-content/uploads/2019/05/Object-Recognition.png" />
@@ -564,7 +573,8 @@ The skip connection skips training from a few layers and connects directly to th
 
 ## CV and NLP
 
-The article [11] discusses how to detect and extract text, figures, tables from any type of document with Computer Vision. 
+The article [12] discusses how to detect and extract text, figures, tables from any type of document with Computer Vision. 
+
 
 
 ## CV Libraries
@@ -603,27 +613,31 @@ However, you will need to buy their product and install it on your car and it is
 
 [2] [Guide to Deep Learning for Computer Vision](https://machinelearningmastery.com/start-here/#dlfcv)
 
+[3] [A Gentle Introduction to Object Recognition](https://machinelearningmastery.com/object-recognition-with-deep-learning/)
 
-[3] [Image-Processing Libraries to Load Image Data in Machine Learning and Deep Learning](https://medium.com/geekculture/image-processing-libraries-to-load-image-data-in-machine-learning-and-deep-learning-4c6ca538cc95)
+[4] [A Gentle Introduction to Channels-First and Channels-Last Image Formats](https://machinelearningmastery.com/a-gentle-introduction-to-channels-first-and-channels-last-image-formats-for-deep-learning/)
 
-[4] [How to Load and Manipulate Images for Deep Learning in Python With PIL/Pillow](https://machinelearningmastery.com/how-to-load-and-manipulate-images-for-deep-learning-in-python-with-pil-pillow/)
-
-[5] [scikit-learn Dataset loading utilities](https://scikit-learn.org/stable/datasets.html)
-
-[6] [How to Load and Visualize Standard Computer Vision Datasets With Keras](https://machinelearningmastery.com/how-to-load-and-visualize-standard-computer-vision-datasets-with-keras/)
-
-[7] [How to Load, Convert, and Save Images With the Keras API](https://machinelearningmastery.com/how-to-load-convert-and-save-images-with-the-keras-api/)
+[5] [Semantic Segmentation](https://www.technologyhq.org/semantic-segmentation-what-is-it-and-how-does-it-help/)
 
 
-[8] [Computer Vision: Exploring your image datasets the RIGHT way](https://medium.com/mlearning-ai/computer-vision-exploring-your-image-datasets-the-right-way-538c5ae8ca5d))
+[6] [Image-Processing Libraries to Load Image Data in Machine Learning and Deep Learning](https://medium.com/geekculture/image-processing-libraries-to-load-image-data-in-machine-learning-and-deep-learning-4c6ca538cc95)
 
-[9] [A Gentle Introduction to Object Recognition](https://machinelearningmastery.com/object-recognition-with-deep-learning/)
+[7] [How to Load and Manipulate Images for Deep Learning in Python With PIL/Pillow](https://machinelearningmastery.com/how-to-load-and-manipulate-images-for-deep-learning-in-python-with-pil-pillow/)
 
-[10] [A Gentle Introduction to Channels-First and Channels-Last Image Formats](https://machinelearningmastery.com/a-gentle-introduction-to-channels-first-and-channels-last-image-formats-for-deep-learning/)
+[8] [scikit-learn Dataset loading utilities](https://scikit-learn.org/stable/datasets.html))
 
-[11] [Document Parsing with Python and OCR](https://towardsdatascience.com/document-parsing-with-python-ocr-75543448e581)
+[9] [How to Load, Convert, and Save Images With the Keras API](https://machinelearningmastery.com/how-to-load-convert-and-save-images-with-the-keras-api/)
+
+
+[10] [How to Load and Visualize Standard Computer Vision Datasets With Keras](https://machinelearningmastery.com/how-to-load-and-visualize-standard-computer-vision-datasets-with-keras/
+
+[11] [Computer Vision: Exploring your image datasets the RIGHT way](https://medium.com/mlearning-ai/computer-vision-exploring-your-image-datasets-the-right-way-538c5ae8ca5d)
+
+
+[12] [Document Parsing with Python and OCR](https://towardsdatascience.com/document-parsing-with-python-ocr-75543448e581)
 
 
 [Build a Semantic Segmentation Model With One Line Of Code](https://pub.towardsai.net/build-a-semantic-segmentation-model-with-one-line-of-code-32b6eab0cb81)
 
-[9 Applications of Deep Learning for Computer Vision](https://machinelearningmastery.com/applications-of-deep-learning-for-computer-vision/
+[9 Applications of Deep Learning for Computer Vision](https://machinelearningmastery.com/applications-of-deep-learning-for-computer-vision/)
+
