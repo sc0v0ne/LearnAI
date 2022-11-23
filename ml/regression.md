@@ -143,6 +143,59 @@ The parameters of the train function are called _hyperparameters_ such as iterat
 
 
 
+## Classification
+
+Machine learning is the field of study concerned with algorithms that learn from examples.
+
+Classification is a task that requires the use of machine learning algorithms that learn how to assign a class label to examples from the problem domain [6].
+
+There are many different types of classification tasks that you may encounter in machine learning and specialized approaches to modeling that may be used for each.
+
+
+### Classification Predictive Modeling
+
+In machine learning, classification refers to a predictive modeling problem where a class label is predicted for a given example of input data [6].
+
+Examples of classification problems:
+
+- Given an example, classify if it is spam or not.
+
+- Given a handwritten character, classify it as one of the known characters.
+
+- Given recent user behavior, classify as churn or not.
+
+From a modeling perspective, classification requires a training dataset with many examples of inputs and outputs from which to learn.
+
+A model will use the training dataset and will calculate how to best map examples of input data to specific class labels. As such, the training dataset must be sufficiently representative of the problem and have many examples of each class label.
+
+Class labels are often string values such as “spam” or “not spam” that must be mapped to numeric values before being provided to an algorithm for modeling which is often referred to as _label encoding_ where a unique integer is assigned to each class label such as “spam” = 0 and “no spam” = 1.
+
+There are many different types of classification algorithms for modeling classification predictive modeling problems.
+
+There is no good theory on how to map algorithms onto problem types; it is generally recommended that a practitioner use controlled experiments and discover which algorithm and algorithm configuration results in the best performance for a given classification task.
+
+Classification predictive modeling algorithms are evaluated based on their results. 
+
+Classification _accuracy_ is a popular metric used to evaluate the performance of a model based on the predicted class labels. 
+
+Classification accuracy is not perfect but is a good starting point for many classification tasks.
+
+Instead of class labels, some tasks may require the prediction of a probability of class membership for each example which provides additional uncertainty in the prediction that an application or user can then interpret. 
+
+A popular diagnostic for evaluating predicted probabilities is the ROC Curve.
+
+There are four main types of classification tasks that you may encounter [6]:
+
+- **Binary Classification** refers to classification tasks that have two class labels.
+
+- **Multi-Class Classification** refers to classification tasks that have more than two class labels. 
+
+- **Multi-Label Classification** refers to classification tasks that have two or more class labels where one or more class labels may be predicted for each example.
+
+- **Imbalanced Classification** refers to classification tasks where the number of examples in each class is unequally distributed.
+
+
+
 ## Classification Examples
 
 [End-to-End Machine Learning Workflow (Part 1)](https://medium.com/mlearning-ai/end-to-end-machine-learning-workflow-part-1-b5aa2e3d30e2)
@@ -173,10 +226,6 @@ The parameters of the train function are called _hyperparameters_ such as iterat
 [3D image classification from CT scans](https://keras.io/examples/vision/3D_image_classification/)
 
 
-[Imbalanced classification: credit card fraud detection](https://keras.io/examples/structured_data/imbalanced_classification/)
-
-
-
 ## Regression Examples
 
 [A Beginner’s Guide to End to End Machine Learning](https://towardsdatascience.com/a-beginners-guide-to-end-to-end-machine-learning-a42949e15a47?gi=1736097101b9)
@@ -184,6 +233,7 @@ The parameters of the train function are called _hyperparameters_ such as iterat
 [A Practical Guide to Linear Regression](https://towardsdatascience.com/a-practical-guide-to-linear-regression-3b1cb9e501a6?gi=ba29357dcc8)
 
 [A Practical Introduction to 9 Regression Algorithms](https://towardsdatascience.com/a-practical-introduction-to-9-regression-algorithms-389057f86eb9)
+
 
 
 
@@ -198,6 +248,9 @@ The parameters of the train function are called _hyperparameters_ such as iterat
 [4] [Supervised Machine Learning: Classification, Logistic Regression, and Classification Error Metrics](https://medium.com/the-quant-journey/supervised-machine-learning-classification-logistic-regression-and-classification-error-metrics-6c128263ac64?source=rss------artificial_intelligence-5)
 
 [5] [Improve Your Classification Models With Threshold Tuning](https://pub.towardsai.net/improve-your-classification-models-with-threshold-tuning-bb69fca15114)
+
+[6] [4 Types of Classification Tasks in Machine Learning](https://machinelearningmastery.com/types-of-classification-in-machine-learning/)
+
 
 
 [Five Regression Python Modules That Every Data Scientist Must Know](https://towardsdatascience.com/five-regression-python-modules-that-every-data-scientist-must-know-a4e03a886853)
