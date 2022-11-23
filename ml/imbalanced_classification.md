@@ -6,7 +6,9 @@ Class imbalance means that one of the modalities of a categorical variable is ov
 
 The best survey articles on imbalanced datasets found ao far are [8] and [9].
 
+
 ----------
+
 
 The paper [8] provides an overview of different methodologies used to deal with imbalanced data. 
 
@@ -32,7 +34,7 @@ The authors provide the following recommendations for static imbalanced datasets
 
 ## Overview
 
-An imbalanced classification problem is a problem that involves predicting a class label where the distribution of class labels in the training dataset is skewed (there are many more examples for one class than the other classes). 
+An **imbalanced classification** problem is a problem that involves predicting a class label where the distribution of class labels in the training dataset is skewed (there are many more examples for one class than the other classes). 
 
 Many real-world classification problems have an imbalanced class distribution, so it is important for ML engineers to be familiar with working with these types of problems.
 
@@ -342,11 +344,18 @@ Most of the examples are binary classification problems and the examples from th
 
 Many of the domains are described as “detection" which highlights the desire to discover the minority class amongst the abundant examples of the majority class.
 
+
 [Imbalanced Classification with the Fraudulent Credit Card Transactions Dataset](https://machinelearningmastery.com/imbalanced-classification-with-the-fraudulent-credit-card-transactions-dataset/)
 
 [Multi-Class Imbalanced Classification](https://machinelearningmastery.com/multi-class-imbalanced-classification/)
 
 [Classification with Imbalanced Data](https://towardsdatascience.com/classification-with-imbalanced-data-f13ccb0496b3)
+
+
+[Imbalanced classification: credit card fraud detection](https://keras.io/examples/structured_data/imbalanced_classification/)
+
+[Deal With an Imbalanced Dataset With TensorFlow, LightGBM, and CatBoost](https://pub.towardsai.net/deal-with-an-imbalanced-dataset-with-tensorflow-lightgbm-and-catboost-b2476996d145)
+
 
 
 ## Naive Classifier
