@@ -869,6 +869,103 @@ Note in the code snippet we specify `total=False` which makes all the keys optio
 
 
 
+## Model Runtime and Debugging
+
+The article [6] discusses how to define and apply function wrappers for profiling machine learning model runtime for a simple classification model. 
+
+- We will use this function wrapper to monitor the runtime of the data preparation, model fit and model predict steps in a simple machine learning workflow. 
+
+- We will also see how to define and apply function wrappers for debugging these same steps.
+
+The `functools` module in Python makes defining custom decorators easy which can “wrap” (modify/extend) the behavior of another function. 
+
+The process for defining timer and debugger function wrappers follows similar steps.
+
+### Define a timer function wrapper
+
+```py
+def runtime_monitor(input_function):
+  @functools.wraps(input_function)
+  def runtime_wrapper(*args, **kwargs):
+     start_value = time.perf_counter() 
+     return_value = input_function(*args, **kwargs)
+     end_value = time.perf_counter()
+     runtime_value = end_value - start_value 
+     print(f"Finished executing {input_function.__name__} in {runtime_value} seconds")
+     return return_value
+```
+
+We can then use `runtime_monitor` to wrap our data_preparation, fit_model, predict, and model_performance functions.
+
+```py
+@runtime_monitor
+def fit_model(X_train,y_train):
+   model = RandomForestClassifier(random_state=42)
+   model.fit(X_train,y_train)
+   return model
+
+   model = fit_model(X_train,y_train)
+   # Finished executing fit_model in 0.545468124000763 seconds
+   
+@runtime_monitor
+def predict(X_test, model):
+   y_pred = model.predict(X_test)
+   return y_pred
+
+   y_pred = predict(X_test, model)
+   # Finished executing predict in 0.05903794700134313 seconds
+
+@runtime_monitor
+def model_performance(y_pred, y_test):
+   print("f1_score", f1_score(y_test, y_pred))
+   print("accuracy_score", accuracy_score(y_test, y_pred))
+   print("precision_score", precision_score(y_test, y_pred))
+
+   model_performance(y_pred, y_test)
+   
+# f1_score 0.5083848190644307
+# accuracy_score 0.7604301075268817
+# precision_score 0.5702970297029702
+# Finished executing model_performance in 0.0057055420002143364 seconds
+```
+
+### Define a debugger function wrapper
+
+```py
+def debugging_method(input_function):
+    @functools.wraps(input_function)
+    def debugging_wrapper(*args, **kwargs):
+        arguments = []
+        keyword_arguments = []
+        for a in args:
+           arguments.append(repr(a))     
+        for key, value in kwargs.items():
+           keyword_arguments.append(f"{key}={value}")
+        function_signature = arguments + keyword_arguments 
+        function_signature = "; ".join(function_signature)       
+        print(f"{input_function.__name__} has the following signature: {function_signature}")
+        return_value = input_function(*args, **kwargs)
+        print(f"{input_function.__name__} has the following return: {return_value}")  
+        return return_value
+        return debugging_wrapper
+```
+
+We can now wrap our functions with the `debugging_method`:
+
+```py
+@debugging_method
+@runtime_monitor
+def fit_model(X_train,y_train):
+    model = RandomForestClassifier(random_state=42)
+    model.fit(X_train,y_train)
+    return model
+
+    model = fit_model(X_train,y_train)
+```
+
+
+
+
 ## References
 
 [1] [A Gentle Introduction to Decorators in Python](https://machinelearningmastery.com/a-gentle-introduction-to-decorators-in-python/)
@@ -880,4 +977,6 @@ Note in the code snippet we specify `total=False` which makes all the keys optio
 [4] [12 Ways to Use Function Decorators to Improve Your Python Code](https://medium.com/geekculture/12-ways-to-use-function-decorators-to-improve-your-python-code-f35515a45e3b)
 
 [5] [4 New Type Annotation Features in Python 3.11](https://betterprogramming.pub/4-new-type-annotation-features-in-python-3-11-84e7ec277c29)
+
+[6] [Function Wrappers in Python: Model Runtime and Debugging](https://builtin.com/data-science/python-wrapper)
 
