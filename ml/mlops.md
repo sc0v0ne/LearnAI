@@ -31,9 +31,9 @@ The software development lifecycle (SDLC) of an AI project can be divided into s
 7. **Monitoring:** This is the post-deployment phase involving observability of the model and ML pipelines, refresh of the model with new data, and tracking success metrics in the context of the original problem.
 
 
-Serving: Model serving refers to the use of a platform to deploy ML models at massive scale. Examples: Seldon, KFServing, and Ray Serve.
+**Serving:** Model serving refers to the use of a platform to deploy ML models at massive scale. Examples: Seldon, KFServing, and Ray Serve.
 
-Monitoring: This is the post-deployment phase involving observability of the model and ML pipelines, refresh of the model with new data, and tracking success metrics in the context of the original problem. Key items to monitor are:  model drift, data drift, model failure, and system performance. Examples: Evidently.ai, Arize.ai, Arthur.ai, Fiddler.ai, Valohai.com, or whylabs.ai.
+**Monitoring:** This is the post-deployment phase involving observability of the model and ML pipelines, refresh of the model with new data, and tracking success metrics in the context of the original problem. Key items to monitor are:  model drift, data drift, model failure, and system performance. Examples: Evidently.ai, Arize.ai, Arthur.ai, Fiddler.ai, Valohai.com, or whylabs.ai.
 
 
 The two most common architectures for ML model serving are:
@@ -82,15 +82,15 @@ Feature stores address operational challenges. They provide a consistent set of 
 
 ### Observing and Monitoring Model in Production
 
-Data drift: As we mentioned above, our quality and accuracy of the model depends on the quality of the data. Data is complex and never static, meaning what the original model was trained with the extracted features may not be as important over time. Some new features may emerge that need to be taken into account. 
+**Data drift:** As we mentioned above, our quality and accuracy of the model depends on the quality of the data. Data is complex and never static, meaning what the original model was trained with the extracted features may not be as important over time. Some new features may emerge that need to be taken into account. 
 
-Model concept drift: Many practitioners refer to this as model decay or model staleness. When the patterns of trained models no longer hold with the drifting data, the model is no longer valid because the relationships of its input features may not necessarily produce the model’s expected prediction. Thus, its accuracy degrades.
+**Model concept drift:** Many practitioners refer to this as model decay or model staleness. When the patterns of trained models no longer hold with the drifting data, the model is no longer valid because the relationships of its input features may not necessarily produce the model’s expected prediction. Thus, its accuracy degrades.
 
-Models fail over time: Models fail for inexplicable reasons: a system failure or bad network connection; an overloaded system; a bad input or corrupted request. Detecting these failures’ root causes early or its frequency mitigates user bad experience or deters mistrust in the service if the user receives wrong or bogus outcomes.
+**Models fail over time:** Models fail for inexplicable reasons: a system failure or bad network connection; an overloaded system; a bad input or corrupted request. Detecting these failures’ root causes early or its frequency mitigates user bad experience or deters mistrust in the service if the user receives wrong or bogus outcomes.
 
-Systems degrade over load: Constantly being vigilant of the health of your dedicated model servers or services deployed is just as important as monitoring the health of your data pipelines that transform data or your entire data infrastructure’s key components: data stores, web servers, routers, cluster nodes’ system health, etc.
+**Systems degrade over load:** Constantly being vigilant of the health of your dedicated model servers or services deployed is just as important as monitoring the health of your data pipelines that transform data or your entire data infrastructure’s key components: data stores, web servers, routers, cluster nodes’ system health, etc.
 
-### What could go wrong after deployment?
+### What could go wrong after deployment
 
 What kind of problems Machine Learning applications might encounter over time.
 
@@ -178,9 +178,7 @@ Here are some of the problems Machine Learning applications can encounter over t
 
 ## Why monitor ML models in Production
 
-[A Comprehensive Guide on How to Monitor Your Models in Production](https://neptune.ai/blog/how-to-monitor-your-models-in-production-guide)
-
-Here are some of the challenges a model can encounter in production:
+Here are some of the challenges a model can encounter in production [12]:
 
 1. Data distribution changes: Why are there sudden changes in the values of my features?
 
@@ -280,7 +278,7 @@ A TFX pipeline is a sequence of components that implement an ML pipeline which i
 - TensorFlow Serving and TensorFlow Lite
 
 
-**TFX Tutorials**
+### TFX Tutorials
 
 [The TFX User Guide](https://github.com/tensorflow/tfx/blob/master/docs/guide/index.md)
 
@@ -327,6 +325,25 @@ Some of the available tools in Kubeflow:
 - Model production
 
 
+----------
+
+
+
+## MLflow Examples
+
+[Managing Machine Learning Lifecycles with MLflow](https://kedion.medium.com/managing-machine-learning-lifecycles-with-mlflow-f230a03c4803)
+
+[MLflow Quickstart](https://mlflow.org/docs/latest/quickstart.html)
+
+
+
+## MLOps Examples
+
+[Build an Anomaly Detection Pipeline with Isolation Forest and Kedro](https://towardsdatascience.com/build-an-anomaly-detection-pipeline-with-isolation-forest-and-kedro-db5f4437bfab)
+
+[Building Scalable Edge AI Deployments with FleetTrackr](https://medium.com/@Smartcow_ai/building-scalable-edge-ai-deployments-with-fleettrackr-40f9a9ab5d65)
+
+
 
 ## References
 
@@ -350,6 +367,12 @@ Some of the available tools in Kubeflow:
 [11] [Top 3 Python Packages for Machine Learning Validation](https://towardsdatascience.com/top-3-python-packages-for-machine-learning-validation-2df17ee2e13d)
 
 
+[12] [A Comprehensive Guide on How to Monitor Your Models in Production](https://neptune.ai/blog/how-to-monitor-your-models-in-production-guide)
+
+
+[13] [5 Types of ML Accelerators](https://pub.towardsai.net/5-types-of-ml-accelerators-767d26a643de)
+
+
 [Machine Learning Operations](https://ml-ops.org)
 
 [The Secret of Delivering Machine Learning to Production](https://towardsdatascience.com/the-secret-of-delivering-machine-learning-to-production-1f6681f5e30c)
@@ -367,13 +390,5 @@ Some of the available tools in Kubeflow:
 [SHAP for Drift Detection: Effective Data Shift Monitoring](https://towardsdatascience.com/shap-for-drift-detection-effective-data-shift-monitoring-c7fb9590adb0)
 
 
-[Managing Machine Learning Lifecycles with MLflow](https://kedion.medium.com/managing-machine-learning-lifecycles-with-mlflow-f230a03c4803)
-
-[MLflow Quickstart](https://mlflow.org/docs/latest/quickstart.html)
-
-
-[Build an Anomaly Detection Pipeline with Isolation Forest and Kedro](https://towardsdatascience.com/build-an-anomaly-detection-pipeline-with-isolation-forest-and-kedro-db5f4437bfab)
-
-[Building Scalable Edge AI Deployments with FleetTrackr](https://medium.com/@Smartcow_ai/building-scalable-edge-ai-deployments-with-fleettrackr-40f9a9ab5d65)
 
 
