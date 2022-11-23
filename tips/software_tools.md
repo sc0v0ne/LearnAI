@@ -7,6 +7,7 @@
 - Error Lens
 - GistPad
 - Gitlens
+- JavaScript Booster
 - Markdownlint
 - Markdown Preview Enhanced
 - PolaCode
@@ -21,24 +22,27 @@
 - Trailing Spaces
 - YAML Support
 
+- Better Align
+- Better Comments
 - Bloc
 - Bracket Pair Colorizer
-- CodeSnap
+
+- CodeSnap (screenshot)
 - Color Highlight
 - Coverage Gutters
-- Github Copilot
-- Indent Rainbow
-- Noctis
-- Peacock
-
-- Awesome Flutter Snippets
-- Better Comments
-- Docker
 - Folder Templates
+- Indent Rainbow
 - Image Preview
+- Noctis (themes)
+- Peacock
 - Remove Comments
 - Remove empty lines
 - Todo Tree
+
+- CodeLLDB
+- Docker
+- Github Copilot
+- Partial Diff
 
 - Live server
 - Remote development
@@ -61,6 +65,10 @@
 
 ### JavaScript
 
+- Code Spell Checker
+- quick-lint-js
+- P42 JS Assistant
+
 - ES7+ React/Redux/React-Native snippets
 - ESLint
 - Import Cost
@@ -69,6 +77,7 @@
 
 ### Flutter
 
+- Awesome Flutter Snippets
 - Dart Data Class Generator
 - dart-import
 - dart-lang/path
@@ -116,29 +125,27 @@ Advanced
 - asciidoc
 - codeglance-pro
 - Code Time
-- Color Highlighter
 - CSV
-- Database Navigator
 - .env
-- Extra ToolWindow Colorful Icons
 - gitlink
 - GitLive
 - Git Machete
-- Gorgeous Themes
-- Gradianto
 - ignore
-- Indent Rainbow
-- PlantUML
 - Python Security
 - Quokka
-- Rainbow CSV 
-- Rainbow Brackets
+- RestfulTool
 - Save Actions
-- SequenceDiagram
 - Smart Search
 - Stepsize
 - String Manipulation
 - Wakatime
+
+- Color Highlighter
+- Extra ToolWindow Colorful Icons
+- Foldable ProjectView
+- Indent Rainbow
+- Rainbow Brackets
+- Rainbow CSV 
 
 - CPU Usage Indicator
 - Icon Viewer
@@ -146,8 +153,14 @@ Advanced
 - Source Synchronizer
 - Test Management
 
-- Hiberbee Theme
+- Database Navigator
+- PlantUML
+- SequenceDiagram
+
+
+- Gorgeous Themes
 - Gradianto
+- Hiberbee Theme
 - Material UI Theme
 - Monokai Pro Theme
 - One Dark Theme
@@ -162,51 +175,62 @@ Advanced
 
 - Alfred
 - Cheat Sheet
-- DaisyDisk
-- Downie
 - Fantastical (Calendar)
-- FlexiHub
 - GoodTask
-- ImageOptim
-- Keyboard Maestro
 - Meeter
-- Monitor Control
-- Moom
-- Numi (calculator)
-- Raycast
+
 - Reader 5
-- Setapp
 - Spark (Mail)
 - Steam Gaming
-- TickTick
-- Tweetbot
+- TickTick (Productivity)
+- Tweetbot (Twitter client)
 
+
+## Mac Dev Tools
 
 - asdf
 - exa  alias ls=”exa --icons -lh”
 - macchina
 - tokei
 
-- Appium
-- CodeKit
-- Dash
+- [CodeKit](https://codekitapp.com)
 - Figma
-- ImageOptim
-- Navicat Premium
+- [ImageOptim](https://imageoptim.com/mac)
+- [Navicat Premium](https://www.navicat.com/en/products/navicat-premium)
+- [TablePlus](https://tableplus.com)
+- [Tower](https://www.git-tower.com)
+
+- [Dash](https://kapeli.com/dash)
 - Postman
-- TablePlus
-- Tower
 - Transmit
+
+- [Appium](https://appium.io)
+
 
 ```bash
   asdf plugin-add nodejs
   asdf install nodejs latest
   asdf global nodejs latest
-
+ 
   asdf plugin-add python      # install plugin
   asdf install python latest  # install package
   asdf global python latest   # set as default version
 ```
+
+
+## Mac Utils
+
+- [Crontab Guru](https://crontab.guru/)
+- DaisyDisk
+- FlexiHub
+- [ImageOptim](https://imageoptim.com/mac)
+- Keyboard Maestro
+- [Monitor Control](https://github.com/MonitorControl/MonitorControl)
+- [Moom](https://manytricks.com/moom/)
+- Numi (calculator)
+- Raycast (Alfred)
+- [Setapp](https://setapp.com)
+
 
 
 ## Swift
