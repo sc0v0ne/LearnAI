@@ -473,17 +473,20 @@ Spot check some methods that are robust to outliers to see if there is a signifi
 [12] [Advanced EDA Made Simple Using Pandas Profiling](https://pub.towardsai.net/advanced-eda-made-simple-using-pandas-profiling-35f83027061a)
 
 
+[13] [Detecting Outliers Using Python](https://towardsdatascience.com/detecting-outliers-using-python-66b25fc66e67)
+
+[14] [Detecting Outliers with Simple and Advanced Techniques](https://towardsdatascience.com/detecting-outliers-with-simple-and-advanced-techniques-cb3b2db60d03)
+
+
 [How to build a Machine Learning (ML) Predictive System](https://towardsdatascience.com/machine-learning-ml-based-predictive-system-to-predict-the-satisfaction-level-of-airlines-f0780dbdbc87?source=rss----7f60cf5620c9---4)
-
-[Detecting Outliers Using Python](https://towardsdatascience.com/detecting-outliers-using-python-66b25fc66e67)
-
-
-[Sensitivity Analysis of Dataset Size vs Model Performance](https://machinelearningmastery.com/sensitivity-analysis-of-dataset-size-vs-model-performance/)
-
-[Analysing Fairness in Machine Learning (with Python)](https://towardsdatascience.com/analysing-fairness-in-machine-learning-with-python-96a9ab0d0705)
 
 
 [Huber and Ridge Regressions in Python: Dealing with Outliers](https://towardsdatascience.com/huber-and-ridge-regressions-in-python-dealing-with-outliers-dc4fc0ac32e4?gi=c292a23ceab7)
 
 [Use k-medians clustering method if you have many outliers](https://towardsdatascience.com/use-this-clustering-method-if-you-have-many-outliers-5c99b4cd380d?gi=5c97a562ff04)
+
+
+[Sensitivity Analysis of Dataset Size vs Model Performance](https://machinelearningmastery.com/sensitivity-analysis-of-dataset-size-vs-model-performance/)
+
+[Analysing Fairness in Machine Learning (with Python)](https://towardsdatascience.com/analysing-fairness-in-machine-learning-with-python-96a9ab0d0705)
 

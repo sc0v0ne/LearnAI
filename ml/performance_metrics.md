@@ -17,14 +17,16 @@ Here are the common performance measures for the  classification problems:
 - Accuracy
 - Precision and Recall
 - F1 Score
+- Logarithmic loss
+
+- Classification report
+- Confusion matrix (binary classification)
+
 - Receiver operating curve (ROC)
 - Area under ROC (AUC)
 
-- Logarithmic loss
-- Confusion matrix (binary classification)
-- Classification report
 
-For a classification problem, it is common to compute all of the following metrics: Accuracy, Precision and Recall, and AUC. 
+For a classification problem, it is common to compute the following metrics: Accuracy, classification report, confusion matrix, and AUC. 
 
 We can also compute the classification error (error rate) on the training and test datasets. 
 
@@ -218,6 +220,8 @@ Bootstrapping estimates the properties of a population parameter or estimator (b
 There is a 95% likelihood that the range 0.741 to 0.757 covers the true statistic mean.
 
 
+
+
 ## Confidence Intervals
 
 [Understand Time Series Forecast Uncertainty Using Prediction Intervals with Python](https://machinelearningmastery.com/time-series-forecast-uncertainty-using-confidence-intervals-python/)
@@ -232,17 +236,18 @@ There is a 95% likelihood that the range 0.741 to 0.757 covers the true statisti
 
 ## References
 
-[Performance analysis of models](https://mclguide.readthedocs.io/en/latest/sklearn/performance.html)
+[1] [Performance analysis of models](https://mclguide.readthedocs.io/en/latest/sklearn/performance.html)
+
+[2] [Evaluation Metrics for Machine Learning](https://towardsdatascience.com/evaluation-metrics-for-machine-learning-2167fca1a291?gi=2512e2b9b1c0)
+
+[3] [Error Metrics in Machine learning](https://medium.com/analytics-vidhya/error-metrics-in-machine-learning-f9eed7b139f)
+
+[4] [An Overview of Performance Evaluation Metrics of Machine Learning (Classification) Algorithms](https://towardsdatascience.com/an-overview-of-performance-evaluation-metrics-of-machine-learning-classification-algorithms-7a95783a762f?gi=884943f12b27)
+
+[5] [Tutorial: Understanding Regression Error Metrics in Python](https://www.dataquest.io/blog/understanding-regression-error-metrics/)
+
 
 [Approximation Error](https://en.wikipedia.org/wiki/Approximation_error?wprov=sfti1)
-
-[Evaluation Metrics for Machine Learning](https://towardsdatascience.com/evaluation-metrics-for-machine-learning-2167fca1a291?gi=2512e2b9b1c0)
-
-[Error Metrics in Machine learning](https://medium.com/analytics-vidhya/error-metrics-in-machine-learning-f9eed7b139f)
-
-[An Overview of Performance Evaluation Metrics of Machine Learning (Classification) Algorithms](https://towardsdatascience.com/an-overview-of-performance-evaluation-metrics-of-machine-learning-classification-algorithms-7a95783a762f?gi=884943f12b27)
-
-[Tutorial: Understanding Regression Error Metrics in Python](https://www.dataquest.io/blog/understanding-regression-error-metrics/)
 
 
 [Assessing the Performance (Types and Sources of Error) in Machine Learning](https://medium.com/analytics-vidhya/assessing-the-performance-types-and-sources-of-error-in-machine-learning-e5d28b71da6b)

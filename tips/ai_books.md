@@ -88,9 +88,9 @@ E. Gamma, R. Helm, R. Johnson, and J. Vlissides, Design Patterns: Elements of Re
 
 ## AI Textbooks
 
-E. Alpaydin, Introduction to Machine Learning, 3rd ed., MIT Press, ISBN: 978-0262028189, 2014.
+E. Alpaydin, Introduction to Machine Learning, 4th ed., MIT Press, ISBN: 9780262358064, 2020.
 
-S. Russell and P. Norvig, Artificial Intelligence: A Modern Approach, 4th ed. Upper Saddle River, NJ: Prentice Hall, ISBN: 978-0-13-604259-4, 2021.
+S. Russell and P. Norvig, Artificial Intelligence: A Modern Approach, 4th ed. Upper Saddle River, NJ: Prentice Hall, ISBN: 0-13-461099-7, 2021.
 
 
 W. McKinney, Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython, 2nd ed., O’Reilly Media, ISBN: 978-1491957660, 2017.

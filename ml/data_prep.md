@@ -94,6 +94,9 @@ The [Data Science Primer](https://elitedatascience.com/primer) covers explorator
 10. Data Aggregation and Group Operations
 
 
+How to Make Your Data Models Modular to Avoid highly coupled systems and unexpected production bugs [16]. 
+
+
 ### Import data
 
 For ML projects, it can be confusing to determine which library to choose to read and manipulate datasets, especially image and text [1] [2].  
@@ -766,6 +769,8 @@ W. McKinney, Python for Data Analysis, 2nd ed., Oreilly, ISBN: 978-1-491-95766-0
 [14] [How to Detect Missing Values and Dealing with Them: Explained](https://medium.com/geekculture/ow-to-detect-missing-values-and-dealing-with-them-explained-13232230cb64)
 
 [15] [Deduplicate and clean up millions of location records](https://towardsdatascience.com/deduplicate-and-clean-up-millions-of-location-records-abcffb308ebf)
+
+[16] [How to Make Your Data Models Modular](https://towardsdatascience.com/how-to-make-your-data-models-modular-71b21cdf5208)
 
 
 [Build an Anomaly Detection Pipeline with Isolation Forest and Kedro](https://towardsdatascience.com/build-an-anomaly-detection-pipeline-with-isolation-forest-and-kedro-db5f4437bfab)

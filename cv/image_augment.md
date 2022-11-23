@@ -1,12 +1,13 @@
 # Image Augmentation
 
+
 ## Image Data Preparation
 
 When training vision models, it is common to resize images to a lower dimension ((224 x 224), (299 x 299), etc.) to allow mini-batch learning and also to keep up the compute limitations [1]. 
 
 We generally make use of image resizing methods like _bilinear interpolation_ for this step and the resized images do not lose much of their perceptual character to the human eyes.
 
-In “Learning to Resize Images for Computer Vision Tasks,” Talebi et al. show that if we try to optimize the perceptual quality of the images for the vision models rather than the human eyes, their performance can be improved even further [1].
+In "Learning to Resize Images for Computer Vision Tasks," Talebi et al. show that if we try to optimize the perceptual quality of the images for the vision models rather than the human eyes, their performance can be improved even further [1].
 
 **For a given image resolution and a model, how to best resize the given images?**
 

@@ -166,6 +166,7 @@ Once we have everything looking good, we can copy the generated CSS or view the 
 ## Web Design
 
 - [Penpot](https://penpot.app/)
+- [Storybook](https://storybook.js.org)
 
 - [Compressor.io](https://compressor.io/)
 - [Coolors](https://coolors.co/)

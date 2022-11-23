@@ -2,7 +2,7 @@
 
 ## Kubernetes
 
-Kubernetes is an open-source container orchestration system for automating software deployment, scaling, and management. 
+**Kubernetes (K8S)** is an open-source container orchestration system for automating software deployment, scaling, and management. 
 
 Kubernetes works with Docker, Containerd, and CRI-O.
 
@@ -12,18 +12,19 @@ Kubernetes is loosely coupled and extensible to meet different workloads.
 
 The internal components as well as extensions and containers that run on Kubernetes rely on the Kubernetes API.
 
-The platform exerts its control over compute and storage resources by defining resources as Objects that can be managed.
+The platform exerts its control over compute and storage resources by defining resources as **Objects** that can be managed.
 
-Kubernetes follows the primary/replica architecture. 
+Kubernetes follows the **primary/replica architecture**. 
 
 The components of Kubernetes can be divided into those that manage an individual node and those that are part of the control plane.
 
 
 ## Kubernetes vs Docker
 
-Kubernetes is an open-source platform used to maintain and deploy a group of containers. 
+Kubernetes is an open-source platform used to maintain and deploy a _group of containers_. 
 
 Kubernetes is a container management system developed in the Google platform that helps manage a containerized application in various types of physical, virtual, and cloud environments.
+
 
 Docker is a tool used to automate the deployment of applications as lightweight, portable containers that can be deployed to various environments.
 
@@ -59,9 +60,10 @@ The introduction of an abstraction called **resilient distributed datasets (RDDs
 
 RDDs are fault-tolerant collections of elements that can be executed in parallel by distribution among multiple nodes in a cluster. 
 
-The key to the speed of Spark is that any operation performed on an RDD is done in memory rather than on disk. 
+The key to the speed of Spark is that any operation performed on an RDD is done in **memory** rather than on disk.
 
-Spark allows two types of operations on RDDs: transformations and actions. 
+
+**Spark allows two types of operations on RDDs:** transformations and actions. 
 
 Actions are used to apply computation and obtain a result while transformations result in the creation of a new RDD. 
 
@@ -92,7 +94,9 @@ Hadoop results in significant delays (latency) for these tasks because a separat
 
 With Spark, the data remains in RAM; so it can be read from memory instead of disk which results in Spark exhibiting speedups of up to 100x over Hadoop in certain cases where we reuse the same data multiple times. 
 
-In cases where there is data reuse, Spark should be dhosen over Hadoop. Examples: iterative jobs and interactive analysis.
+In cases where there is **data reuse**, Spark should be chosen over Hadoop. 
+
+Examples: iterative jobs and interactive analysis.
 
 A common example of an iterative task that repeatedly uses the same dataset is the training of a machine learning (ML) model. 
 
@@ -100,11 +104,20 @@ ML models are often trained by iteratively passing over the same training datase
 
 The level of increased performance achieved by Spark in a ML task becomes more prominent the more times the data is queried. 
 
-There would be no speedup evident if you were to train an ML model on Hadoop and Spark using only one pass over the data (epoch), since the data needs to be loaded from disk into RAM for the first iteration on Spark. However, each subsequent iteration on Spark will run in a fraction of the time while each subsequent Hadoop iteration will take the same amount of time as the very first iteration as the data is retrieved from disk each time. This, Spark is generally preferable to Hadoop when dealing with ML applications.
+There would be no speedup evident if you were to train an ML model on Hadoop and Spark using only one pass over the data (epoch) since the data needs to be loaded from disk into RAM for the first iteration on Spark. 
+
+However, each subsequent iteration on Spark will run in a fraction of the time while each subsequent Hadoop iteration will take the same amount of time as the very first iteration as the data is retrieved from disk each time. 
+
+Thus, Spark is generally preferable to Hadoop when dealing with ML applications.
 
 There are circumstances where the in-memory computation of Spark falls short. 
 
-If the data sets we are dealing with are so large that they exceed available RAM then Hadoop is the preferred choice. In addition, Hadoop is relatively easy and cheap to scale when compared with Spark. Tjus, a business under time constraints would likely be best served with Spark, but a business with capital constraints may be better served by the cheaper setup and scalability of Hadoop.
+If the data sets we are dealing with are so large that they exceed available RAM then Hadoop is the preferred choice. In addition, Hadoop is relatively easy and cheap to scale when compared with Spark. 
+
+Thus, a business under time constraints would likely be best served with Spark, but a business with capital constraints may be better served by the cheaper setup and scalability of Hadoop.
+
+
+----------
 
 
 ## Tips for Optimizing a Spark Job
@@ -315,6 +328,7 @@ The six recommendations use a greedy approach aims to maximise the probability o
 The following diagram summarises the method proposed by associating the recommendations at each stage:
 
 
+
 ## Spark Performance Tips
 
 Here are some tips to avoid performance problems while running PySpark code.
@@ -475,12 +489,15 @@ The **consumer** reads from a server and can be on separate processes or separat
 Consumers have a group-name label and each message published is sent to one consumer instance within each consumer group that is subscribed to it.
 
 
+
 ----------
+
 
 
 ## Distributed Tools
 
 - [Envoy](https://www.envoyproxy.io/)
+
 
 
 

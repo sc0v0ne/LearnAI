@@ -653,7 +653,7 @@ The DateTime feature column can be passed to the `parse_dates` parameter.
 
 
 
-## Make It Easier to Work with Large Datasets
+## Tips for Large Datasets
 
 Pandas mainly uses a single core of CPU to process instructions and does not take advantage of scaling up the computation across various cores of the CPU to speed up the workflow [7]. 
 
@@ -697,11 +697,16 @@ The article [8] provides some tips on working with huge datasets using pandas:
     df.to_pickle(‘train.pkl’) 
 ```
 
+
+
+## Libraries for Large Datasets
+
 The article [9] discusses four Python libraries that can read and process large-sized datasets.
 
 - Dask
 - Modin
 - Vaex
+- [Gigasheet](https://www.gigasheet.com)
 - Pandas with chunks
 
 ### Dask
@@ -710,7 +715,7 @@ Dask is an open-source Python library that provides multi-core and distributed p
 
 Dask provides the high-performance implementation of the function that parallelizes the implementation across all the cores of the CPU.
 
-Dask provides API similar to Pandas and Numpycwhich makes it easy for developers to switch between the libraries.
+Dask provides API similar to Pandas and Numpy which makes it easy for developers to switch between the libraries.
 
 ```py
     import dask.dataframe as dd
@@ -794,6 +799,7 @@ The idea is to load 10k instances in each chunk (lines 11–14), perform text pr
 
 
 
+
 ## References
 
 [1] [How to Convert to Best Data Types Automatically in Pandas?](https://cmdlinetips.com/2020/04/how-to-convert-to-best-data-types-automatically-in-pandas/amp/)
@@ -822,3 +828,6 @@ The idea is to load 10k instances in each chunk (lines 11–14), perform text pr
 [11] [How to Speed Up Pandas with Modin](https://towardsdatascience.com/how-to-speed-up-pandas-with-modin-84aa6a87bcdb)
 
 [12] [Speed Up Your Pandas Workflow with Modin](https://towardsdatascience.com/speed-up-your-pandas-workflow-with-modin-9a61acff0076)
+
+[13] [Never Worry About Optimization. Process GBs of Tabular Data 25x Faster With Gigasheet](https://towardsdatascience.com/never-worry-about-optimization-process-gbs-of-tabular-data-25x-faster-with-no-code-pandas-e85ede4c37d5)
+

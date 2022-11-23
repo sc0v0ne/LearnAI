@@ -77,7 +77,9 @@ Pickle can be used to save and load the python classes or PyTorch models for reu
 
 ### Pipreqs
 
-[Pipreqs](https://pypi.org/project/pipreqs/) is useful when we want to port our code to a different machine and install all the dependencies. It helps us in creating a list of python dependencies along with the versions that our current working code is using and save them in a file that can be easily installed anywhere else.
+[Pipreqs](https://pypi.org/project/pipreqs/) is useful when we want to port our code to a different machine and install all the dependencies. 
+
+Pipreqs helps us in creating a list of python dependencies along with the versions that our current working code is using and save them in a file that can be easily installed anywhere else.
 
 ### Tqdm
 

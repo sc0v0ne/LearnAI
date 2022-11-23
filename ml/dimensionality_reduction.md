@@ -224,6 +224,8 @@ There are two benefits of LLE algorithm:
 No single dimensionality reduction technique consistently provides the ‘best’ results. Therefore, the data analyst should explore a range of options and combinations of different dimensionality-reduction techniques, so they move their model closer to the optimal solution.
 
 
+
+
 ## References
 
 [1] E. Alpaydin, Introduction to Machine Learning, 3rd ed., MIT Press, ISBN: 978-0262028189, 2014.

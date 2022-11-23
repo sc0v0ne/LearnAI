@@ -52,17 +52,26 @@ Data set, algorithms, models, feature extraction, and training are 5 crucial com
 
 Depending upon the scenario, data type, input, etc., there are different ways an ML model learns: supervised and unsupervised.
 
-In general, there are 10 Machine Learning techniques that are commonly used for AI development.
+In general, there are 10 Machine Learning techniques that are commonly used for AI development [6]:
 
 1. Regression (supervised)
+
 2. Classification (supervised)
+
 3. Transfer Learning (supervised)
+
 4. Clustering (unsupervised)
+
 5. Ensemble Methods (supervised)
+
 6. Neural Networks and Deep Learning (unsupervised)
+
 7. Dimensionality Reduction (supervised and unsupervised)
+
 8. Word Embeddings (unsupervised)
+
 9. Natural Language Processing (unsupervised)
+
 10. Reinforcement Learning (unsupervised)
 
 
@@ -125,22 +134,24 @@ With reinforcement learning, you do not have any labelled data for training purp
 Once agents have been taught using reinforcement learning, they can  apply this knowledge elsewhere in their environment.
 
 
+
 ## The Elbow Method
 
-The _elbow method_ is a common heuristic (not a formula) for finding the optimal k value for unsupervised models such as PCA or k-means. 
+The _elbow method_ is a common heuristic (not a formula) for finding the optimal k value for unsupervised models such as PCA or k-means [9]. 
 
-The best approach to using the elbow method is to create the scree plot and also compute a metric for comparison. Also, AutoML tools such as Orange are good for quickly visualizing the results for the elbow method. 
+The best approach to using the elbow method is to create the scree plot and compute a metric for comparison. 
+
+Also, AutoML tools such as Orange are good for quickly visualizing the results for the elbow method. 
 
 
 Here are some tutorials that may help:
-
-[Elbow Method for optimal value of k in KMeans](https://www.geeksforgeeks.org/elbow-method-for-optimal-value-of-k-in-kmeans/)
 
 [PCA Example in Python with scikit-learn](https://cmdlinetips.com/2018/03/pca-example-in-python-with-scikit-learn/amp/)
 
 [How to do a Clustering project Step by Step](https://z-ai.medium.com/how-to-do-a-clustering-project-step-by-step-4b41e94fad1)
 
 [Detailed Introduction To K-Means Clustering In Python](https://onepagecodewriter.medium.com/detailed-introduction-to-k-means-clustering-in-python-d8178d7eb123)
+
 
 
 ----------
@@ -494,6 +505,8 @@ Here are 10 examples of machine learning algorithm lists that we could create [8
 [7] [63 Machine Learning Algorithms](https://medium.com/swlh/63-machine-learning-algorithms-introduction-5e8ea4129644)
 
 [8] [Take Control By Creating Targeted Lists of Machine Learning Algorithms](https://machinelearningmastery.com/create-lists-of-machine-learning-algorithms/)
+
+[9] [Elbow Method for optimal value of k in KMeans](https://www.geeksforgeeks.org/elbow-method-for-optimal-value-of-k-in-kmeans/)
 
 
 [ML Cheatsheet - Algorithms](https://mclguide.readthedocs.io/en/latest/sklearn/guide.html#algorithms)
