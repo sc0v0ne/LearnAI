@@ -1,4 +1,4 @@
-# Audio
+# Fourier Transform
 
 ## Python Signal Processing with scipy.fft
 
@@ -8,7 +8,7 @@
   - scipy.fft vs numpy.fft
 
 - The Fourier Transform
-  - When to use the Fourier Transform?
+  - When to use the Fourier Transform
   - Time Domain vs Frequency Domain
   - Types of Fourier Transforms
 
@@ -22,6 +22,7 @@
 
 - Avoiding Filtering Pitfalls
 - The Discrete Cosine and Sine Transforms
+
 
 ### The Fourier Transform
 
@@ -41,13 +42,18 @@ The resulting **frequency spectrum** would show three peaks, one for each of the
 
 If the person played one note more softly than the others, then the power of that note’s frequency would be lower than the other two.
 
-### Why Would We Need the Fourier Transform?
+
+### When Do We Need the Fourier Transform
 
 In general, we need the Fourier transform if we need to view the frequencies in a signal.
+
+If working with a signal in the time domain is difficult, using the Fourier transform to move it into the frequency domain can be helpful.
+
 
 You may have noticed that `fft()` returns a maximum frequency of just over 20 thousand Hertz (22050Hz) which is exactly half of our sampling rate which is called the **Nyquist frequency**.
 
 > A fundamental concept in signal processing is the sampling rate must be at least twice the highest frequency in the signal.
+
 
 ### Time Domain vs Frequency Domain
 
@@ -59,9 +65,10 @@ In the **time domain**, a signal is a wave that varies in amplitude (y-axis) ove
 
 ![A signal in the time domain|600xauto {Figure 1: Plot of a signal in the time domain.}](https://files.realpython.com/media/timedomain.cc67471385a2.png)
 
+
 In the **frequency domain**, a signal is represented as a series of frequencies (x-axis) that each have an associated power (y-axis). 
 
-The following image is the above audio signal after being Fourier transformed:
+The following image is the above audio signal after being moved to the frequency domain using the Fourier transform:
 
 ![A signal in the frequency domain|600xauto {Figure 2: Plot of a signal in the frequency domain.}](https://files.realpython.com/media/freqdomain.fdeba267dfda.pn)
 
@@ -203,6 +210,7 @@ We can think of this spectrogram as an image which reduces it to an **image clas
 The image represents the spoken phrase from left to right in a timely manner. Similarly, consider this as an image where the phrase is written from left to right and all we need to do is identify the hidden English characters.
 
 Given a parallel corpus of English text, we can train a deep learning model and build a speech recognition system of our own.
+
 
 
 ## References
