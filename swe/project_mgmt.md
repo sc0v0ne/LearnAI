@@ -220,6 +220,8 @@ What you need to look for in a startup is a team who can work together professio
 
 
 
+
+
 ## References
 
 [1] [The 3 Questions You Must Ask Before Building a Product](https://medium.com/geekculture/the-3-questions-you-must-ask-before-building-a-product-b2ba104e52f9)
@@ -233,3 +235,6 @@ What you need to look for in a startup is a team who can work together professio
 [5] [5 Data Science Startup Red Flags You Need to Be Aware of Before Applying](https://towardsdatascience.com/5-data-science-startup-red-flags-you-need-to-be-aware-of-before-applying-a06a039aa87d)
 
 [6] [The Toxic Effects of Branding Your Workplace a “Family”](https://hbr.org/2021/10/the-toxic-effects-of-branding-your-workplace-a-family#:~:text=According%20to%20research%2C%20when%20an,attach%20themselves%20to%20the%20organization.)
+
+[7] [3 Questions Experienced Developers Ask to Reveal a Bad Workplace](https://medium.com/codex/3-questions-experienced-developers-ask-to-reveal-a-bad-workplace-34a8d344615a)
+
