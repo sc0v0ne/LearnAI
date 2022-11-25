@@ -6,7 +6,7 @@ If you are like me and try to follow the principles of DRY, KISS, Design Pattern
 
 [Instapaper](https://instapaper.com/p/codecypher)
 
-**NOTE:** The latest version of repo is available  on [Obsidian Publish](https://notes.cogentcoder.com). 
+**NOTE:** The latest version of repo is available  on [Obsidian Publish](https://notes.codecypher.ai). 
 
 
 > Don't reinvent the wheel (DRTW)
