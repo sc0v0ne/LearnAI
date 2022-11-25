@@ -20,9 +20,6 @@ If you are like me and try to follow the principles of DRY, KISS, Design Pattern
 
 **No Free Lunch Theorem:** When the performance of all optimization methods is averaged across all conceivable problems, they all perform equally well. Thus, no one optimum optimization algorithm exists.
 
-## Table of Contents
-
-The table of contents is available for the latest version of repo on [Obsidian Publish](https://notes.cogentcoder.com). 
 
 ## Background
 
