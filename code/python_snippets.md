@@ -1,39 +1,5 @@
 # Python Code Snippets
 
-## Show samples from each class
-
-```py
-    import numpy as np
-    import matplotlib.pyplot as plt
-    
-    def show_images(num_classes):
-        """
-        Show image samples from each class
-        """
-        fig = plt.figure(figsize=(8,3))
-    
-        for i in range(num_classes):
-            ax = fig.add_subplot(2, 5, 1 + i, xticks=[], yticks=[])
-            idx = np.where(y_train[:]==i)[0]
-            x_idx = X_train[idx,::]
-            img_num = np.random.randint(x_idx.shape[0])
-            im = np.transpose(x_idx[img_num,::], (1, 2, 0))
-            ax.set_title(class_names[i])
-            plt.imshow(im)
-    
-        plt.show()
-    
-    (X_train, y_train), (X_test, y_test) = cifar10.load_data()
-    num_train, img_channels, img_rows, img_cols =  X_train.shape
-    num_test, _, _, _ =  X_train.shape
-    num_classes = len(np.unique(y_train))
-    
-    class_names = ['airplane','automobile','bird','cat','deer',
-                   'dog','frog','horse','ship','truck']
-    
-    show_images(num_classes)
-```
-
 
 ## Display multiple images in one figure
 
