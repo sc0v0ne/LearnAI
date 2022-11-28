@@ -26,7 +26,7 @@ Here are the common performance measures for the  classification problems:
 - Area under ROC (AUC)
 
 
-For a classification problem, it is common to compute the following metrics: Accuracy, classification report, confusion matrix, and AUC. 
+For a classification problem, it is common to compute the following metrics and graphs: Accuracy, classification report, confusion matrix, and AUC. 
 
 We can also compute the classification error (error rate) on the training and test datasets. 
 
