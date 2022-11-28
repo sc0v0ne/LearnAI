@@ -2,11 +2,11 @@
 
 If you are like me and try to follow the principles of DRY, KISS, Design Patterns, Occam’s Razor, and other software engineering best practices then this repo is for you!
 
+**NOTE:** The latest version of repo is available  on [Obsidian Publish](https://notes.codecypher.ai). 
+
 [Medium](https://aicoder.medium.com)
 
 [Instapaper](https://instapaper.com/p/codecypher)
-
-**NOTE:** The latest version of repo is available  on [Obsidian Publish](https://notes.codecypher.ai). 
 
 
 > Don't reinvent the wheel (DRTW)
