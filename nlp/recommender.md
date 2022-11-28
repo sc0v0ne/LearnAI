@@ -173,7 +173,7 @@ Finally, we create the model, train it, and generate predictions:
 
 # Building a Recommender System for Implicit Feedback
 
-There are three main algorithms for building a recommender system [3]:
+There are three main algorithms for building a recommender system [4]:
 
 - Content-based uses characteristics of an item to provide a recommendation. 
 
@@ -189,7 +189,7 @@ Item-based CF is generally preferred over user-based CF since the user-based is 
 
 - Hybrid combines collaborative filtering, content-based filtering, and other approaches.
 
-The article [3] covers Collaborative Filtering and how to evaluate the model.
+The article [4] covers Collaborative Filtering and how to evaluate the model.
 
 ### The Feedback Loop
 
@@ -204,7 +204,7 @@ The implicit feedback mechanism is simpler and relies heavily on views, clicks, 
 
 Most examples use explicit feedback: star rating of movies on IMDB. It is clear what content the user likes (rated 5 stars) and what they do not like (rated 1 star). In this case, we could try to predict the rating the user would give to an unseen movie and recommend those close to 5 stars.
 
-The article [3] focuses on an approach using only implicit feedback such as if a user purchased a product or not which is implicit because we only know that the customer bought the items, but we cannot tell if they liked or which one they preferred. 
+The article [4] focuses on an approach using only implicit feedback such as if a user purchased a product or not which is implicit because we only know that the customer bought the items, but we cannot tell if they liked or which one they preferred. 
 
 More xamples of implicit feedback: number of clicks, number of page visits, the number of times a song was played, etc. 
 
@@ -220,7 +220,7 @@ Collaborative Filtering requires [4]:
 
 3. Recommendation Calculation Framework
 
-4. Recommended Results
+4. Recommended Resultsl
 
 Collaborative Filtering can be both user-based or item-based which means calculate the similarity between users to make an implicit recommendation or calculate the similarity between items to make an implicit recommendation.
 
@@ -420,13 +420,17 @@ When we have doubts about our evaluation metric, we can quickly check the covera
 
 ## References
 
-[1] [Inside recommendations: how a recommender system recommends](https://www.kdnuggets.com/2021/11/recommendations-recommender-system.html)
+[1] [Recommender Systems — A Complete Guide to Machine Learning Models](https://towardsdatascience.com/recommender-systems-a-complete-guide-to-machine-learning-models-96d3f94ea748)
 
-[2] [Recommend using Scikit-Learn and Tensorflow Recommender](https://towardsdatascience.com/recommend-using-scikit-learn-and-tensorflow-recommender-bc659d91301a)
+[2] [Inside recommendations: how a recommender system recommends](https://www.kdnuggets.com/2021/11/recommendations-recommender-system.html)
 
-[3] [Building (and Evaluating) a Recommender System for Implicit Feedback](https://medium.com/@judaikawa/building-and-evaluating-a-recommender-system-for-implicit-feedback-59495d2077d4)
 
-[4] [Recommender System using Collaborative Filtering in Pyspark](https://angeleastbengal.medium.com/recommender-system-using-collaborative-filtering-in-pyspark-b98eab2aea75)
+[3] [Recommend using Scikit-Learn and Tensorflow Recommender](https://towardsdatascience.com/recommend-using-scikit-learn-and-tensorflow-recommender-bc659d91301a)
+
+[4] [Building (and Evaluating) a Recommender System for Implicit Feedback](https://medium.com/@judaikawa/building-and-evaluating-a-recommender-system-for-implicit-feedback-59495d2077d4)
+
+
+[5] [Recommender System using Collaborative Filtering in Pyspark](https://angeleastbengal.medium.com/recommender-system-using-collaborative-filtering-in-pyspark-b98eab2aea75)
 
 [5] [Turning Web Browsing Activity into Product Ratings with Survival Analysis](https://towardsdatascience.com/turning-web-browsing-activity-into-product-ratings-with-survival-analysis-5d5842af2a6d)
 
