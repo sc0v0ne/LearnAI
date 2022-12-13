@@ -4,7 +4,7 @@ If you are like me and try to follow the principles of DRY, KISS, Design Pattern
 
 **NOTE:** The latest version of repo is available  on [Obsidian Publish](https://notes.codecypher.ai). 
 
-[Medium](https://aicoder.medium.com)
+[Hashnode](https://hashnode.codecypher.ai)
 
 [Instapaper](https://instapaper.com/p/codecypher)
 
@@ -36,9 +36,9 @@ This is a work in progress, so there is probably some content missing and the co
 
 ## Recommended Resources
 
-[How to Learn AI](https://medium.com/geekculture/how-to-learn-ai-7bb743f0bbdf)
+[How to Learn AI](https://hashnode.codecypher.ai/how-to-learn-ai-7bb743f0bbdf)
 
-[Getting Started with AI](https://medium.com/codex/getting-started-with-ai-13eafc77ac8e)
+[Getting Started with AI](https://hashnode.codecypher.ai/getting-started-with-ai-13eafc77ac8e)
 
 [GitHub Lists](https://github.com/codecypher?tab=stars)
 
