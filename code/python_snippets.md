@@ -1,6 +1,195 @@
 # Python Code Snippets
 
 
+## What is Vectorization
+
+Vectorization is the technique of implementing (NumPy) array operations on a dataset.
+
+Vectorization is a very fast alternative to loops in Python. 
+
+In the background, NumPy applies the operations to all the elements of an array or series at once rather than one row at a time using for loop. 
+
+### Finding the Sum of numbers
+
+Using Loops
+
+```py
+    import time 
+    start = time.time()
+
+     
+    # iterative sum
+    total = 0
+    # iterating through 1.5 Million numbers
+    for item in range(0, 1500000):
+        total = total + item
+
+
+    print('sum is:' + str(total))
+    end = time.time()
+
+    print(end - start)
+
+    # 1124999250000
+# 0.14 Seconds
+```
+
+Using Vectorization
+
+```py
+    import numpy as np
+
+    start = time.time()
+
+    # vectorized sum - using numpy for vectorization
+    # np.arange create the sequence of numbers from 0 to 1499999
+    print(np.sum(np.arange(1500000)))
+
+    end = time.time()
+
+    print(end - start)
+
+
+    # 1124999250000
+    # 0.008 Seconds
+```
+
+### Mathematical Operations (on DataFrame)
+
+Create the DataFrame
+
+The DataFrame is tabular data in the form of rows and columns.
+
+We creat a pandas DataFrame having 5 Million rows and 4 columns filled with random values between 0 and 50.
+
+```
+import numpy as np
+import pandas as pd
+df = pd.DataFrame(np.random.randint(0, 50, size=(5000000, 4)), columns=('a','b','c','d'))
+df.shape
+# (5000000, 5)
+df.head()
+```
+
+We create a new column ‘ratio’ to find the ratio of the column ‘d’ and ‘c’.
+
+Using Loops
+
+```py
+    import time 
+    start = time.time()
+
+    # Iterating through DataFrame using iterrows
+    for idx, row in df.iterrows():
+        # creating a new column 
+        df.at[idx,'ratio'] = 100 * (row["d"] / row["c"])  
+    end = time.time()
+    print(end - start)
+    # 109 Seconds
+```
+
+Using Vectorization
+
+```py
+    start = time.time()
+    df["ratio"] = 100 * (df["d"] / df["c"])
+
+    end = time.time()
+    print(end - start)
+# 0.12 seconds
+```
+
+### If-else Statements (on DataFrame)
+
+Suppose we want to create a new column ‘e’ based on some conditions on the exiting column ‘a’.
+
+Using Loops
+
+```py
+    import time 
+    start = time.time()
+
+    # Iterating through DataFrame using iterrows
+    for idx, row in df.iterrows():
+        if row.a == 0:
+            df.at[idx,'e'] = row.d    
+        elif (row.a <= 25) & (row.a > 0):
+            df.at[idx,'e'] = (row.b)-(row.c)    
+        else:
+            df.at[idx,'e'] = row.b + row.c
+
+    end = time.time()
+
+    print(end - start)
+    # Time taken: 177 seconds
+```
+
+Using Vectorization
+ 
+```py
+    start = time.time()
+    df['e'] = df['b'] + df['c']
+    df.loc[df['a'] <= 25, 'e'] = df['b'] -df['c']
+    df.loc[df['a']==0, 'e'] = df['d']end = time.time()
+    print(end - start)
+    # 0.28007707595825195 sec
+```
+
+### Solving Machine Learning/Deep Learning Networks
+
+Create  the Data
+
+```py
+    import numpy as np
+    # setting initial values of m 
+    m = np.random.rand(1,5)
+
+    # input values for 5 million rows
+    x = np.random.rand(5000000,5)
+```
+
+
+Using Loops
+
+```py
+    import numpy as np
+    m = np.random.rand(1,5)
+    x = np.random.rand(5000000,5)
+
+    total = 0
+    tic = time.process_time()
+
+    for i in range(0,5000000):
+        total = 0
+        for j in range(0,5):
+            total = total + x[i][j]*m[0][j] 
+            
+        zer[i] = total 
+
+    toc = time.process_time()
+    print ("Computation time = " + str((toc - tic)) + "seconds")
+    # Computation time = 28.228 seconds
+```
+
+Using Vectorization
+
+Figure: Dot Product of 2 matrices
+
+```py
+    tic = time.process_time()
+
+    # dot product 
+    np.dot(x,m.T) 
+
+    toc = time.process_time()
+    print ("Computation time = " + str((toc - tic)) + "seconds")
+    # Computation time = 0.107 seconds
+```
+
+The np.dot implements Vectorized matrix multiplication in the backend which is much faster compared to loops in python.
+
+
+
 ## Display multiple images in one figure
 
 ```py
