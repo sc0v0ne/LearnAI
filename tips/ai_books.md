@@ -49,6 +49,7 @@ J. Matthew, PyTorch Artificial Intelligence Fundamentals, Birmingham, U.K.: Pack
 - PyTorch Computer Vision Cookbook
 
 
+
 ## Prerequisites
 
 ### Mathematics
@@ -86,6 +87,7 @@ M. Howard and D. LeBlanc, Writing Secure Code, 2nd ed., Microsoft Press Press, I
 E. Gamma, R. Helm, R. Johnson, and J. Vlissides, Design Patterns: Elements of Reusable Object-Oriented Software, 1st ed., Addison-Wesley Professional, ISBN-10: 0201633612, 1994. 
 
 
+
 ## AI Textbooks
 
 E. Alpaydin, Introduction to Machine Learning, 4th ed., MIT Press, ISBN: 9780262358064, 2020.
@@ -93,9 +95,9 @@ E. Alpaydin, Introduction to Machine Learning, 4th ed., MIT Press, ISBN: 9780262
 S. Russell and P. Norvig, Artificial Intelligence: A Modern Approach, 4th ed. Upper Saddle River, NJ: Prentice Hall, ISBN: 0-13-461099-7, 2021.
 
 
-W. McKinney, Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython, 2nd ed., O’Reilly Media, ISBN: 978-1491957660, 2017.
+W. McKinney, Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython, 2nd ed., O’Reilly Media, ISBN: 9781491957660, 2017.
 
-S. Raschka. and V. Mirjalili, Python Machine Learning, 2nd ed. Packt, ISBN: 978-1787125933, 2017.
+S. Raschka. and V. Mirjalili, Python Machine Learning, 2nd ed. Packt, ISBN: 9781787125933, 2017.
 
 S. Bird, E. Klein, and E. Loper. Natural Language Processing with Python – Analyzing Text with the Natural Language Toolkit. Available online: https://www.nltk.org/book/
 
@@ -103,6 +105,7 @@ D. Jurafsky and J. H. Martin, 2nd edition. Speech and Language Processing. Prent
 
 
 B. Siciliano, L. Sciavicco, L. Villani, and G. Oriolo, Robotics: Modeling, Planning and Control, London: Springer, ISBN: 978-1-84628-641-4, 2010.
+
 
 
 ## Good Reads
