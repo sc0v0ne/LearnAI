@@ -90,68 +90,6 @@ By using the options convert_string, convert_integer, and convert_boolean, it is
 
 
 
-## Performance Tips
-
-### Using at in place of loc
-
-Using ‘loc’/’iloc’ inside loops is not optimal. Instead, we should use at / iat which are much faster than loc / iloc.
-
-at and iat are meant to access a scalar, that is, a single element in the DataFrame. 
-
-```py
-    import time
-    
-    start = time.time()
-    # Iterating through DataFrame 
-    for index, row in df.iterrows():
-        df.at[index,'c'] = row.a + row.b
-    end = time.time()
-    print(end - start)
-```
-
-loc and iloc are meant to access multiple elements(series/dataframe) at the same time, potentially to perform vectorized operations.
-
-```py
-    import time
-
-    start = time.time()
-    # Iterating through the DataFrame df
-    for index, row in df.iterrows():
-            df.loc[index,'c'] = row.a + row.b
-    end = time.time()
-    print(end - start)
-```
-
-**NOTE:** If we try to access a series using at and iat, it will throw an error.
-
-```py
-    df.at[2,'a']
-    ### Output: 22
-
-    df.iat[2,0]
-    ### Output: 22
-
-    ## This will generate an error since we are trying to access multiple rows
-    df.at[:3,'a']
-```
-
-```py
-    df.loc[:3,'a']
-    ##0    26
-    ##1    10
-    ##2    22
-    ##3    22
-
-    df.loc[:3,0]
-    ##0    26
-    ##1    10
-    ##2    22
-    ##3    22
-```
-
-
-
-
 ## How to Speedup Pandas
 
 ### 1. Use itertuples() instead of iterrows()
@@ -217,6 +155,75 @@ This can often be avoided by leveraging vectorized operations.
 ```py
     # Here we leverage NumPy vector operations
     df["conditional_mul_result_optimized"] = np.where(df["col2"] >= 1000, df["col2"]* 2, df["col2"] * 3)
+```
+
+
+
+## Performance Tips
+
+### Using at in place of loc
+
+Using `loc` and `iloc` inside loops is not optimal. Instead, we should use `at` and `iat` which are much faster than `loc` and `iloc` [14]. 
+
+The `at` and `iat` methods are used to access a scalar which is a single element in the DataFrame. 
+
+```py
+    import time
+    
+    start = time.time()
+    
+    # Iterating through DataFrame 
+    for index, row in df.iterrows():
+        df.at[index,'c'] = row.a + row.b
+        
+    end = time.time()
+    print(end - start)
+    
+    ### Time taken: 40 seconds
+```
+
+The `loc` and `iloc` functions are used to access multiple elements (series/dataframe) at the same time, potentially to perform vectorized operations.
+
+```py
+    import time
+
+    start = time.time()
+    
+    # Iterating through the DataFrame df
+    for index, row in df.iterrows():
+            df.loc[index,'c'] = row.a + row.b
+            
+    end = time.time()
+    print(end - start)
+    
+    ### Time taken: 2414 seconds
+```
+
+**NOTE:** If we try to access a series using at and iat, it will throw an error.
+
+```py
+    df.at[2,'a']
+    ### Output: 22
+
+    df.iat[2,0]
+    ### Output: 22
+
+    ## This will generate an error since we are trying to access multiple rows
+    df.at[:3,'a']
+```
+
+```py
+    df.loc[:3,'a']
+    ##0    26
+    ##1    10
+    ##2    22
+    ##3    22
+
+    df.loc[:3,0]
+    ##0    26
+    ##1    10
+    ##2    22
+    ##3    22
 ```
 
 
@@ -830,4 +837,10 @@ The idea is to load 10k instances in each chunk (lines 11–14), perform text pr
 [12] [Speed Up Your Pandas Workflow with Modin](https://towardsdatascience.com/speed-up-your-pandas-workflow-with-modin-9a61acff0076)
 
 [13] [Never Worry About Optimization. Process GBs of Tabular Data 25x Faster With Gigasheet](https://towardsdatascience.com/never-worry-about-optimization-process-gbs-of-tabular-data-25x-faster-with-no-code-pandas-e85ede4c37d5)
+
+[14] [Don’t use loc/iloc with Loops In Python](https://medium.com/codex/dont-use-loc-iloc-with-loops-in-python-instead-use-this-f9243289dde7)
+
+
+[15] [How to Boost Pandas Speed And Process 10M-row Datasets in Milliseconds](https://towardsdatascience.com/how-to-boost-pandas-speed-and-process-10m-row-datasets-in-milliseconds-48d5468e269)
+
 
