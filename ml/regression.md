@@ -134,11 +134,101 @@ Here we review the following:
 - Error Metrics in Python
 
 
-## Terminology
+### Terminology
 
 The parameters of the train function are called _hyperparameters_ such as iterations and learning rate which are set so that the train function can find parameters such as w and b.
 
 
+### Limitations of Logistic Regression
+
+Logistic regression is a simple and powerful linear classification algorithm, hut it has limitations that suggest the need for alternate linear classification algorithms [7]:
+
+- Two-Class Problems. Logistic regression is intended for two-class or binary classification problems. It can be extended for multi-class classification, but is rarely used for this purpose.
+
+- Unstable With Well Separated Classes. Logistic regression can become unstable when the classes are well separated.
+
+- Unstable With Few Examples. Logistic regression can become unstable when there are few examples from which to estimate the parameters.
+
+Linear Discriminant Analysis (LDA) attempts to address each of these points and is the go-to linear method for multi-class classification problems. 
+
+Even with binary-classification problems, it is a good idea to try both logistic regression and linear discriminant analysis.
+
+
+
+## Linear Discriminant Analysis
+
+### Representation of LDA Models
+
+The representation of Linear Discriminant Analysis (LDA) consists of statistical properties of your data, calculated for each class [7]. 
+
+For a single input variable (x) this is the mean and the variance of the variable for each class. 
+
+For multiple variables, this is the same properties calculated over the multivariate Gaussian - the means and covariance matrix.
+
+These statistical properties are estimated from your data and plug into the LDA equation to make predictions. These are the model values that you would save to file for your model.
+
+### Learning LDA Models
+
+LDA makes some simplifying assumptions about your data:
+
+1. The data is Gaussian - each variable is shaped like a bell curve when plotted.
+
+2. Each attribute has the same variance - values of each variable vary around the mean by the same amount on average.
+
+With these assumptions, the LDA model estimates the mean and variance from your data for each class. 
+
+It is easy to think about this in the univariate (single input variable) case with two classes.
+
+### Making Predictions with LDA
+
+LDA makes predictions by estimating the probability that a new set of inputs belongs to each class. 
+
+The class that gets the highest probability is the output class and a prediction is made.
+
+The model uses **Bayes Theorem** to estimate the probabilities. 
+
+Bayes’ Theorem can be used to estimate the probability of the output class (k) given the input (x) using the probability of each class and the probability of the data belonging to each class:
+
+The f(x) above is the estimated probability of x belonging to the class. 
+
+A Gaussian distribution function is used for f(x). 
+
+
+### How to Prepare Data for LDA
+
+This section lists some suggestions you may consider when preparing your data for use with LDA.
+
+- Classification Problems. LDA is intended for classification problems where the output variable is categorical. LDA supports both binary and multi-class classification.
+
+- Gaussian Distribution. The standard implementation of the model assumes a Gaussian distribution of the input variables. 
+
+  Consider reviewing the univariate distributions of each attribute and using transforms to make them more Gaussian-looking (such as log and root for exponential distributions and Box-Cox for skewed distributions).
+
+- Remove Outliers. Consider removing outliers from your data that can skew the basic statistics used to separate classes in LDA such the mean and the standard deviation.
+
+- Same Variance. LDA assumes that each input variable has the same variance. 
+
+  It is always a good idea to standardize your data before using LDA so that it has a mean of 0 and a standard deviation of 1.
+  
+### Extensions to LDA
+
+Linear Discriminant Analysis is a simple and effective method for classification. 
+
+Since it is simple and so well understood, there are many extensions and variations to the method [7]:
+
+- Quadratic Discriminant Analysis (QDA): Each class uses its own estimate of variance (or covariance when there are multiple input variables).
+
+- Flexible Discriminant Analysis (FDA): Where non-linear combinations of inputs is used such as splines.
+
+- Regularized Discriminant Analysis (RDA): Introduces regularization into the estimate of the variance (actually covariance), moderating the influence of different variables on LDA.
+
+The original development was called the Linear Discriminant or Fisher’s Discriminant Analysis. 
+
+The multi-class version was referred to Multiple Discriminant Analysis. 
+
+These are all now referred to as Linear Discriminant Analysis.
+
+  
 ----------
 
 
@@ -251,6 +341,7 @@ There are four main types of classification tasks that you may encounter [6]:
 
 [6] [4 Types of Classification Tasks in Machine Learning](https://machinelearningmastery.com/types-of-classification-in-machine-learning/)
 
+[7] [Linear Discriminant Analysis for Machine Learning](https://machinelearningmastery.com/linear-discriminant-analysis-for-machine-learning/)
 
 
 [Five Regression Python Modules That Every Data Scientist Must Know](https://towardsdatascience.com/five-regression-python-modules-that-every-data-scientist-must-know-a4e03a886853)
